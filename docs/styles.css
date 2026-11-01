@@ -1,0 +1,16 @@
+.fiche {
+  padding: 1rem;
+  border: 1px solid #e2e2e2;
+  border-radius: 8px;
+}
+
+.fiche .photo {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+table {
+  font-size: 0.95rem;
+}

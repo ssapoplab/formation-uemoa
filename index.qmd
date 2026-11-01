@@ -1,0 +1,32 @@
+---
+title: "Atelier de formation en analyse démographique"
+subtitle: "Commission de l'UEMOA · Ouagadougou (Burkina Faso) · du lundi 23 au samedi 28 novembre 2026"
+toc: false
+---
+
+<!-- [Intitulé exact à confirmer avec la Commission] -->
+
+## L'atelier
+
+Du **23 au 28 novembre 2026**, la Commission de l'UEMOA réunit à Ouagadougou des cadres des Instituts nationaux de la statistique (INS) de ses huit États membres pour un atelier de six jours consacré à l'analyse démographique.
+
+[Objectifs de l'atelier, en deux ou trois phrases, à reprendre des TDR.]
+
+## Public
+
+Environ 30 participants :
+
+- 24 cadres des INS, à raison de 3 par État membre (Bénin, Burkina Faso, Côte d'Ivoire, Guinée-Bissau, Mali, Niger, Sénégal, Togo) ;
+- environ 6 cadres de la Commission de l'UEMOA.
+
+## Format
+
+Chaque journée alterne exposés le matin et travaux pratiques l'après-midi, sur des données des États membres. Tous les supports (diapositives, code, données d'exercice) sont accessibles sur la page [Programme & matériel](programme.qmd).
+
+## Lieu
+
+Hôtel [nom à confirmer par la Commission], Ouagadougou. Les participants non résidents au Burkina Faso y sont hébergés ; l'atelier se tient dans sa salle de réunion.
+
+## Organisation
+
+Commission de l'UEMOA, en collaboration avec [IBF / UQAM — logos et mentions à confirmer].

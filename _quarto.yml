@@ -1,0 +1,31 @@
+project:
+  type: website
+  output-dir: docs          # GitHub Pages publie le dossier docs/ de la branche main
+
+website:
+  title: "Atelier UEMOA — Analyse démographique"   # [intitulé exact à confirmer]
+  site-url: https://visseho.github.io/formation-uemoa
+  repo-url: https://github.com/visseho/formation-uemoa
+  page-navigation: true
+  navbar:
+    left:
+      - href: index.qmd
+        text: Accueil
+      - href: formateurs.qmd
+        text: Formateurs
+      - href: programme.qmd
+        text: Programme & matériel
+      - href: participants.qmd
+        text: Participants
+  page-footer:
+    center: "Commission de l'UEMOA · Ouagadougou, 23 au 28 novembre 2026"
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    lang: fr
+
+execute:
+  freeze: auto              # le code R n'est réexécuté que si le fichier change

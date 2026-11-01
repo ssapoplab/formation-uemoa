@@ -1,0 +1,46 @@
+---
+title: "Programme & matériel"
+---
+
+Les supports de chaque séance sont dans le dossier `materiel/` du dépôt, un sous-dossier par jour. Les liens ci-dessous y renvoient.
+
+<!-- Horaires indicatifs : 8 h 30-12 h 30 exposés, 14 h-17 h travaux pratiques. À ajuster. -->
+
+## Lundi 23 novembre — Jour 1
+
+| Horaire | Séance | Formateur | Matériel |
+|---|---|---|---|
+| 8 h 30 | Ouverture officielle | Commission de l'UEMOA | |
+| [ ] | [Titre de la séance] | [Nom] | [Diapos](materiel/jour-1/) · [Code](materiel/jour-1/) |
+| [ ] | [Travaux pratiques] | [Nom] | [Données](materiel/jour-1/) |
+
+## Mardi 24 novembre — Jour 2
+
+| Horaire | Séance | Formateur | Matériel |
+|---|---|---|---|
+| [ ] | [Titre] | [Nom] | [Diapos](materiel/jour-2/) |
+
+## Mercredi 25 novembre — Jour 3
+
+| Horaire | Séance | Formateur | Matériel |
+|---|---|---|---|
+| [ ] | [Titre] | [Nom] | [Diapos](materiel/jour-3/) |
+
+## Jeudi 26 novembre — Jour 4
+
+| Horaire | Séance | Formateur | Matériel |
+|---|---|---|---|
+| [ ] | [Titre] | [Nom] | [Diapos](materiel/jour-4/) |
+
+## Vendredi 27 novembre — Jour 5
+
+| Horaire | Séance | Formateur | Matériel |
+|---|---|---|---|
+| [ ] | [Titre] | [Nom] | [Diapos](materiel/jour-5/) |
+
+## Samedi 28 novembre — Jour 6
+
+| Horaire | Séance | Formateur | Matériel |
+|---|---|---|---|
+| [ ] | [Restitution des travaux de groupe] | [Nom] | |
+| [ ] | Clôture | Commission de l'UEMOA | |

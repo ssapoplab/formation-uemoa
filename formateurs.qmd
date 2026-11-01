@@ -1,0 +1,34 @@
+---
+title: "Formateurs"
+toc: false
+---
+
+<!-- Une fiche par formateur. Déposer la photo dans images/ (carrée, 400 x 400 px). -->
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6 .fiche}
+![](images/adjiwanou.jpg){.photo}
+
+### Vissého Adjiwanou
+
+Professeur agrégé de démographie et de méthodes quantitatives, Université du Québec à Montréal (UQAM)
+
+[Bio de 60 à 80 mots.]
+
+**Modules :** [à compléter]
+:::
+
+::: {.g-col-12 .g-col-md-6 .fiche}
+![](images/formateur-2.jpg){.photo}
+
+### [Nom du formateur 2]
+
+[Fonction, institution]
+
+[Bio de 60 à 80 mots.]
+
+**Modules :** [à compléter]
+:::
+
+:::

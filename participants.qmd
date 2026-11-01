@@ -1,0 +1,14 @@
+---
+title: "Participants"
+toc: false
+---
+
+<!--
+N'inscrire ici que les participants qui ont coché le consentement de publication
+dans le canevas de présentation. Les autres n'apparaissent pas.
+-->
+
+| Nom | Fonction | Institution | Pays |
+|---|---|---|---|
+| [Nom] | [Fonction] | Institut national de la statistique | [Pays] |
+| [Nom] | [Fonction] | Commission de l'UEMOA | — |
