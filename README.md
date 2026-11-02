@@ -25,6 +25,7 @@ Site Quarto publié avec GitHub Pages : https://ssapoplab.github.io/formation-ue
 
 ## Règles pour les formateurs
 
+- Chaque journée a un syllabus : copier `_syllabus-gabarit.qmd` dans `materiel/jour-N/syllabus.qmd` et le remplir (échéance : [lundi 9 novembre]).
 - Diapositives en Quarto revealjs (`.qmd`) pour les modules en R ; un PDF est accepté sinon.
 - Nommer les fichiers `jourN-module-nom.qmd` (ex. `jour2-fecondite-adjiwanou.qmd`).
 - Données d'exercice : jamais de microdonnées nominatives ; uniquement des extraits anonymisés autorisés par l'INS concerné.

@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "participants.html",
-    "href": "participants.html",
-    "title": "Participants",
-    "section": "",
-    "text": "Nom\nFonction\nInstitution\nPays\n\n\n\n\n[Nom]\n[Fonction]\nInstitut national de la statistique\n[Pays]\n\n\n[Nom]\n[Fonction]\nCommission de l’UEMOA\n—"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Formation régionale en analyse démographique pour la décision publique",
@@ -19,6 +12,13 @@
     "title": "Formation régionale en analyse démographique pour la décision publique",
     "section": "",
     "text": "Du 23 au 28 novembre 2026, la Commission de l’UEMOA réunit à Ouagadougou des cadres des Instituts nationaux de la statistique (INS) de ses huit États membres et de la Commission pour une formation de six jours en analyse démographique appliquée à la formulation, à la planification et au suivi des politiques publiques."
+  },
+  {
+    "objectID": "index.html#objectifs",
+    "href": "index.html#objectifs",
+    "title": "Formation régionale en analyse démographique pour la décision publique",
+    "section": "Objectifs",
+    "text": "Objectifs\nÀ l’issue de la formation, les participants seront capables de :\n\nmaîtriser les concepts fondamentaux et les indicateurs clés de l’analyse démographique (fécondité, mortalité, migration, urbanisation) ;\nanalyser les dynamiques démographiques et leurs implications socio-économiques ;\nidentifier et analyser les inégalités démographiques territoriales et sociales ;\nutiliser des méthodes quantitatives avancées pour l’analyse des données démographiques ;\nexplorer l’utilisation de nouvelles sources de données dans l’analyse démographique ;\ndévelopper des scénarios démographiques prospectifs utiles à la planification publique ;\ntraduire les analyses démographiques en outils d’aide à la décision (notes analytiques, tableaux de bord, indicateurs de suivi) ;\ncontribuer à l’harmonisation des pratiques d’analyse démographique au sein de l’espace UEMOA."
   },
   {
     "objectID": "index.html#public",
@@ -53,62 +53,76 @@
     "href": "formateurs.html",
     "title": "Formateurs",
     "section": "",
-    "text": "Vissého Adjiwanou\nProfesseur agrégé de démographie et de méthodes quantitatives, Université du Québec à Montréal (UQAM)\n[Bio de 60 à 80 mots.]\nModules : [à compléter]\n\n\n\n\n\n[Nom du formateur 2]\n[Fonction, institution]\n[Bio de 60 à 80 mots.]\nModules : [à compléter]"
+    "text": "Vissého Adjiwanou\nProfesseur agrégé de démographie et de méthodes quantitatives et computationnelles, Université du Québec à Montréal (UQAM) ; directeur du SSAPOPLAB\n[Bio de 60 à 80 mots.]\nInterventions : lundi (fondements), mercredi (nouvelles sources, populations synthétiques), jeudi (prospective, microsimulation)\n\n\n\n\n\n[Prénom] Onadja\n[Fonction, institution]\n[Bio de 60 à 80 mots.]\nInterventions : lundi (indicateurs démographiques), jeudi (projections)\n\n\n\n\n\nBoyam Fabrice Yaméogo\n[Fonction, institution]\n[Bio de 60 à 80 mots.]\nInterventions : mardi (méthodes quantitatives avancées), mercredi (data science et nouvelles sources)\n\n\n\n\n\n[Prénom Nom] Aliou\n[Fonction, institution]\n[Bio de 60 à 80 mots.]\nInterventions : mardi (inégalités territoriales, cartographie), mercredi (appui sur l’analyse spatiale)\n\n\n\n\n\n[Prénom Nom] Irifa\n[Fonction, institution]\n[Bio de 60 à 80 mots.]\nInterventions : vendredi (notes analytiques, communication aux décideurs)\n\n\n\n\n\nAlexandra [Nom]\n[Fonction, institution]\n[Bio de 60 à 80 mots.]\nInterventions : vendredi (policy briefs, tableaux de bord)"
   },
   {
     "objectID": "programme.html",
     "href": "programme.html",
     "title": "Programme & matériel",
     "section": "",
-    "text": "Les supports de chaque séance sont dans le dossier materiel/ du dépôt, un sous-dossier par jour. Les liens ci-dessous y renvoient."
+    "text": "Chaque journée a son syllabus et son dossier de matériel (materiel/jour-N/ dans le dépôt). Les liens deviennent actifs au fur et à mesure que les formateurs déposent leurs supports."
   },
   {
-    "objectID": "programme.html#lundi-23-novembre-jour-1",
-    "href": "programme.html#lundi-23-novembre-jour-1",
+    "objectID": "programme.html#journée-type",
+    "href": "programme.html#journée-type",
     "title": "Programme & matériel",
-    "section": "Lundi 23 novembre — Jour 1",
-    "text": "Lundi 23 novembre — Jour 1\n\n\n\nHoraire\nSéance\nFormateur\nMatériel\n\n\n\n\n8 h 30\nOuverture officielle\nCommission de l’UEMOA\n\n\n\n[ ]\n[Titre de la séance]\n[Nom]\nDiapos · Code\n\n\n[ ]\n[Travaux pratiques]\n[Nom]\nDonnées"
+    "section": "Journée type",
+    "text": "Journée type\nDu lundi au vendredi, chaque journée suit le même déroulé.\n\n\n\n\n\n\n\n\nHoraire\nBloc\nContenu\n\n\n\n\n8 h 30 – 9 h\nRetour sur l’exercice de la veille\n2 ou 3 équipes présentent leur résultat, correction collective\n\n\n9 h – 12 h 30\nCours magistral\nConcepts et méthodes du jour, illustrés par des cas UEMOA ; pause à 10 h 30\n\n\n14 h – 15 h 30\nLabo\nDémonstration pas à pas sur données réelles ; les participants reproduisent en même temps\n\n\n15 h 45 – 17 h 15\nTravail en équipe pays\nApplication aux données de son pays, pour la note d’analyse pays\n\n\n17 h 15 – 17 h 30\nConsignes\nExercice pour le lendemain (une heure au plus)\n\n\n\nLe lundi, le premier créneau est consacré à l’ouverture officielle et à la présentation des participants. Le samedi suit un format propre."
   },
   {
-    "objectID": "programme.html#mardi-24-novembre-jour-2",
-    "href": "programme.html#mardi-24-novembre-jour-2",
+    "objectID": "programme.html#lundi-23-novembre-fondements",
+    "href": "programme.html#lundi-23-novembre-fondements",
     "title": "Programme & matériel",
-    "section": "Mardi 24 novembre — Jour 2",
-    "text": "Mardi 24 novembre — Jour 2\n\n\n\nHoraire\nSéance\nFormateur\nMatériel\n\n\n\n\n[ ]\n[Titre]\n[Nom]\nDiapos"
+    "section": "Lundi 23 novembre — Fondements",
+    "text": "Lundi 23 novembre — Fondements\nObjectifs 1 et 2 · Onadja, Vissého Adjiwanou\n\n\n\n\n\n\n\n\nBloc\nContenu\nFormateur\n\n\n\n\nCours\nSources de données démographiques ; fécondité, mortalité, migration, urbanisation ; transition démographique et dividende ; implications pour l’éducation, la santé et l’emploi\nOnadja, Vissého Adjiwanou\n\n\nLabo\nCalcul des indicateurs de base à partir d’un recensement ou d’une EDS (ISF, quotients de mortalité, espérance de vie, pyramide des âges), dans R et dans Excel\nOnadja\n\n\nÉquipe pays\nProfil démographique du pays en cinq indicateurs clés\nTous\n\n\nExercice\nComparer son pays à la moyenne UEMOA sur trois indicateurs et rédiger trois lignes d’interprétation\nOnadja\n\n\n\nMatériel : Syllabus · Diapositives · Script du labo · Données"
   },
   {
-    "objectID": "programme.html#mercredi-25-novembre-jour-3",
-    "href": "programme.html#mercredi-25-novembre-jour-3",
+    "objectID": "programme.html#mardi-24-novembre-inégalités-et-méthodes-avancées",
+    "href": "programme.html#mardi-24-novembre-inégalités-et-méthodes-avancées",
     "title": "Programme & matériel",
-    "section": "Mercredi 25 novembre — Jour 3",
-    "text": "Mercredi 25 novembre — Jour 3\n\n\n\nHoraire\nSéance\nFormateur\nMatériel\n\n\n\n\n[ ]\n[Titre]\n[Nom]\nDiapos"
+    "section": "Mardi 24 novembre — Inégalités et méthodes avancées",
+    "text": "Mardi 24 novembre — Inégalités et méthodes avancées\nObjectifs 3 et 4 · Aliou, Fabrice Yaméogo\n\n\n\n\n\n\n\n\nBloc\nContenu\nFormateur\n\n\n\n\nCours\nMesure des inégalités démographiques selon le milieu, la région, le quintile de richesse et le sexe ; standardisation, décomposition des écarts, régression et modèles multiniveaux\nAliou, Fabrice Yaméogo\n\n\nLabo\nCartographie des indicateurs par région, puis modèle expliquant les écarts régionaux\nAliou, Fabrice Yaméogo\n\n\nÉquipe pays\nCarte et analyse des inégalités régionales sur un indicateur choisi\nTous\n\n\nExercice\nIdentifier les deux régions les plus en retard et proposer une explication appuyée sur les données\nAliou\n\n\n\nMatériel : Syllabus · Diapositives · Script du labo · Données"
   },
   {
-    "objectID": "programme.html#jeudi-26-novembre-jour-4",
-    "href": "programme.html#jeudi-26-novembre-jour-4",
+    "objectID": "programme.html#mercredi-25-novembre-nouvelles-sources-et-data-science",
+    "href": "programme.html#mercredi-25-novembre-nouvelles-sources-et-data-science",
     "title": "Programme & matériel",
-    "section": "Jeudi 26 novembre — Jour 4",
-    "text": "Jeudi 26 novembre — Jour 4\n\n\n\nHoraire\nSéance\nFormateur\nMatériel\n\n\n\n\n[ ]\n[Titre]\n[Nom]\nDiapos"
+    "section": "Mercredi 25 novembre — Nouvelles sources et data science",
+    "text": "Mercredi 25 novembre — Nouvelles sources et data science\nObjectif 5 · Fabrice Yaméogo, Vissého Adjiwanou (Aliou en appui sur le spatial)\n\n\n\n\n\n\n\n\nBloc\nContenu\nFormateur\n\n\n\n\nOuverture\nL’IA dépend de la mesure qu’elle prétend remplacer : les recensements et les enquêtes des INS restent la référence\nVissého Adjiwanou\n\n\nCours\nDonnées administratives, géospatiales et numériques ; grilles de population et estimation sur petits domaines ; machine learning et inférence sur données prédites ; populations synthétiques ; limites et éthique\nFabrice Yaméogo, Vissého Adjiwanou\n\n\nLabo 1\nCroiser une enquête avec les grilles WorldPop pour estimer un indicateur à un niveau fin\nFabrice Yaméogo, Aliou\n\n\nLabo 2\nCorriger une estimation fondée sur des prédictions avec un petit échantillon validé ; générer une population synthétique du pays\nVissého Adjiwanou\n\n\nÉquipe pays\nInventaire des sources disponibles dans son INS ; génération de la population synthétique utilisée le jeudi\nTous\n\n\nExercice\nUne demi-page sur ce qu’une nouvelle source apporte à sa note, et sur ses limites\nFabrice Yaméogo\n\n\n\nMatériel : Syllabus · Diapositives · Script du labo · Données"
   },
   {
-    "objectID": "programme.html#vendredi-27-novembre-jour-5",
-    "href": "programme.html#vendredi-27-novembre-jour-5",
+    "objectID": "programme.html#jeudi-26-novembre-prospective-et-scénarios",
+    "href": "programme.html#jeudi-26-novembre-prospective-et-scénarios",
     "title": "Programme & matériel",
-    "section": "Vendredi 27 novembre — Jour 5",
-    "text": "Vendredi 27 novembre — Jour 5\n\n\n\nHoraire\nSéance\nFormateur\nMatériel\n\n\n\n\n[ ]\n[Titre]\n[Nom]\nDiapos"
+    "section": "Jeudi 26 novembre — Prospective et scénarios",
+    "text": "Jeudi 26 novembre — Prospective et scénarios\nObjectif 6 · Vissého Adjiwanou, Onadja\n\n\n\n\n\n\n\n\nBloc\nContenu\nFormateur\n\n\n\n\nCours\nProjections par composantes ; hypothèses de fécondité, de mortalité et de migration ; scénarios et besoins sectoriels ; de la projection agrégée à la microsimulation\nVissého Adjiwanou, Onadja\n\n\nLabo 1\nProjection de la population du pays à 2050 sous deux ou trois scénarios, et traduction en besoins pour un secteur\nOnadja\n\n\nLabo 2\nMicrosimulation à partir de la population synthétique du mercredi, pour comparer l’évolution de deux groupes\nVissého Adjiwanou\n\n\nÉquipe pays\nChoix du scénario et du secteur qui structureront la note\nTous\n\n\nExercice\nChiffrer l’écart de besoins entre deux scénarios et l’exprimer en une phrase pour un décideur\nVissého Adjiwanou\n\n\n\nMatériel : Syllabus · Diapositives · Script du labo · Données"
   },
   {
-    "objectID": "programme.html#samedi-28-novembre-jour-6",
-    "href": "programme.html#samedi-28-novembre-jour-6",
+    "objectID": "programme.html#vendredi-27-novembre-des-analyses-aux-outils-de-décision",
+    "href": "programme.html#vendredi-27-novembre-des-analyses-aux-outils-de-décision",
     "title": "Programme & matériel",
-    "section": "Samedi 28 novembre — Jour 6",
-    "text": "Samedi 28 novembre — Jour 6\n\n\n\nHoraire\nSéance\nFormateur\nMatériel\n\n\n\n\n[ ]\n[Restitution des travaux de groupe]\n[Nom]\n\n\n\n[ ]\nClôture\nCommission de l’UEMOA"
+    "section": "Vendredi 27 novembre — Des analyses aux outils de décision",
+    "text": "Vendredi 27 novembre — Des analyses aux outils de décision\nObjectif 7 · Irifa, Alexandra\n\n\n\n\n\n\n\n\nBloc\nContenu\nFormateur\n\n\n\n\nCours\nNote analytique et policy brief ; data storytelling ; tableau de bord et indicateurs de suivi\nIrifa, Alexandra\n\n\nÉtude de cas\nL’outil d’IA d’aide à la rédaction des rapports DHS : ce que l’IA accélère, ce qui reste sous la responsabilité de l’analyste\nIrifa, Alexandra\n\n\nLabo 1\nAutodiagnostic du site web de son INS avec une grille commune, puis comparaison avec un site de référence\nIrifa, Alexandra\n\n\nLabo 2\nConstruction d’un tableau de bord simple à partir d’un modèle\nIrifa, Alexandra\n\n\nÉquipe pays\nRédaction de la note d’analyse pays (2 pages) et préparation de la présentation\nTous\n\n\nExercice\nFinaliser la note et les diapositives de restitution\nIrifa, Alexandra\n\n\n\nMatériel : Syllabus · Diapositives · Gabarit de note pays · Grille d’autodiagnostic"
   },
   {
-    "objectID": "index.html#objectifs",
-    "href": "index.html#objectifs",
-    "title": "Formation régionale en analyse démographique pour la décision publique",
-    "section": "Objectifs",
-    "text": "Objectifs\nÀ l’issue de la formation, les participants seront capables de :\n\nmaîtriser les concepts fondamentaux et les indicateurs clés de l’analyse démographique (fécondité, mortalité, migration, urbanisation) ;\nanalyser les dynamiques démographiques et leurs implications socio-économiques ;\nidentifier et analyser les inégalités démographiques territoriales et sociales ;\nutiliser des méthodes quantitatives avancées pour l’analyse des données démographiques ;\nexplorer l’utilisation de nouvelles sources de données dans l’analyse démographique ;\ndévelopper des scénarios démographiques prospectifs utiles à la planification publique ;\ntraduire les analyses démographiques en outils d’aide à la décision (notes analytiques, tableaux de bord, indicateurs de suivi) ;\ncontribuer à l’harmonisation des pratiques d’analyse démographique au sein de l’espace UEMOA."
+    "objectID": "programme.html#samedi-28-novembre-restitutions-et-feuille-de-route-régionale",
+    "href": "programme.html#samedi-28-novembre-restitutions-et-feuille-de-route-régionale",
+    "title": "Programme & matériel",
+    "section": "Samedi 28 novembre — Restitutions et feuille de route régionale",
+    "text": "Samedi 28 novembre — Restitutions et feuille de route régionale\nObjectif 8 · Toute l’équipe\n\n\n\n\n\n\n\nHoraire\nContenu\n\n\n\n\n8 h 30 – 11 h\nPrésentation des huit notes pays (10 minutes, puis 5 minutes de questions)\n\n\n11 h 15 – 12 h 30\nAtelier collectif sur l’harmonisation des pratiques d’analyse et de diffusion dans l’espace UEMOA\n\n\n12 h 30 – 13 h\nGrandes lignes de la feuille de route régionale, évaluation de la formation et clôture\n\n\n\nMatériel : Notes pays · Synthèse de l’autodiagnostic des sites · Projet de feuille de route"
+  },
+  {
+    "objectID": "programme.html#la-note-danalyse-pays",
+    "href": "programme.html#la-note-danalyse-pays",
+    "title": "Programme & matériel",
+    "section": "La note d’analyse pays",
+    "text": "La note d’analyse pays\nLes 24 cadres des INS forment 8 équipes pays ; les 6 cadres de la Commission sont répartis entre elles. Chaque jour ajoute une section à la note.\n\n\n\nJour\nSection ajoutée\n\n\n\n\nLundi\nProfil démographique : cinq indicateurs clés\n\n\nMardi\nInégalités régionales : une carte et son analyse\n\n\nMercredi\nApport d’une nouvelle source de données\n\n\nJeudi\nScénario à 2050 et besoins pour un secteur\n\n\nVendredi\nRédaction finale (2 pages) et messages pour les décideurs\n\n\nSamedi\nPrésentation et contribution à la feuille de route"
+  },
+  {
+    "objectID": "participants.html",
+    "href": "participants.html",
+    "title": "Participants",
+    "section": "",
+    "text": "Nom\nFonction\nInstitution\nPays\n\n\n\n\n[Nom]\n[Fonction]\nInstitut national de la statistique\n[Pays]\n\n\n[Nom]\n[Fonction]\nCommission de l’UEMOA\n—"
   }
 ]

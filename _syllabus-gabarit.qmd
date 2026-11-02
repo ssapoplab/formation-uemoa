@@ -1,0 +1,96 @@
+---
+# ------------------------------------------------------------------
+# GABARIT DE SYLLABUS — Formation UEMOA, Ouagadougou, 23-28 nov. 2026
+# 1. Copier ce fichier dans materiel/jour-N/syllabus.qmd
+# 2. Remplacer tout ce qui est entre crochets ; ne supprimer aucune rubrique
+#    (écrire « sans objet » si une rubrique ne s'applique pas)
+# 3. Ajouter le lien « Syllabus » du jour dans programme.qmd
+# Le fichier gabarit lui-même (nom commençant par _) n'est pas publié.
+# ------------------------------------------------------------------
+title: "Jour [N] — [Titre du bloc]"
+subtitle: "[Jour JJ] novembre 2026 · Formation régionale en analyse démographique pour la décision publique"
+---
+
+## 1. En-tête
+
+| Rubrique | À remplir |
+|---|---|
+| Objectifs du TDR couverts | [n° des objectifs spécifiques, de 1 à 8] |
+| Formateur(s) du cours | [Nom, institution] |
+| Formateur(s) du labo | [Nom, institution] |
+| Logiciels utilisés | [R, Excel, QGIS…] |
+
+## 2. Objectifs d'apprentissage
+
+À la fin de la journée, les participants seront capables de :
+
+1. [Verbe d'action + compétence observable, par exemple : calculer l'indice synthétique de fécondité à partir d'une EDS]
+2. [Objectif 2]
+3. [Objectif 3]
+
+<!-- Trois ou quatre objectifs au plus, chacun vérifiable par un exercice ou une question. -->
+
+## 3. Prérequis
+
+- **Connaissances** : [ce que les participants doivent déjà savoir]
+- **Logiciels et paquets à installer avant l'atelier** : [par exemple : R 4.4, RStudio, paquets `tidyverse`, `sf`]
+- **Lecture préalable** (facultative, 20 minutes au plus) : [référence]
+
+## 4. Déroulé de la journée
+
+| Horaire | Bloc | Contenu | Formateur | Matériel |
+|---|---|---|---|---|
+| 8 h 30 – 9 h | Retour sur l'exercice de la veille | [Équipes qui présentent, points à corriger] | [Nom] | [Corrigé](corrige-veille.html) |
+| 9 h – 12 h 30 | Cours magistral | [Titre] | [Nom] | [Diapos](cours.html) |
+| 14 h – 15 h 30 | Labo | [Titre] | [Nom] | [Script](labo.qmd) · [Données](donnees/) |
+| 15 h 45 – 17 h 15 | Travail en équipe pays | [Consigne courte] | Tous les formateurs présents | [Gabarit de note pays] |
+| 17 h 15 – 17 h 30 | Consignes de l'exercice | [Titre de l'exercice] | [Nom] | [Énoncé](exercice.html) |
+
+## 5. Cours magistral
+
+- **Plan** : [3 à 5 parties]
+- **Concepts clés** : [notions et indicateurs définis dans le cours]
+- **Cas UEMOA utilisé** : [pays, source, résultat présenté]
+- **Moment interactif** : [question à la salle ou court exercice en binôme, au moins un par demi-heure]
+
+## 6. Labo
+
+- **Données** : [nom du jeu, pays, année, source]
+- **Accès et confidentialité** : [données ouvertes, ou extrait anonymisé autorisé par l'INS ; jamais de microdonnées nominatives]
+- **Étapes** : [3 à 6 étapes, chacune correspondant à un bloc du script]
+- **Script** : [nom du fichier, par exemple `jour2-labo-inegalites.qmd`]
+- **Résultat attendu** : [tableau, graphique ou carte que chaque participant doit obtenir]
+- **Solution de repli** : [version Excel ou résultats précalculés pour les participants bloqués]
+
+## 7. Travail en équipe pays
+
+- **Consigne** : [ce que l'équipe fait avec les données de son pays]
+- **Section de la note pays produite** : [voir le fil rouge du programme]
+- **Livrable en fin de journée** : [par exemple : un tableau et trois lignes d'interprétation]
+
+## 8. Exercice pour le lendemain
+
+- **Énoncé** : [à compléter]
+- **Durée** : une heure au plus
+- **Format de remise** : [fichier, nom du fichier, où le déposer]
+- **Corrigé** : présenté le lendemain à 8 h 30, publié sur le site le lendemain midi
+
+## 9. Vérification des acquis
+
+Trois questions courtes posées en fin de cours ou de labo, une par objectif d'apprentissage :
+
+1. [Question liée à l'objectif 1]
+2. [Question liée à l'objectif 2]
+3. [Question liée à l'objectif 3]
+
+## 10. Ressources
+
+- **Essentielles** (2 ou 3) : [références]
+- **Pour aller plus loin** : [références, sites, paquets]
+
+## 11. Contribution à la boîte à outils régionale
+
+- [ ] Scripts du labo commentés et reproductibles
+- [ ] Données d'exercice ou instructions pour les obtenir
+- [ ] Modèles réutilisables (tableau, note, tableau de bord) le cas échéant
+- [ ] Tous les fichiers déposés dans `materiel/jour-N/`
