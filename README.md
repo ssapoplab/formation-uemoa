@@ -1,6 +1,6 @@
 # Site de l'atelier UEMOA — Ouagadougou, 23-28 novembre 2026
 
-Site Quarto publié avec GitHub Pages : https://visseho.github.io/formation-uemoa
+Site Quarto publié avec GitHub Pages : https://ssapoplab.github.io/formation-uemoa
 
 ## Mise en ligne (une seule fois)
 

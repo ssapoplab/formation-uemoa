@@ -4,8 +4,8 @@ project:
 
 website:
   title: "Atelier UEMOA — Analyse démographique"   # [intitulé exact à confirmer]
-  site-url: https://visseho.github.io/formation-uemoa
-  repo-url: https://github.com/visseho/formation-uemoa
+  site-url: https://ssapoplab.github.io/formation-uemoa
+  repo-url: https://ssapoplab.github.io/formation-uemoa
   page-navigation: true
   navbar:
     left:

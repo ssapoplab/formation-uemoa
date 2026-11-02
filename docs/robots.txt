@@ -1,1 +1,1 @@
-Sitemap: https://visseho.github.io/formation-uemoa/sitemap.xml
+Sitemap: https://ssapoplab.github.io/formation-uemoa/sitemap.xml
