@@ -3,32 +3,84 @@ title: "Formateurs"
 toc: false
 ---
 
-<!-- Une fiche par formateur. Déposer la photo dans images/ (carrée, 400 x 400 px). -->
+<!--
+Une fiche par formateur. Pour chacun :
+- déposer la photo dans images/ (carrée, 400 x 400 px), nommée prenom-nom.jpg ;
+- compléter nom complet, fonction, institution et bio (60 à 80 mots).
+-->
 
 ::: {.grid}
 
 ::: {.g-col-12 .g-col-md-6 .fiche}
-![](images/adjiwanou.jpg){.photo}
+![](images/visseho-adjiwanou.jpg){.photo}
 
 ### Vissého Adjiwanou
 
-Professeur agrégé de démographie et de méthodes quantitatives, Université du Québec à Montréal (UQAM)
+Professeur agrégé de démographie et de méthodes quantitatives et computationnelles, Université du Québec à Montréal (UQAM) ; directeur du SSAPOPLAB
 
 [Bio de 60 à 80 mots.]
 
-**Modules :** [à compléter]
+**Interventions :** lundi (fondements), mercredi (nouvelles sources, populations synthétiques), jeudi (prospective, microsimulation)
 :::
 
 ::: {.g-col-12 .g-col-md-6 .fiche}
-![](images/formateur-2.jpg){.photo}
+![](images/onadja.jpg){.photo}
 
-### [Nom du formateur 2]
+### [Prénom] Onadja
 
 [Fonction, institution]
 
 [Bio de 60 à 80 mots.]
 
-**Modules :** [à compléter]
+**Interventions :** lundi (indicateurs démographiques), jeudi (projections)
+:::
+
+::: {.g-col-12 .g-col-md-6 .fiche}
+![](images/fabrice-yameogo.jpg){.photo}
+
+### Boyam Fabrice Yaméogo
+
+[Fonction, institution]
+
+[Bio de 60 à 80 mots.]
+
+**Interventions :** mardi (méthodes quantitatives avancées), mercredi (data science et nouvelles sources)
+:::
+
+::: {.g-col-12 .g-col-md-6 .fiche}
+![](images/aliou.jpg){.photo}
+
+### [Prénom Nom] Aliou
+
+[Fonction, institution]
+
+[Bio de 60 à 80 mots.]
+
+**Interventions :** mardi (inégalités territoriales, cartographie), mercredi (appui sur l'analyse spatiale)
+:::
+
+::: {.g-col-12 .g-col-md-6 .fiche}
+![](images/irifa.jpg){.photo}
+
+### [Prénom Nom] Irifa
+
+[Fonction, institution]
+
+[Bio de 60 à 80 mots.]
+
+**Interventions :** vendredi (notes analytiques, communication aux décideurs)
+:::
+
+::: {.g-col-12 .g-col-md-6 .fiche}
+![](images/alexandra.jpg){.photo}
+
+### Alexandra [Nom]
+
+[Fonction, institution]
+
+[Bio de 60 à 80 mots.]
+
+**Interventions :** vendredi (policy briefs, tableaux de bord)
 :::
 
 :::

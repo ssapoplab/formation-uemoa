@@ -9,44 +9,44 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Atelier de formation en analyse démographique",
+    "title": "Formation régionale en analyse démographique pour la décision publique",
     "section": "",
-    "text": "Du 23 au 28 novembre 2026, la Commission de l’UEMOA réunit à Ouagadougou des cadres des Instituts nationaux de la statistique (INS) de ses huit États membres pour un atelier de six jours consacré à l’analyse démographique.\n[Objectifs de l’atelier, en deux ou trois phrases, à reprendre des TDR.]"
+    "text": "Du 23 au 28 novembre 2026, la Commission de l’UEMOA réunit à Ouagadougou des cadres des Instituts nationaux de la statistique (INS) de ses huit États membres et de la Commission pour une formation de six jours en analyse démographique appliquée à la formulation, à la planification et au suivi des politiques publiques."
   },
   {
     "objectID": "index.html#latelier",
     "href": "index.html#latelier",
-    "title": "Atelier de formation en analyse démographique",
+    "title": "Formation régionale en analyse démographique pour la décision publique",
     "section": "",
-    "text": "Du 23 au 28 novembre 2026, la Commission de l’UEMOA réunit à Ouagadougou des cadres des Instituts nationaux de la statistique (INS) de ses huit États membres pour un atelier de six jours consacré à l’analyse démographique.\n[Objectifs de l’atelier, en deux ou trois phrases, à reprendre des TDR.]"
+    "text": "Du 23 au 28 novembre 2026, la Commission de l’UEMOA réunit à Ouagadougou des cadres des Instituts nationaux de la statistique (INS) de ses huit États membres et de la Commission pour une formation de six jours en analyse démographique appliquée à la formulation, à la planification et au suivi des politiques publiques."
   },
   {
     "objectID": "index.html#public",
     "href": "index.html#public",
-    "title": "Atelier de formation en analyse démographique",
+    "title": "Formation régionale en analyse démographique pour la décision publique",
     "section": "Public",
-    "text": "Public\nEnviron 30 participants :\n\n24 cadres des INS, à raison de 3 par État membre (Bénin, Burkina Faso, Côte d’Ivoire, Guinée-Bissau, Mali, Niger, Sénégal, Togo) ;\nenviron 6 cadres de la Commission de l’UEMOA."
+    "text": "Public\nEnviron 30 participants :\n\n24 cadres des INS, à raison de 3 par État membre (Bénin, Burkina Faso, Côte d’Ivoire, Guinée-Bissau, Mali, Niger, Sénégal, Togo) ;\n6 cadres de la Commission de l’UEMOA."
   },
   {
     "objectID": "index.html#format",
     "href": "index.html#format",
-    "title": "Atelier de formation en analyse démographique",
+    "title": "Formation régionale en analyse démographique pour la décision publique",
     "section": "Format",
-    "text": "Format\nChaque journée alterne exposés le matin et travaux pratiques l’après-midi, sur des données des États membres. Tous les supports (diapositives, code, données d’exercice) sont accessibles sur la page Programme & matériel."
+    "text": "Format\nChaque journée suit le même déroulé : retour sur l’exercice de la veille, cours magistral le matin, labo sur données réelles en début d’après-midi, puis travail en équipe pays. Chaque équipe construit au fil de la semaine une note d’analyse sur son pays, qu’elle présente le samedi.\nLe fil conducteur de la formation est apprendre à apprendre : chaque outil et chaque ressource sont choisis pour que les participants puissent continuer seuls après l’atelier. Tous les supports (diapositives, scripts R, données d’exercice) sont accessibles sur la page Programme & matériel."
   },
   {
     "objectID": "index.html#lieu",
     "href": "index.html#lieu",
-    "title": "Atelier de formation en analyse démographique",
+    "title": "Formation régionale en analyse démographique pour la décision publique",
     "section": "Lieu",
-    "text": "Lieu\nHôtel [nom à confirmer par la Commission], Ouagadougou. Les participants non résidents au Burkina Faso y sont hébergés ; l’atelier se tient dans sa salle de réunion."
+    "text": "Lieu\nHôtel [nom à confirmer par la Commission], Ouagadougou. Les participants qui ne résident pas au Burkina Faso y sont hébergés ; la formation se tient dans sa salle de réunion."
   },
   {
     "objectID": "index.html#organisation",
     "href": "index.html#organisation",
-    "title": "Atelier de formation en analyse démographique",
+    "title": "Formation régionale en analyse démographique pour la décision publique",
     "section": "Organisation",
-    "text": "Organisation\nCommission de l’UEMOA, en collaboration avec [IBF / UQAM — logos et mentions à confirmer]."
+    "text": "Organisation\nCommission de l’UEMOA, avec l’appui du Programme d’appui au renforcement des capacités institutionnelles de la Commission de l’UEMOA et de la BOAD (PARCI III)."
   },
   {
     "objectID": "formateurs.html",
@@ -103,5 +103,12 @@
     "title": "Programme & matériel",
     "section": "Samedi 28 novembre — Jour 6",
     "text": "Samedi 28 novembre — Jour 6\n\n\n\nHoraire\nSéance\nFormateur\nMatériel\n\n\n\n\n[ ]\n[Restitution des travaux de groupe]\n[Nom]\n\n\n\n[ ]\nClôture\nCommission de l’UEMOA"
+  },
+  {
+    "objectID": "index.html#objectifs",
+    "href": "index.html#objectifs",
+    "title": "Formation régionale en analyse démographique pour la décision publique",
+    "section": "Objectifs",
+    "text": "Objectifs\nÀ l’issue de la formation, les participants seront capables de :\n\nmaîtriser les concepts fondamentaux et les indicateurs clés de l’analyse démographique (fécondité, mortalité, migration, urbanisation) ;\nanalyser les dynamiques démographiques et leurs implications socio-économiques ;\nidentifier et analyser les inégalités démographiques territoriales et sociales ;\nutiliser des méthodes quantitatives avancées pour l’analyse des données démographiques ;\nexplorer l’utilisation de nouvelles sources de données dans l’analyse démographique ;\ndévelopper des scénarios démographiques prospectifs utiles à la planification publique ;\ntraduire les analyses démographiques en outils d’aide à la décision (notes analytiques, tableaux de bord, indicateurs de suivi) ;\ncontribuer à l’harmonisation des pratiques d’analyse démographique au sein de l’espace UEMOA."
   }
 ]

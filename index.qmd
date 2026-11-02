@@ -1,32 +1,43 @@
 ---
-title: "Atelier de formation en analyse démographique"
-subtitle: "Commission de l'UEMOA · Ouagadougou (Burkina Faso) · du lundi 23 au samedi 28 novembre 2026"
+title: "Formation régionale en analyse démographique pour la décision publique"
+subtitle: "Espace UEMOA · Ouagadougou (Burkina Faso) · du lundi 23 au samedi 28 novembre 2026"
 toc: false
 ---
 
-<!-- [Intitulé exact à confirmer avec la Commission] -->
-
 ## L'atelier
 
-Du **23 au 28 novembre 2026**, la Commission de l'UEMOA réunit à Ouagadougou des cadres des Instituts nationaux de la statistique (INS) de ses huit États membres pour un atelier de six jours consacré à l'analyse démographique.
+Du **23 au 28 novembre 2026**, la Commission de l'UEMOA réunit à Ouagadougou des cadres des Instituts nationaux de la statistique (INS) de ses huit États membres et de la Commission pour une formation de six jours en analyse démographique appliquée à la formulation, à la planification et au suivi des politiques publiques.
 
-[Objectifs de l'atelier, en deux ou trois phrases, à reprendre des TDR.]
+## Objectifs
+
+À l'issue de la formation, les participants seront capables de :
+
+1. maîtriser les concepts fondamentaux et les indicateurs clés de l'analyse démographique (fécondité, mortalité, migration, urbanisation) ;
+2. analyser les dynamiques démographiques et leurs implications socio-économiques ;
+3. identifier et analyser les inégalités démographiques territoriales et sociales ;
+4. utiliser des méthodes quantitatives avancées pour l'analyse des données démographiques ;
+5. explorer l'utilisation de nouvelles sources de données dans l'analyse démographique ;
+6. développer des scénarios démographiques prospectifs utiles à la planification publique ;
+7. traduire les analyses démographiques en outils d'aide à la décision (notes analytiques, tableaux de bord, indicateurs de suivi) ;
+8. contribuer à l'harmonisation des pratiques d'analyse démographique au sein de l'espace UEMOA.
 
 ## Public
 
 Environ 30 participants :
 
 - 24 cadres des INS, à raison de 3 par État membre (Bénin, Burkina Faso, Côte d'Ivoire, Guinée-Bissau, Mali, Niger, Sénégal, Togo) ;
-- environ 6 cadres de la Commission de l'UEMOA.
+- 6 cadres de la Commission de l'UEMOA.
 
 ## Format
 
-Chaque journée alterne exposés le matin et travaux pratiques l'après-midi, sur des données des États membres. Tous les supports (diapositives, code, données d'exercice) sont accessibles sur la page [Programme & matériel](programme.qmd).
+Chaque journée suit le même déroulé : retour sur l'exercice de la veille, cours magistral le matin, labo sur données réelles en début d'après-midi, puis travail en équipe pays. Chaque équipe construit au fil de la semaine une **note d'analyse sur son pays**, qu'elle présente le samedi.
+
+Le fil conducteur de la formation est **apprendre à apprendre** : chaque outil et chaque ressource sont choisis pour que les participants puissent continuer seuls après l'atelier. Tous les supports (diapositives, scripts R, données d'exercice) sont accessibles sur la page [Programme & matériel](programme.qmd).
 
 ## Lieu
 
-Hôtel [nom à confirmer par la Commission], Ouagadougou. Les participants non résidents au Burkina Faso y sont hébergés ; l'atelier se tient dans sa salle de réunion.
+Hôtel [nom à confirmer par la Commission], Ouagadougou. Les participants qui ne résident pas au Burkina Faso y sont hébergés ; la formation se tient dans sa salle de réunion.
 
 ## Organisation
 
-Commission de l'UEMOA, en collaboration avec [IBF / UQAM — logos et mentions à confirmer].
+Commission de l'UEMOA, avec l'appui du Programme d'appui au renforcement des capacités institutionnelles de la Commission de l'UEMOA et de la BOAD (PARCI III).

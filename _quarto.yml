@@ -3,9 +3,9 @@ project:
   output-dir: docs          # GitHub Pages publie le dossier docs/ de la branche main
 
 website:
-  title: "Atelier UEMOA — Analyse démographique"   # [intitulé exact à confirmer]
+  title: "Formation UEMOA — Analyse démographique pour la décision publique"
   site-url: https://ssapoplab.github.io/formation-uemoa
-  repo-url: https://ssapoplab.github.io/formation-uemoa
+  repo-url: https://github.com/ssapoplab/formation-uemoa
   page-navigation: true
   navbar:
     left:
