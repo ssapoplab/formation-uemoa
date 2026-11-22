@@ -1,0 +1,130 @@
+/*-- scss:defaults --*/
+
+// Base commune aux gabarits SSAPOPLAB.
+// Ne s'utilise jamais seule : elle se charge avant un thème de contexte.
+//
+//   theme: [default, _ssapoplab-base.scss, theme-ssapoplab-cours.scss]
+//
+// Les variables définies ici avec !default peuvent être redéfinies par le
+// thème de contexte, qui est chargé après.
+
+// Famille de rouges reprise du colortheme beamer « beaver »
+$ssap-rouge-fonce:  #7f1d1d !default;
+$ssap-rouge:        #a51c24 !default;
+$ssap-rouge-clair:  #c0392b !default;
+$ssap-gris:         #5b6670 !default;
+
+$presentation-heading-font-weight: 700 !default;
+
+/*-- scss:rules --*/
+
+// ---------------------------------------------------------------------------
+// Diapositive de titre : auteur, puis les deux affiliations
+// ---------------------------------------------------------------------------
+
+.reveal .title-slide .subtitle {
+  font-weight: 400;
+  opacity: 0.85;
+  margin-bottom: 1.2em;
+}
+
+.reveal .title-slide .author,
+.reveal .title-slide .quarto-title-author-name {
+  font-size: 0.78em;
+  margin-bottom: 0.15em;
+}
+
+// Le champ `institute` porte les deux affiliations, séparées par « · ».
+.reveal .title-slide .institute,
+.reveal .title-slide .quarto-title-affiliation {
+  font-size: 0.6em;
+  line-height: 1.45;
+  opacity: 0.85;
+}
+
+.reveal .title-slide .date,
+.reveal .title-slide .quarto-title-date {
+  font-size: 0.55em;
+  opacity: 0.7;
+  margin-top: 0.8em;
+}
+
+// ---------------------------------------------------------------------------
+// Confort de lecture
+// ---------------------------------------------------------------------------
+
+.reveal p,
+.reveal li {
+  line-height: 1.45;
+}
+
+.reveal ul,
+.reveal ol {
+  margin-bottom: 0.4em;
+}
+
+.reveal li {
+  margin-bottom: 0.3em;
+}
+
+// Les diapositives denses (listes longues) se déclarent avec {.smaller}
+.reveal .smaller {
+  font-size: 0.82em;
+}
+
+// ---------------------------------------------------------------------------
+// Images : jamais plus hautes que la diapositive
+// ---------------------------------------------------------------------------
+
+.reveal .slide img {
+  max-height: 62vh;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reveal figure figcaption {
+  font-size: 0.5em;
+  opacity: 0.7;
+}
+
+// ---------------------------------------------------------------------------
+// Tableaux et code
+// ---------------------------------------------------------------------------
+
+.reveal table {
+  font-size: 0.75em;
+  border-collapse: collapse;
+}
+
+.reveal table th,
+.reveal table td {
+  padding: 0.3em 0.6em;
+}
+
+.reveal pre code {
+  max-height: 58vh;
+  font-size: 0.78em;
+  line-height: 1.35;
+}
+
+.reveal code {
+  border-radius: 4px;
+  padding: 0 0.2em;
+}
+
+// ---------------------------------------------------------------------------
+// Pied de page et numérotation
+// ---------------------------------------------------------------------------
+
+.reveal .footer {
+  font-size: 0.42em;
+  opacity: 0.6;
+}
+
+.reveal .slide-number {
+  font-size: 0.5em;
+  opacity: 0.6;
+}
