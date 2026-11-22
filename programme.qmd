@@ -2,113 +2,182 @@
 title: "Programme & matériel"
 ---
 
-Chaque journée a son syllabus et son dossier de matériel (`materiel/jour-N/` dans le dépôt). Les liens deviennent actifs au fur et à mesure que les formateurs déposent leurs supports.
+Chaque journée a son dossier de matériel (`materiel/jour-N/` dans le dépôt) : diapositives du cours, labo, consignes du travail en équipe et de l'exercice, et fichiers à télécharger. Les liens s'ajoutent au fur et à mesure que les formateurs déposent leurs supports.
+
+::: {.callout-important}
+## Avant de commencer
+
+- Installer **R**, **RStudio** et le paquet `tidyverse` (Excel suffit pour les labos qui ont une version tableur).
+- Créer un compte sur [dhsprogram.com](https://dhsprogram.com) et demander l'accès aux EDS de son pays : les microdonnées EDS ne sont jamais distribuées par la formation, chaque participant les télécharge avec son propre compte.
+- Aucune microdonnée nominative n'est publiée sur ce site.
+:::
 
 ## Journée type
 
 Du lundi au vendredi, chaque journée suit le même déroulé.
 
 | Horaire | Bloc | Contenu |
-|---|---|---|
-| 8 h 30 – 9 h | Retour sur l'exercice de la veille | 2 ou 3 équipes présentent leur résultat, correction collective |
-| 9 h – 12 h 30 | Cours magistral | Concepts et méthodes du jour, illustrés par des cas UEMOA ; pause à 10 h 30 |
-| 14 h – 15 h 30 | Labo | Démonstration pas à pas sur données réelles ; les participants reproduisent en même temps |
-| 15 h 45 – 17 h 15 | Travail en équipe pays | Application aux données de son pays, pour la note d'analyse pays |
-| 17 h 15 – 17 h 30 | Consignes | Exercice pour le lendemain (une heure au plus) |
+|:--|:--|:--|
+| 8 h 30 – 9 h | Retour sur l'exercice de la veille | Deux ou trois équipes présentent leur travail, puis correction collective |
+| 9 h – 12 h 30 | Cours magistral | Concepts et méthodes du jour, illustrés par des cas de l'UEMOA (pause de 10 h 45 à 11 h) |
+| 14 h – 15 h 30 | Labo | Démonstration pas à pas sur des données réelles, que les participants reproduisent sur leur poste |
+| 15 h 45 – 17 h 45 | Travail en équipe pays | Application aux données de son pays, pour la note d'analyse pays |
+| 17 h 45 – 18 h | Consignes | Exercice pour le lendemain (une heure au plus) |
 
-Le lundi, le premier créneau est consacré à l'ouverture officielle et à la présentation des participants. Le samedi suit un format propre.
+: {tbl-colwidths="[16,22,62]"}
 
-## Lundi 23 novembre — Fondements
+Le lundi, le premier créneau est consacré à l'ouverture officielle, et l'après-midi comprend un séminaire en ligne avec Statistique Canada. Le samedi est réservé aux restitutions et à la feuille de route régionale.
 
-*Objectifs 1 et 2 · Onadja, Vissého Adjiwanou*
+**Les équipes pays.** Chaque équipe réunit deux cadres d'un même pays et un cadre d'un autre pays, qui apporte un regard croisé. La note d'analyse est celle du pays des deux membres majoritaires. Les cadres de la Commission sont répartis entre les équipes.
 
-| Bloc | Contenu | Formateur |
-|---|---|---|
-| Cours | Sources de données démographiques ; fécondité, mortalité, migration, urbanisation ; transition démographique et dividende ; implications pour l'éducation, la santé et l'emploi | Onadja, Vissého Adjiwanou |
-| Labo | Calcul des indicateurs de base à partir d'un recensement ou d'une EDS (ISF, quotients de mortalité, espérance de vie, pyramide des âges), dans R et dans Excel | Onadja |
-| Équipe pays | Profil démographique du pays en cinq indicateurs clés | Tous |
-| Exercice | Comparer son pays à la moyenne UEMOA sur trois indicateurs et rédiger trois lignes d'interprétation | Onadja |
+## Lundi 23 novembre — Mesurer une population pour décider
 
-**Matériel :** [Syllabus](materiel/jour-1/syllabus.html) · Diapositives · Script du labo · Données
+*Objectifs 1 et 2 · Vissého Adjiwanou, Yentéma Onadja, Alexandra Tapsoba*
 
-## Mardi 24 novembre — Inégalités et méthodes avancées
+| Horaire | Bloc | Contenu |
+|:--|:--|:--|
+| 8 h 30 – 9 h | Ouverture officielle | Mot de la Commission, présentation de l'équipe de formation et des participants |
+| 9 h – 12 h 30 | Cours | Que veut dire « mesurer une population » ? ; les phénomènes démographiques dans l'UEMOA et leurs théories explicatives ; la transition démographique et ses conséquences |
+| 14 h – 15 h 30 | Labo | Des indicateurs aux explications : calculer, puis interpréter et questionner les indicateurs de son pays ; standardisation et décomposition |
+| 15 h 45 – 16 h 25 | Équipe pays (1re partie) | Choix des cinq indicateurs du profil démographique et de leur source nationale |
+| 16 h 30 – 17 h 20 | Séminaire en ligne | Laurent Martel (Statistique Canada) : « Défis actuels de Statistique Canada dans le domaine des statistiques de population » |
+| 17 h 20 – 17 h 50 | Équipe pays (2e partie) | Commentaire des cinq indicateurs, à la lumière du séminaire |
+| 17 h 50 – 18 h | Consignes | Exercice : comparer son pays à l'ensemble de l'UEMOA |
 
-*Objectifs 3 et 4 · Aliou, Fabrice Yaméogo*
+: {tbl-colwidths="[16,22,62]"}
 
-| Bloc | Contenu | Formateur |
-|---|---|---|
-| Cours | Mesure des inégalités démographiques selon le milieu, la région, le quintile de richesse et le sexe ; standardisation, décomposition des écarts, régression et modèles multiniveaux | Aliou, Fabrice Yaméogo |
-| Labo | Cartographie des indicateurs par région, puis modèle expliquant les écarts régionaux | Aliou, Fabrice Yaméogo |
-| Équipe pays | Carte et analyse des inégalités régionales sur un indicateur choisi | Tous |
-| Exercice | Identifier les deux régions les plus en retard et proposer une explication appuyée sur les données | Aliou |
+::: {.callout-note appearance="simple"}
+## Matériel du lundi
 
-**Matériel :** [Syllabus](materiel/jour-2/syllabus.html) · Diapositives · Script du labo · Données
+- **Cours** : [diapositives](materiel/jour-1/cours-fondements.html)
+- **Labo** : [le labo en ligne](materiel/jour-1/labo/jour1-labo-indicateurs.html) · [télécharger le labo](materiel/jour-1/jour1-labo.zip) (script R Markdown, classeur Excel et données)
+- **Travail en équipe et exercice** : [consignes et questions](materiel/jour-1/exercices-indicateurs.html)
+- **Données** : tableaux par âge des huit pays en 2023, reconstitués à partir des *World Population Prospects 2024* (données agrégées et publiques), inclus dans le labo
+- **Séminaire** : lien de connexion bit.ly/Seminaires26-27
+:::
 
-## Mercredi 25 novembre — Nouvelles sources et data science
+## Mardi 24 novembre — Inégalités territoriales et sociales
 
-*Objectif 5 · Fabrice Yaméogo, Vissého Adjiwanou (Aliou en appui sur le spatial)*
+*Objectifs 3 et 4 · Aliou Gadiaga*
 
-| Bloc | Contenu | Formateur |
-|---|---|---|
-| Ouverture | L'IA dépend de la mesure qu'elle prétend remplacer : les recensements et les enquêtes des INS restent la référence | Vissého Adjiwanou |
-| Cours | Données administratives, géospatiales et numériques ; grilles de population et estimation sur petits domaines ; machine learning et inférence sur données prédites ; populations synthétiques ; limites et éthique | Fabrice Yaméogo, Vissého Adjiwanou |
-| Labo 1 | Croiser une enquête avec les grilles WorldPop pour estimer un indicateur à un niveau fin | Fabrice Yaméogo, Aliou |
-| Labo 2 | Corriger une estimation fondée sur des prédictions avec un petit échantillon validé ; générer une population synthétique du pays | Vissého Adjiwanou |
-| Équipe pays | Inventaire des sources disponibles dans son INS ; génération de la population synthétique utilisée le jeudi | Tous |
-| Exercice | Une demi-page sur ce qu'une nouvelle source apporte à sa note, et sur ses limites | Fabrice Yaméogo |
+| Horaire | Bloc | Contenu |
+|:--|:--|:--|
+| 9 h – 12 h 30 | Cours | Mesure et cartographie des inégalités : indicateur régional et son intervalle de confiance, écart, rapport, indice de concentration ; cartographie dans QGIS |
+| 14 h – 15 h 30 | Labo | Carte régionale d'un indicateur dans QGIS (EDS Burkina Faso 2021) |
+| 15 h 45 – 17 h 45 | Équipe pays | Cartographier un indicateur par région dans son pays et en analyser les écarts |
+| 17 h 45 – 18 h | Consignes | Exercice : les deux régions les plus en retard, et une explication appuyée sur les données |
 
-**Matériel :** [Syllabus](materiel/jour-3/syllabus.html) · Diapositives · Script du labo · Données
+: {tbl-colwidths="[16,22,62]"}
 
-## Jeudi 26 novembre — Prospective et scénarios
+::: {.callout-note appearance="simple"}
+## Matériel du mardi
 
-*Objectif 6 · Vissého Adjiwanou, Onadja*
+À venir. Logiciel : QGIS. Données : EDS Burkina Faso 2021 (fichier des enfants), à télécharger avec son compte DHS.
+:::
 
-| Bloc | Contenu | Formateur |
-|---|---|---|
-| Cours | Projections par composantes ; hypothèses de fécondité, de mortalité et de migration ; scénarios et besoins sectoriels ; de la projection agrégée à la microsimulation | Vissého Adjiwanou, Onadja |
-| Labo 1 | Projection de la population du pays à 2050 sous deux ou trois scénarios, et traduction en besoins pour un secteur | Onadja |
-| Labo 2 | Microsimulation à partir de la population synthétique du mercredi, pour comparer l'évolution de deux groupes | Vissého Adjiwanou |
-| Équipe pays | Choix du scénario et du secteur qui structureront la note | Tous |
-| Exercice | Chiffrer l'écart de besoins entre deux scénarios et l'exprimer en une phrase pour un décideur | Vissého Adjiwanou |
+## Mercredi 25 novembre — Nouvelles sources de données et data science
 
-**Matériel :** [Syllabus](materiel/jour-4/syllabus.html) · Diapositives · Script du labo · Données
+*Objectif 5 · Boyam Fabrice Yaméogo, Vissého Adjiwanou*
 
-## Vendredi 27 novembre — Des analyses aux outils de décision
+| Horaire | Bloc | Contenu |
+|:--|:--|:--|
+| 9 h – 10 h 45 | Cours 1 | Populations synthétiques (B. F. Yaméogo) |
+| 11 h – 12 h 30 | Cours 2 | De la causalité à la modélisation : régression, inférence causale et nouvelles sources (V. Adjiwanou) |
+| 14 h – 15 h 30 | Labo | Générer et valider la population synthétique à deux niveaux d'une commune (B. F. Yaméogo) |
+| 15 h 45 – 17 h 45 | Équipe pays | Proposition de population synthétique pour une zone infrarégionale de son pays |
+| 17 h 45 – 18 h | Consignes | Exercice : ce que la population synthétique apporte à la note pays, et ses limites |
 
-*Objectif 7 · Irifa, Alexandra*
+: {tbl-colwidths="[16,22,62]"}
 
-| Bloc | Contenu | Formateur |
-|---|---|---|
-| Cours | Note analytique et policy brief ; data storytelling ; tableau de bord et indicateurs de suivi | Irifa, Alexandra |
-| Étude de cas | L'outil d'IA d'aide à la rédaction des rapports DHS : ce que l'IA accélère, ce qui reste sous la responsabilité de l'analyste | Irifa, Alexandra |
-| Labo 1 | Autodiagnostic du site web de son INS avec une grille commune, puis comparaison avec un site de référence | Irifa, Alexandra |
-| Labo 2 | Construction d'un tableau de bord simple à partir d'un modèle | Irifa, Alexandra |
-| Équipe pays | Rédaction de la note d'analyse pays (2 pages) et préparation de la présentation | Tous |
-| Exercice | Finaliser la note et les diapositives de restitution | Irifa, Alexandra |
+::: {.callout-note appearance="simple"}
+## Matériel du mercredi
 
-**Matériel :** [Syllabus](materiel/jour-5/syllabus.html) · Diapositives · Gabarit de note pays · Grille d'autodiagnostic
+- **Cours 2 (causalité et modélisation)** : [diapositives](materiel/jour-3/cours-causalite-modelisation.html)
+- **Labo causalité (complémentaire, à faire en autonomie)** : [résultats commentés](materiel/jour-3/labo-causalite/jour3-labo-causalite-resultats.html) · [télécharger le labo](materiel/jour-3/jour3-labo.zip) (script R Markdown et données des parties A et B). La partie C utilise l'EDS Ghana 2003 (`GHIR4BFL.DTA`), à télécharger avec son compte DHS et à placer dans `donnees/`.
+- **Cours 1 et labo populations synthétiques** : à venir.
+:::
+
+## Jeudi 26 novembre — Démographie prospective et scénarios
+
+*Objectif 6 · Vissého Adjiwanou, Yentéma Onadja*
+
+| Horaire | Bloc | Contenu |
+|:--|:--|:--|
+| 9 h – 12 h 30 | Cours | Projeter la population pour planifier : méthode des composantes, hypothèses, incertitude, besoins |
+| 14 h – 15 h 30 | Labo | Projeter la population de son pays à 2050, en R puis en Excel |
+| 15 h 45 – 17 h 45 | Équipe pays | Projeter son pays sous quatre scénarios, choisir un secteur, chiffrer ses besoins |
+| 17 h 45 – 18 h | Consignes | Exercice : scénario national et part de l'écart de besoins due à la démographie |
+
+: {tbl-colwidths="[16,22,62]"}
+
+::: {.callout-note appearance="simple"}
+## Matériel du jeudi
+
+- [Syllabus](materiel/jour-4/syllabus.html)
+- **Cours** : [diapositives](materiel/jour-4/cours-projections.html)
+- **Labo** : [projeter la population de son pays à 2050](materiel/jour-4/labo-projections.html) (dossier `projet-projection/` sur la clé USB)
+- **Travail en équipe et exercice** : [scénario à 2050 et besoins pour un secteur](materiel/jour-4/exercices-projections.html)
+- **Données** : [description des fichiers](materiel/jour-4/donnees-projections.html)
+:::
+
+## Vendredi 27 novembre — Traduire les analyses en outils pour les décideurs
+
+*Objectif 7 · Irifaar Somé, Alexandra Tapsoba, avec toute l'équipe*
+
+| Horaire | Bloc | Contenu |
+|:--|:--|:--|
+| 9 h – 12 h 30 | Cours | Du chiffre brut à la décision ; publics cibles ; rédiger pour convaincre ; visualiser et piloter |
+| 14 h – 15 h 30 | Labo | Concevoir un package décisionnel : policy brief, message citoyen et maquette de tableau de bord |
+| 15 h 45 – 17 h 45 | Équipe pays | Package décisionnel de son pays |
+| 17 h 45 – 18 h | Consignes | Finaliser le package pour la restitution du samedi |
+
+: {tbl-colwidths="[16,22,62]"}
+
+::: {.callout-note appearance="simple"}
+## Matériel du vendredi
+
+À venir : diapositives, canevas de policy brief et de tableau de bord.
+:::
 
 ## Samedi 28 novembre — Restitutions et feuille de route régionale
 
 *Objectif 8 · Toute l'équipe*
 
 | Horaire | Contenu |
-|---|---|
-| 8 h 30 – 11 h | Présentation des huit notes pays (10 minutes, puis 5 minutes de questions) |
-| 11 h 15 – 12 h 30 | Atelier collectif sur l'harmonisation des pratiques d'analyse et de diffusion dans l'espace UEMOA |
+|:--|:--|
+| 8 h 30 – 11 h | Présentation des notes pays et des packages décisionnels (10 minutes, puis 5 minutes de questions) |
+| 11 h 15 – 12 h 30 | Atelier collectif sur l'harmonisation des pratiques d'analyse et de diffusion dans l'espace UEMOA, à partir des notes pays et des recommandations des débats du soir |
 | 12 h 30 – 13 h | Grandes lignes de la feuille de route régionale, évaluation de la formation et clôture |
 
-**Matériel :** Notes pays · Synthèse de l'autodiagnostic des sites · Projet de feuille de route
+: {tbl-colwidths="[28,72]"}
+
+## Les activités du soir
+
+Une activité par soir, d'une heure au plus.
+
+| Soir | Activité |
+|:--|:--|
+| Dimanche 22, 16 h – 18 h 30 | Séance zéro de R : installation, projet RStudio, lecture d'un CSV (à confirmer selon l'arrivée des participants) |
+| Lundi 23, 18 h 15 – 19 h 15 | Atelier R 1 : manipuler des données avec le tidyverse ; reprendre le labo du jour |
+| Mardi 24, 18 h 15 – 19 h 15 | Débat 1 : « Après les EDS : état civil, recensements et données administratives » |
+| Mercredi 25, 18 h 15 – 19 h 15 | Atelier R 2 : joindre des tableaux, écrire une fonction, ggplot2 ; préparation du labo de projection |
+| Jeudi 26, 18 h 15 – 19 h 15 | Débat 2 : « Les INS à l'ère de l'IA générative : remplacés, augmentés ou contournés ? » |
+
+: {tbl-colwidths="[28,72]"}
+
+Chaque débat se conclut par trois recommandations, reprises le samedi dans la feuille de route régionale.
 
 ## La note d'analyse pays
 
-Les 24 cadres des INS forment 8 équipes pays ; les 6 cadres de la Commission sont répartis entre elles. Chaque jour ajoute une section à la note.
+Chaque jour, le travail en équipe ajoute une section à la note d'analyse de son pays.
 
 | Jour | Section ajoutée |
-|---|---|
-| Lundi | Profil démographique : cinq indicateurs clés |
+|:--|:--|
+| Lundi | Profil démographique : cinq indicateurs commentés |
 | Mardi | Inégalités régionales : une carte et son analyse |
-| Mercredi | Apport d'une nouvelle source de données |
+| Mercredi | Apport d'une nouvelle source : la population synthétique pour des indicateurs infrarégionaux |
 | Jeudi | Scénario à 2050 et besoins pour un secteur |
-| Vendredi | Rédaction finale (2 pages) et messages pour les décideurs |
-| Samedi | Présentation et contribution à la feuille de route |
+| Vendredi | Policy brief, message grand public et maquette de tableau de bord |
+| Samedi | Présentation et contribution à la feuille de route régionale |
+
+: {tbl-colwidths="[28,72]"}

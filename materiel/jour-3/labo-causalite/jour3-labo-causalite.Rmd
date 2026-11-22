@@ -1,0 +1,484 @@
+---
+title: "Labo — De la causalité à la modélisation"
+subtitle: "Formation régionale UEMOA · Ouagadougou · Mercredi 25 novembre 2026"
+author: "Vissého Adjiwanou (UQAM)"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    number_sections: true
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+# Ce que vous allez faire
+
+Ce labo prolonge le cours du matin. Il pose toujours la même question : **le
+traitement a-t-il un effet, et de combien ?** Il y répond avec trois types de
+données, de la plus favorable à la plus courante dans nos instituts.
+
+| Partie | Données | Ce que l'on apprend | Durée |
+|:--|:--|:--|:--|
+| A. L'expérience | CV fictifs envoyés à des employeurs (Bertrand et Mullainathan, 2004) | Avec le hasard, une simple différence de moyennes suffit | 15 min |
+| B. Une expérience naturelle | Salaire minimum au New Jersey et en Pennsylvanie (Card et Krueger, 1994) | Comparer dans le temps et entre groupes : la double différence | 15 min |
+| C. Une vraie EDS | CPN et accouchement assisté, Ghana rural 2003 (Adjiwanou et LeGrand, 2013) | Confusion, régression logistique, effet marginal, mauvais contrôle, effets fixes, variable instrumentale | 40 min |
+| D. Pour aller plus loin | Les mêmes données | Prédire n'est pas expliquer | 10 min |
+
+**La partie C reprend les données de l'article d'Adjiwanou et LeGrand (2013)** :
+l'EDS du Ghana de 2003, femmes rurales ayant eu une naissance dans les cinq
+années précédant l'enquête. La question : les consultations prénatales (CPN)
+augmentent-elles le recours à un accouchement assisté par du personnel
+qualifié ? Avec de vraies données, **personne ne connaît le vrai effet**.
+Nous verrons comment l'estimation bouge d'une méthode à l'autre, et ce que
+chaque méthode suppose.
+
+**Les microdonnées EDS ne sont pas fournies avec ce labo.** Chaque participant
+télécharge lui-même le fichier « Individual Recode » au format Stata
+(`GHIR4BFL.DTA`) depuis son compte sur dhsprogram.com et le place dans le
+dossier `donnees/`. Les conditions d'utilisation des EDS interdisent de
+redistribuer les fichiers.
+
+# Préparation
+
+```{r paquets}
+library(tidyverse)
+library(broom)
+library(haven)    # lire les fichiers Stata des EDS
+library(fixest)   # variables instrumentales
+```
+
+```{r donnees}
+resume  <- read_csv("donnees/resume.csv")
+minwage <- read_csv("donnees/minwage.csv")
+```
+
+La fonction ci-dessous prépare le fichier d'analyse à partir du fichier IR
+brut. Elle utilise les noms de variables standard des EDS ; elle peut donc
+servir pour l'EDS de votre pays, en vérifiant les catégories de `m3a` à `m3n`
+(personnel qualifié) qui changent d'un pays à l'autre.
+
+```{r preparer}
+preparer_eds <- function(fichier) {
+  read_dta(fichier,
+           col_select = c(v001, v005, v012, v024, v025, v106, v190, v201,
+                          v467d, v158, m14_1, m13_1, m3a_1, m3b_1, m3c_1, m15_1)) %>%
+    # femmes rurales, dernière naissance des 5 dernières années
+    filter(v025 == 2, !is.na(m14_1), m14_1 < 98) %>%
+    transmute(
+      grappe       = v001,
+      region       = as_factor(v024),
+      # résultat : médecin, infirmière/sage-femme ou sage-femme auxiliaire
+      acc_assiste  = as.integer(m3a_1 == 1 | m3b_1 == 1 | m3c_1 == 1),
+      # traitement : au moins 4 CPN
+      cpn4         = as.integer(m14_1 >= 4),
+      # première CPN au cours des 3 premiers mois (0 si aucune CPN)
+      cpn_precoce  = case_when(m14_1 == 0 ~ 0L, m13_1 <= 3 ~ 1L, m13_1 <= 10 ~ 0L),
+      # lieu d'accouchement : établissement de santé (codes 20 à 96)
+      centre_sante = as.integer(m15_1 >= 20 & m15_1 < 97),
+      age          = v012,
+      instruction  = factor(pmin(as.numeric(v106), 2), 0:2,
+                            c("aucune", "primaire", "secondaire+")),
+      quintile     = as_factor(v190),
+      parite       = cut(v201, c(0, 1, 3, 5, Inf), c("1", "2-3", "4-5", "6+")),
+      distance_pb  = as.integer(v467d == 1),   # la distance est un « gros problème »
+      radio        = as.integer(v158 >= 1 & v158 < 9)
+    ) %>%
+    drop_na()
+}
+
+eds <- preparer_eds("donnees/GHIR4BFL.DTA")
+nrow(eds)
+```
+
+# Partie A — L'expérience : discrimination à l'embauche
+
+Des chercheurs ont répondu à des offres d'emploi à Boston et à Chicago avec
+des CV fictifs. Seul le **prénom** changeait : un prénom à consonance
+afro-américaine (Lakisha, Jamal) ou blanche (Emily, Greg). Le prénom a été
+attribué **au hasard** à chaque CV. La variable `call` vaut 1 si l'employeur a
+rappelé.
+
+```{r resume-apercu}
+resume %>% count(race, sex)
+```
+
+## L'effet causal est une différence de moyennes
+
+```{r resume-effet}
+taux_rappel <- resume %>%
+  group_by(race) %>%
+  summarise(taux_rappel = mean(call))
+taux_rappel
+
+taux_rappel %>%
+  pivot_wider(names_from = race, values_from = taux_rappel) %>%
+  mutate(effet = black - white)
+```
+
+Le prénom afro-américain réduit le taux de rappel d'environ 3 points de
+pourcentage (6,4 % contre 9,7 %).
+
+## Les deux groupes étaient-ils comparables ?
+
+Le hasard rend les groupes semblables **en moyenne**, sur ce qu'on observe
+comme sur ce qu'on n'observe pas. On le vérifie sur les variables observées :
+c'est la **vérification de l'équilibre**.
+
+```{r resume-equilibre}
+resume %>%
+  group_by(race) %>%
+  summarise(part_femmes = mean(sex == "female"))
+```
+
+## La même chose avec une régression
+
+```{r resume-regression}
+lm(call ~ race, data = resume) %>% tidy()
+```
+
+Le coefficient de `racewhite` est exactement la différence de moyennes. **Dans
+une expérience, la régression ne fait rien de plus qu'une soustraction.**
+
+> **À vous (1).** Ajoutez `sex` au modèle. Le coefficient de `race` change-t-il
+> beaucoup ? Pourquoi est-ce attendu dans une expérience ?
+
+# Partie B — Une expérience naturelle : le salaire minimum
+
+En 1992, le New Jersey a relevé son salaire minimum de 4,25 à 5,05 dollars ;
+la Pennsylvanie voisine ne l'a pas fait. Card et Krueger ont interrogé des
+restaurants de restauration rapide des deux États avant et après la hausse.
+La théorie économique classique prédit une baisse de l'emploi. Nous mesurons
+la part des emplois à temps plein.
+
+```{r minwage-prep}
+minwage <- minwage %>%
+  mutate(etat       = if_else(location == "PA", "Pennsylvanie", "New Jersey"),
+         part_avant = fullBefore / (fullBefore + partBefore),
+         part_apres = fullAfter  / (fullAfter  + partAfter))
+
+resultats <- minwage %>%
+  group_by(etat) %>%
+  summarise(avant = mean(part_avant, na.rm = TRUE),
+            apres = mean(part_apres, na.rm = TRUE))
+resultats
+```
+
+## Trois façons de construire le contrefactuel
+
+```{r minwage-trois}
+nj <- resultats %>% filter(etat == "New Jersey")
+pa <- resultats %>% filter(etat == "Pennsylvanie")
+
+tibble(
+  methode = c("Comparaison transversale (après)",
+              "Avant-après (New Jersey seul)",
+              "Double différence"),
+  estimation = c(nj$apres - pa$apres,
+                 nj$apres - nj$avant,
+                 (nj$apres - nj$avant) - (pa$apres - pa$avant)),
+  hypothese = c("Les deux États sont comparables",
+                "Rien d'autre n'a changé dans le temps",
+                "Sans la hausse, les deux États auraient évolué en parallèle")
+)
+```
+
+## La double différence est une régression avec interaction
+
+```{r minwage-did-regression}
+minwage_long <- minwage %>%
+  select(etat, part_avant, part_apres) %>%
+  pivot_longer(c(part_avant, part_apres), names_to = "periode", values_to = "part_temps_plein") %>%
+  mutate(nj    = as.integer(etat == "New Jersey"),
+         apres = as.integer(periode == "part_apres"))
+
+lm(part_temps_plein ~ nj * apres, data = minwage_long) %>% tidy()
+```
+
+Le coefficient de l'interaction `nj:apres` est l'estimation par double
+différence.
+
+> **À vous (2).** Quelle est l'hypothèse qui rend la double différence
+> crédible ? Avec quelles données pourrait-on la vérifier ? Pensez à une
+> politique de votre pays qui a été appliquée dans certaines régions et pas
+> dans d'autres (gratuité des soins, gratuité scolaire) : comment
+> l'évalueriez-vous de la même manière ?
+
+# Partie C — Une vraie EDS : CPN et accouchement assisté au Ghana rural
+
+| Variable | Contenu |
+|:--|:--|
+| `grappe` | numéro de la grappe (unité primaire de sondage) |
+| `region` | région |
+| `cpn4` | **traitement** : au moins 4 consultations prénatales pour la dernière naissance |
+| `acc_assiste` | **résultat** : accouchement assisté par du personnel qualifié |
+| `cpn_precoce` | première CPN dans les 3 premiers mois de grossesse |
+| `centre_sante` | a accouché dans un établissement de santé |
+| `instruction`, `quintile` | niveau d'instruction et quintile de bien-être |
+| `age`, `parite` | âge de la femme et nombre d'enfants nés vivants |
+| `distance_pb` | la distance au centre de santé est un « gros problème » |
+| `radio` | écoute la radio au moins de temps en temps |
+
+Les régressions de ce labo ne sont pas pondérées : on cherche un effet, pas un
+niveau national. Pour un indicateur descriptif, on utiliserait le poids
+d'échantillonnage (`v005`).
+
+## C1. La comparaison naïve
+
+```{r naif}
+eds %>%
+  group_by(cpn4) %>%
+  summarise(n = n(), acc_assiste = mean(acc_assiste))
+
+naif <- eds %>%
+  summarise(effet = mean(acc_assiste[cpn4 == 1]) - mean(acc_assiste[cpn4 == 0])) %>%
+  pull(effet)
+naif
+```
+
+Les femmes qui ont eu au moins 4 CPN accouchent beaucoup plus souvent avec du
+personnel qualifié (40 % contre 12 %). Mais sont-elles comparables aux autres ?
+
+## C2. Les groupes ne sont pas comparables : la confusion
+
+```{r equilibre}
+eds %>%
+  group_by(cpn4) %>%
+  summarise(secondaire  = mean(instruction == "secondaire+"),
+            plus_riches = mean(quintile %in% c("richer", "richest")),
+            distance_pb = mean(distance_pb),
+            radio       = mean(radio),
+            age         = mean(age))
+```
+
+Les femmes qui font 4 CPN sont plus instruites, plus riches, moins gênées par
+la distance et plus exposées aux médias. Ces mêmes facteurs favorisent aussi
+l'accouchement assisté : ce sont des **facteurs de confusion**. La comparaison
+naïve mélange l'effet des CPN et l'effet de ces différences.
+
+> **À vous (3).** Dessinez sur papier le graphe causal (DAG) : CPN,
+> accouchement assisté, instruction, richesse, distance, radio. Ajoutez une
+> variable que l'EDS ne mesure pas. Où se place-t-elle ?
+
+## C3. La régression logistique : comparer à caractéristiques égales
+
+```{r logit}
+controles <- ~ age + instruction + quintile + parite + distance_pb + radio + region
+
+m0 <- glm(acc_assiste ~ cpn4, family = binomial, data = eds)
+m1 <- glm(update(controles, acc_assiste ~ cpn4 + .), family = binomial, data = eds)
+
+bind_rows(
+  tidy(m0, exponentiate = TRUE, conf.int = TRUE) %>% mutate(modele = "Sans contrôle"),
+  tidy(m1, exponentiate = TRUE, conf.int = TRUE) %>% mutate(modele = "Avec contrôles")
+) %>%
+  filter(term == "cpn4") %>%
+  select(modele, rapport_de_cotes = estimate, conf.low, conf.high)
+```
+
+Le **rapport de cotes** (*odds ratio*) diminue quand on contrôle les facteurs
+de confusion observés. Mais un rapport de cotes de 4 ne veut pas dire « quatre
+fois plus de chances » : il porte sur les cotes, pas sur les probabilités.
+Pour un décideur, il faut un effet en **points de pourcentage**.
+
+## C4. De la cote à l'effet : le contrefactuel par prédiction
+
+On utilise le modèle pour prédire, pour **chaque femme**, la probabilité
+d'accouchement assisté si elle avait eu 4 CPN, puis si elle ne les avait pas
+eues. La moyenne des différences est l'**effet moyen** (cette méthode
+s'appelle la *g-computation* ou standardisation par le modèle).
+
+```{r g-computation}
+effet_moyen <- function(modele, donnees) {
+  p1 <- predict(modele, newdata = donnees %>% mutate(cpn4 = 1), type = "response")
+  p0 <- predict(modele, newdata = donnees %>% mutate(cpn4 = 0), type = "response")
+  mean(p1 - p0)
+}
+
+tibble(modele = c("Sans contrôle", "Avec contrôles"),
+       effet_points = 100 * c(effet_moyen(m0, eds), effet_moyen(m1, eds)))
+```
+
+C'est le raisonnement contrefactuel du cours, appliqué avec un modèle : « que
+se serait-il passé pour la même femme avec et sans CPN ? ».
+
+## C5. Le mauvais contrôle : le lieu d'accouchement
+
+Les CPN agissent en grande partie **à travers** le choix du lieu
+d'accouchement : on conseille à la femme d'accoucher au centre de santé, où
+elle sera assistée. Que se passe-t-il si l'on « contrôle » le lieu
+d'accouchement ?
+
+```{r mediateur}
+m2 <- update(m1, . ~ . + centre_sante)
+
+tibble(modele = c("Avec contrôles", "Avec contrôles + lieu d'accouchement"),
+       effet_points = 100 * c(effet_moyen(m1, eds), effet_moyen(m2, eds)))
+```
+
+L'effet disparaît presque. Ce n'est pas que les CPN ne servent à rien : on a
+retiré le chemin principal par lequel elles agissent. Contrôler une variable
+qui est une **conséquence** du traitement change la question (l'effet
+« direct », hors lieu d'accouchement) et fausse l'effet total. Une variable de
+contrôle doit être mesurée **avant** le traitement.
+
+> **À vous (4).** Dans l'article sur l'éducation du conjoint (Adjiwanou,
+> Bougma et LeGrand, 2018), pourquoi ne faudrait-il pas contrôler le nombre de
+> CPN pour estimer l'effet de l'éducation du conjoint sur l'accouchement
+> assisté ?
+
+## C6. Ce qu'on ne voit pas dans la grappe : les effets fixes
+
+Certaines caractéristiques locales ne sont pas mesurées : la qualité du centre
+de santé, la présence d'une sage-femme, les normes du village. Si elles
+influencent à la fois les CPN et l'accouchement, elles biaisent l'estimation.
+Les **effets fixes de grappe** comparent les femmes **à l'intérieur d'une même
+grappe** : tout ce qui est commun à la grappe, observé ou non, est neutralisé.
+C'est la stratégie d'Adjiwanou, Boco et Yaya (2021) sur les beaux-pères et la
+scolarisation.
+
+```{r effets-fixes}
+m3 <- glm(acc_assiste ~ cpn4 + age + instruction + quintile + parite + distance_pb + radio +
+            factor(grappe),
+          family = binomial, data = eds)
+
+tibble(modele = c("Avec contrôles", "Avec contrôles + effets fixes de grappe"),
+       effet_points = 100 * c(effet_moyen(m1, eds), effet_moyen(m3, eds)))
+```
+
+La région disparaît du modèle : elle est constante dans une grappe, donc
+absorbée par les effets fixes. L'effet baisse : une partie de l'association
+venait de différences entre villages.
+
+## C7. Ce qu'on ne voit pas chez la femme : la variable instrumentale
+
+Reste la confusion **individuelle** non observée : une femme qui tient
+davantage aux soins modernes fait plus de CPN *et* accouche plus souvent avec
+du personnel qualifié. Ni les contrôles ni les effets fixes n'y peuvent rien.
+
+Adjiwanou et LeGrand (2013) ont estimé un système de deux équations (CPN et
+accouchement) qui laisse leurs erreurs être corrélées. Pour l'identifier, ils
+ont utilisé une variable qui agit sur les CPN mais, par hypothèse, pas
+directement sur l'accouchement : **avoir commencé les CPN tôt** (dans les
+trois premiers mois). Nous faisons la même chose avec un modèle linéaire en
+deux étapes (doubles moindres carrés), plus simple à lire.
+
+```{r variable-instrumentale}
+mco <- feols(acc_assiste ~ cpn4 + age + instruction + quintile + parite + distance_pb +
+               radio + region,
+             data = eds, cluster = ~grappe)
+
+vi  <- feols(acc_assiste ~ age + instruction + quintile + parite + distance_pb + radio +
+               region | cpn4 ~ cpn_precoce,
+             data = eds, cluster = ~grappe)
+
+etable(mco, vi, keep = "cpn4", fitstat = ~ n + ivf + wh)
+```
+
+Lisez trois choses :
+
+- **Première étape (`ivf`)** : commencer tôt augmente fortement la probabilité
+  d'avoir 4 CPN. L'instrument est puissant (F bien au-dessus de 10).
+- **L'effet corrigé** reste positif et du même ordre que l'estimation simple.
+  C'est la conclusion de l'article : au Ghana, l'effet des CPN ne s'explique
+  pas par la sélection des femmes.
+- **Le test de Wu-Hausman (`wh`, statistique 1,1, p = 0,29)** ne rejette pas l'égalité des deux
+  estimations : rien n'indique ici que les CPN soient endogènes.
+
+Tout repose sur une hypothèse **qu'aucun test ne peut vérifier** : la date de
+la première CPN n'agit sur l'accouchement **qu'à travers** le nombre de CPN.
+
+> **À vous (5).** Cette hypothèse vous paraît-elle crédible ? Imaginez un
+> chemin par lequel commencer tôt les CPN agirait directement sur
+> l'accouchement assisté, ou une caractéristique de la femme qui pousserait à
+> la fois à commencer tôt et à accoucher au centre. Que deviendrait alors
+> l'estimation ?
+
+## C8. Bilan : comment l'estimation bouge
+
+```{r bilan}
+bilan <- tibble(
+  methode = c("1. Comparaison naïve",
+              "2. Logit avec contrôles",
+              "3. + effets fixes de grappe",
+              "4. Variable instrumentale (CPN précoce)",
+              "5. + lieu d'accouchement (mauvais contrôle)"),
+  effet_points = 100 * c(naif, effet_moyen(m1, eds), effet_moyen(m3, eds),
+                         coef(vi)["fit_cpn4"], effet_moyen(m2, eds))
+)
+bilan
+
+ggplot(bilan, aes(x = effet_points, y = fct_rev(methode))) +
+  geom_col(width = 0.6, fill = "#2a78d6") +
+  geom_text(aes(label = round(effet_points, 1)), hjust = -0.2, size = 3.5) +
+  scale_x_continuous(limits = c(0, 32)) +
+  labs(x = "Effet estimé des CPN sur l'accouchement assisté (points de pourcentage)",
+       y = NULL) +
+  theme_minimal()
+```
+
+Avec de vraies données, il n'y a pas de ligne « vraie valeur » à tracer. On
+ne peut que **rendre explicites les hypothèses** de chaque estimation et voir
+si la conclusion y résiste. Ici, de 18 à 28 points selon la méthode, la
+conclusion tient : les CPN augmentent l'accouchement assisté. Seul le mauvais
+contrôle la renverse, et pour une mauvaise raison.
+
+> **À vous (6).** Classez les sources de biais rencontrées (confusion
+> observée, confusion locale non observée, confusion individuelle non
+> observée, mauvais contrôle) selon la méthode qui permet de les traiter.
+> Laquelle reste la plus difficile avec une EDS ?
+
+> **À vous (7), pour votre équipe.** Refaites C1 à C8 avec l'EDS la plus
+> récente de votre pays (`preparer_eds("donnees/XXIRxxFL.DTA")`). Vérifiez
+> d'abord les catégories de `m3a` à `m3n` et de `m15`. La conclusion
+> est-elle la même qu'au Ghana en 2003 ?
+
+# Partie D — Pour aller plus loin : prédire n'est pas expliquer
+
+Supposons maintenant que l'objectif soit de **prédire** quelles femmes
+risquent d'accoucher sans assistance, pour cibler une campagne. Le meilleur
+modèle n'est plus le même.
+
+```{r prediction}
+set.seed(2026)
+eds_part <- eds %>% mutate(echantillon = if_else(runif(n()) < 0.7, "apprentissage", "test"))
+appr <- eds_part %>% filter(echantillon == "apprentissage")
+test <- eds_part %>% filter(echantillon == "test")
+
+precision <- function(formule) {
+  m <- glm(formule, family = binomial, data = appr)
+  pred <- predict(m, newdata = test, type = "response") > 0.5
+  mean(pred == (test$acc_assiste == 1))
+}
+
+tibble(
+  modele = c("Modèle causal (contrôles avant traitement)",
+             "Modèle avec le lieu d'accouchement"),
+  precision_test = c(
+    precision(acc_assiste ~ cpn4 + age + instruction + quintile + parite + distance_pb + radio + region),
+    precision(acc_assiste ~ cpn4 + centre_sante + age + instruction + quintile + parite + distance_pb + radio + region)
+  )
+)
+```
+
+Le lieu d'accouchement améliore nettement la prédiction alors qu'il fausse
+l'effet causal. **Décrire, prédire et expliquer sont trois tâches
+différentes**, qui n'appellent pas les mêmes modèles ni les mêmes variables
+(Hernán, Hsu et Healy, 2019).
+
+> **À vous (8).** Pour la note de votre pays, quelle tâche votre institut
+> remplit-il le plus souvent : décrire, prédire ou expliquer ? Donnez un
+> exemple de question pour chacune.
+
+# Références
+
+- Adjiwanou, V. et LeGrand, T. (2013). Does antenatal care matter in the use of skilled birth attendance in rural Africa: A multi-country analysis. *Social Science & Medicine*, 86, 26-34.
+- Adjiwanou, V., Bougma, M. et LeGrand, T. (2018). The effect of partners' education on women's reproductive and maternal health in developing countries. *Social Science & Medicine*, 197, 104-115.
+- Adjiwanou, V., Boco, G. A. et Yaya, S. (2021). Stepfather families and children's schooling in sub-Saharan Africa: A cross-national study. *Demographic Research*, 44(27), 627-670.
+- Adjiwanou, V. et N'Bouke, A. (2015). Exploring the paradox of intimate partner violence and increased contraceptive use in sub-Saharan Africa. *Studies in Family Planning*, 46(2), 127-142.
+- Bertrand, M. et Mullainathan, S. (2004). Are Emily and Greg more employable than Lakisha and Jamal? *American Economic Review*, 94(4), 991-1013.
+- Card, D. et Krueger, A. B. (1994). Minimum wages and employment: A case study of the fast-food industry in New Jersey and Pennsylvania. *American Economic Review*, 84(4), 772-793.
+- Ghana Statistical Service, Noguchi Memorial Institute for Medical Research et ORC Macro (2004). *Ghana Demographic and Health Survey 2003*. Calverton, ORC Macro.
+- Hernán, M. A., Hsu, J. et Healy, B. (2019). A second chance to get causal inference right: A classification of data science tasks. *Chance*, 32(1), 42-49.
+- Imai, K. (2017). *Quantitative Social Science: An Introduction*. Princeton University Press. Les données `resume` et `minwage` viennent de ce manuel.

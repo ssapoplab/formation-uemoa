@@ -128,12 +128,13 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#journée-type" id="toc-journée-type" class="nav-link active" data-scroll-target="#journée-type">Journée type</a></li>
-  <li><a href="#lundi-23-novembre-fondements" id="toc-lundi-23-novembre-fondements" class="nav-link" data-scroll-target="#lundi-23-novembre-fondements">Lundi 23 novembre — Fondements</a></li>
-  <li><a href="#mardi-24-novembre-inégalités-et-méthodes-avancées" id="toc-mardi-24-novembre-inégalités-et-méthodes-avancées" class="nav-link" data-scroll-target="#mardi-24-novembre-inégalités-et-méthodes-avancées">Mardi 24 novembre — Inégalités et méthodes avancées</a></li>
-  <li><a href="#mercredi-25-novembre-nouvelles-sources-et-data-science" id="toc-mercredi-25-novembre-nouvelles-sources-et-data-science" class="nav-link" data-scroll-target="#mercredi-25-novembre-nouvelles-sources-et-data-science">Mercredi 25 novembre — Nouvelles sources et data science</a></li>
-  <li><a href="#jeudi-26-novembre-prospective-et-scénarios" id="toc-jeudi-26-novembre-prospective-et-scénarios" class="nav-link" data-scroll-target="#jeudi-26-novembre-prospective-et-scénarios">Jeudi 26 novembre — Prospective et scénarios</a></li>
-  <li><a href="#vendredi-27-novembre-des-analyses-aux-outils-de-décision" id="toc-vendredi-27-novembre-des-analyses-aux-outils-de-décision" class="nav-link" data-scroll-target="#vendredi-27-novembre-des-analyses-aux-outils-de-décision">Vendredi 27 novembre — Des analyses aux outils de décision</a></li>
+  <li><a href="#lundi-23-novembre-mesurer-une-population-pour-décider" id="toc-lundi-23-novembre-mesurer-une-population-pour-décider" class="nav-link" data-scroll-target="#lundi-23-novembre-mesurer-une-population-pour-décider">Lundi 23 novembre — Mesurer une population pour décider</a></li>
+  <li><a href="#mardi-24-novembre-inégalités-territoriales-et-sociales" id="toc-mardi-24-novembre-inégalités-territoriales-et-sociales" class="nav-link" data-scroll-target="#mardi-24-novembre-inégalités-territoriales-et-sociales">Mardi 24 novembre — Inégalités territoriales et sociales</a></li>
+  <li><a href="#mercredi-25-novembre-nouvelles-sources-de-données-et-data-science" id="toc-mercredi-25-novembre-nouvelles-sources-de-données-et-data-science" class="nav-link" data-scroll-target="#mercredi-25-novembre-nouvelles-sources-de-données-et-data-science">Mercredi 25 novembre — Nouvelles sources de données et data science</a></li>
+  <li><a href="#jeudi-26-novembre-démographie-prospective-et-scénarios" id="toc-jeudi-26-novembre-démographie-prospective-et-scénarios" class="nav-link" data-scroll-target="#jeudi-26-novembre-démographie-prospective-et-scénarios">Jeudi 26 novembre — Démographie prospective et scénarios</a></li>
+  <li><a href="#vendredi-27-novembre-traduire-les-analyses-en-outils-pour-les-décideurs" id="toc-vendredi-27-novembre-traduire-les-analyses-en-outils-pour-les-décideurs" class="nav-link" data-scroll-target="#vendredi-27-novembre-traduire-les-analyses-en-outils-pour-les-décideurs">Vendredi 27 novembre — Traduire les analyses en outils pour les décideurs</a></li>
   <li><a href="#samedi-28-novembre-restitutions-et-feuille-de-route-régionale" id="toc-samedi-28-novembre-restitutions-et-feuille-de-route-régionale" class="nav-link" data-scroll-target="#samedi-28-novembre-restitutions-et-feuille-de-route-régionale">Samedi 28 novembre — Restitutions et feuille de route régionale</a></li>
+  <li><a href="#les-activités-du-soir" id="toc-les-activités-du-soir" class="nav-link" data-scroll-target="#les-activités-du-soir">Les activités du soir</a></li>
   <li><a href="#la-note-danalyse-pays" id="toc-la-note-danalyse-pays" class="nav-link" data-scroll-target="#la-note-danalyse-pays">La note d’analyse pays</a></li>
   </ul>
 </nav>
@@ -160,348 +161,479 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Chaque journée a son syllabus et son dossier de matériel (<code>materiel/jour-N/</code> dans le dépôt). Les liens deviennent actifs au fur et à mesure que les formateurs déposent leurs supports.</p>
+<p>Chaque journée a son dossier de matériel (<code>materiel/jour-N/</code> dans le dépôt) : diapositives du cours, labo, consignes du travail en équipe et de l’exercice, et fichiers à télécharger. Les liens s’ajoutent au fur et à mesure que les formateurs déposent leurs supports.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Avant de commencer
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Installer <strong>R</strong>, <strong>RStudio</strong> et le paquet <code>tidyverse</code> (Excel suffit pour les labos qui ont une version tableur).</li>
+<li>Créer un compte sur <a href="https://dhsprogram.com">dhsprogram.com</a> et demander l’accès aux EDS de son pays : les microdonnées EDS ne sont jamais distribuées par la formation, chaque participant les télécharge avec son propre compte.</li>
+<li>Aucune microdonnée nominative n’est publiée sur ce site.</li>
+</ul>
+</div>
+</div>
 <section id="journée-type" class="level2">
 <h2 class="anchored" data-anchor-id="journée-type">Journée type</h2>
 <p>Du lundi au vendredi, chaque journée suit le même déroulé.</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
+<col style="width: 16%">
+<col style="width: 22%">
+<col style="width: 62%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Horaire</th>
-<th>Bloc</th>
-<th>Contenu</th>
+<th style="text-align: left;">Horaire</th>
+<th style="text-align: left;">Bloc</th>
+<th style="text-align: left;">Contenu</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>8 h 30 – 9 h</td>
-<td>Retour sur l’exercice de la veille</td>
-<td>2 ou 3 équipes présentent leur résultat, correction collective</td>
+<td style="text-align: left;">8 h 30 – 9 h</td>
+<td style="text-align: left;">Retour sur l’exercice de la veille</td>
+<td style="text-align: left;">Deux ou trois équipes présentent leur travail, puis correction collective</td>
 </tr>
 <tr class="even">
-<td>9 h – 12 h 30</td>
-<td>Cours magistral</td>
-<td>Concepts et méthodes du jour, illustrés par des cas UEMOA ; pause à 10 h 30</td>
+<td style="text-align: left;">9 h – 12 h 30</td>
+<td style="text-align: left;">Cours magistral</td>
+<td style="text-align: left;">Concepts et méthodes du jour, illustrés par des cas de l’UEMOA (pause de 10 h 45 à 11 h)</td>
 </tr>
 <tr class="odd">
-<td>14 h – 15 h 30</td>
-<td>Labo</td>
-<td>Démonstration pas à pas sur données réelles ; les participants reproduisent en même temps</td>
+<td style="text-align: left;">14 h – 15 h 30</td>
+<td style="text-align: left;">Labo</td>
+<td style="text-align: left;">Démonstration pas à pas sur des données réelles, que les participants reproduisent sur leur poste</td>
 </tr>
 <tr class="even">
-<td>15 h 45 – 17 h 15</td>
-<td>Travail en équipe pays</td>
-<td>Application aux données de son pays, pour la note d’analyse pays</td>
+<td style="text-align: left;">15 h 45 – 17 h 45</td>
+<td style="text-align: left;">Travail en équipe pays</td>
+<td style="text-align: left;">Application aux données de son pays, pour la note d’analyse pays</td>
 </tr>
 <tr class="odd">
-<td>17 h 15 – 17 h 30</td>
-<td>Consignes</td>
-<td>Exercice pour le lendemain (une heure au plus)</td>
+<td style="text-align: left;">17 h 45 – 18 h</td>
+<td style="text-align: left;">Consignes</td>
+<td style="text-align: left;">Exercice pour le lendemain (une heure au plus)</td>
 </tr>
 </tbody>
 </table>
-<p>Le lundi, le premier créneau est consacré à l’ouverture officielle et à la présentation des participants. Le samedi suit un format propre.</p>
+<p>Le lundi, le premier créneau est consacré à l’ouverture officielle, et l’après-midi comprend un séminaire en ligne avec Statistique Canada. Le samedi est réservé aux restitutions et à la feuille de route régionale.</p>
+<p><strong>Les équipes pays.</strong> Chaque équipe réunit deux cadres d’un même pays et un cadre d’un autre pays, qui apporte un regard croisé. La note d’analyse est celle du pays des deux membres majoritaires. Les cadres de la Commission sont répartis entre les équipes.</p>
 </section>
-<section id="lundi-23-novembre-fondements" class="level2">
-<h2 class="anchored" data-anchor-id="lundi-23-novembre-fondements">Lundi 23 novembre — Fondements</h2>
-<p><em>Objectifs 1 et 2 · Onadja, Vissého Adjiwanou</em></p>
+<section id="lundi-23-novembre-mesurer-une-population-pour-décider" class="level2">
+<h2 class="anchored" data-anchor-id="lundi-23-novembre-mesurer-une-population-pour-décider">Lundi 23 novembre — Mesurer une population pour décider</h2>
+<p><em>Objectifs 1 et 2 · Vissého Adjiwanou, Yentéma Onadja, Alexandra Tapsoba</em></p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
+<col style="width: 16%">
+<col style="width: 22%">
+<col style="width: 62%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Bloc</th>
-<th>Contenu</th>
-<th>Formateur</th>
+<th style="text-align: left;">Horaire</th>
+<th style="text-align: left;">Bloc</th>
+<th style="text-align: left;">Contenu</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Cours</td>
-<td>Sources de données démographiques ; fécondité, mortalité, migration, urbanisation ; transition démographique et dividende ; implications pour l’éducation, la santé et l’emploi</td>
-<td>Onadja, Vissého Adjiwanou</td>
+<td style="text-align: left;">8 h 30 – 9 h</td>
+<td style="text-align: left;">Ouverture officielle</td>
+<td style="text-align: left;">Mot de la Commission, présentation de l’équipe de formation et des participants</td>
 </tr>
 <tr class="even">
-<td>Labo</td>
-<td>Calcul des indicateurs de base à partir d’un recensement ou d’une EDS (ISF, quotients de mortalité, espérance de vie, pyramide des âges), dans R et dans Excel</td>
-<td>Onadja</td>
+<td style="text-align: left;">9 h – 12 h 30</td>
+<td style="text-align: left;">Cours</td>
+<td style="text-align: left;">Que veut dire « mesurer une population » ? ; les phénomènes démographiques dans l’UEMOA et leurs théories explicatives ; la transition démographique et ses conséquences</td>
 </tr>
 <tr class="odd">
-<td>Équipe pays</td>
-<td>Profil démographique du pays en cinq indicateurs clés</td>
-<td>Tous</td>
+<td style="text-align: left;">14 h – 15 h 30</td>
+<td style="text-align: left;">Labo</td>
+<td style="text-align: left;">Des indicateurs aux explications : calculer, puis interpréter et questionner les indicateurs de son pays ; standardisation et décomposition</td>
 </tr>
 <tr class="even">
-<td>Exercice</td>
-<td>Comparer son pays à la moyenne UEMOA sur trois indicateurs et rédiger trois lignes d’interprétation</td>
-<td>Onadja</td>
+<td style="text-align: left;">15 h 45 – 16 h 25</td>
+<td style="text-align: left;">Équipe pays (1re partie)</td>
+<td style="text-align: left;">Choix des cinq indicateurs du profil démographique et de leur source nationale</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">16 h 30 – 17 h 20</td>
+<td style="text-align: left;">Séminaire en ligne</td>
+<td style="text-align: left;">Laurent Martel (Statistique Canada) : « Défis actuels de Statistique Canada dans le domaine des statistiques de population »</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">17 h 20 – 17 h 50</td>
+<td style="text-align: left;">Équipe pays (2e partie)</td>
+<td style="text-align: left;">Commentaire des cinq indicateurs, à la lumière du séminaire</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">17 h 50 – 18 h</td>
+<td style="text-align: left;">Consignes</td>
+<td style="text-align: left;">Exercice : comparer son pays à l’ensemble de l’UEMOA</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Matériel :</strong> <a href="materiel/jour-1/syllabus.html">Syllabus</a> · Diapositives · Script du labo · Données</p>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Matériel du lundi
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Cours</strong> : <a href="materiel/jour-1/cours-fondements.html">diapositives</a></li>
+<li><strong>Labo</strong> : <a href="materiel/jour-1/labo/jour1-labo-indicateurs.html">le labo en ligne</a> · <a href="materiel/jour-1/jour1-labo.zip">télécharger le labo</a> (script R Markdown, classeur Excel et données)</li>
+<li><strong>Travail en équipe et exercice</strong> : <a href="materiel/jour-1/exercices-indicateurs.html">consignes et questions</a></li>
+<li><strong>Données</strong> : tableaux par âge des huit pays en 2023, reconstitués à partir des <em>World Population Prospects 2024</em> (données agrégées et publiques), inclus dans le labo</li>
+<li><strong>Séminaire</strong> : lien de connexion bit.ly/Seminaires26-27</li>
+</ul>
+</div>
+</div>
 </section>
-<section id="mardi-24-novembre-inégalités-et-méthodes-avancées" class="level2">
-<h2 class="anchored" data-anchor-id="mardi-24-novembre-inégalités-et-méthodes-avancées">Mardi 24 novembre — Inégalités et méthodes avancées</h2>
-<p><em>Objectifs 3 et 4 · Aliou, Fabrice Yaméogo</em></p>
+<section id="mardi-24-novembre-inégalités-territoriales-et-sociales" class="level2">
+<h2 class="anchored" data-anchor-id="mardi-24-novembre-inégalités-territoriales-et-sociales">Mardi 24 novembre — Inégalités territoriales et sociales</h2>
+<p><em>Objectifs 3 et 4 · Aliou Gadiaga</em></p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
+<col style="width: 16%">
+<col style="width: 22%">
+<col style="width: 62%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Bloc</th>
-<th>Contenu</th>
-<th>Formateur</th>
+<th style="text-align: left;">Horaire</th>
+<th style="text-align: left;">Bloc</th>
+<th style="text-align: left;">Contenu</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Cours</td>
-<td>Mesure des inégalités démographiques selon le milieu, la région, le quintile de richesse et le sexe ; standardisation, décomposition des écarts, régression et modèles multiniveaux</td>
-<td>Aliou, Fabrice Yaméogo</td>
+<td style="text-align: left;">9 h – 12 h 30</td>
+<td style="text-align: left;">Cours</td>
+<td style="text-align: left;">Mesure et cartographie des inégalités : indicateur régional et son intervalle de confiance, écart, rapport, indice de concentration ; cartographie dans QGIS</td>
 </tr>
 <tr class="even">
-<td>Labo</td>
-<td>Cartographie des indicateurs par région, puis modèle expliquant les écarts régionaux</td>
-<td>Aliou, Fabrice Yaméogo</td>
+<td style="text-align: left;">14 h – 15 h 30</td>
+<td style="text-align: left;">Labo</td>
+<td style="text-align: left;">Carte régionale d’un indicateur dans QGIS (EDS Burkina Faso 2021)</td>
 </tr>
 <tr class="odd">
-<td>Équipe pays</td>
-<td>Carte et analyse des inégalités régionales sur un indicateur choisi</td>
-<td>Tous</td>
+<td style="text-align: left;">15 h 45 – 17 h 45</td>
+<td style="text-align: left;">Équipe pays</td>
+<td style="text-align: left;">Cartographier un indicateur par région dans son pays et en analyser les écarts</td>
 </tr>
 <tr class="even">
-<td>Exercice</td>
-<td>Identifier les deux régions les plus en retard et proposer une explication appuyée sur les données</td>
-<td>Aliou</td>
+<td style="text-align: left;">17 h 45 – 18 h</td>
+<td style="text-align: left;">Consignes</td>
+<td style="text-align: left;">Exercice : les deux régions les plus en retard, et une explication appuyée sur les données</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Matériel :</strong> <a href="materiel/jour-2/syllabus.html">Syllabus</a> · Diapositives · Script du labo · Données</p>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Matériel du mardi
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>À venir. Logiciel : QGIS. Données : EDS Burkina Faso 2021 (fichier des enfants), à télécharger avec son compte DHS.</p>
+</div>
+</div>
 </section>
-<section id="mercredi-25-novembre-nouvelles-sources-et-data-science" class="level2">
-<h2 class="anchored" data-anchor-id="mercredi-25-novembre-nouvelles-sources-et-data-science">Mercredi 25 novembre — Nouvelles sources et data science</h2>
-<p><em>Objectif 5 · Fabrice Yaméogo, Vissého Adjiwanou (Aliou en appui sur le spatial)</em></p>
+<section id="mercredi-25-novembre-nouvelles-sources-de-données-et-data-science" class="level2">
+<h2 class="anchored" data-anchor-id="mercredi-25-novembre-nouvelles-sources-de-données-et-data-science">Mercredi 25 novembre — Nouvelles sources de données et data science</h2>
+<p><em>Objectif 5 · Boyam Fabrice Yaméogo, Vissého Adjiwanou</em></p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
+<col style="width: 16%">
+<col style="width: 22%">
+<col style="width: 62%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Bloc</th>
-<th>Contenu</th>
-<th>Formateur</th>
+<th style="text-align: left;">Horaire</th>
+<th style="text-align: left;">Bloc</th>
+<th style="text-align: left;">Contenu</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Ouverture</td>
-<td>L’IA dépend de la mesure qu’elle prétend remplacer : les recensements et les enquêtes des INS restent la référence</td>
-<td>Vissého Adjiwanou</td>
+<td style="text-align: left;">9 h – 10 h 45</td>
+<td style="text-align: left;">Cours 1</td>
+<td style="text-align: left;">Populations synthétiques (B. F. Yaméogo)</td>
 </tr>
 <tr class="even">
-<td>Cours</td>
-<td>Données administratives, géospatiales et numériques ; grilles de population et estimation sur petits domaines ; machine learning et inférence sur données prédites ; populations synthétiques ; limites et éthique</td>
-<td>Fabrice Yaméogo, Vissého Adjiwanou</td>
+<td style="text-align: left;">11 h – 12 h 30</td>
+<td style="text-align: left;">Cours 2</td>
+<td style="text-align: left;">De la causalité à la modélisation : régression, inférence causale et nouvelles sources (V. Adjiwanou)</td>
 </tr>
 <tr class="odd">
-<td>Labo 1</td>
-<td>Croiser une enquête avec les grilles WorldPop pour estimer un indicateur à un niveau fin</td>
-<td>Fabrice Yaméogo, Aliou</td>
+<td style="text-align: left;">14 h – 15 h 30</td>
+<td style="text-align: left;">Labo</td>
+<td style="text-align: left;">Générer et valider la population synthétique à deux niveaux d’une commune (B. F. Yaméogo)</td>
 </tr>
 <tr class="even">
-<td>Labo 2</td>
-<td>Corriger une estimation fondée sur des prédictions avec un petit échantillon validé ; générer une population synthétique du pays</td>
-<td>Vissého Adjiwanou</td>
+<td style="text-align: left;">15 h 45 – 17 h 45</td>
+<td style="text-align: left;">Équipe pays</td>
+<td style="text-align: left;">Proposition de population synthétique pour une zone infrarégionale de son pays</td>
 </tr>
 <tr class="odd">
-<td>Équipe pays</td>
-<td>Inventaire des sources disponibles dans son INS ; génération de la population synthétique utilisée le jeudi</td>
-<td>Tous</td>
-</tr>
-<tr class="even">
-<td>Exercice</td>
-<td>Une demi-page sur ce qu’une nouvelle source apporte à sa note, et sur ses limites</td>
-<td>Fabrice Yaméogo</td>
+<td style="text-align: left;">17 h 45 – 18 h</td>
+<td style="text-align: left;">Consignes</td>
+<td style="text-align: left;">Exercice : ce que la population synthétique apporte à la note pays, et ses limites</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Matériel :</strong> <a href="materiel/jour-3/syllabus.html">Syllabus</a> · Diapositives · Script du labo · Données</p>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Matériel du mercredi
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Cours 2 (causalité et modélisation)</strong> : <a href="materiel/jour-3/cours-causalite-modelisation.html">diapositives</a></li>
+<li><strong>Labo causalité (complémentaire, à faire en autonomie)</strong> : <a href="materiel/jour-3/labo-causalite/jour3-labo-causalite-resultats.html">résultats commentés</a> · <a href="materiel/jour-3/jour3-labo.zip">télécharger le labo</a> (script R Markdown et données des parties A et B). La partie C utilise l’EDS Ghana 2003 (<code>GHIR4BFL.DTA</code>), à télécharger avec son compte DHS et à placer dans <code>donnees/</code>.</li>
+<li><strong>Cours 1 et labo populations synthétiques</strong> : à venir.</li>
+</ul>
+</div>
+</div>
 </section>
-<section id="jeudi-26-novembre-prospective-et-scénarios" class="level2">
-<h2 class="anchored" data-anchor-id="jeudi-26-novembre-prospective-et-scénarios">Jeudi 26 novembre — Prospective et scénarios</h2>
-<p><em>Objectif 6 · Vissého Adjiwanou, Onadja</em></p>
+<section id="jeudi-26-novembre-démographie-prospective-et-scénarios" class="level2">
+<h2 class="anchored" data-anchor-id="jeudi-26-novembre-démographie-prospective-et-scénarios">Jeudi 26 novembre — Démographie prospective et scénarios</h2>
+<p><em>Objectif 6 · Vissého Adjiwanou, Yentéma Onadja</em></p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
+<col style="width: 16%">
+<col style="width: 22%">
+<col style="width: 62%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Bloc</th>
-<th>Contenu</th>
-<th>Formateur</th>
+<th style="text-align: left;">Horaire</th>
+<th style="text-align: left;">Bloc</th>
+<th style="text-align: left;">Contenu</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Cours</td>
-<td>Projections par composantes ; hypothèses de fécondité, de mortalité et de migration ; scénarios et besoins sectoriels ; de la projection agrégée à la microsimulation</td>
-<td>Vissého Adjiwanou, Onadja</td>
+<td style="text-align: left;">9 h – 12 h 30</td>
+<td style="text-align: left;">Cours</td>
+<td style="text-align: left;">Projeter la population pour planifier : méthode des composantes, hypothèses, incertitude, besoins</td>
 </tr>
 <tr class="even">
-<td>Labo 1</td>
-<td>Projection de la population du pays à 2050 sous deux ou trois scénarios, et traduction en besoins pour un secteur</td>
-<td>Onadja</td>
+<td style="text-align: left;">14 h – 15 h 30</td>
+<td style="text-align: left;">Labo</td>
+<td style="text-align: left;">Projeter la population de son pays à 2050, en R puis en Excel</td>
 </tr>
 <tr class="odd">
-<td>Labo 2</td>
-<td>Microsimulation à partir de la population synthétique du mercredi, pour comparer l’évolution de deux groupes</td>
-<td>Vissého Adjiwanou</td>
+<td style="text-align: left;">15 h 45 – 17 h 45</td>
+<td style="text-align: left;">Équipe pays</td>
+<td style="text-align: left;">Projeter son pays sous quatre scénarios, choisir un secteur, chiffrer ses besoins</td>
 </tr>
 <tr class="even">
-<td>Équipe pays</td>
-<td>Choix du scénario et du secteur qui structureront la note</td>
-<td>Tous</td>
-</tr>
-<tr class="odd">
-<td>Exercice</td>
-<td>Chiffrer l’écart de besoins entre deux scénarios et l’exprimer en une phrase pour un décideur</td>
-<td>Vissého Adjiwanou</td>
+<td style="text-align: left;">17 h 45 – 18 h</td>
+<td style="text-align: left;">Consignes</td>
+<td style="text-align: left;">Exercice : scénario national et part de l’écart de besoins due à la démographie</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Matériel :</strong> <a href="materiel/jour-4/syllabus.html">Syllabus</a> · Diapositives · Script du labo · Données</p>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Matériel du jeudi
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><a href="materiel/jour-4/syllabus.html">Syllabus</a></li>
+<li><strong>Cours</strong> : <a href="materiel/jour-4/cours-projections.html">diapositives</a></li>
+<li><strong>Labo</strong> : <a href="materiel/jour-4/labo-projections.html">projeter la population de son pays à 2050</a> (dossier <code>projet-projection/</code> sur la clé USB)</li>
+<li><strong>Travail en équipe et exercice</strong> : <a href="materiel/jour-4/exercices-projections.html">scénario à 2050 et besoins pour un secteur</a></li>
+<li><strong>Données</strong> : <a href="materiel/jour-4/donnees-projections.html">description des fichiers</a></li>
+</ul>
+</div>
+</div>
 </section>
-<section id="vendredi-27-novembre-des-analyses-aux-outils-de-décision" class="level2">
-<h2 class="anchored" data-anchor-id="vendredi-27-novembre-des-analyses-aux-outils-de-décision">Vendredi 27 novembre — Des analyses aux outils de décision</h2>
-<p><em>Objectif 7 · Irifa, Alexandra</em></p>
+<section id="vendredi-27-novembre-traduire-les-analyses-en-outils-pour-les-décideurs" class="level2">
+<h2 class="anchored" data-anchor-id="vendredi-27-novembre-traduire-les-analyses-en-outils-pour-les-décideurs">Vendredi 27 novembre — Traduire les analyses en outils pour les décideurs</h2>
+<p><em>Objectif 7 · Irifaar Somé, Alexandra Tapsoba, avec toute l’équipe</em></p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
+<col style="width: 16%">
+<col style="width: 22%">
+<col style="width: 62%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Bloc</th>
-<th>Contenu</th>
-<th>Formateur</th>
+<th style="text-align: left;">Horaire</th>
+<th style="text-align: left;">Bloc</th>
+<th style="text-align: left;">Contenu</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Cours</td>
-<td>Note analytique et policy brief ; data storytelling ; tableau de bord et indicateurs de suivi</td>
-<td>Irifa, Alexandra</td>
+<td style="text-align: left;">9 h – 12 h 30</td>
+<td style="text-align: left;">Cours</td>
+<td style="text-align: left;">Du chiffre brut à la décision ; publics cibles ; rédiger pour convaincre ; visualiser et piloter</td>
 </tr>
 <tr class="even">
-<td>Étude de cas</td>
-<td>L’outil d’IA d’aide à la rédaction des rapports DHS : ce que l’IA accélère, ce qui reste sous la responsabilité de l’analyste</td>
-<td>Irifa, Alexandra</td>
+<td style="text-align: left;">14 h – 15 h 30</td>
+<td style="text-align: left;">Labo</td>
+<td style="text-align: left;">Concevoir un package décisionnel : policy brief, message citoyen et maquette de tableau de bord</td>
 </tr>
 <tr class="odd">
-<td>Labo 1</td>
-<td>Autodiagnostic du site web de son INS avec une grille commune, puis comparaison avec un site de référence</td>
-<td>Irifa, Alexandra</td>
+<td style="text-align: left;">15 h 45 – 17 h 45</td>
+<td style="text-align: left;">Équipe pays</td>
+<td style="text-align: left;">Package décisionnel de son pays</td>
 </tr>
 <tr class="even">
-<td>Labo 2</td>
-<td>Construction d’un tableau de bord simple à partir d’un modèle</td>
-<td>Irifa, Alexandra</td>
-</tr>
-<tr class="odd">
-<td>Équipe pays</td>
-<td>Rédaction de la note d’analyse pays (2 pages) et préparation de la présentation</td>
-<td>Tous</td>
-</tr>
-<tr class="even">
-<td>Exercice</td>
-<td>Finaliser la note et les diapositives de restitution</td>
-<td>Irifa, Alexandra</td>
+<td style="text-align: left;">17 h 45 – 18 h</td>
+<td style="text-align: left;">Consignes</td>
+<td style="text-align: left;">Finaliser le package pour la restitution du samedi</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Matériel :</strong> <a href="materiel/jour-5/syllabus.html">Syllabus</a> · Diapositives · Gabarit de note pays · Grille d’autodiagnostic</p>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Matériel du vendredi
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>À venir : diapositives, canevas de policy brief et de tableau de bord.</p>
+</div>
+</div>
 </section>
 <section id="samedi-28-novembre-restitutions-et-feuille-de-route-régionale" class="level2">
 <h2 class="anchored" data-anchor-id="samedi-28-novembre-restitutions-et-feuille-de-route-régionale">Samedi 28 novembre — Restitutions et feuille de route régionale</h2>
 <p><em>Objectif 8 · Toute l’équipe</em></p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
+<col style="width: 28%">
+<col style="width: 72%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Horaire</th>
-<th>Contenu</th>
+<th style="text-align: left;">Horaire</th>
+<th style="text-align: left;">Contenu</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>8 h 30 – 11 h</td>
-<td>Présentation des huit notes pays (10 minutes, puis 5 minutes de questions)</td>
+<td style="text-align: left;">8 h 30 – 11 h</td>
+<td style="text-align: left;">Présentation des notes pays et des packages décisionnels (10 minutes, puis 5 minutes de questions)</td>
 </tr>
 <tr class="even">
-<td>11 h 15 – 12 h 30</td>
-<td>Atelier collectif sur l’harmonisation des pratiques d’analyse et de diffusion dans l’espace UEMOA</td>
+<td style="text-align: left;">11 h 15 – 12 h 30</td>
+<td style="text-align: left;">Atelier collectif sur l’harmonisation des pratiques d’analyse et de diffusion dans l’espace UEMOA, à partir des notes pays et des recommandations des débats du soir</td>
 </tr>
 <tr class="odd">
-<td>12 h 30 – 13 h</td>
-<td>Grandes lignes de la feuille de route régionale, évaluation de la formation et clôture</td>
+<td style="text-align: left;">12 h 30 – 13 h</td>
+<td style="text-align: left;">Grandes lignes de la feuille de route régionale, évaluation de la formation et clôture</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Matériel :</strong> Notes pays · Synthèse de l’autodiagnostic des sites · Projet de feuille de route</p>
 </section>
-<section id="la-note-danalyse-pays" class="level2">
-<h2 class="anchored" data-anchor-id="la-note-danalyse-pays">La note d’analyse pays</h2>
-<p>Les 24 cadres des INS forment 8 équipes pays ; les 6 cadres de la Commission sont répartis entre elles. Chaque jour ajoute une section à la note.</p>
+<section id="les-activités-du-soir" class="level2">
+<h2 class="anchored" data-anchor-id="les-activités-du-soir">Les activités du soir</h2>
+<p>Une activité par soir, d’une heure au plus.</p>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 28%">
+<col style="width: 72%">
+</colgroup>
 <thead>
 <tr class="header">
-<th>Jour</th>
-<th>Section ajoutée</th>
+<th style="text-align: left;">Soir</th>
+<th style="text-align: left;">Activité</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Lundi</td>
-<td>Profil démographique : cinq indicateurs clés</td>
+<td style="text-align: left;">Dimanche 22, 16 h – 18 h 30</td>
+<td style="text-align: left;">Séance zéro de R : installation, projet RStudio, lecture d’un CSV (à confirmer selon l’arrivée des participants)</td>
 </tr>
 <tr class="even">
-<td>Mardi</td>
-<td>Inégalités régionales : une carte et son analyse</td>
+<td style="text-align: left;">Lundi 23, 18 h 15 – 19 h 15</td>
+<td style="text-align: left;">Atelier R 1 : manipuler des données avec le tidyverse ; reprendre le labo du jour</td>
 </tr>
 <tr class="odd">
-<td>Mercredi</td>
-<td>Apport d’une nouvelle source de données</td>
+<td style="text-align: left;">Mardi 24, 18 h 15 – 19 h 15</td>
+<td style="text-align: left;">Débat 1 : « Après les EDS : état civil, recensements et données administratives »</td>
 </tr>
 <tr class="even">
-<td>Jeudi</td>
-<td>Scénario à 2050 et besoins pour un secteur</td>
+<td style="text-align: left;">Mercredi 25, 18 h 15 – 19 h 15</td>
+<td style="text-align: left;">Atelier R 2 : joindre des tableaux, écrire une fonction, ggplot2 ; préparation du labo de projection</td>
 </tr>
 <tr class="odd">
-<td>Vendredi</td>
-<td>Rédaction finale (2 pages) et messages pour les décideurs</td>
+<td style="text-align: left;">Jeudi 26, 18 h 15 – 19 h 15</td>
+<td style="text-align: left;">Débat 2 : « Les INS à l’ère de l’IA générative : remplacés, augmentés ou contournés ? »</td>
+</tr>
+</tbody>
+</table>
+<p>Chaque débat se conclut par trois recommandations, reprises le samedi dans la feuille de route régionale.</p>
+</section>
+<section id="la-note-danalyse-pays" class="level2">
+<h2 class="anchored" data-anchor-id="la-note-danalyse-pays">La note d’analyse pays</h2>
+<p>Chaque jour, le travail en équipe ajoute une section à la note d’analyse de son pays.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 28%">
+<col style="width: 72%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Jour</th>
+<th style="text-align: left;">Section ajoutée</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Lundi</td>
+<td style="text-align: left;">Profil démographique : cinq indicateurs commentés</td>
 </tr>
 <tr class="even">
-<td>Samedi</td>
-<td>Présentation et contribution à la feuille de route</td>
+<td style="text-align: left;">Mardi</td>
+<td style="text-align: left;">Inégalités régionales : une carte et son analyse</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Mercredi</td>
+<td style="text-align: left;">Apport d’une nouvelle source : la population synthétique pour des indicateurs infrarégionaux</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Jeudi</td>
+<td style="text-align: left;">Scénario à 2050 et besoins pour un secteur</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Vendredi</td>
+<td style="text-align: left;">Policy brief, message grand public et maquette de tableau de bord</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Samedi</td>
+<td style="text-align: left;">Présentation et contribution à la feuille de route régionale</td>
 </tr>
 </tbody>
 </table>

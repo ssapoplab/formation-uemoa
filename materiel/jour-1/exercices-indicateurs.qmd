@@ -1,0 +1,82 @@
+---
+title: "Lundi 23 novembre — Labo, travail en équipe et exercice"
+subtitle: "Jour 1 · Formation régionale UEMOA · Ouagadougou, 23 novembre 2026"
+lang: fr
+---
+
+# Labo (14 h – 15 h 30) : des indicateurs aux explications
+
+Calculer un ISF ou une table de mortalité, vous savez le faire. Le code (`jour1-labo-indicateurs.Rmd`) et le classeur (`jour1-labo-indicateurs.xlsx`) sont **fournis** : ils produisent tous les indicateurs en quelques minutes. Le temps du labo est consacré à **interpréter** les résultats avec les théories du cours, et à **questionner** les chiffres, leurs sources et leurs catégories.
+
+**Données** : pour chacun des huit pays, en 2023, la population, les naissances et les décès de l'année par groupe d'âge, comme les produit un recensement. Ces tableaux sont reconstitués à partir des *World Population Prospects 2024* des Nations Unies : ce sont des données agrégées et publiques.
+
+**Organisation** : travaillez en équipe. Une personne exécute le code ou le classeur, les autres préparent les réponses. Vos réponses alimentent la section 1 de votre note pays.
+
+| Étape | Calculer | Interpréter avec | Durée |
+|:--|:--|:--|:--|
+| 1. Fécondité | TBN, taux par âge, ISF, âge moyen à la maternité | Coale ; perspectives féministe et antiraciste | 20 min |
+| 2. Mortalité | table de mortalité, e₀ par sexe, ₅q₀, ₄₅q₁₅ | Omran | 20 min |
+| 3. Structure par âge | pyramide, rapport de dépendance, âge médian | Bloom ; Lutz | 15 min |
+| 4. Standardisation et décomposition | TBM standardisé, indice comparatif, décomposition du TBN | inertie démographique | 20 min |
+| 5. Synthèse | tableau des huit pays | Notestein ; Tabutin et Schoumaker ; Mason | 15 min |
+
+## Les questions
+
+**Question 1 — Interpréter.** Pour Coale (1973), la fécondité baisse quand elle devient un choix conscient, que les couples ont intérêt à limiter les naissances et qu'ils en ont les moyens. Laquelle de ces conditions est la moins remplie dans votre pays ? Quelles données de votre institut permettraient de le vérifier ?
+
+**Question 2 — Questionner.** Au Niger et au Mali, près de 15 % des filles de 15 à 19 ans ont un enfant chaque année, contre 6 % au Sénégal. On explique souvent cet écart par la « culture ». Quelles autres explications proposeraient les perspectives féministe et antiraciste ? Que sait-on de la fécondité des hommes, que l'ISF ignore ?
+
+**Question 3 — Interpréter.** Où se situe votre pays dans la transition épidémiologique d'Omran (1971) ? Les gains récents viennent-ils surtout des enfants (₅q₀) ou des adultes (₄₅q₁₅) ? Qu'est-ce que cela implique pour le système de santé ?
+
+**Question 4 — Questionner.** Quel écart d'espérance de vie obtenez-vous entre femmes et hommes ? Au Togo, il n'est que de 0,3 an, contre 4 à 6 ans dans la plupart des pays. Réalité sociale ou artefact de modèle ? Vos taux de mortalité sont-ils observés ou estimés, et à partir de quelles données nationales ?
+
+**Question 5 — Interpréter.** Pour Bloom, Canning et Sevilla (2003), le dividende démographique exige des emplois, une population éduquée et en bonne santé, et de l'investissement. Pour Lutz et al. (2019), c'est d'abord l'éducation qui le produit. Dans votre pays, quelle condition est le maillon le plus faible ?
+
+**Question 6 — Questionner.** Le rapport de dépendance suppose que les moins de 15 ans et les 65 ans et plus sont « à charge », et que les 15-64 ans sont « actifs ». Est-ce vrai dans votre pays ? Quel indicateur décrirait mieux la charge réelle ?
+
+**Question 7 — Interpréter.** Au Niger et au Mali, l'effet de structure sur la natalité est négatif alors que la fécondité y est la plus forte. Pourquoi ? Que se passera-t-il quand les enfants d'aujourd'hui atteindront 15 ans ?
+
+**Question 8 — Questionner.** (a) Standardiser, c'est choisir une norme : qui choisit la population de référence, et pourquoi cela compte-t-il ? (b) Une décomposition dit *combien* de l'écart vient de la fécondité, pas *pourquoi*. Quelle théorie du matin mobiliseriez-vous pour expliquer l'effet de fécondité de votre pays ?
+
+**Question 9 — Interpréter.** Placez les huit pays dans les phases de la transition et dans les modèles de Tabutin et Schoumaker (2004). Le Niger a la fécondité la plus forte de l'Union mais une espérance de vie moyenne. La séquence classique de Notestein (la mortalité baisse d'abord, la fécondité ensuite) tient-elle ? Faut-il parler d'*une* transition ou *des* transitions (Mason, 1997) ?
+
+# Travail en équipe (15 h 45 – 16 h 25, puis 17 h 20 – 17 h 50) : le profil démographique de votre pays
+
+C'est la **section 1 de votre note pays**. Le travail se fait en deux temps, de part et d'autre du séminaire de Statistique Canada.
+
+## Première partie (40 minutes) : choisir et documenter
+
+1. **Choisissez cinq indicateurs** parmi les douze du labo. Prenez-en au moins un pour la fécondité, un pour la mortalité et un pour la structure par âge. Retenez ceux qui comptent le plus pour une décision publique dans votre pays, et notez pourquoi.
+2. **Remplissez le tableau ci-dessous.** La colonne « Source nationale » est la plus importante : d'où le chiffre viendrait-il dans votre institut ? Du recensement, d'une EDS ou d'une MICS, de l'état civil, ou d'une estimation de l'ONU faute de données nationales ? Et de quelle année date la dernière donnée nationale ?
+
+| Indicateur | Valeur 2023 | Ensemble UEMOA | Source nationale et année | Pourquoi cet indicateur ? |
+|:--|:--|:--|:--|:--|
+| 1. | | | | |
+| 2. | | | | |
+| 3. | | | | |
+| 4. | | | | |
+| 5. | | | | |
+
+## Deuxième partie (30 minutes) : interpréter
+
+3. Écrivez un **paragraphe qui situe votre pays dans la transition** : sa phase, le modèle de Tabutin et Schoumaker dont il relève, et l'explication théorique qui vous paraît la plus plausible pour son niveau de fécondité. Appuyez-vous sur les questions 1, 7 et 9 du labo.
+4. Pour chaque indicateur, écrivez **une phrase pour un décideur** (ce que le chiffre veut dire pour l'école, la santé ou l'emploi) et **une phrase sur sa limite** (ce que l'indicateur ne dit pas, ou la fragilité de sa source). Appuyez-vous sur le séminaire de Statistique Canada.
+5. **Regard croisé** : le membre invité de l'équipe ajoute, pour deux indicateurs au moins, une ligne de comparaison avec son propre pays.
+
+**Livrable en fin de journée** : le tableau et les commentaires, soit une demi-page. Déposez-les dans le dossier de votre équipe sous le nom `note_<pays>_section1.docx`.
+
+# Exercice pour le mardi (une heure au plus) : votre pays dans l'UEMOA
+
+1. **Choisissez trois indicateurs** du tableau de synthèse du labo : un de fécondité, un de mortalité et un de structure par âge.
+2. Pour chacun, relevez :
+   - la valeur de votre pays ;
+   - la valeur de l'ensemble de l'UEMOA ;
+   - l'écart entre les deux, en valeur absolue et en pourcentage ;
+   - le rang de votre pays parmi les huit.
+3. **Calculez la moyenne simple** des huit pays pour ces trois indicateurs. Elle n'est pas égale à la valeur de l'« ensemble de l'UEMOA ». Expliquez pourquoi en deux phrases, et dites laquelle des deux vous utiliseriez dans une note pour la Commission.
+4. **Proposez une explication.** Pour l'indicateur où votre pays s'écarte le plus de l'UEMOA, écrivez un court paragraphe qui avance une explication fondée sur une théorie du cours, et dites quelles données permettraient de la vérifier.
+5. **Rédigez trois lignes d'interprétation**, une par indicateur, comme vous les écririez pour un décideur.
+
+**Format de remise** : un fichier Word nommé `jour1_exercice_<pays>.docx`, déposé dans le dossier de votre équipe avant 8 h le mardi.
+
+**Correction** : mardi de 8 h 30 à 9 h. Deux ou trois équipes présentent leur comparaison.

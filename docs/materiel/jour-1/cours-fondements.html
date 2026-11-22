@@ -1,0 +1,2151 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-17888a1159294d3eb470f19f6f52f5a5.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.20">
+
+  <meta name="author" content="Vissého Adjiwanou, PhD">
+  <meta name="author" content="Yentéma Onadja">
+  <meta name="author" content="Alexandra Tapsoba">
+  <title>Formation UEMOA — Analyse démographique pour la décision publique – Mesurer une population pour décider</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-c6f98795111125a28c35549681020626.css">
+  <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;display=swap">
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Mesurer une population pour décider</h1>
+  <p class="subtitle">Jour 1 · Fondements de l’analyse démographique — Formation régionale UEMOA</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Vissého Adjiwanou, PhD
+</div>
+        <p class="quarto-title-affiliation">
+            Département de sociologie, UQAM
+          </p>
+        <p class="quarto-title-affiliation">
+            SSAPOPLAB
+          </p>
+        <p class="quarto-title-affiliation">
+            Département de démographie, UdeM
+          </p>
+    </div>
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Yentéma Onadja
+</div>
+        <p class="quarto-title-affiliation">
+            ISSP, Université Joseph Ki-Zerbo
+          </p>
+    </div>
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Alexandra Tapsoba
+</div>
+        <p class="quarto-title-affiliation">
+            ISSP, Université Joseph Ki-Zerbo
+          </p>
+    </div>
+</div>
+
+  <p class="date">23 novembre 2026</p>
+</section>
+<section id="déroulé-de-la-matinée" class="slide level2">
+<h2>Déroulé de la matinée</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Bloc</th>
+<th style="text-align: left;">Durée</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">Présentations</td>
+<td style="text-align: left;">10 min</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">Introduction : la semaine et notre façon d’apprendre</td>
+<td style="text-align: left;">15 min</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">Que veut dire « mesurer une population » ?</td>
+<td style="text-align: left;">40 min</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">Les phénomènes démographiques dans l’UEMOA : mesures et explications</td>
+<td style="text-align: left;">75 min</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">La transition démographique et ses conséquences</td>
+<td style="text-align: left;">60 min</td>
+</tr>
+</tbody>
+</table>
+<p>Pause à 10 h 30. Fin vers 12 h 35.</p>
+<aside class="notes">
+<p>Durée totale : 3 h 15 hors pause. Garder le chronomètre visible : les parties 3 et 5 ont tendance à déborder. La partie 4 passe à 75 minutes pour les théories explicatives de la fécondité, de la mortalité et de la migration, et pour l’effet de structure ; l’introduction est ramenée à 15 minutes.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section>
+<section id="présentations" class="title-slide slide level1 center">
+<h1>1 · Présentations</h1>
+
+</section>
+<section id="qui-suis-je" class="slide level2 smaller">
+<h2>Qui suis-je ?</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="formation">Formation</h3>
+<ul>
+<li>Doctorat en démographie, U. de Montréal</li>
+<li>Maîtrise en économie du développement, CERDI</li>
+<li>Ingénieur des travaux statistiques, ENSEA</li>
+<li>Mathématiques, Université de Lomé</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3 id="intérêts-de-recherche">Intérêts de recherche</h3>
+<ul>
+<li><strong>Démographie</strong> : familles, fécondité, transition</li>
+<li><strong>Santé publique</strong> : mortalité des enfants et des mères, santé de la reproduction</li>
+<li><strong>Méthodes</strong> : causalité, analyse de texte, données massives</li>
+</ul>
+<h3 id="parcours">Parcours</h3>
+<ul>
+<li>University of Cape Town (2013-2018)</li>
+<li>UQAM depuis 2018, SSAPOPLAB</li>
+</ul>
+</div></div>
+<aside class="notes">
+<p>Deux minutes au plus. Insister sur l’ENSEA : une partie de la salle y a sans doute été formée. C’est un point de contact immédiat.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="tour-de-table" class="slide level2">
+<h2>Tour de table</h2>
+<p>En une phrase chacun :</p>
+<ul>
+<li>votre nom, votre institut, votre service ;</li>
+<li><strong>un chiffre de votre pays dont vous doutez</strong>, et pourquoi.</li>
+</ul>
+<aside class="notes">
+<p>Environ 8 minutes pour 30 personnes : 15 secondes chacun. Noter au tableau les chiffres cités : on les reprendra dans les parties 3 et 4.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="introduction" class="title-slide slide level1 center">
+<h1>2 · Introduction</h1>
+
+</section>
+<section id="la-semaine-en-un-coup-dœil" class="slide level2">
+<h2>La semaine en un coup d’œil</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Jour</th>
+<th style="text-align: left;">Thème</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Lundi</td>
+<td style="text-align: left;">Fondements : indicateurs et dynamiques démographiques</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Mardi</td>
+<td style="text-align: left;">Inégalités territoriales et sociales, méthodes avancées</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Mercredi</td>
+<td style="text-align: left;">Nouvelles sources de données et data science</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Jeudi</td>
+<td style="text-align: left;">Prospective et scénarios</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Vendredi</td>
+<td style="text-align: left;">Des analyses aux outils de décision</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Samedi</td>
+<td style="text-align: left;">Restitutions et feuille de route régionale</td>
+</tr>
+</tbody>
+</table>
+<p>Fil rouge : chaque équipe pays construit <strong>une note d’analyse sur son pays</strong>, section par section, et la présente samedi.</p>
+</section>
+<section id="chaque-journée-suit-le-même-déroulé" class="slide level2">
+<h2>Chaque journée suit le même déroulé</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Horaire</th>
+<th style="text-align: left;">Bloc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">8 h 30 – 9 h</td>
+<td style="text-align: left;">Retour sur l’exercice de la veille</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">9 h – 12 h 30</td>
+<td style="text-align: left;">Cours</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">14 h – 15 h 30</td>
+<td style="text-align: left;">Labo sur données réelles</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">15 h 45 – 17 h 15</td>
+<td style="text-align: left;">Travail en équipe pays</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">17 h 15 – 17 h 30</td>
+<td style="text-align: left;">Exercice pour le lendemain</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="quatre-révolutions-qui-marquent-notre-temps" class="slide level2">
+<h2>Quatre révolutions qui marquent notre temps</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Révolution</th>
+<th style="text-align: left;">Ce qu’elle change</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>1. Des données</strong></td>
+<td style="text-align: left;"><em>Ce que nous analysons</em> : volume, vitesse et variété ; des textes, des images, des voix, pas seulement des chiffres</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>2. Informatique</strong></td>
+<td style="text-align: left;"><em>Ce que nous pouvons calculer</em> : puissance de calcul et stockage qui doublent tous les deux à trois ans, apprentissage automatique</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>3. De l’apprentissage</strong></td>
+<td style="text-align: left;"><em>Comment nous apprenons</em> : les savoirs vieillissent vite, la capacité d’apprendre devient la compétence clé</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>4. Des grands modèles de langage</strong></td>
+<td style="text-align: left;"><em>Qui fait le travail analytique</em> : depuis 2022, une machine écrit du code, interprète des résultats et rédige du texte</td>
+</tr>
+</tbody>
+</table>
+<aside class="notes">
+<p>Pour un institut de statistique, chacune a une traduction concrète : données administratives et numériques (1), traitement de recensements entiers sur un ordinateur portable (2), formation continue des cadres (3), rédaction assistée des rapports (4), que l’on verra vendredi avec l’exemple des rapports DHS.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="ce-que-cela-change-pour-apprendre" class="slide level2">
+<h2>Ce que cela change pour apprendre</h2>
+<ul>
+<li><strong>L’agilité d’apprentissage devient la compétence la plus précieuse</strong> (« learning agility is the most competitive ability », Sheila Jagannathan).</li>
+<li>L’ancien goulot d’étranglement, apprendre à taper des commandes, se dissout en partie : <strong>la valeur se déplace vers la formulation, la vérification et la critique</strong>.</li>
+<li>L’IA est un <strong>assistant, jamais un oracle</strong> : elle se trompe avec assurance, invente des références, reproduit les biais de ses données.</li>
+</ul>
+<blockquote>
+<p>Devise de la semaine : <strong>faire confiance, mais toujours vérifier.</strong></p>
+</blockquote>
+</section>
+<section id="notre-philosophie-apprendre-à-apprendre" class="slide level2">
+<h2>Notre philosophie : apprendre à apprendre</h2>
+<p>L’objectif n’est pas de tout retenir en six jours, mais de <strong>repartir capable d’apprendre seul une méthode nouvelle</strong>.</p>
+<ol type="1">
+<li><strong>Se tester plutôt que relire</strong> : exercice du soir, retour du matin.</li>
+<li><strong>Apprendre par un problème réel</strong> : la note sur votre pays.</li>
+<li><strong>Lire la documentation</strong>, pas seulement le cours.</li>
+<li><strong>Enseigner à ses pairs</strong> : c’est vous qui présentez les solutions.</li>
+<li><strong>Utiliser l’IA de façon critique</strong>, jamais avec des microdonnées de vos instituts.</li>
+</ol>
+</section>
+<section id="la-partie-3-sappuie-sur-quatre-textes" class="slide level2">
+<h2>La partie 3 s’appuie sur quatre textes</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Texte</th>
+<th style="text-align: left;">Ce qu’il apporte</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Preston (1995)</strong>, « Where is US demography headed? »</td>
+<td style="text-align: left;">La démographie comme science de la mesure, utile à l’action publique</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Greenhalgh (1996)</strong>, « The social construction of population science »</td>
+<td style="text-align: left;">Mesurer n’est jamais neutre : catégories, institutions, finalités politiques</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Tabutin (1997)</strong>, « Les systèmes d’information en démographie »</td>
+<td style="text-align: left;">La démographie dépend de ses sources : recensements, enquêtes, état civil</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Cesare et al.&nbsp;(2018)</strong>, « Promises and pitfalls of using digital traces »</td>
+<td style="text-align: left;">Les nouvelles données ne règlent pas ces questions, elles les déplacent</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Vous n’avez pas à les lire</strong> : je vous en présente l’essentiel. Les parties 4 et 5 s’appuient sur les données de vos pays et sur d’autres références, données au fil des diapositives.</p>
+</section>
+<section id="la-question-de-la-matinée" class="slide level2">
+<h2>La question de la matinée</h2>
+<blockquote>
+<p>Que veut dire « mesurer une population » ? Et que permet cette mesure quand il faut décider ?</p>
+</blockquote>
+<p>Pour commencer :</p>
+<blockquote>
+<p>Quand votre institut publie un indice synthétique de fécondité de 4,6, <strong>qu’est-ce qui est réellement mesuré ? Et qu’est-ce qui ne l’est pas ?</strong></p>
+</blockquote>
+<aside class="notes">
+<p>Laisser 3 à 4 réponses, sans corriger. Réponses attendues : un indicateur du moment et non une descendance réelle ; une estimation issue d’une enquête par sondage (erreur d’échantillonnage) ; une période de référence (3 ou 5 ans avant l’enquête) ; ce qui n’est pas mesuré : les naissances non déclarées, les intentions, les raisons.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="que-veut-dire-mesurer-une-population" class="title-slide slide level1 center">
+<h1>3 · Que veut dire mesurer une population ?</h1>
+
+</section>
+<section id="preston-1995-une-science-de-la-mesure-utile-à-laction" class="slide level2">
+<h2>Preston (1995) : une science de la mesure utile à l’action</h2>
+<ul>
+<li>La force de la démographie n’est pas la grande théorie, mais <strong>la rigueur de la mesure</strong> : décomposer, comparer, estimer.</li>
+<li>Son orientation vers l’action publique est <strong>une qualité</strong> : elle éclaire les décisions.</li>
+<li>Son avenir : de meilleures données, des méthodes plus fines, des liens avec l’économie, l’épidémiologie, la biologie.</li>
+</ul>
+<blockquote>
+<p>La démographie progresse en mesurant mieux.</p>
+</blockquote>
+</section>
+<section id="greenhalgh-1996-mesurer-nest-jamais-neutre" class="slide level2">
+<h2>Greenhalgh (1996) : mesurer n’est jamais neutre</h2>
+<ul>
+<li>La démographie s’est construite en lien étroit avec <strong>les États, les fondations et les organisations internationales</strong> qui la financent.</li>
+<li>Ses <strong>catégories</strong> (ménage, chef de ménage, âge, milieu de résidence) sont des constructions, pas des évidences.</li>
+<li>Elle mesure beaucoup, mais <strong>explique peu</strong>, et reste peu ouverte aux théories sociales de son temps : féminismes, postcolonialisme. Nous y reviendrons avec la transition démographique.</li>
+</ul>
+<blockquote>
+<p>La démographie est une science socialement construite.</p>
+</blockquote>
+</section>
+<section id="deux-diagnostics-une-même-discipline" class="slide level2">
+<h2>Deux diagnostics, une même discipline</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Preston</th>
+<th style="text-align: left;">Greenhalgh</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Question posée</td>
+<td style="text-align: left;">Comment rendre la démographie plus performante ?</td>
+<td style="text-align: left;">Quelle est la nature sociale de la démographie ?</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Statut de la théorie</td>
+<td style="text-align: left;">Secondaire : la rigueur empirique prime</td>
+<td style="text-align: left;">Insuffisant : il manque une théorie sociale</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Lien avec l’action publique</td>
+<td style="text-align: left;">Une responsabilité</td>
+<td style="text-align: left;">Une dépendance</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Ce qu’il faut pour avancer</td>
+<td style="text-align: left;">De meilleures données et méthodes</td>
+<td style="text-align: left;">Plus de réflexivité sur les catégories</td>
+</tr>
+</tbody>
+</table>
+<p>Ils ne s’opposent pas sur les faits, mais sur <strong>la finalité</strong> de la discipline.</p>
+</section>
+<section id="tabutin-la-démographie-est-une-science-de-ses-sources" class="slide level2">
+<h2>Tabutin : la démographie est une science de ses sources</h2>
+<ul>
+<li>Toute mesure repose sur un <strong>système d’information</strong> : recensements, état civil, enquêtes par sondage.</li>
+<li>Ces systèmes sont <strong>inégalement développés</strong> : dans la plupart des pays de l’UEMOA, l’état civil reste incomplet, et l’essentiel des indicateurs vient d’enquêtes et de recensements.</li>
+<li>Ce que l’on mesure dépend donc de <strong>ce qui est disponible</strong>, de qui collecte et de qui finance.</li>
+</ul>
+<blockquote>
+<p>La démographie est autant une science des sources que des idées.</p>
+</blockquote>
+<aside class="notes">
+<p>Pour des cadres d’INS, c’est le texte le plus proche de leur métier : ils sont les producteurs de ces systèmes d’information. Leur demander : quelle part de vos indicateurs démographiques vient de l’état civil ? d’enquêtes ? du dernier recensement ?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="un-exemple-dactualité" class="slide level2">
+<h2>Un exemple d’actualité</h2>
+<p>Le programme des <strong>Enquêtes démographiques et de santé (EDS / DHS)</strong> a fourni pendant près de 40 ans une grande partie des indicateurs de fécondité et de mortalité des pays de l’UEMOA.</p>
+<ul>
+<li>Il était financé par l’agence américaine USAID, dont le financement a pris fin en <strong>février 2025</strong>.</li>
+<li>Les données existantes restent accessibles, mais la suite du programme n’est plus garantie.</li>
+</ul>
+<p><strong>Question :</strong> dans votre pays, combien d’indicateurs clés dépendent d’une EDS ? Qui financera la prochaine ?</p>
+<aside class="notes">
+<p>C’est l’argument de Greenhalgh rendu concret : elle notait déjà en 1996 que, depuis les années 1960, l’USAID était devenue l’un des principaux financeurs de la recherche démographique. La dépendance aux bailleurs détermine ce qui sera mesuré demain. Faire le lien avec la feuille de route régionale de samedi.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="et-les-nouvelles-données" class="slide level2">
+<h2>Et les nouvelles données ?</h2>
+<p><strong>Cesare et al.&nbsp;(2018)</strong> : les traces numériques (réseaux sociaux, téléphonie, données satellitaires) promettent des données plus rapides et moins chères…</p>
+<p>…mais elles posent les mêmes questions sous une autre forme : <strong>qui est visible, qui est invisible, qui contrôle les données ?</strong></p>
+<p>Nous y reviendrons <strong>mercredi</strong>.</p>
+</section>
+<section id="trois-lunettes-pour-la-suite-de-la-matinée" class="slide level2">
+<h2>Trois lunettes pour la suite de la matinée</h2>
+<blockquote>
+<p>Preston nous montre ce que la démographie sait faire. Greenhalgh nous montre ce qu’elle oublie de penser. Tabutin nous montre comment elle navigue entre les deux.</p>
+</blockquote>
+<p>Devant chaque chiffre de ce matin, trois questions :</p>
+<ol type="1">
+<li><strong>Qu’est-ce qui est mesuré, et qu’est-ce qui ne l’est pas ?</strong></li>
+<li><strong>Qui produit ce chiffre, avec quelle source ?</strong></li>
+<li><strong>Quelle décision ce chiffre permet-il d’éclairer ?</strong></li>
+</ol>
+</section></section>
+<section>
+<section id="les-phénomènes-démographiques-dans-luemoa-mesurer-et-expliquer" class="title-slide slide level1 center">
+<h1>4 · Les phénomènes démographiques dans l’UEMOA : mesurer et expliquer</h1>
+
+</section>
+<section id="léquation-de-base" class="slide level2">
+<h2>L’équation de base</h2>
+<blockquote>
+<p><strong>Population de demain = population d’aujourd’hui + (naissances − décès) + (immigrants − émigrants)</strong></p>
+<p>(naissances − décès) = accroissement naturel · (immigrants − émigrants) = solde migratoire</p>
+</blockquote>
+<ul>
+<li>Dans l’UEMOA, la croissance vient presque entièrement de <strong>l’accroissement naturel</strong>.</li>
+<li>Un taux de croissance de 2,5 % par an <strong>double la population en 28 ans</strong> environ.</li>
+</ul>
+</section>
+<section id="luemoa-en-2023" class="slide level2">
+<h2>L’UEMOA en 2023</h2>
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Pays</th>
+<th style="text-align: right;">Population (millions)</th>
+<th style="text-align: right;">ISF</th>
+<th style="text-align: right;">Espérance de vie</th>
+<th style="text-align: right;">Moins de 15 ans (%)</th>
+<th style="text-align: right;">Âge médian</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Bénin</td>
+<td style="text-align: right;">14,3</td>
+<td style="text-align: right;">4,6</td>
+<td style="text-align: right;">60,8</td>
+<td style="text-align: right;">41,7</td>
+<td style="text-align: right;">18</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Burkina Faso</td>
+<td style="text-align: right;">23,3</td>
+<td style="text-align: right;">4,2</td>
+<td style="text-align: right;">61,1</td>
+<td style="text-align: right;">42,1</td>
+<td style="text-align: right;">18</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Côte d’Ivoire</td>
+<td style="text-align: right;">31,5</td>
+<td style="text-align: right;">4,3</td>
+<td style="text-align: right;">61,9</td>
+<td style="text-align: right;">41,1</td>
+<td style="text-align: right;">19</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Guinée-Bissau</td>
+<td style="text-align: right;">2,2</td>
+<td style="text-align: right;">3,8</td>
+<td style="text-align: right;">64,1</td>
+<td style="text-align: right;">39,0</td>
+<td style="text-align: right;">20</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Mali</td>
+<td style="text-align: right;">24,1</td>
+<td style="text-align: right;">5,6</td>
+<td style="text-align: right;">60,4</td>
+<td style="text-align: right;">46,3</td>
+<td style="text-align: right;">16</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Niger</td>
+<td style="text-align: right;">26,6</td>
+<td style="text-align: right;">6,1</td>
+<td style="text-align: right;">61,2</td>
+<td style="text-align: right;">46,8</td>
+<td style="text-align: right;">16</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Sénégal</td>
+<td style="text-align: right;">18,3</td>
+<td style="text-align: right;">3,8</td>
+<td style="text-align: right;">68,7</td>
+<td style="text-align: right;">38,4</td>
+<td style="text-align: right;">20</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Togo</td>
+<td style="text-align: right;">9,4</td>
+<td style="text-align: right;">4,2</td>
+<td style="text-align: right;">62,7</td>
+<td style="text-align: right;">39,7</td>
+<td style="text-align: right;">19</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><em>Monde</em></td>
+<td style="text-align: right;"><em>8 127</em></td>
+<td style="text-align: right;"><em>2,3</em></td>
+<td style="text-align: right;"><em>73,2</em></td>
+<td style="text-align: right;"><em>24,9</em></td>
+<td style="text-align: right;"><em>31</em></td>
+</tr>
+</tbody>
+</table>
+<div class="smaller">
+<p>Source : Nations Unies, <em>World Population Prospects 2024</em>. Environ 150 millions d’habitants au total.</p>
+</div>
+</section>
+<section id="fécondité-une-baisse-partout-à-des-rythmes-différents" class="slide level2">
+<h2>Fécondité : une baisse partout, à des rythmes différents</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figures/isf_uemoa.png" class="quarto-figure quarto-figure-center" style="max-height: 76vh;"></p>
+</figure>
+</div>
+<aside class="notes">
+<p>Lecture : de 1990 à 2023, l’ISF a baissé de 2 à 3 enfants dans la plupart des pays ; le Niger et le Mali restent au-dessus de 5. Les projections 2050 supposent que la baisse se poursuit : c’est une hypothèse, on la discutera jeudi.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="lunette-quel-isf" class="slide level2">
+<h2>Lunette : quel ISF ?</h2>
+<p>L’ISF des Nations Unies n’est <strong>pas</strong> celui de votre dernière enquête nationale.</p>
+<ul>
+<li>Les Nations Unies <strong>modélisent</strong> une série continue à partir de toutes les sources disponibles.</li>
+<li>L’enquête donne une estimation pour <strong>une période de référence</strong>, avec une marge d’erreur.</li>
+</ul>
+<p><strong>Exercice (5 min, par pays) :</strong> comparez l’ISF 2023 du tableau avec celui de votre dernière EDS ou MICS. L’écart vous semble-t-il important ? D’où peut-il venir ?</p>
+<aside class="notes">
+<p>Réponses attendues : année de référence différente, ajustements des Nations Unies (sous-déclaration, déplacement des naissances), erreur d’échantillonnage. Message : un chiffre n’existe pas sans sa source. C’est Tabutin.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="expliquer-la-fécondité" class="slide level2">
+<h2>Expliquer la fécondité</h2>
+<p><strong>Déterminants proches</strong> (Davis et Blake, 1956 ; Bongaarts, 1978) : la fécondité ne change <strong>que</strong> par quatre canaux.</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Canal</th>
+<th style="text-align: left;">Au Sahel</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">L’<strong>union</strong> (âge au mariage, célibat, rupture)</td>
+<td style="text-align: left;">Mariage précoce des filles</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">La <strong>contraception</strong></td>
+<td style="text-align: left;">Faible prévalence, besoins non satisfaits</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">L’<strong>avortement</strong> provoqué</td>
+<td style="text-align: left;">Mal mesuré, souvent clandestin</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">L’<strong>infécondabilité post-partum</strong> (allaitement, abstinence)</td>
+<td style="text-align: left;">Longue : principal frein à la fécondité</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Causes profondes</strong>, qui passent par ces canaux : théories de la partie 5, <strong>diffusion</strong> des normes (Cleland et Wilson, 1987), <strong>ralentissements</strong> de la baisse en Afrique (Bongaarts, 2006 ; Schoumaker, 2019).</p>
+<aside class="notes">
+<p>Le cadre des déterminants proches est l’outil de travail des INS : chaque canal correspond à un module des EDS (nuptialité, contraception, allaitement). Les ralentissements : la baisse de la fécondité a marqué le pas dans plusieurs pays d’Afrique de l’Ouest ; Schoumaker (2019) les relie en partie aux perturbations de la scolarisation des femmes. Lunette critique : Caldwell et Caldwell (1987) expliquaient la forte fécondité africaine par la religion des lignages et des ancêtres ; c’est l’exemple type d’une explication « culturelle » que la perspective décoloniale invite à discuter.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="mortalité-des-gains-considérables" class="slide level2">
+<h2>Mortalité : des gains considérables</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figures/e0_uemoa.png" class="quarto-figure quarto-figure-center" style="max-height: 76vh;"></p>
+</figure>
+</div>
+<aside class="notes">
+<p>Lecture : le Niger a gagné près de 20 ans d’espérance de vie depuis 1990 (41,7 à 61,2 ans). Le Sénégal est à près de 69 ans. Le recul de la mortalité des enfants explique l’essentiel de ces gains.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="lunette-une-mortalité-surtout-estimée" class="slide level2">
+<h2>Lunette : une mortalité surtout estimée</h2>
+<p>Sans état civil complet, la mortalité n’est pas <strong>observée</strong>, elle est <strong>estimée</strong> :</p>
+<ul>
+<li>à partir des historiques de naissances des enquêtes (mortalité des enfants) ;</li>
+<li>à partir de tables-types et de méthodes indirectes (mortalité des adultes) ;</li>
+<li>avec des modèles pour combler les années sans données.</li>
+</ul>
+<p>Plus l’âge est élevé, plus l’estimation est fragile. <strong>Ce que l’on sait le moins bien, c’est la mortalité des adultes.</strong></p>
+<aside class="notes">
+<p>Lien avec le labo de cet après-midi et avec le manuel « Outils d’estimation démographique » de l’UIESP, en français et gratuit.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="expliquer-la-baisse-de-la-mortalité" class="slide level2">
+<h2>Expliquer la baisse de la mortalité</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Explication</th>
+<th style="text-align: left;">Ce qui fait baisser la mortalité</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>McKeown (1976)</strong></td>
+<td style="text-align: left;">Le niveau de vie et la nutrition, plus que la médecine</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Szreter (1988)</strong></td>
+<td style="text-align: left;">L’action publique : eau potable, assainissement, hygiène</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Preston (1975)</strong></td>
+<td style="text-align: left;">À revenu égal, l’espérance de vie progresse : la santé publique compte plus que le revenu</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Caldwell (1986)</strong></td>
+<td style="text-align: left;">Sri Lanka, Kerala, Costa Rica : faible mortalité grâce à l’<strong>instruction des femmes</strong> et à la <strong>volonté politique</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Mosley et Chen (1984)</strong></td>
+<td style="text-align: left;">Enfants : les facteurs sociaux passent par des <strong>déterminants proches</strong> (nutrition, environnement, soins…)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>UEMOA</strong> : vaccination, lutte contre le paludisme, instruction des mères, bien plus que croissance des revenus.</p>
+<aside class="notes">
+<p>Le débat McKeown-Szreter n’est pas académique : il oppose « attendre la croissance » à « investir dans la santé publique ». Le cadre de Mosley et Chen est la base de la plupart des analyses de la mortalité des enfants à partir des EDS. Caldwell (1986) est la référence la plus utile pour les décideurs : la faible mortalité est d’abord un choix politique.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="après-la-baisse-la-transition-sanitaire" class="slide level2">
+<h2>Après la baisse : la transition sanitaire</h2>
+<ul>
+<li><strong>Omran (1971)</strong> : des pestilences et famines aux maladies dégénératives.</li>
+<li><strong>Olshansky et Ault (1986)</strong> : un 4e âge, où les maladies chroniques sont retardées.</li>
+<li><strong>Frenk et al.&nbsp;(1989)</strong> : au Sud, les âges se <strong>chevauchent</strong> au lieu de se succéder.</li>
+<li><strong>Vallin et Meslé (2004)</strong> : la <strong>transition sanitaire</strong> alterne divergences et convergences entre pays.</li>
+</ul>
+<p><strong>UEMOA</strong> : un <strong>double fardeau</strong>. Infections et mortalité maternelle et infantile restent fortes ; hypertension, diabète et cancers progressent.</p>
+<aside class="notes">
+<p>Vallin et Meslé, en français, sont une bonne porte d’entrée : chaque grande innovation (antibiotiques, révolution cardiovasculaire) creuse d’abord des écarts entre pays avant de converger. Question à la salle : votre système de santé et votre système statistique sont-ils organisés pour suivre les maladies chroniques ?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="attention-un-taux-brut-mélange-deux-choses" class="slide level2">
+<h2>Attention : un taux brut mélange deux choses</h2>
+<p>Taux brut de mortalité en 2023 : <strong>Sénégal 5,6 ‰</strong> · <strong>Burkina Faso 8,0 ‰</strong></p>
+<p>Un taux brut combine :</p>
+<ul>
+<li>les <strong>risques par âge</strong> : la probabilité de mourir, ou d’avoir un enfant, à chaque âge ;</li>
+<li>la <strong>structure par âge</strong> : le poids de chaque âge dans la population.</li>
+</ul>
+<blockquote>
+<p>TBM = Σ (part de la population à l’âge x) × (taux de mortalité à l’âge x)</p>
+</blockquote>
+<p>Une population jeune a peu de décès, même si les risques y sont élevés. <strong>Comparer des taux bruts, c’est comparer en partie des pyramides.</strong></p>
+<aside class="notes">
+<p>Analogie : comparer la mortalité d’une école primaire et d’une maison de retraite. Le TBM de la maison de retraite est bien plus élevé, même si on y soigne mieux. Transition vers les deux outils : standardiser et décomposer.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="standardiser-comparer-à-structure-égale" class="slide level2">
+<h2>Standardiser : comparer à structure égale</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Principe</th>
+<th style="text-align: left;">Résultat</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Directe</strong></td>
+<td style="text-align: left;">On applique les taux par âge de chaque pays à une <strong>même</strong> structure par âge</td>
+<td style="text-align: left;">Le TBM qu’aurait le pays avec la structure de l’UEMOA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Indirecte</strong></td>
+<td style="text-align: left;">On applique des taux de référence à la population du pays</td>
+<td style="text-align: left;">Indice comparatif : décès observés / décès attendus</td>
+</tr>
+</tbody>
+</table>
+<p>Exemple, avec la structure par âge de l’UEMOA comme référence :</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Pays</th>
+<th style="text-align: right;">TBM brut</th>
+<th style="text-align: right;">TBM standardisé (structure UEMOA)</th>
+<th style="text-align: right;">Indice comparatif</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Sénégal</td>
+<td style="text-align: right;">5,6 ‰</td>
+<td style="text-align: right;"><strong>5,0 ‰</strong></td>
+<td style="text-align: right;">0,67</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Burkina Faso</td>
+<td style="text-align: right;">8,0 ‰</td>
+<td style="text-align: right;"><strong>8,3 ‰</strong></td>
+<td style="text-align: right;">1,05</td>
+</tr>
+</tbody>
+</table>
+<p>Le Sénégal est plus avantagé qu’il n’y paraît ; le Burkina Faso, moins.</p>
+<aside class="notes">
+<p>Le Sénégal a une population un peu plus âgée, ce qui gonfle son TBM brut. Le Burkina Faso a une structure jeune qui masquait une mortalité supérieure à celle de l’Union. La standardisation indirecte sert quand on ne connaît que le total des décès d’une région, pas leur répartition par âge : situation fréquente avec un état civil incomplet. Source : calculs sur le WPP 2024, refaits au labo.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="décomposer-doù-vient-un-écart" class="slide level2">
+<h2>Décomposer : d’où vient un écart ?</h2>
+<p>Le Niger a un taux brut de natalité supérieur de <strong>7,3 points</strong> à celui de l’UEMOA. La méthode de Kitagawa (1955) partage cet écart :</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Composante</th>
+<th style="text-align: right;">Niger, en points de ‰</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Effet de la <strong>fécondité</strong> (taux par âge plus élevés)</td>
+<td style="text-align: right;">+9,7</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Effet de la <strong>structure</strong> (part des femmes de 15 à 49 ans)</td>
+<td style="text-align: right;">−2,5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Écart total</strong></td>
+<td style="text-align: right;"><strong>+7,3</strong></td>
+</tr>
+</tbody>
+</table>
+<p>La très forte proportion d’enfants <strong>masque</strong> une partie de la fécondité. Quand ces enfants auront 15 ans, la natalité restera forte même si la fécondité baisse : c’est l’<strong>inertie démographique</strong>.</p>
+<aside class="notes">
+<p>Annoncer le jeudi : l’inertie démographique (Keyfitz, 1971) explique pourquoi la population de l’UEMOA continuera de croître longtemps après la baisse de la fécondité. Pour décomposer à partir de microdonnées (urbain et rural, par exemple), on utilise Blinder-Oaxaca.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="lunette-ce-que-ces-outils-ne-disent-pas" class="slide level2">
+<h2>Lunette : ce que ces outils ne disent pas</h2>
+<ul>
+<li><strong>Standardiser, c’est choisir une norme.</strong> Avec la population type mondiale de l’OMS, plus âgée, les chiffres changent. Qui choisit la référence, et à quoi compare-t-on l’Afrique ?</li>
+<li><strong>Une décomposition est une comptabilité, pas une explication.</strong> Elle dit <em>combien</em> de l’écart vient de la fécondité, pas <em>pourquoi</em> la fécondité diffère.</li>
+<li>Pour le <em>pourquoi</em>, il faut une <strong>théorie</strong> : Coale, Caldwell, Becker, et les perspectives critiques de la partie 5.</li>
+</ul>
+<aside class="notes">
+<p>C’est le pont entre la partie « phénomènes » et la partie « théories ». Message pour l’après-midi : les participants savent calculer ; la valeur ajoutée de la formation est dans l’interprétation.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="migration-un-solde-proche-de-zéro-ne-veut-pas-dire-peu-de-mobilité" class="slide level2">
+<h2>Migration : un solde proche de zéro ne veut pas dire peu de mobilité</h2>
+<p>Solde migratoire net en 2023, pour 1 000 habitants : <strong>Mali −1,7 · Burkina Faso −1,1 · Guinée-Bissau −0,7 · Sénégal −0,6 · Togo −0,2 · Bénin 0,0 · Niger 0,0 · Côte d’Ivoire +0,2</strong></p>
+<ul>
+<li>Un solde <strong>net</strong> additionne des entrées et des sorties qui peuvent être importantes.</li>
+<li>La mobilité entre pays de l’UEMOA, la migration saisonnière et la mobilité interne <strong>n’apparaissent pas</strong> dans ce chiffre.</li>
+<li>C’est la composante la plus mal mesurée de l’équation.</li>
+</ul>
+<aside class="notes">
+<p>Source : WPP 2024. Question : votre dernier recensement permet-il de mesurer les entrées et les sorties, ou seulement la population née à l’étranger ?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="expliquer-la-migration" class="slide level2">
+<h2>Expliquer la migration</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Approche</th>
+<th style="text-align: left;">Pourquoi part-on ?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Ravenstein (1885) ; Lee (1966)</strong></td>
+<td style="text-align: left;">Des facteurs d’<strong>attraction</strong> et de <strong>répulsion</strong>, et des obstacles intermédiaires</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Néoclassique</strong> (Todaro, 1969 ; Harris et Todaro, 1970)</td>
+<td style="text-align: left;">Un calcul individuel : l’écart de revenu <strong>espéré</strong> entre le village et la ville, ou entre deux pays</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Nouvelle économie de la migration</strong> (Stark et Bloom, 1985)</td>
+<td style="text-align: left;">Une stratégie du <strong>ménage</strong> pour diversifier ses risques ; les <strong>transferts</strong> en sont la contrepartie</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Marché du travail segmenté</strong> (Piore, 1979)</td>
+<td style="text-align: left;">La demande d’emplois peu qualifiés dans les pays d’accueil</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Réseaux</strong> (Massey et al., 1993)</td>
+<td style="text-align: left;">Les migrants déjà installés réduisent le coût du départ : la migration s’entretient elle-même</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Aspirations et capacités</strong> (de Haas, 2010, 2021)</td>
+<td style="text-align: left;">Il faut <strong>vouloir</strong> et <strong>pouvoir</strong> partir : le développement augmente d’abord la migration</td>
+</tr>
+</tbody>
+</table>
+<aside class="notes">
+<p>Massey et al.&nbsp;(1993) est la synthèse de référence. Le point de de Haas est contre-intuitif pour les décideurs : ce ne sont pas les plus pauvres qui émigrent le plus loin, car partir coûte cher ; le développement accroît d’abord les capacités, donc la migration (la « bosse migratoire »). Zelinsky (1971) proposait déjà une « transition de la mobilité » parallèle à la transition démographique.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="une-migration-sud-sud-sous-estimée" class="slide level2 smaller">
+<h2>Une migration Sud-Sud sous-estimée</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<p><img data-src="figures/migration_sud_sud_flux.png" style="width:100.0%"></p>
+<p><span style="font-size:0.7em">Source : Migration Data Portal</span></p>
+</div><div class="column" style="width:55%;">
+<ul>
+<li>La migration africaine va <strong>surtout vers d’autres pays africains</strong>, contrairement à la rhétorique dominante.</li>
+<li>L’Afrique subsaharienne a l’une des plus fortes parts de migration <strong>intrarégionale</strong> du Sud global (Schewel et Debray, 2024).</li>
+<li>En 2020, <strong>63 %</strong> des 28,3 millions de migrants d’Afrique subsaharienne vivaient dans un autre pays de la région : <strong>Côte d’Ivoire</strong>, Afrique du Sud, Ouganda en tête.</li>
+<li>La sous-estimation vient en partie de la <strong>collecte</strong> :
+<ul>
+<li><strong>stocks</strong> : fiables et disponibles, mais ils sous-estiment la mobilité ;</li>
+<li><strong>flux</strong> : plus difficiles à collecter.</li>
+</ul></li>
+</ul>
+</div></div>
+<aside class="notes">
+<p>Diapositive préparée par Yentéma Onadja et Alexandra Tapsoba. Chiffres de 2020 : UN DESA, repris par Schewel et Debray (2024). Question à la salle : votre institut publie-t-il des stocks de migrants, des flux, ou les deux ? Le recensement donne des stocks (lieu de naissance, résidence antérieure) ; les flux demandent des registres, des enquêtes répétées ou des données de passage aux frontières.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="la-migration-dans-luemoa" class="slide level2">
+<h2>La migration dans l’UEMOA</h2>
+<ul>
+<li><strong>La plupart des migrants ouest-africains restent dans la région</strong> (Flahaux et de Haas, 2016) : couloir Burkina Faso–Côte d’Ivoire.</li>
+<li>La <strong>libre circulation</strong> CEDEAO facilite ces mouvements et les rend <strong>moins visibles</strong> dans les statistiques.</li>
+<li><strong>Réseaux</strong> et <strong>stratégies familiales</strong> les expliquent mieux que l’écart de revenu.</li>
+<li>Les crises au Sahel créent des <strong>déplacements forcés internes</strong>, que ces théories expliquent mal.</li>
+</ul>
+<p><strong>Lunette</strong> : la « crise migratoire » vise surtout les départs vers l’Europe, minoritaires. Qui définit le problème ?</p>
+</section>
+<section id="urbanisation-une-catégorie-à-définir" class="slide level2">
+<h2>Urbanisation : une catégorie à définir</h2>
+<p>Qu’est-ce qu’une « ville » ? La réponse <strong>change d’un pays à l’autre</strong> :</p>
+<ul>
+<li>un seuil de population (2 000, 5 000, 10 000 habitants…) ;</li>
+<li>un statut administratif (chef-lieu, commune urbaine) ;</li>
+<li>des critères d’équipement ou d’activité.</li>
+</ul>
+<p><strong>Question à la salle :</strong> quelle définition votre dernier recensement utilise-t-il ?</p>
+<p>Conséquence : comparer les taux d’urbanisation des huit pays suppose d’abord <strong>d’harmoniser la définition</strong>. C’est l’argument de Greenhalgh, et un sujet pour samedi.</p>
+</section></section>
+<section>
+<section id="la-transition-démographique-et-ses-conséquences" class="title-slide slide level1 center">
+<h1>5 · La transition démographique et ses conséquences</h1>
+
+</section>
+<section id="une-théorie-née-de-lhistoire-européenne" class="slide level2">
+<h2>Une théorie née de l’histoire européenne</h2>
+<ul>
+<li><strong>Thompson (1929)</strong> repère des régularités : des pays où mortalité et fécondité baissent, d’autres où seule une partie de la société est concernée, d’autres encore où rien n’a bougé.</li>
+<li><strong>Notestein (1945)</strong> en fait une théorie : un <strong>modèle spatio-temporel</strong> qui décrit le passage d’une population à natalité et mortalité élevées à une population où elles sont faibles.</li>
+<li><strong>Hypothèse de base</strong> : toutes les populations du monde suivront le même chemin, avec des décalages de calendrier.</li>
+</ul>
+<aside class="notes">
+<p>Ordre de grandeur : la population mondiale passe d’un milliard en 1800 à six milliards en 2000. C’est la transition qui produit cette croissance inédite.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="le-schéma-de-la-transition" class="slide level2">
+<h2>Le schéma de la transition</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figures/schema_transition.png" class="quarto-figure quarto-figure-center" style="max-height: 76vh;"></p>
+</figure>
+</div>
+</section>
+<section id="les-quatre-phases" class="slide level2">
+<h2>Les quatre phases</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Phase</th>
+<th style="text-align: left;">Mortalité</th>
+<th style="text-align: left;">Natalité</th>
+<th style="text-align: left;">Accroissement naturel</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>1. Régime ancien</strong></td>
+<td style="text-align: left;">Élevée, avec des crises</td>
+<td style="text-align: left;">Élevée (normes, religion, mariage)</td>
+<td style="text-align: left;">Faible</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>2. Baisse de la mortalité</strong></td>
+<td style="text-align: left;">Baisse rapide</td>
+<td style="text-align: left;">Reste élevée</td>
+<td style="text-align: left;">Fort, croissant</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>3. Baisse de la natalité</strong></td>
+<td style="text-align: left;">Baisse plus lente</td>
+<td style="text-align: left;">Baisse</td>
+<td style="text-align: left;">Fort, puis en baisse</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>4. Régime moderne</strong></td>
+<td style="text-align: left;">Faible et stable</td>
+<td style="text-align: left;">Faible, fluctuante</td>
+<td style="text-align: left;">Faible, voire négatif</td>
+</tr>
+</tbody>
+</table>
+<p>Europe : de 1740 à 1940 environ. Pays du Sud : <strong>plus rapide</strong>, dans des conditions économiques plus précaires.</p>
+<aside class="notes">
+<p>Au régime ancien, c’est la mortalité qui régule la population ; au régime moderne, c’est la natalité. La transition épidémiologique d’Omran (1971) décrit le versant « mortalité » : l’âge des pestilences et des famines, l’âge du recul des pandémies, puis l’âge des maladies dégénératives et de société.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="pourquoi-la-fécondité-baisse-t-elle" class="slide level2">
+<h2>Pourquoi la fécondité baisse-t-elle ?</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Explication</th>
+<th style="text-align: left;">Mécanisme principal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Notestein (1945)</strong></td>
+<td style="text-align: left;">Mortalité en baisse, urbanisation, modernisation : les familles nombreuses deviennent coûteuses</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Davis (1963)</strong></td>
+<td style="text-align: left;"><strong>Réponses multiples</strong> : mariage retardé, célibat, contraception, avortement, migration</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Coale (1973)</strong></td>
+<td style="text-align: left;">Trois conditions : <strong>choix conscient</strong>, <strong>intérêt</strong> à limiter, <strong>moyens</strong> disponibles</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Caldwell (1976)</strong></td>
+<td style="text-align: left;">Les <strong>flux de richesses</strong> entre générations s’inversent</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Becker (1991)</strong></td>
+<td style="text-align: left;">Arbitrage entre le <strong>nombre</strong> et la <strong>« qualité »</strong> des enfants</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Limite commune</strong> : un fait stylisé, pas une explication. D’où le pluriel de Mason (1997) : <em>des</em> transitions.</p>
+</section>
+<section id="trois-perspectives-critiques" class="slide level2">
+<h2>Trois perspectives critiques</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Perspective</th>
+<th style="text-align: left;">Ce qu’elle examine</th>
+<th style="text-align: left;">Question qu’elle pose à la démographie</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Antiraciste</strong></td>
+<td style="text-align: left;">Comment les catégories raciales et ethniques sont construites, et comment elles produisent ou légitiment des hiérarchies entre groupes</td>
+<td style="text-align: left;">Nos catégories et nos explications « culturelles » de la fécondité naturalisent-elles des différences entre groupes ?</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Féministe</strong></td>
+<td style="text-align: left;">Les rapports de pouvoir entre les sexes : division du travail, contrôle de la sexualité et de la reproduction</td>
+<td style="text-align: left;">Qui décide de la fécondité ? Que mesure-t-on des hommes, de la contrainte, de la violence ?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Décoloniale</strong></td>
+<td style="text-align: left;">La « colonialité du savoir » : les normes, les catégories et les agendas définis au Nord et présentés comme universels</td>
+<td style="text-align: left;">Qui définit ce qu’est une population « en retard », et au nom de quel modèle ?</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="la-transition-peut-elle-être-réconciliée-avec-ces-perspectives" class="slide level2 smaller">
+<h2>La transition peut-elle être réconciliée avec ces perspectives ?</h2>
+<div class="columns">
+<div class="column" style="width:33%;">
+<h3 id="eurocentrisme">Eurocentrisme</h3>
+<p>La théorie est construite sur les trajectoires européennes. Les autres régions sont pensées comme <strong>« en retard »</strong> ou <strong>« en transition incomplète »</strong>.</p>
+<p>L’histoire européenne devient la norme universelle.</p>
+</div><div class="column" style="width:33%;">
+<h3 id="angle-mort-féministe">Angle mort féministe</h3>
+<p>La fécondité est traitée comme un comportement agrégé, une réponse « rationnelle » aux contraintes.</p>
+<p>Où sont les <strong>rapports de genre</strong>, le pouvoir reproductif, la contrainte, l’accès inégal à la contraception ?</p>
+</div><div class="column" style="width:33%;">
+<h3 id="critique-décoloniale">Critique décoloniale</h3>
+<p>La transition est liée historiquement aux politiques coloniales, aux <strong>politiques de population</strong> et aux interventions internationales sur la reproduction.</p>
+<p>La fécondité n’est pas qu’un choix : <strong>elle est aussi gouvernée</strong>.</p>
+</div></div>
+<aside class="notes">
+<p>Greenhalgh (1996) rappelle qu’après 1945 la théorie de la transition a servi à justifier des programmes de planification familiale financés par des fondations (Ford, Rockefeller), puis par l’aide américaine. Laisser 10 minutes de discussion.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="et-dans-nos-systèmes-statistiques" class="slide level2">
+<h2>Et dans nos systèmes statistiques ?</h2>
+<ul>
+<li><strong>Chef de ménage</strong> : qui le désigne ? Que devient l’autorité des femmes dans le ménage quand on n’enregistre qu’une personne ?</li>
+<li><strong>Fécondité des hommes</strong> : presque toutes nos mesures portent sur les femmes. Que sait-on de la fécondité et des intentions des hommes ?</li>
+<li><strong>Ethnie</strong> : faut-il la collecter ? Pour quels usages, et avec quels risques ?</li>
+<li><strong>Questionnaires et indicateurs</strong> : qui les conçoit ? Qui les finance ? Qui choisit les priorités ?</li>
+</ul>
+<p><strong>Discussion (10 min) :</strong> une réconciliation est-elle possible ? Que faudrait-il changer, concrètement, dans la façon dont votre institut mesure la population ?</p>
+<aside class="notes">
+<p>Pistes de réponse : intégrer des modules sur l’autonomie et la prise de décision des femmes (déjà présents dans les EDS), mesurer la fécondité des hommes, associer les INS à la conception des questionnaires régionaux, croiser enquêtes quantitatives et approches qualitatives (démographie anthropologique, Greenhalgh 1995). La réconciliation passe moins par l’abandon de la théorie que par l’élargissement de ce que l’on mesure.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="quatre-modèles-de-transition-en-afrique" class="slide level2 smaller">
+<h2>Quatre modèles de transition en Afrique</h2>
+<p>D’après <strong>Tabutin et Schoumaker (2004)</strong> :</p>
+<ol type="1">
+<li><strong>Le modèle encore traditionnel</strong> : la mortalité a reculé, la natalité reste très élevée (Mali, Niger, Burkina Faso au début des années 2000).</li>
+<li><strong>Le modèle classique</strong> : la mortalité baisse depuis 50 ans, la natalité depuis 20 ans (Sénégal, Ghana).</li>
+<li><strong>Le modèle perturbé par les guerres</strong> : reprises brutales de la mortalité (Sierra Leone, RD Congo, Rwanda).</li>
+<li><strong>Le modèle perturbé par le sida</strong> : la mortalité remonte après 1990 (Afrique australe, Côte d’Ivoire, Cameroun).</li>
+</ol>
+<p><strong>Question :</strong> vingt ans plus tard, dans quel modèle placeriez-vous votre pays ?</p>
+</section>
+<section id="la-transition-dans-luemoa" class="slide level2">
+<h2>La transition dans l’UEMOA</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figures/transition_uemoa.png" class="quarto-figure quarto-figure-center" style="max-height: 76vh;"></p>
+</figure>
+</div>
+<aside class="notes">
+<p>Lecture : la mortalité baisse depuis les années 1950 (31 ‰ à 8 ‰), la natalité seulement depuis les années 1980 (49 ‰ à 34 ‰). L’écart entre les deux courbes, environ 26 ‰ aujourd’hui, est l’accroissement naturel. L’UEMOA est dans la phase 3.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="une-structure-par-âge-très-jeune-qui-va-vieillir" class="slide level2">
+<h2>Une structure par âge très jeune, qui va vieillir</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figures/pyramide_uemoa.png" class="quarto-figure quarto-figure-center" style="max-height: 76vh;"></p>
+</figure>
+</div>
+<aside class="notes">
+<p>Lecture : en 2023, plus de 4 habitants sur 10 ont moins de 15 ans. En 2050, toutes les classes d’âge augmentent, mais surtout les adultes : la pyramide s’élargit au milieu.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="le-rapport-de-dépendance-a-commencé-à-baisser" class="slide level2">
+<h2>Le rapport de dépendance a commencé à baisser</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figures/dependance_uemoa.png" class="quarto-figure quarto-figure-center" style="max-height: 76vh;"></p>
+</figure>
+</div>
+<aside class="notes">
+<p>Lecture : il y avait 100 personnes à charge pour 100 adultes en 1988, 83 en 2023, 61 en 2050 selon la projection. C’est la « fenêtre d’opportunité » démographique.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="le-dividende-démographique" class="slide level2">
+<h2>Le dividende démographique</h2>
+<p>Quand la part des <strong>personnes en âge de travailler</strong> augmente, l’économie peut croître plus vite (Bloom, Canning et Sevilla, 2003), <strong>à condition que</strong> :</p>
+<ul>
+<li>ces adultes trouvent un <strong>emploi</strong> productif ;</li>
+<li>ils aient été <strong>éduqués</strong> et soient <strong>en bonne santé</strong> ;</li>
+<li>l’épargne dégagée soit <strong>investie</strong>.</li>
+</ul>
+<blockquote>
+<p>Le dividende n’est pas automatique : c’est une opportunité, pas une garantie. Les institutions publiques y jouent un rôle décisif.</p>
+</blockquote>
+<aside class="notes">
+<p>Bloom et ses coauteurs : « governments invariably play a vital role in creating an environment where high-quality health and education provision is possible ». Comparaison classique : l’Asie de l’Est a saisi le dividende, l’Amérique latine beaucoup moins.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="un-dividende-dâge-ou-déducation" class="slide level2">
+<h2>Un dividende d’âge… ou d’éducation ?</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figures/pyramides_education_uemoa.png" class="quarto-figure quarto-figure-center" style="max-height: 80vh;"></p>
+</figure>
+</div>
+</section>
+<section id="ce-que-montrent-ces-pyramides" class="slide level2">
+<h2>Ce que montrent ces pyramides</h2>
+<ul>
+<li>En 2020, près de <strong>la moitié des 25-34 ans</strong> de l’UEMOA n’a <strong>aucune instruction</strong> (49 %), et <strong>21 %</strong> ont atteint au moins le secondaire.</li>
+<li>En 2050, selon le scénario intermédiaire, ils seraient <strong>16 %</strong> sans instruction et <strong>54 %</strong> au moins au secondaire.</li>
+<li>L’écart entre les sexes reste net : chez les 25-34 ans, <strong>16 % des femmes</strong> contre 27 % des hommes ont atteint le secondaire en 2020.</li>
+</ul>
+<p>Pour <strong>Lutz et al.&nbsp;(2019)</strong>, c’est l’<strong>éducation</strong>, plus que la structure par âge, qui produit le dividende. Un pays qui gagne des adultes sans les scolariser n’en tirera qu’un faible bénéfice.</p>
+<div class="smaller">
+<p>Source : Wittgenstein Centre Data Explorer, version 3.0 (2024), scénario SSP2, huit pays agrégés.</p>
+</div>
+</section>
+<section id="ce-que-cela-représente-pour-luemoa-dici-2050" class="slide level2">
+<h2>Ce que cela représente pour l’UEMOA, d’ici 2050</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: right;">2023</th>
+<th style="text-align: right;">2050</th>
+<th style="text-align: right;">Écart</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Population totale</td>
+<td style="text-align: right;">150 M</td>
+<td style="text-align: right;">268 M</td>
+<td style="text-align: right;">+118 M (+79 %)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Enfants d’âge scolaire (6-16 ans)</td>
+<td style="text-align: right;">43 M</td>
+<td style="text-align: right;">63 M</td>
+<td style="text-align: right;">+19 M (+45 %)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Population de 15-64 ans</td>
+<td style="text-align: right;">82 M</td>
+<td style="text-align: right;">167 M</td>
+<td style="text-align: right;">+85 M</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Population de 65 ans et plus</td>
+<td style="text-align: right;">4,2 M</td>
+<td style="text-align: right;">12,1 M</td>
+<td style="text-align: right;">multipliée par 2,9</td>
+</tr>
+</tbody>
+</table>
+<div class="smaller">
+<p>Source : <em>World Population Prospects 2024</em>, variante moyenne, huit pays agrégés.</p>
+</div>
+</section>
+<section id="les-conséquences-par-secteur" class="slide level2">
+<h2>Les conséquences par secteur</h2>
+<ul>
+<li><strong>Éducation</strong> : 19 millions d’élèves potentiels de plus, donc des écoles et des enseignants à prévoir dès maintenant.</li>
+<li><strong>Emploi</strong> : environ <strong>3 millions</strong> de personnes de plus en âge de travailler <strong>chaque année</strong>.</li>
+<li><strong>Santé</strong> : un double fardeau, avec la santé maternelle et infantile d’un côté, la hausse des maladies chroniques liée au vieillissement de l’autre.</li>
+</ul>
+<p><strong>Lunette</strong> : ces chiffres reposent sur des <strong>hypothèses</strong> (une fécondité d’environ 3 enfants par femme en 2050). Changer l’hypothèse change les besoins : c’est le sujet de jeudi.</p>
+</section>
+<section id="à-retenir" class="slide level2">
+<h2>À retenir</h2>
+<ol type="1">
+<li><strong>Mesurer une population n’est jamais neutre</strong> : catégories, institutions, finalités.</li>
+<li><strong>La démographie dépend de ses sources</strong> : ce que l’on mesure dépend de ce qui est disponible, et de qui finance.</li>
+<li><strong>La transition démographique décrit bien, mais explique mal</strong> ; elle gagne à être lue avec les perspectives féministe, antiraciste et décoloniale.</li>
+<li><strong>L’UEMOA est en pleine transition</strong>, et la fenêtre du dividende s’ouvre. Elle ne profitera qu’aux pays qui investissent dans <strong>l’éducation</strong>, la santé et l’emploi.</li>
+</ol>
+</section>
+<section id="avant-de-partir-une-minute" class="slide level2">
+<h2>Avant de partir : une minute</h2>
+<p>Sur un papier, sans nom :</p>
+<ol type="1">
+<li><strong>Ce que j’ai appris ce matin</strong>, en une phrase.</li>
+<li><strong>Ce qui reste flou pour moi</strong>, en une phrase.</li>
+</ol>
+<aside class="notes">
+<p>Ramasser les papiers. Lire les réponses ce soir : elles servent à ouvrir le retour du mardi matin.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="cet-après-midi" class="slide level2">
+<h2>Cet après-midi</h2>
+<ul>
+<li><strong>Labo</strong> : les calculs de ce matin (ISF, table de mortalité, pyramide, standardisation, décomposition) sont fournis en R et en Excel. Le temps est consacré à <strong>interpréter</strong> les résultats avec les théories du cours, et à <strong>questionner</strong> les sources et les catégories.</li>
+<li><strong>Équipe pays</strong> : le profil démographique de votre pays en cinq indicateurs, situé dans la transition, première section de la note pays.</li>
+<li><strong>16 h 30</strong> : séminaire en ligne de Laurent Martel, Statistique Canada.</li>
+<li><strong>Exercice pour demain</strong> : comparer votre pays à l’ensemble de l’UEMOA sur trois indicateurs et proposer une explication.</li>
+</ul>
+</section>
+<section id="références-mesurer-une-population" class="slide level2 smaller scrollable">
+<h2>Références : mesurer une population</h2>
+<ul>
+<li>Cesare, N., Lee, H., McCormick, T., Spiro, E. et Zagheni, E. (2018). Promises and pitfalls of using digital traces for demographic research. <em>Demography</em>, 55(5), 1979-1999.</li>
+<li>Greenhalgh, S. (1996). The social construction of population science: An intellectual, institutional, and political history of twentieth-century demography. <em>Comparative Studies in Society and History</em>, 38(1), 26-66.</li>
+<li>Preston, S. H. (1995). Where is US demography headed? Dans J.-C. Chasteland et L. Roussel (dir.), <em>Les contours de la démographie au seuil du XXIe siècle</em> (p.&nbsp;233-250). INED.</li>
+<li>Tabutin, D. (1997). Les systèmes d’information en démographie. Dans G. Caselli, J. Vallin et G. Wunsch (dir.), <em>Démographie : analyse et synthèse</em>. CEPED.</li>
+<li>Tabutin, D. (2007). Vers quelle(s) démographie(s) ? Atouts, faiblesses et évolutions de la discipline depuis 50 ans. <em>Population</em>, 62(1), 15-32.</li>
+</ul>
+</section>
+<section id="références-expliquer-la-fécondité-la-mortalité-et-la-migration" class="slide level2 smaller scrollable">
+<h2>Références : expliquer la fécondité, la mortalité et la migration</h2>
+<p><em>Fécondité</em></p>
+<ul>
+<li>Bongaarts, J. (1978). A framework for analyzing the proximate determinants of fertility. <em>Population and Development Review</em>, 4(1), 105-132.</li>
+<li>Bongaarts, J. (2006). The causes of stalling fertility transitions. <em>Studies in Family Planning</em>, 37(1), 1-16.</li>
+<li>Caldwell, J. C. et Caldwell, P. (1987). The cultural context of high fertility in sub-Saharan Africa. <em>Population and Development Review</em>, 13(3), 409-437.</li>
+<li>Cleland, J. et Wilson, C. (1987). Demand theories of the fertility transition: An iconoclastic view. <em>Population Studies</em>, 41(1), 5-30.</li>
+<li>Davis, K. et Blake, J. (1956). Social structure and fertility: An analytic framework. <em>Economic Development and Cultural Change</em>, 4(3), 211-235.</li>
+<li>Schoumaker, B. (2019). Stalls in fertility transitions in sub-Saharan Africa: Revisiting the evidence. <em>Studies in Family Planning</em>, 50(3), 257-278.</li>
+</ul>
+<p><em>Mortalité</em></p>
+<ul>
+<li>Caldwell, J. C. (1986). Routes to low mortality in poor countries. <em>Population and Development Review</em>, 12(2), 171-220.</li>
+<li>Frenk, J., Bobadilla, J. L., Sepúlveda, J. et López Cervantes, M. (1989). Health transition in middle-income countries: New challenges for health care. <em>Health Policy and Planning</em>, 4(1), 29-39.</li>
+<li>McKeown, T. (1976). <em>The Modern Rise of Population</em>. Edward Arnold.</li>
+<li>Mosley, W. H. et Chen, L. C. (1984). An analytical framework for the study of child survival in developing countries. <em>Population and Development Review</em>, 10 (supplément), 25-45.</li>
+<li>Olshansky, S. J. et Ault, A. B. (1986). The fourth stage of the epidemiologic transition: The age of delayed degenerative diseases. <em>Milbank Quarterly</em>, 64(3), 355-391.</li>
+<li>Preston, S. H. (1975). The changing relation between mortality and level of economic development. <em>Population Studies</em>, 29(2), 231-248.</li>
+<li>Szreter, S. (1988). The importance of social intervention in Britain’s mortality decline c.1850-1914: A re-interpretation of the role of public health. <em>Social History of Medicine</em>, 1(1), 1-37.</li>
+<li>Vallin, J. et Meslé, F. (2004). Convergences and divergences in mortality: A new approach to health transition. <em>Demographic Research</em>, Special Collection 2, 11-44.</li>
+</ul>
+<p><em>Migration</em></p>
+<ul>
+<li>de Haas, H. (2010). Migration and development: A theoretical perspective. <em>International Migration Review</em>, 44(1), 227-264.</li>
+<li>de Haas, H. (2021). A theory of migration: The aspirations-capabilities framework. <em>Comparative Migration Studies</em>, 9, 8.</li>
+<li>Flahaux, M.-L. et de Haas, H. (2016). African migration: Trends, patterns, drivers. <em>Comparative Migration Studies</em>, 4, 1.</li>
+<li>Harris, J. R. et Todaro, M. P. (1970). Migration, unemployment and development: A two-sector analysis. <em>American Economic Review</em>, 60(1), 126-142.</li>
+<li>Lee, E. S. (1966). A theory of migration. <em>Demography</em>, 3(1), 47-57.</li>
+<li>Massey, D. S., Arango, J., Hugo, G., Kouaouci, A., Pellegrino, A. et Taylor, J. E. (1993). Theories of international migration: A review and appraisal. <em>Population and Development Review</em>, 19(3), 431-466.</li>
+<li>Piore, M. J. (1979). <em>Birds of Passage: Migrant Labor and Industrial Societies</em>. Cambridge University Press.</li>
+<li>Ravenstein, E. G. (1885). The laws of migration. <em>Journal of the Statistical Society of London</em>, 48(2), 167-235.</li>
+<li>Schewel, K. et Debray, A. (2024). Global trends in South–South migration. Dans H. Crawley et J. K. Teye (dir.), <em>The Palgrave Handbook of South–South Migration and Inequality</em>. Palgrave Macmillan. https://doi.org/10.1007/978-3-031-39814-8_8</li>
+<li>Stark, O. et Bloom, D. E. (1985). The new economics of labor migration. <em>American Economic Review</em>, 75(2), 173-178.</li>
+<li>Todaro, M. P. (1969). A model of labor migration and urban unemployment in less developed countries. <em>American Economic Review</em>, 59(1), 138-148.</li>
+<li>Zelinsky, W. (1971). The hypothesis of the mobility transition. <em>Geographical Review</em>, 61(2), 219-249.</li>
+</ul>
+</section>
+<section id="références-transition-démographique" class="slide level2 smaller scrollable">
+<h2>Références : transition démographique</h2>
+<ul>
+<li>Becker, G. S. (1991). <em>A Treatise on the Family</em> (éd. augmentée). Harvard University Press.</li>
+<li>Caldwell, J. C. (1976). Toward a restatement of demographic transition theory. <em>Population and Development Review</em>, 2(3-4), 321-366.</li>
+<li>Caldwell, J. C. (2004). Demographic theory: A long view. <em>Population and Development Review</em>, 30(2), 297-316.</li>
+<li>Chesnais, J.-C. (1986). <em>La transition démographique : étapes, formes, implications économiques</em>. INED et PUF.</li>
+<li>Coale, A. J. (1973). The demographic transition reconsidered. <em>International Population Conference, Liège</em>, vol.&nbsp;1, 53-72. UIESP.</li>
+<li>Coale, A. J. et Watkins, S. C. (dir.) (1986). <em>The Decline of Fertility in Europe</em>. Princeton University Press.</li>
+<li>Davis, K. (1963). The theory of change and response in modern demographic history. <em>Population Index</em>, 29(4), 345-366.</li>
+<li>Keyfitz, N. (1971). On the momentum of population growth. <em>Demography</em>, 8(1), 71-80.</li>
+<li>Kirk, D. (1996). Demographic transition theory. <em>Population Studies</em>, 50(3), 361-387.</li>
+<li>Kitagawa, E. M. (1955). Components of a difference between two rates. <em>Journal of the American Statistical Association</em>, 50(272), 1168-1194.</li>
+<li>Lee, R. (2003). The demographic transition: Three centuries of fundamental change. <em>Journal of Economic Perspectives</em>, 17(4), 167-190.</li>
+<li>Mason, K. O. (1997). Explaining fertility transitions. <em>Demography</em>, 34(4), 443-454.</li>
+<li>Notestein, F. W. (1945). Population: The long view. Dans T. W. Schultz (dir.), <em>Food for the World</em> (p.&nbsp;36-57). University of Chicago Press.</li>
+<li>Omran, A. R. (1971). The epidemiologic transition: A theory of the epidemiology of population change. <em>Milbank Memorial Fund Quarterly</em>, 49(4), 509-538.</li>
+<li>Tabutin, D. et Schoumaker, B. (2004). La démographie de l’Afrique au sud du Sahara des années 1950 aux années 2000. <em>Population</em>, 59(3-4), 521-622.</li>
+<li>Thompson, W. S. (1929). Population. <em>American Journal of Sociology</em>, 34(6), 959-975.</li>
+</ul>
+</section>
+<section id="références-perspectives-critiques-et-dividende" class="slide level2 smaller scrollable">
+<h2>Références : perspectives critiques et dividende</h2>
+<p><strong>Perspectives critiques</strong></p>
+<ul>
+<li>Connelly, M. (2008). <em>Fatal Misconception: The Struggle to Control World Population</em>. Harvard University Press.</li>
+<li>Greenhalgh, S. (dir.) (1995). <em>Situating Fertility: Anthropology and Demographic Inquiry</em>. Cambridge University Press.</li>
+<li>Riley, N. E. et McCarthy, J. (2003). <em>Demography in the Age of the Postmodern</em>. Cambridge University Press.</li>
+</ul>
+<p><strong>Dividende démographique</strong></p>
+<ul>
+<li>Bloom, D. E., Canning, D. et Sevilla, J. (2003). <em>The Demographic Dividend: A New Perspective on the Economic Consequences of Population Change</em>. RAND.</li>
+<li>Canning, D., Raja, S. et Yazbeck, A. S. (dir.) (2015). <em>Africa’s Demographic Transition: Dividend or Disaster?</em> Banque mondiale et AFD.</li>
+<li>Crespo Cuaresma, J., Lutz, W. et Sanderson, W. (2014). Is the demographic dividend an education dividend? <em>Demography</em>, 51(1), 299-315.</li>
+<li>Lutz, W., Crespo Cuaresma, J., Kebede, E., Prskawetz, A., Sanderson, W. C. et Striessnig, E. (2019). Education rather than age structure brings demographic dividend. <em>PNAS</em>, 116(26), 12798-12803.</li>
+<li>Mason, A. et Lee, R. (2006). Reform and support systems for the elderly in developing countries: Capturing the second demographic dividend. <em>Genus</em>, 62(2), 11-35.</li>
+</ul>
+<p><strong>Données</strong></p>
+<ul>
+<li>Nations Unies (2024). <em>World Population Prospects 2024</em>.</li>
+<li>Wittgenstein Centre for Demography and Global Human Capital (2024). <em>Wittgenstein Centre Data Explorer</em>, version 3.0.</li>
+</ul>
+
+
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+<p>Formation UEMOA · Jour 1 · Département de sociologie, UQAM · SSAPOPLAB</p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'fade',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1280,
+
+        height: 720,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copié");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copié");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp("https:\/\/ssapoplab\.github\.io\/formation-uemoa");
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>

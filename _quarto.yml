@@ -1,6 +1,16 @@
 project:
   type: website
   output-dir: docs          # GitHub Pages publie le dossier docs/ de la branche main
+  render:
+    - "*.qmd"
+    - "*.Rmd"
+    - "!materiel/jour-3/labo-causalite/"   # labo sur EDS : microdonnées non publiées, résultats fournis en HTML
+    - "!materiel/jour-4/projet-projection/"
+  resources:
+    - "materiel/**/*.zip"
+    - "materiel/**/*.xlsx"
+    - "materiel/jour-1/labo/donnees/*.csv"
+    - "materiel/jour-3/labo-causalite/*-resultats.html"
 
 website:
   title: "Formation UEMOA — Analyse démographique pour la décision publique"
