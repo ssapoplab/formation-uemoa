@@ -4,6 +4,21 @@ subtitle: "Espace UEMOA · Ouagadougou (Burkina Faso) · du lundi 23 au samedi 2
 toc: false
 ---
 
+::: {.grid .chiffres}
+::: {.g-col-6 .g-col-md-3 .chiffre}
+[8]{.nombre} [États membres de l'UEMOA]{.libelle}
+:::
+::: {.g-col-6 .g-col-md-3 .chiffre}
+[30]{.nombre} [cadres des INS et de la Commission]{.libelle}
+:::
+::: {.g-col-6 .g-col-md-3 .chiffre}
+[6]{.nombre} [jours de cours, de labos et de travail en équipe]{.libelle}
+:::
+::: {.g-col-6 .g-col-md-3 .chiffre}
+[1]{.nombre} [note d'analyse par pays, présentée le samedi]{.libelle}
+:::
+:::
+
 ## L'atelier
 
 Du **23 au 28 novembre 2026**, la Commission de l'UEMOA réunit à Ouagadougou des cadres des Instituts nationaux de la statistique (INS) de ses huit États membres et de la Commission pour une formation de six jours en analyse démographique appliquée à la formulation, à la planification et au suivi des politiques publiques.
@@ -33,6 +48,31 @@ Environ 30 participants :
 Chaque journée suit le même déroulé : retour sur l'exercice de la veille, cours magistral le matin, labo sur données réelles en début d'après-midi, puis travail en équipe pays. Chaque équipe construit au fil de la semaine une **note d'analyse sur son pays**, qu'elle présente le samedi.
 
 Le fil conducteur de la formation est **apprendre à apprendre** : chaque outil et chaque ressource sont choisis pour que les participants puissent continuer seuls après l'atelier. Tous les supports (diapositives, scripts R, données d'exercice) sont accessibles sur la page [Programme & matériel](programme.qmd).
+
+## La semaine en un coup d'œil
+
+::: {.grid}
+::: {.g-col-12 .g-col-md-4 .jour}
+[Lundi 23]{.date} [Mesurer une population pour décider]{.theme}
+:::
+::: {.g-col-12 .g-col-md-4 .jour}
+[Mardi 24]{.date} [Inégalités territoriales et sociales]{.theme}
+:::
+::: {.g-col-12 .g-col-md-4 .jour}
+[Mercredi 25]{.date} [Nouvelles sources de données et data science]{.theme}
+:::
+::: {.g-col-12 .g-col-md-4 .jour}
+[Jeudi 26]{.date} [Démographie prospective et scénarios]{.theme}
+:::
+::: {.g-col-12 .g-col-md-4 .jour}
+[Vendredi 27]{.date} [Traduire les analyses en outils pour les décideurs]{.theme}
+:::
+::: {.g-col-12 .g-col-md-4 .jour .samedi}
+[Samedi 28]{.date} [Restitutions et feuille de route régionale]{.theme}
+:::
+:::
+
+Le détail de chaque journée et tout le matériel sont sur la page [Programme & matériel](programme.qmd).
 
 ## Lieu
 

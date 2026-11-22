@@ -32,8 +32,9 @@ website:
 
 format:
   html:
-    theme: cosmo
+    theme: [cosmo, theme-site.scss]
     css: styles.css
+    title-block-banner: true
     toc: true
     lang: fr
 

@@ -1,0 +1,143 @@
+/*-- scss:defaults --*/
+
+// Palette du site : les rouges SSAPOPLAB des diapositives,
+// un ocre pour les accents et des neutres légèrement chauds.
+$rouge-fonce: #7f1d1d;
+$rouge:       #a51c24;
+$ocre:        #c98a1b;
+$sable:       #faf6f0;
+$sable-fonce: #f1e8dc;
+$encre:       #2b2523;
+$gris:        #6b625d;
+
+$primary:   $rouge;
+$secondary: $gris;
+$body-color: $encre;
+$link-color: $rouge;
+$headings-color: $rouge-fonce;
+
+$navbar-bg: $rouge-fonce;
+$navbar-fg: #ffffff;
+$navbar-hl: #ffd98a;
+
+$footer-bg: $sable-fonce;
+$footer-fg: $gris;
+
+$font-family-sans-serif: "Source Sans 3", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$headings-font-family: "Source Sans 3", "Segoe UI", Roboto, Arial, sans-serif;
+$headings-font-weight: 700;
+
+$table-head-bg: $sable-fonce;
+
+/*-- scss:rules --*/
+
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap");
+
+body { background: #fff; }
+
+// Barre de navigation : un filet ocre sous le rouge
+.navbar { border-bottom: 4px solid $ocre; }
+.navbar-title { font-weight: 700; }
+
+// Bandeau de titre de chaque page
+.quarto-title-banner {
+  background: linear-gradient(120deg, $rouge-fonce 0%, $rouge 70%, darken($ocre, 5%) 140%);
+  color: #fff;
+  padding: 2.5rem 0 2rem;
+}
+.quarto-title-banner .title { color: #fff; font-weight: 700; }
+.quarto-title-banner .subtitle { color: #fff; opacity: 0.92; }
+
+// Titres de section
+h2 {
+  margin-top: 2.2rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid $sable-fonce;
+}
+
+// Tableaux
+table thead th {
+  background: $sable-fonce;
+  color: $rouge-fonce;
+  border-bottom: 2px solid $rouge !important;
+}
+table { font-size: 0.95rem; }
+table tbody tr:nth-child(even) { background: $sable; }
+
+// Encadrés « Matériel du jour »
+.callout.callout-style-simple.callout-note {
+  border-left-color: $ocre !important;
+  background: $sable;
+}
+.callout-note .callout-title-container,
+.callout-note .callout-header { color: $rouge-fonce; font-weight: 700; }
+
+// Chiffres clés de l'accueil
+.chiffres { margin: 1.5rem 0 0.5rem; }
+.chiffre {
+  background: $sable;
+  border-top: 4px solid $rouge;
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+  height: 100%;
+}
+.chiffre .nombre {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: $rouge-fonce;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+.chiffre .libelle { color: $gris; }
+
+// Les six journées sur l'accueil
+.jour {
+  border-left: 5px solid $rouge;
+  background: $sable;
+  border-radius: 0 6px 6px 0;
+  padding: 0.8rem 1rem;
+  height: 100%;
+}
+.jour .date { text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.8rem; color: $gris; }
+.jour .theme { display: block; font-weight: 700; color: $rouge-fonce; margin-top: 0.2rem; }
+.jour.samedi { border-left-color: $ocre; }
+
+// Fiches formateurs et pays
+.fiche {
+  background: $sable;
+  border-top: 4px solid $rouge;
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+  height: 100%;
+}
+.fiche h3 { margin-top: 0.2rem; font-size: 1.2rem; }
+.fiche .initiales {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: $rouge-fonce;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.03em;
+}
+.fiche .institution { color: $gris; }
+.fiche ul { padding-left: 1.1rem; margin-bottom: 0; }
+.fiche li { margin-bottom: 0.35rem; }
+.fiche .fonction { display: block; color: $gris; font-size: 0.9rem; }
+.pays-code {
+  float: right;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: $ocre;
+  letter-spacing: 0.08em;
+}
+
+// Pied de page
+.nav-footer { border-top: 3px solid $ocre; }
+
+.grid { margin-bottom: 1.2rem; }

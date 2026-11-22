@@ -1,86 +1,77 @@
 ---
 title: "Formateurs"
+subtitle: "Une équipe de l'UQAM et de l'Institut supérieur des sciences de la population (ISSP)"
 toc: false
 ---
 
 <!--
-Une fiche par formateur. Pour chacun :
-- déposer la photo dans images/ (carrée, 400 x 400 px), nommée prenom-nom.jpg ;
-- compléter nom complet, fonction, institution et bio (60 à 80 mots).
+Une fiche par formateur. Pour ajouter une photo : la déposer dans images/ (carrée, 400 x 400 px),
+puis remplacer la ligne [XX]{.initiales} par ![](images/prenom-nom.jpg){.photo}.
+Une bio de 60 à 80 mots peut être ajoutée sous l'institution.
 -->
 
 ::: {.grid}
 
 ::: {.g-col-12 .g-col-md-6 .fiche}
-![](images/visseho-adjiwanou.jpg){.photo}
+[VA]{.initiales}
 
 ### Vissého Adjiwanou
 
-Professeur agrégé de démographie et de méthodes quantitatives et computationnelles, Université du Québec à Montréal (UQAM) ; directeur du SSAPOPLAB
+[Professeur agrégé de démographie et de méthodes quantitatives et computationnelles, Département de sociologie, Université du Québec à Montréal (UQAM) ; directeur du SSAPOPLAB ; professeur associé au Département de démographie de l'Université de Montréal]{.institution}
 
-[Bio de 60 à 80 mots.]
+Ses recherches portent sur les dynamiques familiales et la santé en Afrique subsaharienne et sur les méthodes d'inférence causale.
 
-**Interventions :** lundi (fondements), mercredi (nouvelles sources, populations synthétiques), jeudi (prospective, microsimulation)
+**Interventions :** lundi (mesurer une population), mercredi (causalité et modélisation), jeudi (projections)
 :::
 
 ::: {.g-col-12 .g-col-md-6 .fiche}
-![](images/onadja.jpg){.photo}
+[YO]{.initiales}
 
-### [Prénom] Onadja
+### Yentéma Onadja
 
-[Fonction, institution]
+[ISSP, Université Joseph Ki-Zerbo]{.institution}
 
-[Bio de 60 à 80 mots.]
-
-**Interventions :** lundi (indicateurs démographiques), jeudi (projections)
+**Interventions :** lundi (mesurer une population), jeudi (projections)
 :::
 
 ::: {.g-col-12 .g-col-md-6 .fiche}
-![](images/fabrice-yameogo.jpg){.photo}
+[AT]{.initiales}
+
+### Alexandra Tapsoba
+
+[ISSP, Université Joseph Ki-Zerbo]{.institution}
+
+**Interventions :** lundi (mesurer une population), vendredi (outils pour les décideurs)
+:::
+
+::: {.g-col-12 .g-col-md-6 .fiche}
+[AG]{.initiales}
+
+### Aliou Gadiaga
+
+[ISSP, Université Joseph Ki-Zerbo]{.institution}
+
+**Interventions :** mardi (inégalités territoriales et cartographie)
+:::
+
+::: {.g-col-12 .g-col-md-6 .fiche}
+[BFY]{.initiales}
 
 ### Boyam Fabrice Yaméogo
 
-[Fonction, institution]
+[ISSP, Université Joseph Ki-Zerbo]{.institution}
 
-[Bio de 60 à 80 mots.]
-
-**Interventions :** mardi (méthodes quantitatives avancées), mercredi (data science et nouvelles sources)
+**Interventions :** mercredi (populations synthétiques)
 :::
 
 ::: {.g-col-12 .g-col-md-6 .fiche}
-![](images/aliou.jpg){.photo}
+[IS]{.initiales}
 
-### [Prénom Nom] Aliou
+### Irifaar Somé
 
-[Fonction, institution]
+[ISSP, Université Joseph Ki-Zerbo]{.institution}
 
-[Bio de 60 à 80 mots.]
-
-**Interventions :** mardi (inégalités territoriales, cartographie), mercredi (appui sur l'analyse spatiale)
-:::
-
-::: {.g-col-12 .g-col-md-6 .fiche}
-![](images/irifa.jpg){.photo}
-
-### [Prénom Nom] Irifa
-
-[Fonction, institution]
-
-[Bio de 60 à 80 mots.]
-
-**Interventions :** vendredi (notes analytiques, communication aux décideurs)
-:::
-
-::: {.g-col-12 .g-col-md-6 .fiche}
-![](images/alexandra.jpg){.photo}
-
-### Alexandra [Nom]
-
-[Fonction, institution]
-
-[Bio de 60 à 80 mots.]
-
-**Interventions :** vendredi (policy briefs, tableaux de bord)
+**Interventions :** vendredi (outils pour les décideurs)
 :::
 
 :::

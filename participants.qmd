@@ -1,14 +1,123 @@
 ---
 title: "Participants"
+subtitle: "Cadres des instituts nationaux de la statistique des huit États membres"
 toc: false
 ---
 
 <!--
-N'inscrire ici que les participants qui ont coché le consentement de publication
-dans le canevas de présentation. Les autres n'apparaissent pas.
+Ne publier ici que le nom, la fonction et le pays. Jamais de courriel ni de téléphone.
+Retirer toute personne qui s'oppose à la publication.
+Source : liste des participants des États membres, version du 4 novembre 2026.
 -->
 
-| Nom | Fonction | Institution | Pays |
-|---|---|---|---|
-| [Nom] | [Fonction] | Institut national de la statistique | [Pays] |
-| [Nom] | [Fonction] | Commission de l'UEMOA | — |
+Trois cadres par institut national de la statistique, auxquels s'ajoutent six cadres de la Commission de l'UEMOA. En équipe pays, deux cadres d'un même pays travaillent avec un cadre d'un autre pays.
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4 .fiche}
+[BEN]{.pays-code}
+
+### Bénin
+
+[Institut national de la statistique et de la démographie (INStaD)]{.institution}
+
+- Renaud Emilien YOVOGA [Chef du Service des recensements et des études démographiques]{.fonction}
+- Aliou YESSOUFOU [Ingénieur statisticien économiste, cartographie et méthodes de sondage]{.fonction}
+- Sedjro Larios Amen LOHOUNME [Ingénieur démographe, Service des recensements et des études démographiques]{.fonction}
+:::
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4 .fiche}
+[BFA]{.pays-code}
+
+### Burkina Faso
+
+[Institut national de la statistique et de la démographie (INSD)]{.institution}
+
+- Félicité D. K. HEMA [Démographe]{.fonction}
+- Wilfried B. ZONGO [Ingénieur statisticien économiste]{.fonction}
+- Sandaogo KIENDREBEOGO [Démographe]{.fonction}
+:::
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4 .fiche}
+[CIV]{.pays-code}
+
+### Côte d'Ivoire
+
+[Institut national de la statistique (INS)]{.institution}
+
+- Amoin Berthe KOUAKOU [Sous-directrice de l'emploi et des revenus]{.fonction}
+- Kouakou Emmanuel KOUADIO [Chargé d'études]{.fonction}
+- Kadjo Ayomibié Jaurès MANOUAN [Chargé d'études]{.fonction}
+:::
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4 .fiche}
+[GNB]{.pays-code}
+
+### Guinée-Bissau
+
+[Instituto Nacional de Estatística (INE)]{.institution}
+
+- Donato Pereira Candança [Directeur technique du quatrième recensement de la population et du logement]{.fonction}
+- Fana Bupás [Technicien principal, département central du recensement]{.fonction}
+- Hipolito Gomes [Technicien supérieur, département central du recensement]{.fonction}
+:::
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4 .fiche}
+[MLI]{.pays-code}
+
+### Mali
+
+[Institut national de la statistique (INSTAT)]{.institution}
+
+- Aminata COULIBALY [Chef de la Division des enquêtes]{.fonction}
+- Fatoumata TOGORA [Chef de la Division des études et analyses économiques]{.fonction}
+- Mamady KEITA [Chargé du recensement et des statistiques démographiques et sociales]{.fonction}
+:::
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4 .fiche}
+[NER]{.pays-code}
+
+### Niger
+
+[Institut national de la statistique (INS)]{.institution}
+
+- Mamadou TCHIARI MARA [Démographe, chef du Service des statistiques démographiques]{.fonction}
+- Amadou ISSIFI TCHAMBOU [Statisticien économiste, suivi-évaluation]{.fonction}
+- Adam MAMADOU [Économiste, chef de la Division de la coordination statistique et de la coopération]{.fonction}
+:::
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4 .fiche}
+[SEN]{.pays-code}
+
+### Sénégal
+
+[Agence nationale de la statistique et de la démographie (ANSD)]{.institution}
+
+- Adjibou O. BARRY [Chef de la Division des statistiques sociales et du suivi des conditions de vie]{.fonction}
+- Fatou DIOUF [Démographe, Bureau du recensement et des statistiques migratoires]{.fonction}
+- Jean Pierre Diamane BAHOUM
+:::
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4 .fiche}
+[TGO]{.pays-code}
+
+### Togo
+
+[Institut national de la statistique et des études économiques et démographiques (INSEED)]{.institution}
+
+- Gbeblèwou K. TETE [Chef de la Division du recensement et des enquêtes sociodémographiques]{.fonction}
+- Obidon OGOUMEDI [Cheffe de la Division des études sociodémographiques et sur les conditions de vie des ménages]{.fonction}
+- Kokou Mawufe AMEDODZI [Chargé d'études]{.fonction}
+:::
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4 .fiche}
+[UEMOA]{.pays-code}
+
+### Commission de l'UEMOA
+
+[Six cadres de la Commission, répartis entre les équipes pays]{.institution}
+
+- Liste à venir
+:::
+
+:::

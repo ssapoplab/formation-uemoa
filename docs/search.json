@@ -144,7 +144,7 @@
     "href": "participants.html",
     "title": "Participants",
     "section": "",
-    "text": "Nom\nFonction\nInstitution\nPays\n\n\n\n\n[Nom]\n[Fonction]\nInstitut national de la statistique\n[Pays]\n\n\n[Nom]\n[Fonction]\nCommission de l’UEMOA\n—"
+    "text": "Trois cadres par institut national de la statistique, auxquels s’ajoutent six cadres de la Commission de l’UEMOA. En équipe pays, deux cadres d’un même pays travaillent avec un cadre d’un autre pays.\n\n\nBEN\n\nBénin\nInstitut national de la statistique et de la démographie (INStaD)\n\nRenaud Emilien YOVOGA Chef du Service des recensements et des études démographiques\nAliou YESSOUFOU Ingénieur statisticien économiste, cartographie et méthodes de sondage\nSedjro Larios Amen LOHOUNME Ingénieur démographe, Service des recensements et des études démographiques\n\n\n\n\nBFA\n\nBurkina Faso\nInstitut national de la statistique et de la démographie (INSD)\n\nFélicité D. K. HEMA Démographe\nWilfried B. ZONGO Ingénieur statisticien économiste\nSandaogo KIENDREBEOGO Démographe\n\n\n\n\nCIV\n\nCôte d’Ivoire\nInstitut national de la statistique (INS)\n\nAmoin Berthe KOUAKOU Sous-directrice de l’emploi et des revenus\nKouakou Emmanuel KOUADIO Chargé d’études\nKadjo Ayomibié Jaurès MANOUAN Chargé d’études\n\n\n\n\nGNB\n\nGuinée-Bissau\nInstituto Nacional de Estatística (INE)\n\nDonato Pereira Candança Directeur technique du quatrième recensement de la population et du logement\nFana Bupás Technicien principal, département central du recensement\nHipolito Gomes Technicien supérieur, département central du recensement\n\n\n\n\nMLI\n\nMali\nInstitut national de la statistique (INSTAT)\n\nAminata COULIBALY Chef de la Division des enquêtes\nFatoumata TOGORA Chef de la Division des études et analyses économiques\nMamady KEITA Chargé du recensement et des statistiques démographiques et sociales\n\n\n\n\nNER\n\nNiger\nInstitut national de la statistique (INS)\n\nMamadou TCHIARI MARA Démographe, chef du Service des statistiques démographiques\nAmadou ISSIFI TCHAMBOU Statisticien économiste, suivi-évaluation\nAdam MAMADOU Économiste, chef de la Division de la coordination statistique et de la coopération\n\n\n\n\nSEN\n\nSénégal\nAgence nationale de la statistique et de la démographie (ANSD)\n\nAdjibou O. BARRY Chef de la Division des statistiques sociales et du suivi des conditions de vie\nFatou DIOUF Démographe, Bureau du recensement et des statistiques migratoires\nJean Pierre Diamane BAHOUM\n\n\n\n\nTGO\n\nTogo\nInstitut national de la statistique et des études économiques et démographiques (INSEED)\n\nGbeblèwou K. TETE Chef de la Division du recensement et des enquêtes sociodémographiques\nObidon OGOUMEDI Cheffe de la Division des études sociodémographiques et sur les conditions de vie des ménages\nKokou Mawufe AMEDODZI Chargé d’études\n\n\n\n\nUEMOA\n\nCommission de l’UEMOA\nSix cadres de la Commission, répartis entre les équipes pays\n\nListe à venir"
   },
   {
     "objectID": "materiel/jour-4/labo-projections.html",
@@ -886,21 +886,21 @@
     "href": "formateurs.html",
     "title": "Formateurs",
     "section": "",
-    "text": "Vissého Adjiwanou\nProfesseur agrégé de démographie et de méthodes quantitatives et computationnelles, Université du Québec à Montréal (UQAM) ; directeur du SSAPOPLAB\n[Bio de 60 à 80 mots.]\nInterventions : lundi (fondements), mercredi (nouvelles sources, populations synthétiques), jeudi (prospective, microsimulation)\n\n\n\n\n\n[Prénom] Onadja\n[Fonction, institution]\n[Bio de 60 à 80 mots.]\nInterventions : lundi (indicateurs démographiques), jeudi (projections)\n\n\n\n\n\nBoyam Fabrice Yaméogo\n[Fonction, institution]\n[Bio de 60 à 80 mots.]\nInterventions : mardi (méthodes quantitatives avancées), mercredi (data science et nouvelles sources)\n\n\n\n\n\n[Prénom Nom] Aliou\n[Fonction, institution]\n[Bio de 60 à 80 mots.]\nInterventions : mardi (inégalités territoriales, cartographie), mercredi (appui sur l’analyse spatiale)\n\n\n\n\n\n[Prénom Nom] Irifa\n[Fonction, institution]\n[Bio de 60 à 80 mots.]\nInterventions : vendredi (notes analytiques, communication aux décideurs)\n\n\n\n\n\nAlexandra [Nom]\n[Fonction, institution]\n[Bio de 60 à 80 mots.]\nInterventions : vendredi (policy briefs, tableaux de bord)"
+    "text": "VA\n\nVissého Adjiwanou\nProfesseur agrégé de démographie et de méthodes quantitatives et computationnelles, Département de sociologie, Université du Québec à Montréal (UQAM) ; directeur du SSAPOPLAB ; professeur associé au Département de démographie de l’Université de Montréal\nSes recherches portent sur les dynamiques familiales et la santé en Afrique subsaharienne et sur les méthodes d’inférence causale.\nInterventions : lundi (mesurer une population), mercredi (causalité et modélisation), jeudi (projections)\n\n\n\nYO\n\nYentéma Onadja\nISSP, Université Joseph Ki-Zerbo\nInterventions : lundi (mesurer une population), jeudi (projections)\n\n\n\nAT\n\nAlexandra Tapsoba\nISSP, Université Joseph Ki-Zerbo\nInterventions : lundi (mesurer une population), vendredi (outils pour les décideurs)\n\n\n\nAG\n\nAliou Gadiaga\nISSP, Université Joseph Ki-Zerbo\nInterventions : mardi (inégalités territoriales et cartographie)\n\n\n\nBFY\n\nBoyam Fabrice Yaméogo\nISSP, Université Joseph Ki-Zerbo\nInterventions : mercredi (populations synthétiques)\n\n\n\nIS\n\nIrifaar Somé\nISSP, Université Joseph Ki-Zerbo\nInterventions : vendredi (outils pour les décideurs)"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Formation régionale en analyse démographique pour la décision publique",
     "section": "",
-    "text": "Du 23 au 28 novembre 2026, la Commission de l’UEMOA réunit à Ouagadougou des cadres des Instituts nationaux de la statistique (INS) de ses huit États membres et de la Commission pour une formation de six jours en analyse démographique appliquée à la formulation, à la planification et au suivi des politiques publiques."
+    "text": "8 États membres de l’UEMOA\n\n\n30 cadres des INS et de la Commission\n\n\n6 jours de cours, de labos et de travail en équipe\n\n\n1 note d’analyse par pays, présentée le samedi"
   },
   {
     "objectID": "index.html#latelier",
     "href": "index.html#latelier",
     "title": "Formation régionale en analyse démographique pour la décision publique",
-    "section": "",
-    "text": "Du 23 au 28 novembre 2026, la Commission de l’UEMOA réunit à Ouagadougou des cadres des Instituts nationaux de la statistique (INS) de ses huit États membres et de la Commission pour une formation de six jours en analyse démographique appliquée à la formulation, à la planification et au suivi des politiques publiques."
+    "section": "L’atelier",
+    "text": "L’atelier\nDu 23 au 28 novembre 2026, la Commission de l’UEMOA réunit à Ouagadougou des cadres des Instituts nationaux de la statistique (INS) de ses huit États membres et de la Commission pour une formation de six jours en analyse démographique appliquée à la formulation, à la planification et au suivi des politiques publiques."
   },
   {
     "objectID": "index.html#objectifs",
@@ -922,6 +922,13 @@
     "title": "Formation régionale en analyse démographique pour la décision publique",
     "section": "Format",
     "text": "Format\nChaque journée suit le même déroulé : retour sur l’exercice de la veille, cours magistral le matin, labo sur données réelles en début d’après-midi, puis travail en équipe pays. Chaque équipe construit au fil de la semaine une note d’analyse sur son pays, qu’elle présente le samedi.\nLe fil conducteur de la formation est apprendre à apprendre : chaque outil et chaque ressource sont choisis pour que les participants puissent continuer seuls après l’atelier. Tous les supports (diapositives, scripts R, données d’exercice) sont accessibles sur la page Programme & matériel."
+  },
+  {
+    "objectID": "index.html#la-semaine-en-un-coup-dœil",
+    "href": "index.html#la-semaine-en-un-coup-dœil",
+    "title": "Formation régionale en analyse démographique pour la décision publique",
+    "section": "La semaine en un coup d’œil",
+    "text": "La semaine en un coup d’œil\n\n\nLundi 23 Mesurer une population pour décider\n\n\nMardi 24 Inégalités territoriales et sociales\n\n\nMercredi 25 Nouvelles sources de données et data science\n\n\nJeudi 26 Démographie prospective et scénarios\n\n\nVendredi 27 Traduire les analyses en outils pour les décideurs\n\n\nSamedi 28 Restitutions et feuille de route régionale\n\n\nLe détail de chaque journée et tout le matériel sont sur la page Programme & matériel."
   },
   {
     "objectID": "index.html#lieu",
