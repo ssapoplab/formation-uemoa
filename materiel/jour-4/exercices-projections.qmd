@@ -1,0 +1,182 @@
+---
+title: "Travail en équipe — Scénario à 2050 et besoins pour un secteur"
+subtitle: "Jour 4 · Prospective et scénarios — Formation régionale UEMOA · Ouagadougou, 26 novembre 2026"
+author: "Vissého Adjiwanou — Département de sociologie, UQAM · SSAPOPLAB"
+lang: fr
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    number-sections: true
+    code-copy: true
+execute:
+  echo: true
+  eval: false
+---
+
+::: {.callout-note}
+## En bref
+
+- **Durée** : 2 heures, de 15 h 45 à 17 h 45, en équipe pays, avec la supervision des formateurs.
+- **Outil** : au choix, le script R `tp1_projection.R` ou le classeur Excel `TP1_projection_UEMOA.xlsx`. Une équipe peut aussi utiliser les deux.
+- **Produit** : la section « Scénario à 2050 et besoins pour un secteur » de la note pays, d'une demi-page environ, avec un graphique et un tableau.
+- **Point d'étape** : à 16 h 45, chaque équipe dit en une minute le secteur choisi et son premier chiffre.
+:::
+
+## Ce que l'équipe doit produire
+
+À 17 h 45, l'équipe dépose dans son dossier de note pays :
+
+1. le **graphique** de la population selon les quatre scénarios (ou les scénarios retenus) ;
+2. un **tableau** des besoins du secteur choisi en 2025, 2035 et 2050, sous deux scénarios au moins ;
+3. un **texte** de 200 à 300 mots qui suit le gabarit de la tâche 5 ;
+4. **une phrase pour un décideur** qui chiffre l'écart de besoins entre deux scénarios.
+
+## Déroulé conseillé
+
+| Horaire | Tâche | Durée |
+|:--|:--|:--|
+| 15 h 45 | 1. Projeter son pays et contrôler le résultat | 25 min |
+| 16 h 10 | 2. Confronter à d'autres projections | 20 min |
+| 16 h 30 | 3. Choisir un secteur et chiffrer ses besoins | 30 min |
+| 17 h 00 | 4. Dire l'incertitude | 15 min |
+| 17 h 15 | 5. Rédiger la section de la note pays | 30 min |
+
+Répartissez les rôles dès le début : une personne aux calculs, une à la rédaction, une qui vérifie les chiffres et prépare le graphique.
+
+# Projeter son pays et contrôler le résultat
+
+**Avec R.** Ouvrez `projet-projection.Rproj`, puis `tp1_projection.R`. Changez seulement la ligne :
+
+```r
+pays <- "Togo"   # remplacer par le nom de votre pays, avec ses accents
+```
+
+Exécutez tout le script. Les résultats sont dans `resultats/`. Les objets `d` (données), `intr` (intrants du pays), `proj` (projection) et `bes` (besoins) restent dans la session : les morceaux de code ci-dessous s'en servent.
+
+**Avec Excel.** Ouvrez `excel/TP1_projection_UEMOA.xlsx`, feuille `Paramètres`, et choisissez votre pays dans la cellule jaune.
+
+**Contrôle obligatoire.** Le scénario moyen doit reproduire la variante moyenne de l'ONU à moins de 0,5 % près en 2050. Si ce n'est pas le cas, appelez un formateur avant d'aller plus loin.
+
+**Relevez ces chiffres** :
+
+| Indicateur | 2025 | 2050, fécondité constante | 2050, variante moyenne | 2050, variante basse |
+|:--|--:|--:|--:|--:|
+| Population totale (milliers) | | | | |
+| Part des moins de 15 ans (%) | | | | |
+| Rapport de dépendance (pour 100) | | | | |
+| Naissances par an (milliers) | | | | |
+| Part de la population de 2050 déjà née en 2025 (%) | — | | | |
+
+::: {.callout-tip}
+## Indice pour la dernière ligne
+
+Les personnes âgées de 25 ans ou plus en 2050 sont nées avant 2025. Dans `resultats/<pays>_projection_age_sexe.csv`, additionnez les groupes 25-29 et plus de l'année 2050, puis divisez par la population totale de 2050.
+:::
+
+# Confronter à d'autres projections
+
+Une projection se juge en la comparant à d'autres.
+
+1. **La projection officielle de votre INS.** Si elle existe, notez sa population de 2030 et de 2050, et les hypothèses de fécondité retenues. D'où vient l'écart avec votre scénario moyen : la population de départ, la fécondité, la migration ?
+2. **Une projection exponentielle.** Calculez le taux de croissance entre 2015 et 2025, puis projetez à 2050 avec P(2050) = P(2025) × exp(25 r). Pourquoi ce chiffre est-il plus élevé que la projection par composantes ?
+
+```r
+pop <- d$pop %>% filter(pays == "Togo") %>% group_by(annee) %>% summarise(p = sum(pop_milliers))
+r   <- log(pop$p[pop$annee == 2025] / pop$p[pop$annee == 2015]) / 10
+pop$p[pop$annee == 2025] * exp(25 * r)
+```
+
+3. **Facultatif : votre recensement.** Si votre équipe a apporté la population de son dernier recensement par âge, ramenée au 1er juillet 2025, recopiez-la dans `modeles/modele_population_recensement.csv` (mêmes colonnes, mêmes groupes d'âge, effectifs en milliers), puis :
+
+```r
+intr <- intrants_pays(d, pays) %>%
+  remplacer_population_depart("modeles/modele_population_recensement.csv")
+proj_recensement <- projeter_scenarios(intr)
+```
+
+# Choisir un secteur et chiffrer ses besoins
+
+Choisissez **un** secteur, celui qui servira dans la note pays.
+
+| Secteur | Population cible | Normes à fixer | Résultat |
+|:--|:--|:--|:--|
+| École primaire | 6-11 ans | taux de scolarisation visé, élèves par maître, élèves par classe | élèves, enseignants, salles de classe |
+| Emploi | 15-64 ans | taux d'activité | actifs, nouveaux actifs par an, donc emplois à créer |
+| Santé maternelle | naissances | part des accouchements assistés, nombre de consultations prénatales par grossesse | accouchements, consultations |
+
+**Fixez les normes avec réalisme.** Prenez la valeur actuelle de votre pays et la cible du plan national ou des ODD. Notez la source de chaque norme.
+
+**Avec R** :
+
+```r
+bes <- besoins(proj, taux_scolarisation = 0.95, eleves_par_maitre = 40,
+               eleves_par_classe = 45, taux_activite = 0.65)
+bes %>% filter(annee %in% c(2025, 2035, 2050)) %>%
+  select(scenario, annee, eleves_primaire, enseignants, salles_classe, nouveaux_actifs_an)
+
+# Santé maternelle : à partir des naissances annuelles
+bes %>% mutate(accouchements_assistes = naissances_an * 0.80,
+               consultations_prenatales = naissances_an * 4) %>%
+  filter(annee %in% c(2030, 2035, 2050)) %>%
+  select(scenario, annee, naissances_an, accouchements_assistes, consultations_prenatales)
+```
+
+**Avec Excel** : modifiez les normes dans la feuille `Paramètres` ; les besoins s'affichent dans `Résultats`.
+
+**Remplissez le tableau** pour deux scénarios au moins, la variante moyenne et celui qui s'en écarte le plus :
+
+| Besoin | 2025 | 2035, scénario A | 2035, scénario B | 2050, scénario A | 2050, scénario B |
+|:--|--:|--:|--:|--:|--:|
+| | | | | | |
+| | | | | | |
+
+# Dire l'incertitude
+
+1. Dans `donnees/onu_population_totale.csv`, relevez l'intervalle à 95 % de l'ONU pour votre pays en 2050. Votre scénario « fécondité constante » est-il à l'intérieur ?
+2. Avec les simulations `bayesPop`, calculez la probabilité que la population de votre pays dépasse un seuil qui compte pour votre secteur. Par exemple, que les enfants d'âge primaire augmentent de plus de 20 % entre 2025 et 2040 :
+
+```r
+sim  <- readRDS("simulations/bayespop_uemoa.rds")
+traj <- sim$trajectoires %>% filter(pays == "Togo")
+traj %>% filter(annee %in% c(2025, 2040)) %>%
+  select(trajectoire, annee, age_primaire) %>%
+  pivot_wider(names_from = annee, values_from = age_primaire, names_prefix = "a") %>%
+  summarise(probabilite = mean(a2040 / a2025 > 1.20))
+```
+
+3. Écrivez une phrase qui donne l'intervalle, sans jargon : « Il y a 95 chances sur 100 que… ».
+
+# Rédiger la section de la note pays
+
+Suivez ce gabarit, de 200 à 300 mots :
+
+> **Scénario à 2050 et besoins pour [secteur]**
+>
+> **Le constat.** En 2025, [pays] compte [X] millions d'habitants, dont [Y] % de moins de 15 ans. Environ [Z] % des habitants de 2050 sont déjà nés.
+>
+> **Les scénarios.** Selon la variante moyenne de l'ONU, la population atteindrait [A] millions en 2050. Si la fécondité restait à son niveau actuel de [ISF] enfants par femme, elle atteindrait [B] millions ; si elle baissait plus vite, [C] millions. [Une phrase sur l'écart avec la projection officielle de l'INS, s'il y en a une.]
+>
+> **Les besoins.** Avec [normes et sources], [secteur] devrait [chiffre des besoins] en 2035. L'écart entre les scénarios atteint [chiffre] en 2035 et [chiffre] en 2050.
+>
+> **L'incertitude.** Il y a 95 chances sur 100 que la population de 2050 soit comprise entre [borne basse] et [borne haute] millions.
+>
+> **Le message.** [Une phrase pour le décideur, voir ci-dessous.]
+
+**La phrase pour le décideur** chiffre l'écart de besoins entre deux scénarios, avec une échéance et une action :
+
+> *Exemple :* « Si la fécondité ne baisse pas, il faudra recruter environ [N] enseignants de plus d'ici 2035 que dans le scénario de baisse rapide : la politique de population et la politique éducative doivent être planifiées ensemble. »
+
+## Grille de vérification avant de déposer
+
+- [ ] Le scénario moyen reproduit l'ONU à moins de 0,5 % près.
+- [ ] Chaque chiffre a son unité (milliers, millions, %, pour 100) et son année.
+- [ ] Chaque norme du secteur a une source (plan national, ODD, annuaire statistique).
+- [ ] Le graphique a un titre qui dit le message, et la source.
+- [ ] L'incertitude est donnée par un intervalle, pas seulement par une médiane.
+- [ ] La phrase pour le décideur contient un chiffre, une échéance et une action.
+
+## Pour aller plus loin, ce soir
+
+1. Construisez un scénario national de fécondité avec `isf_logistique()`, à partir des cibles de votre plan national, et comparez-le aux variantes de l'ONU.
+2. Refaites les besoins avec deux jeux de normes (situation actuelle et cible du plan) : quelle part de l'écart vient de la démographie, et quelle part de la politique ?

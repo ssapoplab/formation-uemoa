@@ -1,0 +1,370 @@
+---
+title: "Labo — Projeter la population de son pays à 2050"
+subtitle: "Jour 4 · Prospective et scénarios — Formation régionale UEMOA · Ouagadougou, 26 novembre 2026"
+author: "Vissého Adjiwanou — Département de sociologie, UQAM · SSAPOPLAB"
+lang: fr
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    number-sections: true
+    code-copy: true
+    code-tools: false
+execute:
+  echo: true
+  warning: false
+  message: false
+knitr:
+  opts_chunk:
+    fig.width: 10
+    fig.height: 5.5
+    dpi: 150
+---
+
+::: {.callout-note}
+## En bref
+
+- **Durée** : 1 h 30, de 14 h à 15 h 30. Le formateur fait la démonstration ; les participants suivent sur leur ordinateur.
+- **Matériel** : le dossier `projet-projection/`, à copier depuis la clé USB. Il contient les données des huit pays, les fonctions R, les simulations probabilistes et le classeur Excel. **Aucune connexion internet n'est nécessaire.**
+- **Paquets R** : `dplyr`, `tidyr`, `readr`, `purrr`, `ggplot2` et `forcats`, tous inclus dans `tidyverse`.
+- **Produit** : la projection de votre pays de 2025 à 2050 sous quatre hypothèses de fécondité, contrôlée par rapport à l'ONU, et traduite en besoins pour l'école primaire.
+:::
+
+## Objectifs du labo
+
+À la fin du labo, vous serez capables de :
+
+1. charger les données d'un pays et lire ses hypothèses de fécondité, de mortalité et de migration ;
+2. réaliser un pas de projection de cinq ans et en vérifier le résultat ;
+3. projeter la population à 2050 sous quatre scénarios et contrôler le résultat par rapport à l'ONU ;
+4. lire l'incertitude d'une projection probabiliste ;
+5. traduire la projection en besoins pour un secteur.
+
+## Déroulé
+
+| Horaire | Étape | Durée |
+|:--|:--|:--|
+| 14 h 00 | 1. Ouvrir le projet et charger les données | 10 min |
+| 14 h 10 | 2. Les intrants d'un pays | 15 min |
+| 14 h 25 | 3. Un pas de projection, à la main | 15 min |
+| 14 h 40 | 4. Projeter à 2050 sous quatre scénarios | 15 min |
+| 14 h 55 | 5. Lire l'incertitude | 15 min |
+| 15 h 10 | 6. Des effectifs aux besoins, puis la version Excel | 20 min |
+
+# Ouvrir le projet et charger les données
+
+Ouvrez `projet-projection/projet-projection.Rproj` dans RStudio. Le dossier contient :
+
+| Dossier ou fichier | Contenu |
+|:--|:--|
+| `donnees/` | Huit fichiers CSV tirés du WPP 2024 pour les huit pays (voir la page [Données](donnees-projections.qmd)) |
+| `R/fonctions_projection.R` | Les fonctions de la méthode des composantes, commentées |
+| `tp1_projection.R` | Le script du TP : une seule ligne à modifier, le nom du pays |
+| `simulations/bayespop_uemoa.rds` | 1 000 trajectoires probabilistes par pays, déjà calculées |
+| `excel/TP1_projection_UEMOA.xlsx` | La même projection dans Excel |
+| `modeles/` | Modèle de fichier pour utiliser votre propre recensement |
+
+Dans ce document, les chemins commencent par `projet-projection/`. Dans RStudio, une fois le projet ouvert, vous les écrirez sans ce préfixe.
+
+```{r}
+#| label: charger
+source("projet-projection/R/fonctions_projection.R", encoding = "UTF-8")
+library(ggplot2)
+
+d <- lire_donnees("projet-projection/donnees")
+names(d)
+```
+
+Choisissons un pays. Pendant la démonstration, nous prenons le Togo ; chaque équipe refera la même chose pour son pays.
+
+```{r}
+#| label: pays
+pays <- "Togo"
+intr <- intrants_pays(d, pays)
+```
+
+L'objet `intr` rassemble tout ce dont la projection a besoin : la population de départ (`P0`), les survies, le calendrier de la fécondité, la migration, le rapport de masculinité et quatre trajectoires de l'ISF.
+
+# Les intrants d'un pays
+
+## La population de départ
+
+```{r}
+#| label: pyramide-2025
+d$pop %>%
+  filter(pays == !!pays, annee == 2025) %>%
+  mutate(age = forcats::fct_collapse(factor(age, GROUPES), "85+" = GROUPES[18:21]),
+         pop = if_else(sexe == "hommes", -pop_milliers, pop_milliers)) %>%
+  ggplot(aes(pop, age, fill = sexe)) +
+  geom_col(width = 0.9) +
+  scale_x_continuous(labels = abs) +
+  scale_fill_manual(values = c(femmes = "#a51c24", hommes = "#5b6670")) +
+  labs(title = paste(pays, ": population au 1er juillet 2025"),
+       x = "Effectif (milliers)", y = NULL, fill = NULL) +
+  theme_minimal(base_size = 13)
+```
+
+::: {.callout-tip}
+## À vous
+
+Dans `d$pop`, la colonne `statut` distingue les estimations (jusqu'en 2020) et les projections (à partir de 2025). La population de 2025 est donc déjà une projection de l'ONU à partir de son estimation de 2020.
+:::
+
+## La fécondité : quatre hypothèses de niveau
+
+```{r}
+#| label: isf
+tibble(periode = PERIODES, !!!intr$isf) %>% knitr::kable(digits = 2)
+```
+
+- **constante** : l'ISF de 2020-2025 reste le même jusqu'en 2050 ;
+- **haute**, **moyenne** et **basse** : les variantes de l'ONU, la haute et la basse s'écartant progressivement de 0,5 enfant de la moyenne.
+
+Le **calendrier** (la part des naissances par groupe d'âge) est celui de l'ONU, identique pour les quatre scénarios :
+
+```{r}
+#| label: calendrier
+round(100 * intr$calendrier[["2025-2030"]], 1)
+```
+
+## La mortalité : des taux mx à la table de mortalité
+
+Le fichier `mortalite_mx.csv` donne les taux de mortalité par âge. La fonction `table_mortalite()` en tire une table abrégée :
+
+```{r}
+#| label: table-mortalite
+mx_f <- d$mx %>% filter(pays == !!pays, periode == "2025-2030", sexe == "femmes") %>% pull(mx)
+tm <- table_mortalite(mx_f, "femmes")
+tm %>% slice(c(1:6, 18:22)) %>% knitr::kable(digits = 4)
+```
+
+Vérification : l'espérance de vie calculée (`ex` à l'âge 0) doit être proche de celle publiée par l'ONU.
+
+```{r}
+#| label: verif-e0
+c(calculee = round(tm$ex[1], 2),
+  onu = d$onu_e0 %>% filter(pays == !!pays, periode == "2025-2030") %>% pull(e0_femmes))
+```
+
+On passe ensuite aux rapports de survie quinquennaux, S(x) = 5L(x+5) / 5L(x) :
+
+```{r}
+#| label: survies
+sv <- survies_quinquennales(tm)
+round(sv$S[1:8], 4)   # 0-4 -> 5-9, 5-9 -> 10-14, ...
+round(sv$s0, 4)       # survie des naissances jusqu'à 0-4 ans
+```
+
+## La migration
+
+```{r}
+#| label: migration
+d$mig %>%
+  filter(pays == !!pays, periode == "2025-2030") %>%
+  group_by(sexe) %>%
+  summarise(solde_milliers = sum(migrants_nets_milliers))
+```
+
+Le solde de la période est réparti par âge et par sexe selon l'hypothèse de l'ONU.
+
+# Un pas de projection, à la main
+
+Faisons une seule période, de 2025 à 2030, en suivant les étapes du cours.
+
+```{r}
+#| label: un-pas
+p   <- "2025-2030"
+fx  <- intr$isf$moyenne[1] * intr$calendrier[[p]] / 5   # taux annuels par âge
+P30 <- pas_projection(intr$P0, intr$survie[[p]], fx, intr$rmn[1], intr$migration[[p]])
+
+c(naissances_2025_2030 = attr(P30, "naissances"),
+  population_2030      = sum(P30$femmes) + sum(P30$hommes))
+```
+
+Comparons groupe par groupe avec la projection de l'ONU pour 2030 :
+
+```{r}
+#| label: comparer-2030
+onu_2030 <- d$pop %>% filter(pays == !!pays, annee == 2030, sexe == "femmes") %>%
+  mutate(age = factor(age, GROUPES)) %>% arrange(age)
+tibble(age = GROUPES, notre_calcul = P30$femmes, onu = onu_2030$pop_milliers) %>%
+  mutate(ecart_pct = 100 * (notre_calcul / onu - 1)) %>%
+  slice(1:12) %>% knitr::kable(digits = 2)
+```
+
+Les écarts sont de quelques dixièmes de pour cent : notre méthode reproduit celle de l'ONU. Les petits écarts viennent de la table de mortalité et de la façon d'insérer les migrants.
+
+::: {.callout-tip}
+## À vous
+
+Ouvrez `R/fonctions_projection.R` et retrouvez, dans `pas_projection()`, les lignes qui correspondent aux étapes 1 à 5 du cours.
+:::
+
+# Projeter à 2050 sous quatre scénarios
+
+```{r}
+#| label: projeter
+proj <- projeter_scenarios(intr, migration = TRUE)
+ind  <- indicateurs(proj)
+
+ind %>% filter(annee %in% c(2025, 2035, 2050)) %>%
+  select(scenario, annee, pop_totale, pct_moins_15, rapport_dependance, naissances_an) %>%
+  knitr::kable(digits = 1)
+```
+
+## Contrôle : retrouve-t-on l'ONU ?
+
+Avant d'interpréter, on vérifie toujours que le scénario moyen reproduit la variante moyenne de l'ONU.
+
+```{r}
+#| label: controle
+comparer_onu(proj, d) %>% filter(scenario == "moyenne") %>%
+  select(annee, notre_projection = pop_totale, onu_variante_moyenne, ecart_pct) %>%
+  knitr::kable(digits = 2)
+```
+
+## Les quatre trajectoires
+
+```{r}
+#| label: graphique-scenarios
+ggplot(ind, aes(annee, pop_totale / 1000, colour = scenario)) +
+  geom_line(linewidth = 1) + geom_point() +
+  scale_colour_manual(values = COULEURS_SCENARIOS) +
+  labs(title = paste(pays, ": population selon quatre hypothèses de fécondité"),
+       x = NULL, y = "Population (millions)", colour = "Fécondité") +
+  theme_minimal(base_size = 13)
+```
+
+## Et si la migration était nulle ?
+
+```{r}
+#| label: migration-nulle
+bind_rows(projeter(intr, "moyenne", migration = TRUE),
+          projeter(intr, "moyenne", migration = FALSE)) %>%
+  indicateurs() %>% filter(annee == 2050) %>%
+  select(migration, pop_totale)
+```
+
+## Un scénario national
+
+Si votre INS a ses propres hypothèses, la fonction `isf_logistique()` construit une trajectoire de l'ISF à partir de trois choix : le niveau final, l'année de baisse la plus rapide et la vitesse de baisse.
+
+```{r}
+#| label: scenario-national
+isf_national <- isf_logistique(depart = intr$isf$constante[1], final = 2.5,
+                               annee_inflexion = 2030, vitesse = 0.10)
+round(isf_national, 2)
+projeter(intr, isf_perso = isf_national) %>% indicateurs() %>%
+  filter(annee == 2050) %>% select(scenario, pop_totale, pct_moins_15)
+```
+
+# Lire l'incertitude
+
+## Les intervalles publiés par l'ONU
+
+```{r}
+#| label: intervalles-onu
+d$onu_pop %>% filter(pays == !!pays, annee %in% c(2030, 2040, 2050, 2075, 2100)) %>%
+  select(annee, mediane = pop_mediane, pop_80_inf, pop_80_sup, pop_95_inf, pop_95_sup) %>%
+  knitr::kable(digits = 0)
+```
+
+> Il y a 95 chances sur 100 que la population du Togo en 2050 soit comprise entre la borne inférieure et la borne supérieure de l'intervalle à 95 %.
+
+## Les simulations `bayesPop`
+
+Le fichier `simulations/bayespop_uemoa.rds` contient, pour chaque pays et chaque année de 2025 à 2100, 1 000 trajectoires déjà calculées avec les paquets `bayesTFR` et `bayesPop`. Dans ces simulations, la **fécondité** est aléatoire ; la mortalité et la migration suivent les hypothèses moyennes de l'ONU. Vous n'avez pas besoin d'installer ces paquets ni de faire tourner leurs chaînes, qui prennent environ une heure.
+
+```{r}
+#| label: lire-bayespop
+sim <- readRDS("projet-projection/simulations/bayespop_uemoa.rds")
+names(sim)
+traj <- sim$trajectoires %>% filter(pays == !!pays)
+traj %>% filter(annee == 2050) %>% head()
+```
+
+Chaque ligne est une trajectoire possible. Les quantiles se calculent sur les trajectoires :
+
+```{r}
+#| label: quantiles-bayespop
+traj %>% filter(annee %in% c(2030, 2050, 2075)) %>%
+  group_by(annee) %>%
+  summarise(q025 = quantile(pop_totale, 0.025), mediane = median(pop_totale),
+            q975 = quantile(pop_totale, 0.975))
+```
+
+L'intérêt des trajectoires : on peut calculer la probabilité de n'importe quel événement. Par exemple, la probabilité que le nombre d'enfants d'âge primaire augmente de plus de 20 % entre 2025 et 2040 :
+
+```{r}
+#| label: probabilite
+traj %>% filter(annee %in% c(2025, 2040)) %>%
+  select(trajectoire, annee, age_primaire) %>%
+  pivot_wider(names_from = annee, values_from = age_primaire, names_prefix = "a") %>%
+  summarise(probabilite = mean(a2040 / a2025 > 1.20))
+```
+
+::: {.callout-warning}
+## Ce que valent ces simulations
+
+Elles ont été produites avec des chaînes MCMC courtes, pour la formation. Leurs médianes de 2050 dépassent celles de l'ONU de 2 à 8 % selon le pays, et leurs intervalles sont en général plus étroits, parce que seule la fécondité y est aléatoire. Elles servent à **apprendre à raisonner sur des trajectoires** ; **pour un chiffre officiel, utilisez les intervalles publiés par l'ONU** (`onu_population_totale.csv`). La règle reste la même : les quantiles d'une somme ou d'un ratio se calculent sur les trajectoires, jamais en additionnant des quantiles.
+:::
+
+# Des effectifs aux besoins
+
+La fonction `besoins()` applique des normes aux effectifs projetés. Ses paramètres sont des hypothèses de politique, à fixer avec le ministère concerné.
+
+```{r}
+#| label: besoins
+bes <- besoins(proj, taux_scolarisation = 0.90, eleves_par_maitre = 45,
+               eleves_par_classe = 50, taux_activite = 0.65)
+
+bes %>% filter(annee %in% c(2025, 2035, 2050)) %>%
+  select(scenario, annee, eleves_primaire, enseignants, salles_classe, nouveaux_actifs_an) %>%
+  knitr::kable(digits = 1)
+```
+
+Les effectifs sont en milliers : `enseignants = 40,1` veut dire 40 100 enseignants.
+
+La phrase pour le décideur se construit à partir de l'**écart entre deux scénarios** :
+
+```{r}
+#| label: phrase
+e <- bes %>% filter(annee == 2035, scenario %in% c("basse", "constante")) %>%
+  select(scenario, enseignants) %>% tibble::deframe()
+sprintf("En 2035, il faudrait %s enseignants du primaire si la fécondité restait à son niveau actuel, contre %s si elle baissait selon la variante basse de l'ONU, soit %s de plus.",
+        format(round(1000 * e[["constante"]], -2), big.mark = " "),
+        format(round(1000 * e[["basse"]], -2), big.mark = " "),
+        format(round(1000 * (e[["constante"]] - e[["basse"]]), -2), big.mark = " "))
+```
+
+# Le script du TP et la version Excel
+
+## Le script `tp1_projection.R`
+
+Tout ce que nous venons de faire tient dans `tp1_projection.R`. Une seule ligne change d'un pays à l'autre :
+
+```r
+pays <- "Togo"
+```
+
+Le script écrit dans `resultats/` trois graphiques (scénarios, pyramides, élèves du primaire) et trois tableaux CSV (indicateurs, besoins, projection par âge et sexe), prêts pour la note pays.
+
+## La version Excel
+
+Le classeur `excel/TP1_projection_UEMOA.xlsx` fait la même projection avec des formules visibles, pour les participants qui préfèrent Excel.
+
+| Feuille | Rôle |
+|:--|:--|
+| `Lisez-moi` | Mode d'emploi |
+| `Paramètres` | Choix du pays (liste déroulante), du scénario de fécondité, de la migration et des normes de scolarisation |
+| `Projection` | Calcul pas à pas, 2025 à 2050, par sexe et âge quinquennal |
+| `Résultats` | Indicateurs, besoins et graphique |
+| `Données` | Intrants des huit pays (ne pas modifier) |
+
+On change le pays dans la cellule jaune de `Paramètres`, et tout se recalcule. Le classeur donne les mêmes résultats que le script R, à l'arrondi près.
+
+::: {.callout-note}
+## Pour le travail en équipe
+
+Chaque équipe choisit son outil (R ou Excel), projette son pays, puis suit la feuille de [travail en équipe](exercices-projections.qmd).
+:::

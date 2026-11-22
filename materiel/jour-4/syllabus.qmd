@@ -1,0 +1,102 @@
+---
+title: "Jour 4 — Prospective et scénarios : projeter la population pour planifier"
+subtitle: "Jeudi 26 novembre 2026 · Formation régionale en analyse démographique pour la décision publique"
+---
+
+## 1. En-tête
+
+| Rubrique | À remplir |
+|---|---|
+| Objectifs du TDR couverts | **6** (développer des scénarios démographiques prospectifs utiles à la planification publique) ; en appui, **4** (méthodes quantitatives) et **7** (traduire les analyses en outils d'aide à la décision) |
+| Formateur(s) du cours | Vissého Adjiwanou, Département de sociologie, UQAM · SSAPOPLAB ; Onadja, [institution] |
+| Formateur(s) du labo | Vissého Adjiwanou, UQAM ; Onadja, [institution] |
+| Logiciels utilisés | R et RStudio (`tidyverse`) ; Excel ou LibreOffice Calc pour la version tableur |
+
+## 2. Objectifs d'apprentissage
+
+À la fin de la journée, les participants seront capables de :
+
+1. **expliquer** la méthode des composantes, y compris la survie d'un groupe d'âges par le rapport ₅Lₓ/₅Lₓ₋₅, et ce que chaque hypothèse de fécondité, de mortalité et de migration apporte au résultat ;
+2. **projeter** la population de leur pays de 2025 à 2050 sous quatre hypothèses de fécondité, en R ou en Excel, et **contrôler** le résultat par rapport à la variante moyenne de l'ONU ;
+3. **lire** une projection probabiliste et en tirer un intervalle ou une probabilité correctement formulés ;
+4. **traduire** une projection en besoins pour un secteur (élèves et enseignants, emplois, santé maternelle) et l'écrire en une phrase pour un décideur.
+
+## 3. Prérequis
+
+- **Connaissances** : table de mortalité (quotients, survivants lₓ, années vécues ₅Lₓ, espérance de vie), indice synthétique de fécondité et taux par âge, pyramide des âges, taux de croissance. Ces notions ont été revues le lundi.
+- **Logiciels et paquets à installer avant l'atelier** : R 4.2 ou plus récent, RStudio, paquet `tidyverse` ; Excel ou LibreOffice Calc. Le dossier `projet-projection/` fonctionne sans connexion internet ; les paquets `bayesTFR` et `bayesPop` ne sont **pas** nécessaires, les simulations étant fournies.
+- **Données à apporter** (facultatif) : la population du dernier recensement de son pays par sexe et groupe d'âge quinquennal (0-4 à 85+), ramenée au 1er juillet 2025, au format de `modeles/modele_population_recensement.csv`. À défaut, la population de départ de l'ONU est utilisée.
+- **Lecture préalable** (facultative, 20 minutes au plus) : Preston, Heuveline et Guillot (2001), *Demography*, chapitre 6, section sur la projection par composantes.
+
+## 4. Déroulé de la journée
+
+| Horaire | Bloc | Contenu | Formateur | Matériel |
+|---|---|---|---|---|
+| 8 h 30 – 9 h | Retour sur l'exercice de la veille | Deux équipes présentent leur demi-page sur l'apport d'une nouvelle source de données à la note pays ; discussion des limites | Fabrice Yaméogo | Corrigé du jour 3 |
+| 9 h – 12 h 30 | Cours magistral (pause 10 h 30 – 11 h) | Projeter la population pour planifier : méthodes, hypothèses, incertitude, besoins | Vissého Adjiwanou, Onadja | [Diapos](cours-projections.html) |
+| 14 h – 15 h 30 | Labo (démonstration) | Projeter la population de son pays à 2050, en R puis en Excel | Vissého Adjiwanou, Onadja | [Script](labo-projections.qmd) · [Données](donnees-projections.html) · `projet-projection/` |
+| 15 h 45 – 17 h 45 | Travail en équipe pays | Projeter son pays sous quatre scénarios, choisir un secteur, chiffrer ses besoins et rédiger la section « Scénario à 2050 » | Tous les formateurs présents | [Feuille de travail](exercices-projections.html) · Gabarit de note pays |
+| 17 h 45 – 17 h 55 | Consignes de l'exercice | Scénario national et part de l'écart due à la démographie | Vissého Adjiwanou | Section 8 ci-dessous |
+
+## 5. Cours magistral
+
+- **Plan** : (1) pourquoi projeter : projection, perspective et prévision ; (2) des formules globales (Malthus, croissance exponentielle) à la méthode des composantes ; (3) la méthode des composantes pas à pas, avec le diagramme de Lexis et la formule de Preston ; (4) construire les hypothèses de fécondité, de mortalité et de migration ; (5) l'incertitude, des variantes de l'ONU aux projections probabilistes ; (6) des projections aux besoins, au dividende démographique et au climat, et ouverture sur la microsimulation.
+- **Concepts clés** : équation de bilan ; méthode des composantes ; rapport de survie ₅Lₓ/₅Lₓ₋₅ et population stationnaire ; groupe ouvert ; calendrier et niveau de la fécondité ; solde migratoire et profil de Rogers-Castro ; inertie démographique ; variantes haute et basse (±0,5 enfant) ; médiane et intervalles de prédiction ; projection dérivée ; rapport de dépendance et dividende démographique.
+- **Cas UEMOA utilisé** : les huit pays, à partir du WPP 2024. Environ la moitié des habitants de 2050 sont déjà nés. L'UEMOA passerait de 156 millions d'habitants en 2025 à 247 à 312 millions en 2050 selon la fécondité. Avec 90 % de scolarisation et 45 élèves par maître, il faudrait environ 509 000 enseignants du primaire en 2025, et entre 593 000 (variante basse) et 972 000 (fécondité constante) en 2050. Le Togo sert d'exemple suivi tout au long du cours.
+- **Moments interactifs** : sondage d'ouverture sur les projections de chaque INS et le niveau en R ; question à la salle sur la demande de projections des ministères ; calcul en binôme d'un pas de projection (femmes de 15-24 ans, naissances, filles de 0-4 ans) ; discussion de la plausibilité de la baisse de la fécondité prévue pour son pays ; trois questions de vérification en fin de cours.
+
+## 6. Labo
+
+- **Données** : *World Population Prospects 2024* des Nations Unies, huit pays de l'UEMOA. Population par sexe et âge (1990-2100), taux de mortalité, ISF et ses variantes, calendrier de la fécondité, rapport de masculinité, migration par âge, projections officielles avec intervalles. Huit fichiers CSV, plus des simulations `bayesPop` précalculées.
+- **Accès et confidentialité** : données ouvertes de l'ONU. Les recensements apportés par les équipes ne sont utilisés que sous forme agrégée (effectifs par sexe et âge) ; jamais de microdonnées nominatives.
+- **Étapes** :
+    1. ouvrir le projet et charger les données ;
+    2. lire les intrants d'un pays (pyramide, ISF, table de mortalité, migration) ;
+    3. faire un pas de projection de cinq ans à la main et le comparer à l'ONU ;
+    4. projeter à 2050 sous quatre scénarios de fécondité et contrôler le scénario moyen ;
+    5. lire l'incertitude (intervalles de l'ONU, probabilités tirées des trajectoires `bayesPop`) ;
+    6. calculer les besoins sectoriels et rédiger une phrase pour le décideur, puis montrer la version Excel.
+- **Script** : `labo-projections.qmd` pour la démonstration ; `projet-projection/tp1_projection.R` pour les participants, avec une seule ligne à modifier (le nom du pays).
+- **Résultat attendu** : pour son pays, un graphique de la population 2025-2050 selon quatre scénarios, les pyramides de 2025 et 2050, un tableau d'indicateurs et un tableau des besoins du primaire. Le scénario moyen doit reproduire la variante moyenne de l'ONU à moins de 0,5 % près.
+- **Solution de repli** : le classeur `excel/TP1_projection_UEMOA.xlsx`, qui fait la même projection en formules visibles, avec le choix du pays dans une liste déroulante ; il donne exactement les mêmes résultats que le script R.
+
+## 7. Travail en équipe pays
+
+- **Consigne** : avec R ou Excel, projeter son pays à 2050 et contrôler le résultat ; confronter le scénario moyen à la projection officielle de l'INS et à une projection exponentielle ; choisir un secteur (école primaire, emploi ou santé maternelle) ; fixer des normes sourcées ; chiffrer les besoins en 2025, 2035 et 2050 sous deux scénarios ; donner l'intervalle à 95 % de l'ONU.
+- **Section de la note pays produite** : « Scénario à 2050 et besoins pour un secteur ».
+- **Livrable en fin de journée** : un graphique des scénarios, un tableau des besoins sous deux scénarios, un texte de 200 à 300 mots suivant le gabarit de la feuille de travail, et une phrase pour le décideur qui chiffre l'écart de besoins entre deux scénarios, avec une échéance et une action.
+
+## 8. Exercice pour le lendemain
+
+- **Énoncé** : (1) construire un scénario national de fécondité à partir de la cible du plan national de développement ou de la politique de population de son pays, avec `isf_logistique()` en R ou la ligne « ISF personnalisé » du classeur Excel, et le comparer aux variantes de l'ONU ; (2) refaire le calcul des besoins du secteur choisi avec deux jeux de normes, situation actuelle et cible du plan, puis dire quelle part de l'écart de besoins en 2035 vient de la démographie et quelle part de la politique sectorielle. Rendre une demi-page avec un tableau.
+- **Durée** : une heure au plus
+- **Format de remise** : un fichier `jour4-exercice-<pays>` (Word, PDF ou Markdown), déposé dans le dossier partagé de l'équipe pays avant 8 h le vendredi.
+- **Corrigé** : présenté le lendemain à 8 h 30, publié sur le site le lendemain midi
+
+## 9. Vérification des acquis
+
+Une question par objectif d'apprentissage, posée en fin de cours ou de labo :
+
+1. Pourquoi le rapport de survie d'un groupe d'âges ₅Lₓ/₅Lₓ₋₅ diffère-t-il de la probabilité l(x)/l(x−5), et quelle hypothèse permet de l'utiliser ?
+2. Votre scénario moyen s'écarte de 3 % de la variante moyenne de l'ONU en 2050 : quelles sont les trois premières choses à vérifier ?
+3. Pourquoi ne peut-on pas additionner les bornes à 95 % de deux pays pour obtenir celle de leur ensemble ?
+4. Votre ministre demande combien d'enseignants recruter d'ici 2035. Quelles hypothèses de la projection, et quelles normes, pèsent le plus sur votre réponse ?
+
+## 10. Ressources
+
+- **Essentielles** :
+    - Preston, S. H., Heuveline, P. et Guillot, M. (2001). *Demography: Measuring and Modeling Population Processes*, chapitre 6. Blackwell.
+    - Nations Unies (2024). *World Population Prospects 2024: Summary of Results*. [population.un.org/wpp](https://population.un.org/wpp/)
+    - Moultrie, T. et al. (dir.) (2013). *Tools for Demographic Estimation*. IUSSP, en accès libre. [demographicestimation.iussp.org](https://demographicestimation.iussp.org/)
+- **Pour aller plus loin** :
+    - Raftery, A. E. et al. (2012). Bayesian probabilistic population projections for all countries. *PNAS*, 109(35).
+    - K.C., S. et al. (2024). Updating the Shared Socioeconomic Pathways (SSPs) global population and human capital projections. IIASA, WP-24-003 ; données sur le [Wittgenstein Centre Data Explorer](https://dataexplorer.wittgensteincentre.org/).
+    - Vollset, S. E. et al. (2020), *The Lancet*, 396(10258), et la réponse d'Ezeh, Kissling et Singer (2020), *The Lancet*, 396(10258).
+    - Paquets R : `wpp2024`, `bayesTFR`, `bayesLife`, `bayesPop`, `MortCast` (Ševčíková, Raftery et coll.), `DemoTools` (correction des données de base), `wcde` (données du Wittgenstein Centre).
+
+## 11. Contribution à la boîte à outils régionale
+
+- [x] Scripts du labo commentés et reproductibles (`projet-projection/R/fonctions_projection.R`, `tp1_projection.R`, scripts de préparation)
+- [x] Données d'exercice ou instructions pour les obtenir (huit CSV du WPP 2024, script d'extraction `preparation/01_extraire_donnees_wpp2024.R`)
+- [x] Modèles réutilisables : classeur Excel de projection, modèle de saisie d'un recensement, gabarit de la section « Scénario à 2050 » de la note pays
+- [x] Tous les fichiers déposés dans `materiel/jour-4/`

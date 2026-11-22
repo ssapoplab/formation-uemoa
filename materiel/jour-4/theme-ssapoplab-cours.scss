@@ -1,0 +1,82 @@
+/*-- scss:defaults --*/
+
+// Gabarit « cours » — SOC8655 et autres cours de cycles supérieurs.
+//
+// Fond blanc, plus lumineux que le beamer beaver, mais la famille de rouges
+// reste la même pour que les étudiants retrouvent vos repères habituels.
+// Typographie sans empattements : plus lisible projetée en salle éclairée.
+//
+//   theme: [default, _ssapoplab-base.scss, theme-ssapoplab-cours.scss]
+
+$body-bg: #ffffff;
+$body-color: #1c1c1c;
+
+$link-color: #a51c24;
+$presentation-heading-color: #7f1d1d;
+
+$presentation-font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$presentation-heading-font: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$presentation-font-size-root: 36px;
+
+/*-- scss:rules --*/
+
+// Titres de section (niveau 1) : bandeau rouge pleine page
+.reveal .slide h1,
+.reveal section.has-dark-background h1 {
+  color: #7f1d1d;
+}
+
+.reveal h2 {
+  font-size: 1.35em;
+  border-bottom: 2px solid #a51c24;
+  padding-bottom: 0.18em;
+  margin-bottom: 0.55em;
+}
+
+.reveal h3 {
+  color: #a51c24;
+  font-size: 1.05em;
+}
+
+.reveal strong {
+  color: #7f1d1d;
+}
+
+.reveal blockquote {
+  border-left: 4px solid #a51c24;
+  background: #faf6f6;
+  padding: 0.5em 0.9em;
+  border-radius: 0 5px 5px 0;
+  font-style: normal;
+  box-shadow: none;
+}
+
+.reveal code {
+  background: #f4f4f5;
+  color: #7f1d1d;
+}
+
+.reveal pre {
+  box-shadow: none;
+  border: 1px solid #e4e4e7;
+  border-radius: 5px;
+}
+
+.reveal table th {
+  background: #f6eaea;
+  color: #7f1d1d;
+  border-bottom: 2px solid #a51c24;
+}
+
+.reveal table td {
+  border-color: #ececec;
+}
+
+// Les encadrés Quarto (callout) restent sobres
+.reveal .callout {
+  font-size: 0.85em;
+}
+
+.reveal .title-slide h1 {
+  color: #7f1d1d;
+}

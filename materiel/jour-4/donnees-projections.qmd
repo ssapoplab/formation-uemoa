@@ -1,0 +1,87 @@
+---
+title: "Données du jour 4 — Projections démographiques"
+subtitle: "Formation régionale UEMOA · Ouagadougou, 26 novembre 2026"
+author: "Vissého Adjiwanou — Département de sociologie, UQAM · SSAPOPLAB"
+lang: fr
+format:
+  html:
+    toc: true
+    number-sections: false
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+Toutes les données du jour 4 sont dans `projet-projection/donnees/`. Elles couvrent les huit pays de l'UEMOA : Bénin, Burkina Faso, Côte d'Ivoire, Guinée-Bissau, Mali, Niger, Sénégal et Togo.
+
+**Source.** Nations Unies, Département des affaires économiques et sociales, Division de la population (2024). *World Population Prospects 2024*. Extraction à partir du paquet R `wpp2024` (jeux en périodes quinquennales), avec le script `projet-projection/preparation/01_extraire_donnees_wpp2024.R`.
+
+**Conventions.**
+
+- Effectifs en **milliers** de personnes.
+- Population au **1er juillet** de l'année (1990, 1995, …, 2100).
+- Taux et flux d'une **période** quinquennale, du 1er juillet de l'année t au 30 juin de l'année t + 5 (par exemple « 2025-2030 »).
+- Projections : **variante moyenne** de l'ONU, sauf mention contraire.
+- Fichiers CSV encodés en UTF-8 avec BOM : les accents s'affichent correctement dans Excel.
+
+## Les fichiers
+
+```{r}
+#| label: tableau-fichiers
+library(readr); library(dplyr)
+dossier <- "projet-projection/donnees"
+f <- tibble::tribble(
+  ~fichier, ~contenu, ~unite,
+  "pop_age_sexe.csv", "Population par sexe et groupe d'âge quinquennal (0-4 à 100+), 1990-2100 ; estimations jusqu'en 2020, projections ensuite", "milliers",
+  "mortalite_mx.csv", "Taux de mortalité par âge (0, 1-4, 5-9, …, 100+) et sexe, périodes 2015-2020 à 2095-2100", "décès par personne-année",
+  "fecondite_isf.csv", "ISF par période, 1985-1990 à 2095-2100 : variante moyenne, variantes basse et haute, intervalles à 80 % et 95 %", "enfants par femme",
+  "fecondite_calendrier.csv", "Répartition des naissances par groupe d'âge de la mère (15-19 à 45-49), par période", "% des naissances",
+  "rapport_masculinite_naissance.csv", "Rapport de masculinité à la naissance, par période", "garçons par fille",
+  "migration_age_sexe.csv", "Migrants nets par sexe et groupe d'âge, périodes 2020-2025 à 2095-2100", "milliers",
+  "onu_population_totale.csv", "Population totale 1990-2100 : estimations jusqu’en 2020, puis médiane probabiliste (colonne pop_mediane), variantes basse et haute, intervalles à 80 % et 95 %", "milliers",
+  "onu_esperance_vie.csv", "Espérance de vie à la naissance par sexe, par période, avec intervalles", "années"
+)
+f$lignes <- sapply(f$fichier, function(x) length(readLines(file.path(dossier, x))) - 1)
+knitr::kable(f, col.names = c("Fichier", "Contenu", "Unité", "Lignes"))
+```
+
+## Variables communes
+
+| Variable | Description |
+|:--|:--|
+| `code_pays` | Code numérique ISO du pays (204 Bénin, 854 Burkina Faso, 384 Côte d'Ivoire, 624 Guinée-Bissau, 466 Mali, 562 Niger, 686 Sénégal, 768 Togo) |
+| `pays` | Nom du pays en français |
+| `annee` | Année de la population, au 1er juillet |
+| `periode` | Période quinquennale des taux et des flux |
+| `sexe` | `femmes` ou `hommes` |
+| `age` | Groupe d'âge quinquennal (`0-4`, `5-9`, …, `95-99`, `100+`) |
+| `age_debut` | Âge au début de l'intervalle, pour la table de mortalité (0, 1, 5, 10, …, 100) |
+
+## Aperçu
+
+```{r}
+#| label: apercu
+p <- read_csv(file.path(dossier, "pop_age_sexe.csv"), show_col_types = FALSE)
+p %>% filter(annee %in% c(2025, 2050)) %>%
+  group_by(pays, annee) %>% summarise(population = sum(pop_milliers), .groups = "drop") %>%
+  tidyr::pivot_wider(names_from = annee, values_from = population, names_prefix = "pop_") %>%
+  mutate(croissance_pct = 100 * (pop_2050 / pop_2025 - 1)) %>%
+  knitr::kable(digits = 0, col.names = c("Pays", "Population 2025 (milliers)", "Population 2050 (milliers)", "Croissance 2025-2050 (%)"))
+```
+
+## Les autres fichiers du projet
+
+| Fichier | Contenu |
+|:--|:--|
+| `simulations/bayespop_uemoa.rds` | Liste R : `trajectoires` (1 000 trajectoires par pays et par année, 2025-2100 : population totale, 0-14 ans, 15-64 ans, 65 ans et plus, âge primaire 6-11 ans) et `resume` (quantiles). Fécondité probabiliste, mortalité et migration de l'ONU, usage pédagogique ; voir `preparation/02_simulations_bayespop.R` |
+| `modeles/modele_population_recensement.csv` | Modèle pour saisir la population d'un recensement (sexe, âge 0-4 à 85+, effectifs en milliers au 1er juillet 2025) ; il est prérempli avec les chiffres de l'ONU pour le Togo |
+| `excel/TP1_projection_UEMOA.xlsx` | Classeur Excel : mêmes données et même projection, en formules |
+
+## Utiliser les données de votre INS
+
+Les données de l'ONU sont une base commune et cohérente, mais ce ne sont pas les données officielles de votre pays. Pour la note pays :
+
+- citez la source : « Nations Unies, *World Population Prospects 2024* » ;
+- si vous utilisez votre recensement comme population de départ, indiquez sa date, les corrections appliquées et la façon dont il a été ramené au 1er juillet 2025 ;
+- n'ajoutez jamais de microdonnées nominatives au dossier partagé.
