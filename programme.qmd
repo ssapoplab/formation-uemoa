@@ -94,7 +94,8 @@ Le lundi, le premier créneau est consacré à l'ouverture officielle, et l'apr�
 
 - **Cours 2 (causalité et modélisation)** : [diapositives](materiel/jour-3/cours-causalite-modelisation.html)
 - **Labo causalité (complémentaire, à faire en autonomie)** : [résultats commentés](materiel/jour-3/labo-causalite/jour3-labo-causalite-resultats.html) · [télécharger le labo](materiel/jour-3/jour3-labo.zip) (script R Markdown et données des parties A et B). La partie C utilise l'EDS Ghana 2003 (`GHIR4BFL.DTA`), à télécharger avec son compte DHS et à placer dans `donnees/`.
-- **Cours 1 et labo populations synthétiques** : à venir.
+- **Cours 1 (populations synthétiques)** : [diapositives](materiel/jour-3/Cours_magistral_populations_synthetiques_VF.html)
+- **Labo populations synthétiques (commune de Djibo)** : [télécharger le labo](materiel/jour-3/Labo_jour3_Populations_synthetiques.zip) (labo commenté en HTML et  les quatre fichiers de données). Décompresser le dossier, ouvrir le HTML et copier le code dans R au fur et à mesure : les fichiers CSV doivent se trouver dans le répertoire de travail de R. Packages : `mlfit`, `dplyr`, `ggplot2`, `knitr`.
 :::
 
 ## Jeudi 26 novembre — Démographie prospective et scénarios
