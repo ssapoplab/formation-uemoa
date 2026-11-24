@@ -11,6 +11,7 @@ project:
     - "materiel/**/*.xlsx"
     - "materiel/jour-1/labo/donnees/*.csv"
     - "materiel/jour-3/labo-causalite/*-resultats.html"
+    - "materiel/jour-3/Cours_magistral_populations_synthetiques_VF.html"
 
 website:
   title: "Formation UEMOA — Analyse démographique pour la décision publique"
