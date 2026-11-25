@@ -167,6 +167,8 @@ Suivez ce gabarit, de 200 à 300 mots :
 
 > *Exemple :* « Si la fécondité ne baisse pas, il faudra recruter environ [N] enseignants de plus d'ici 2035 que dans le scénario de baisse rapide : la politique de population et la politique éducative doivent être planifiées ensemble. »
 
+**Le levier, et sa preuve.** Ajoutez deux phrases qui relient le scénario au cours du matin : un scénario de baisse plus rapide de la fécondité est une question causale. Quel levier (scolarisation des filles, accès à la contraception, recul de l'âge au mariage…) ferait passer votre pays du scénario moyen au scénario bas ? Et quelle preuve avons-nous que ce levier produit cet effet : une simple corrélation, une comparaison à caractéristiques égales, ou une évaluation causale (expérience, double différence, variable instrumentale) ?
+
 ## Grille de vérification avant de déposer
 
 - [ ] Le scénario moyen reproduit l'ONU à moins de 0,5 % près.
@@ -175,6 +177,7 @@ Suivez ce gabarit, de 200 à 300 mots :
 - [ ] Le graphique a un titre qui dit le message, et la source.
 - [ ] L'incertitude est donnée par un intervalle, pas seulement par une médiane.
 - [ ] La phrase pour le décideur contient un chiffre, une échéance et une action.
+- [ ] Le levier proposé est accompagné du type de preuve qui le soutient.
 
 ## Pour aller plus loin, ce soir
 

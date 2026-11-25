@@ -1292,7 +1292,7 @@
     "href": "materiel/jour-4/exercices-projections.html#grille-de-vérification-avant-de-déposer",
     "title": "Travail en équipe — Scénario à 2050 et besoins pour un secteur",
     "section": "5.1 Grille de vérification avant de déposer",
-    "text": "5.1 Grille de vérification avant de déposer\n\nLe scénario moyen reproduit l’ONU à moins de 0,5 % près.\nChaque chiffre a son unité (milliers, millions, %, pour 100) et son année.\nChaque norme du secteur a une source (plan national, ODD, annuaire statistique).\nLe graphique a un titre qui dit le message, et la source.\nL’incertitude est donnée par un intervalle, pas seulement par une médiane.\nLa phrase pour le décideur contient un chiffre, une échéance et une action."
+    "text": "5.1 Grille de vérification avant de déposer\n\nLe scénario moyen reproduit l’ONU à moins de 0,5 % près.\nChaque chiffre a son unité (milliers, millions, %, pour 100) et son année.\nChaque norme du secteur a une source (plan national, ODD, annuaire statistique).\nLe graphique a un titre qui dit le message, et la source.\nL’incertitude est donnée par un intervalle, pas seulement par une médiane.\nLa phrase pour le décideur contient un chiffre, une échéance et une action.\nLe levier proposé est accompagné du type de preuve qui le soutient."
   },
   {
     "objectID": "materiel/jour-4/exercices-projections.html#pour-aller-plus-loin-ce-soir",
@@ -1306,21 +1306,21 @@
     "href": "materiel/jour-4/syllabus.html",
     "title": "Jour 4 — Prospective et scénarios : projeter la population pour planifier",
     "section": "",
-    "text": "Rubrique\nÀ remplir\n\n\n\n\nObjectifs du TDR couverts\n6 (développer des scénarios démographiques prospectifs utiles à la planification publique) ; en appui, 4 (méthodes quantitatives) et 7 (traduire les analyses en outils d’aide à la décision)\n\n\nFormateur(s) du cours\nVissého Adjiwanou, Département de sociologie, UQAM · SSAPOPLAB ; Onadja, [institution]\n\n\nFormateur(s) du labo\nVissého Adjiwanou, UQAM ; Onadja, [institution]\n\n\nLogiciels utilisés\nR et RStudio (tidyverse) ; Excel ou LibreOffice Calc pour la version tableur"
+    "text": "Rubrique\nÀ remplir\n\n\n\n\nObjectifs du TDR couverts\n6 (développer des scénarios démographiques prospectifs utiles à la planification publique) ; en appui, 4 (méthodes quantitatives, dont l’inférence causale reportée du mercredi) et 7 (traduire les analyses en outils d’aide à la décision)\n\n\nFormateur(s) du cours\nVissého Adjiwanou, Département de sociologie, UQAM · SSAPOPLAB ; Onadja, [institution]\n\n\nFormateur(s) du labo\nVissého Adjiwanou, UQAM ; Onadja, [institution]\n\n\nLogiciels utilisés\nR et RStudio (tidyverse) ; Excel ou LibreOffice Calc pour la version tableur"
   },
   {
     "objectID": "materiel/jour-4/syllabus.html#en-tête",
     "href": "materiel/jour-4/syllabus.html#en-tête",
     "title": "Jour 4 — Prospective et scénarios : projeter la population pour planifier",
     "section": "",
-    "text": "Rubrique\nÀ remplir\n\n\n\n\nObjectifs du TDR couverts\n6 (développer des scénarios démographiques prospectifs utiles à la planification publique) ; en appui, 4 (méthodes quantitatives) et 7 (traduire les analyses en outils d’aide à la décision)\n\n\nFormateur(s) du cours\nVissého Adjiwanou, Département de sociologie, UQAM · SSAPOPLAB ; Onadja, [institution]\n\n\nFormateur(s) du labo\nVissého Adjiwanou, UQAM ; Onadja, [institution]\n\n\nLogiciels utilisés\nR et RStudio (tidyverse) ; Excel ou LibreOffice Calc pour la version tableur"
+    "text": "Rubrique\nÀ remplir\n\n\n\n\nObjectifs du TDR couverts\n6 (développer des scénarios démographiques prospectifs utiles à la planification publique) ; en appui, 4 (méthodes quantitatives, dont l’inférence causale reportée du mercredi) et 7 (traduire les analyses en outils d’aide à la décision)\n\n\nFormateur(s) du cours\nVissého Adjiwanou, Département de sociologie, UQAM · SSAPOPLAB ; Onadja, [institution]\n\n\nFormateur(s) du labo\nVissého Adjiwanou, UQAM ; Onadja, [institution]\n\n\nLogiciels utilisés\nR et RStudio (tidyverse) ; Excel ou LibreOffice Calc pour la version tableur"
   },
   {
     "objectID": "materiel/jour-4/syllabus.html#objectifs-dapprentissage",
     "href": "materiel/jour-4/syllabus.html#objectifs-dapprentissage",
     "title": "Jour 4 — Prospective et scénarios : projeter la population pour planifier",
     "section": "2. Objectifs d’apprentissage",
-    "text": "2. Objectifs d’apprentissage\nÀ la fin de la journée, les participants seront capables de :\n\nexpliquer la méthode des composantes, y compris la survie d’un groupe d’âges par le rapport ₅Lₓ/₅Lₓ₋₅, et ce que chaque hypothèse de fécondité, de mortalité et de migration apporte au résultat ;\nprojeter la population de leur pays de 2025 à 2050 sous quatre hypothèses de fécondité, en R ou en Excel, et contrôler le résultat par rapport à la variante moyenne de l’ONU ;\nlire une projection probabiliste et en tirer un intervalle ou une probabilité correctement formulés ;\ntraduire une projection en besoins pour un secteur (élèves et enseignants, emplois, santé maternelle) et l’écrire en une phrase pour un décideur."
+    "text": "2. Objectifs d’apprentissage\nÀ la fin de la journée, les participants seront capables de :\n\ndistinguer décrire, prédire et expliquer, raisonner en contrefactuel et repérer un facteur de confusion, et voir pourquoi un scénario est une question causale ;\nexpliquer la méthode des composantes, y compris la survie d’un groupe d’âges par le rapport ₅Lₓ/₅Lₓ₋₅, et ce que chaque hypothèse de fécondité, de mortalité et de migration apporte au résultat ;\nprojeter la population de leur pays de 2025 à 2050 sous quatre hypothèses de fécondité, en R ou en Excel, et contrôler le résultat par rapport à la variante moyenne de l’ONU ;\nlire une projection probabiliste et en tirer un intervalle ou une probabilité correctement formulés ;\ntraduire une projection en besoins pour un secteur (élèves et enseignants, emplois, santé maternelle) et l’écrire en une phrase pour un décideur, en nommant le levier qui ferait changer de scénario et la preuve qui le soutient."
   },
   {
     "objectID": "materiel/jour-4/syllabus.html#prérequis",
@@ -1334,14 +1334,14 @@
     "href": "materiel/jour-4/syllabus.html#déroulé-de-la-journée",
     "title": "Jour 4 — Prospective et scénarios : projeter la population pour planifier",
     "section": "4. Déroulé de la journée",
-    "text": "4. Déroulé de la journée\n\n\n\nHoraire\nBloc\nContenu\nFormateur\nMatériel\n\n\n\n\n8 h 30 – 9 h\nRetour sur l’exercice de la veille\nDeux équipes présentent leur demi-page sur l’apport d’une nouvelle source de données à la note pays ; discussion des limites\nFabrice Yaméogo\nCorrigé du jour 3\n\n\n9 h – 12 h 30\nCours magistral (pause 10 h 30 – 11 h)\nProjeter la population pour planifier : méthodes, hypothèses, incertitude, besoins\nVissého Adjiwanou, Onadja\nDiapos\n\n\n14 h – 15 h 30\nLabo (démonstration)\nProjeter la population de son pays à 2050, en R puis en Excel\nVissého Adjiwanou, Onadja\nScript · Données · projet-projection/\n\n\n15 h 45 – 17 h 45\nTravail en équipe pays\nProjeter son pays sous quatre scénarios, choisir un secteur, chiffrer ses besoins et rédiger la section « Scénario à 2050 »\nTous les formateurs présents\nFeuille de travail · Gabarit de note pays\n\n\n17 h 45 – 17 h 55\nConsignes de l’exercice\nScénario national et part de l’écart due à la démographie\nVissého Adjiwanou\nSection 8 ci-dessous"
+    "text": "4. Déroulé de la journée\n\n\n\nHoraire\nBloc\nContenu\nFormateur\nMatériel\n\n\n\n\n8 h 30 – 9 h\nRetour sur l’exercice de la veille\nDeux équipes présentent leur demi-page sur l’apport d’une nouvelle source de données à la note pays ; discussion des limites\nFabrice Yaméogo\nCorrigé du jour 3\n\n\n9 h – 12 h 30\nCours magistral (pause 10 h 30 – 11 h)\nDes causes aux scénarios : inférence causale, puis projections (méthodes, hypothèses, incertitude, besoins)\nVissého Adjiwanou, Onadja\nDiapos\n\n\n14 h – 15 h 30\nLabo (démonstration)\nProjeter la population de son pays à 2050, en R puis en Excel\nVissého Adjiwanou, Onadja\nLabo · Télécharger · Données · projet-projection/\n\n\n15 h 45 – 17 h 45\nTravail en équipe pays\nProjeter son pays sous quatre scénarios, choisir un secteur, chiffrer ses besoins, nommer le levier causal et rédiger la section « Scénario à 2050 »\nTous les formateurs présents\nFeuille de travail · Gabarit de note pays\n\n\n17 h 45 – 17 h 55\nConsignes de l’exercice\nScénario national et part de l’écart due à la démographie\nVissého Adjiwanou\nSection 8 ci-dessous"
   },
   {
     "objectID": "materiel/jour-4/syllabus.html#cours-magistral",
     "href": "materiel/jour-4/syllabus.html#cours-magistral",
     "title": "Jour 4 — Prospective et scénarios : projeter la population pour planifier",
     "section": "5. Cours magistral",
-    "text": "5. Cours magistral\n\nPlan : (1) pourquoi projeter : projection, perspective et prévision ; (2) des formules globales (Malthus, croissance exponentielle) à la méthode des composantes ; (3) la méthode des composantes pas à pas, avec le diagramme de Lexis et la formule de Preston ; (4) construire les hypothèses de fécondité, de mortalité et de migration ; (5) l’incertitude, des variantes de l’ONU aux projections probabilistes ; (6) des projections aux besoins, au dividende démographique et au climat, et ouverture sur la microsimulation.\nConcepts clés : équation de bilan ; méthode des composantes ; rapport de survie ₅Lₓ/₅Lₓ₋₅ et population stationnaire ; groupe ouvert ; calendrier et niveau de la fécondité ; solde migratoire et profil de Rogers-Castro ; inertie démographique ; variantes haute et basse (±0,5 enfant) ; médiane et intervalles de prédiction ; projection dérivée ; rapport de dépendance et dividende démographique.\nCas UEMOA utilisé : les huit pays, à partir du WPP 2024. Environ la moitié des habitants de 2050 sont déjà nés. L’UEMOA passerait de 156 millions d’habitants en 2025 à 247 à 312 millions en 2050 selon la fécondité. Avec 90 % de scolarisation et 45 élèves par maître, il faudrait environ 509 000 enseignants du primaire en 2025, et entre 593 000 (variante basse) et 972 000 (fécondité constante) en 2050. Le Togo sert d’exemple suivi tout au long du cours.\nMoments interactifs : sondage d’ouverture sur les projections de chaque INS et le niveau en R ; question à la salle sur la demande de projections des ministères ; calcul en binôme d’un pas de projection (femmes de 15-24 ans, naissances, filles de 0-4 ans) ; discussion de la plausibilité de la baisse de la fécondité prévue pour son pays ; trois questions de vérification en fin de cours."
+    "text": "5. Cours magistral\n\nPlan : Partie A, causalité : trois tâches (décrire, prédire, expliquer) ; le contrefactuel ; les graphes causaux (confusion, médiation, causalité inverse) ; comparer à caractéristiques égales, effets fixes et endogénéité, illustrés par nos articles sur les CPN et le beau-père ; big data et hétérogénéité des effets ; un scénario est une question causale. Partie B, projections : (1) pourquoi projeter : projection, perspective et prévision ; (2) des formules globales (Malthus, croissance exponentielle) à la méthode des composantes ; (3) la méthode des composantes pas à pas, avec le diagramme de Lexis et la formule de Preston ; (4) construire les hypothèses de fécondité, de mortalité et de migration ; (5) l’incertitude, des variantes de l’ONU aux projections probabilistes ; (6) des projections aux besoins, au dividende démographique et au climat, et ouverture sur la microsimulation.\nConcepts clés : équation de bilan ; méthode des composantes ; rapport de survie ₅Lₓ/₅Lₓ₋₅ et population stationnaire ; groupe ouvert ; calendrier et niveau de la fécondité ; solde migratoire et profil de Rogers-Castro ; inertie démographique ; variantes haute et basse (±0,5 enfant) ; médiane et intervalles de prédiction ; projection dérivée ; rapport de dépendance et dividende démographique.\nCas UEMOA utilisé : les huit pays, à partir du WPP 2024. Environ la moitié des habitants de 2050 sont déjà nés. L’UEMOA passerait de 156 millions d’habitants en 2025 à 247 à 312 millions en 2050 selon la fécondité. Avec 90 % de scolarisation et 45 élèves par maître, il faudrait environ 509 000 enseignants du primaire en 2025, et entre 593 000 (variante basse) et 972 000 (fécondité constante) en 2050. Le Togo sert d’exemple suivi tout au long du cours.\nMoments interactifs : sondage d’ouverture sur les projections de chaque INS et le niveau en R ; question à la salle sur la demande de projections des ministères ; calcul en binôme d’un pas de projection (femmes de 15-24 ans, naissances, filles de 0-4 ans) ; discussion de la plausibilité de la baisse de la fécondité prévue pour son pays ; trois questions de vérification en fin de cours."
   },
   {
     "objectID": "materiel/jour-4/syllabus.html#labo",
@@ -1418,14 +1418,14 @@
     "href": "programme.html#mercredi-25-novembre-nouvelles-sources-de-données-et-data-science",
     "title": "Programme & matériel",
     "section": "Mercredi 25 novembre — Nouvelles sources de données et data science",
-    "text": "Mercredi 25 novembre — Nouvelles sources de données et data science\nObjectif 5 · Boyam Fabrice Yaméogo, Vissého Adjiwanou\n\n\n\n\n\n\n\n\nHoraire\nBloc\nContenu\n\n\n\n\n9 h – 10 h 45\nCours 1\nPopulations synthétiques (B. F. Yaméogo)\n\n\n11 h – 12 h 30\nCours 2\nDe la causalité à la modélisation : régression, inférence causale et nouvelles sources (V. Adjiwanou)\n\n\n14 h – 15 h 30\nLabo\nGénérer et valider la population synthétique à deux niveaux d’une commune (B. F. Yaméogo)\n\n\n15 h 45 – 17 h 45\nÉquipe pays\nProposition de population synthétique pour une zone infrarégionale de son pays\n\n\n17 h 45 – 18 h\nConsignes\nExercice : ce que la population synthétique apporte à la note pays, et ses limites\n\n\n\n\n\n\n\n\n\nNoteMatériel du mercredi\n\n\n\n\nCours 2 (causalité et modélisation) : diapositives\nLabo causalité (complémentaire, à faire en autonomie) : résultats commentés · télécharger le labo (script R Markdown et données des parties A et B). La partie C utilise l’EDS Ghana 2003 (GHIR4BFL.DTA), à télécharger avec son compte DHS et à placer dans donnees/.\nCours 1 (populations synthétiques) : diapositives\nLabo populations synthétiques (commune de Djibo) : télécharger le labo (labo commenté en HTML et les quatre fichiers de données). Décompresser le dossier, ouvrir le HTML et copier le code dans R au fur et à mesure : les fichiers CSV doivent se trouver dans le répertoire de travail de R. Packages : mlfit, dplyr, ggplot2, knitr."
+    "text": "Mercredi 25 novembre — Nouvelles sources de données et data science\nObjectif 5 · Boyam Fabrice Yaméogo, Vissého Adjiwanou\n\n\n\n\n\n\n\n\nHoraire\nBloc\nContenu\n\n\n\n\n9 h – 10 h 45\nCours 1\nPopulations synthétiques (B. F. Yaméogo)\n\n\n11 h – 12 h 30\nCours 2\nDe la causalité à la modélisation : régression, inférence causale et nouvelles sources (V. Adjiwanou)\n\n\n14 h – 15 h 30\nLabo\nGénérer et valider la population synthétique à deux niveaux d’une commune (B. F. Yaméogo)\n\n\n15 h 45 – 17 h 45\nÉquipe pays\nProposition de population synthétique pour une zone infrarégionale de son pays\n\n\n17 h 45 – 18 h\nConsignes\nExercice : ce que la population synthétique apporte à la note pays, et ses limites\n\n\n\n\n\n\n\n\n\nNoteMatériel du mercredi\n\n\n\n\nCours 2 (causalité et modélisation) : diapositives — présenté finalement le jeudi, dans le cours « Des causes aux scénarios »\nLabo causalité (complémentaire, à faire en autonomie) : résultats commentés · télécharger le labo (script R Markdown et données des parties A et B). La partie C utilise l’EDS Ghana 2003 (GHIR4BFL.DTA), à télécharger avec son compte DHS et à placer dans donnees/.\nCours 1 (populations synthétiques) : diapositives\nLabo populations synthétiques (commune de Djibo) : télécharger le labo (labo commenté en HTML et les quatre fichiers de données). Décompresser le dossier, ouvrir le HTML et copier le code dans R au fur et à mesure : les fichiers CSV doivent se trouver dans le répertoire de travail de R. Packages : mlfit, dplyr, ggplot2, knitr."
   },
   {
     "objectID": "programme.html#jeudi-26-novembre-démographie-prospective-et-scénarios",
     "href": "programme.html#jeudi-26-novembre-démographie-prospective-et-scénarios",
     "title": "Programme & matériel",
     "section": "Jeudi 26 novembre — Démographie prospective et scénarios",
-    "text": "Jeudi 26 novembre — Démographie prospective et scénarios\nObjectif 6 · Vissého Adjiwanou, Yentéma Onadja\n\n\n\n\n\n\n\n\nHoraire\nBloc\nContenu\n\n\n\n\n9 h – 12 h 30\nCours\nProjeter la population pour planifier : méthode des composantes, hypothèses, incertitude, besoins\n\n\n14 h – 15 h 30\nLabo\nProjeter la population de son pays à 2050, en R puis en Excel\n\n\n15 h 45 – 17 h 45\nÉquipe pays\nProjeter son pays sous quatre scénarios, choisir un secteur, chiffrer ses besoins\n\n\n17 h 45 – 18 h\nConsignes\nExercice : scénario national et part de l’écart de besoins due à la démographie\n\n\n\n\n\n\n\n\n\nNoteMatériel du jeudi\n\n\n\n\nSyllabus\nCours : diapositives\nLabo : projeter la population de son pays à 2050 (dossier projet-projection/ sur la clé USB)\nTravail en équipe et exercice : scénario à 2050 et besoins pour un secteur\nDonnées : description des fichiers"
+    "text": "Jeudi 26 novembre — Démographie prospective et scénarios\nObjectif 6 · Vissého Adjiwanou, Yentéma Onadja\n\n\n\n\n\n\n\n\nHoraire\nBloc\nContenu\n\n\n\n\n9 h – 12 h 30\nCours\nDes causes aux scénarios : inférence causale (contrefactuel, graphes, comparer à caractéristiques égales, hétérogénéité) puis projections par composantes, hypothèses, incertitude, besoins et microsimulation\n\n\n14 h – 15 h 30\nLabo\nProjeter la population de son pays à 2050, en R puis en Excel\n\n\n15 h 45 – 17 h 45\nÉquipe pays\nProjeter son pays sous quatre scénarios, choisir un secteur, chiffrer ses besoins\n\n\n17 h 45 – 18 h\nConsignes\nExercice : scénario national et part de l’écart de besoins due à la démographie\n\n\n\n\n\n\n\n\n\nNoteMatériel du jeudi\n\n\n\n\nSyllabus\nCours : diapositives « Des causes aux scénarios » (causalité et projections réunies)\nLabo : projeter la population de son pays à 2050 · télécharger le labo (dossier projet-projection/ : script R, fonctions, données des huit pays, simulations et classeur Excel ; aussi sur la clé USB)\nTravail en équipe et exercice : scénario à 2050, besoins pour un secteur et levier causal\nLabo causalité, en autonomie : résultats commentés · télécharger le labo, à reprendre à l’atelier R du soir\nDonnées : description des fichiers"
   },
   {
     "objectID": "programme.html#vendredi-27-novembre-traduire-les-analyses-en-outils-pour-les-décideurs",
@@ -1454,5 +1454,474 @@
     "title": "Programme & matériel",
     "section": "La note d’analyse pays",
     "text": "La note d’analyse pays\nChaque jour, le travail en équipe ajoute une section à la note d’analyse de son pays.\n\n\n\n\n\n\n\nJour\nSection ajoutée\n\n\n\n\nLundi\nProfil démographique : cinq indicateurs commentés\n\n\nMardi\nInégalités régionales : une carte et son analyse\n\n\nMercredi\nApport d’une nouvelle source : la population synthétique pour des indicateurs infrarégionaux\n\n\nJeudi\nScénario à 2050 et besoins pour un secteur\n\n\nVendredi\nPolicy brief, message grand public et maquette de tableau de bord\n\n\nSamedi\nPrésentation et contribution à la feuille de route régionale"
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#qui-suis-je",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#qui-suis-je",
+    "title": "Des causes aux scénarios",
+    "section": "Qui suis-je ?",
+    "text": "Qui suis-je ?\n\n\nVissého Adjiwanou\n\nProfesseur agrégé de démographie et de méthodes quantitatives et computationnelles, Département de sociologie, UQAM\nProfesseur associé, Département de démographie, Université de Montréal, et University of Cape Town\n\n\nDes portes ouvertes pour vous\n\nDirecteur des Cahiers québécois de démographie : une revue francophone à comité de lecture, ouverte à vos analyses. Vos notes pays peuvent devenir des articles.\nMembre du Conseil de l’IUSSP, liaison avec le panel scientifique sur le big data : réseaux, ateliers, congrès.\nDirecteur du SSAPOPLAB, laboratoire sur les populations d’Afrique et de sa diaspora : séjours de recherche à Montréal et projets communs.\n\n\n\nDeux minutes, pas plus. Le message : la formation ne s’arrête pas samedi. Inviter ceux qui veulent publier leur note pays ou faire un séjour de recherche à venir vous voir pendant la pause."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#objectifs-de-la-journée",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#objectifs-de-la-journée",
+    "title": "Des causes aux scénarios",
+    "section": "Objectifs de la journée",
+    "text": "Objectifs de la journée\nÀ la fin de la journée, vous serez capables de :\n\ndistinguer une association d’un effet causal, et dire quelle hypothèse il faut croire pour passer de l’une à l’autre ;\nexpliquer la méthode des composantes et ce que chaque hypothèse y apporte ;\nprojeter la population de votre pays à 2050 sous plusieurs hypothèses de fécondité, en R ou en Excel ;\nlire une projection probabiliste et dire ce qu’elle permet d’affirmer ;\ntraduire une projection en besoins pour un secteur (écoles, emplois, santé) et l’écrire en une phrase pour un décideur.\n\n\nPhrase d’ouverture : « Avant de projeter l’avenir, il faut savoir quels leviers agissent vraiment sur la fécondité, la mortalité et la migration. Sinon, nos scénarios ne disent rien aux décideurs. » Annoncer le livrable : à 17 h 45, chaque équipe a une projection de son pays à 2050 sous quatre hypothèses, et un chiffre de besoins pour un secteur."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#plan-du-cours",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#plan-du-cours",
+    "title": "Des causes aux scénarios",
+    "section": "Plan du cours",
+    "text": "Plan du cours\n\n\nA. Des causes…\n\nDécrire, prédire, expliquer\nCinq questions causales tirées de nos recherches\nLe contrefactuel et le biais de sélection\nDonnées d’enquête : les graphes causaux\nLa régression et ses hypothèses\nDes causes aux scénarios\n\n\nB. … aux scénarios\n\nPourquoi projeter ?\nDes formules globales à la méthode des composantes\nLa méthode des composantes, pas à pas\nConstruire les hypothèses\nL’incertitude : des variantes aux projections probabilistes\nDes projections aux besoins, et au-delà"
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#sondage-douverture",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#sondage-douverture",
+    "title": "Des causes aux scénarios",
+    "section": "Sondage d’ouverture",
+    "text": "Sondage d’ouverture\nLevez la main :\n\nVotre INS a-t-il publié une projection de population depuis le dernier recensement ?\nAvez-vous déjà participé à une projection ? Avec quel outil : Excel, Spectrum, R, autre ?\nAvez-vous déjà utilisé R au-delà des labos de cette semaine ?\n\n\nCe sondage décide de l’organisation du labo de l’après-midi. Si plus de la moitié de la salle n’est pas à l’aise en R, faire la démonstration en R, puis donner la main sur le classeur Excel pour le travail en équipe. Noter au tableau le nombre de mains pour chaque question."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#trois-tâches-trois-questions",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#trois-tâches-trois-questions",
+    "title": "Des causes aux scénarios",
+    "section": "Trois tâches, trois questions",
+    "text": "Trois tâches, trois questions\n\n\n\n\n\n\n\n\nTâche\nQuestion\nExemple pour un INS\n\n\n\n\nDécrire\nQuoi ? Combien ? Où ?\nQuelle part des accouchements est assistée, par région ?\n\n\nPrédire\nQui ? Quand ?\nQuelles femmes risquent d’accoucher sans assistance ?\n\n\nExpliquer\nPourquoi ? Et si… ?\nLes consultations prénatales augmentent-elles l’accouchement assisté ?\n\n\n\nHernán, Hsu et Healy (2019) : ces trois tâches n’appellent ni les mêmes modèles, ni les mêmes variables.\n\nLa plupart des publications des INS décrivent. Les décideurs posent pourtant des questions du troisième type : « si l’on rend les CPN gratuites, combien d’accouchements assistés de plus ? »."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#et-lintelligence-artificielle",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#et-lintelligence-artificielle",
+    "title": "Des causes aux scénarios",
+    "section": "Et l’intelligence artificielle ?",
+    "text": "Et l’intelligence artificielle ?\n\nL’apprentissage automatique et les modèles de langage excellent à prédire : repérer des régularités dans d’énormes masses de données.\nIls ne disent pas pourquoi : une corrélation apprise sur des millions de cas reste une corrélation.\nLa causalité ne vient pas de la quantité de données, mais du plan d’analyse : une question contrefactuelle, une hypothèse d’identification, une théorie.\n\n\nAvec l’IA, calculer devient facile. Savoir quelle comparaison répond à quelle question devient la compétence rare."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#nos-questions-de-recherche",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#nos-questions-de-recherche",
+    "title": "Des causes aux scénarios",
+    "section": "Nos questions de recherche",
+    "text": "Nos questions de recherche\n\n\n\n\n\n\n\n\nArticle\nQuestion\nTraitement → résultat\n\n\n\n\nAdjiwanou et LeGrand (2013)\nLes CPN favorisent-elles l’accouchement assisté ?\nCPN → accouchement assisté\n\n\nAdjiwanou, Bougma et LeGrand (2018)\nL’éducation du conjoint améliore-t-elle la santé des femmes ?\nÉducation du conjoint → contraception, CPN, accouchement\n\n\nAdjiwanou et N’Bouke (2015)\nPourquoi violence conjugale et contraception vont-elles de pair ?\nViolence ↔︎ contraception\n\n\nAdjiwanou, Boco et Yaya (2021)\nVivre avec un beau-père réduit-il la scolarisation ?\nBeau-père → fréquentation scolaire\n\n\nJohn et Adjiwanou (2021)\nLe remariage freine-t-il la fécondité ?\nRemariage → nombre d’enfants\n\n\n\nToutes posent la même question de fond : que se serait-il passé autrement ?\n\nToutes utilisent des EDS : aucune expérience possible. Chacune a dû affronter un problème différent : confusion, sens de la causalité, sélection, inobservé. Ce sont ces problèmes qui organisent la suite du cours."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#deux-résultats-potentiels-pour-chaque-personne",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#deux-résultats-potentiels-pour-chaque-personne",
+    "title": "Des causes aux scénarios",
+    "section": "Deux résultats potentiels pour chaque personne",
+    "text": "Deux résultats potentiels pour chaque personne\nPour une femme  et un traitement  (au moins 4 CPN = 1, sinon 0) :\n\n : accouche-t-elle avec assistance si elle a fait 4 CPN ?\n : accouche-t-elle avec assistance si elle ne les a pas faites ?\nL’effet causal pour elle : \n\n\n\n\n\n\n\n\n\n\n\nFemme\nCPN\n\n\nEffet\n\n\n\n\nAminata\n1\n1\n?\n?\n\n\nFatou\n0\n?\n0\n?\n\n\n\nLe problème fondamental de l’inférence causale : on n’observe jamais les deux résultats pour la même personne."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#le-biais-de-sélection",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#le-biais-de-sélection",
+    "title": "Des causes aux scénarios",
+    "section": "Le biais de sélection",
+    "text": "Le biais de sélection\n\n\nLes femmes qui font 4 CPN sont plus instruites, plus riches, plus proches d’un centre de santé.\nMême sans CPN, elles accoucheraient plus souvent avec assistance : le biais de sélection est positif.\nLa différence observée surestime l’effet.\n\n\nDans le cours de méthodes, l’exemple d’Angrist et Pischke : les personnes hospitalisées se déclarent en moins bonne santé que les autres. L’hôpital ne rend pas malade : ce sont les malades qui vont à l’hôpital. Là, le biais de sélection est négatif et peut masquer complètement un effet positif."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#ce-que-donne-la-comparaison-naïve",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#ce-que-donne-la-comparaison-naïve",
+    "title": "Des causes aux scénarios",
+    "section": "Ce que donne la comparaison naïve",
+    "text": "Ce que donne la comparaison naïve\nDans les données du labo (EDS Ghana 2003, femmes rurales, n = 1 886) :\n\n\n\n\nAccouchement assisté\n\n\n\n\nFemmes avec au moins 4 CPN\n40 %\n\n\nFemmes avec moins de 4 CPN\n12 %\n\n\nDifférence observée\n28 points\n\n\n\nCombien de ces 28 points sont un effet des CPN, et combien un biais de sélection ? Avec de vraies données, personne ne connaît la réponse : la suite du cours sert à s’en approcher."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#trois-conditions-pour-parler-de-cause",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#trois-conditions-pour-parler-de-cause",
+    "title": "Des causes aux scénarios",
+    "section": "Trois conditions pour parler de cause",
+    "text": "Trois conditions pour parler de cause\n\nAntériorité : la cause précède l’effet.\nAssociation : la cause et l’effet varient ensemble.\nIsolement : aucune autre explication plausible de cette association.\n\nAvec des données d’enquête, la troisième condition est toujours la plus difficile. Les graphes causaux (DAG) obligent à dire quelles autres explications on envisage."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#la-confusion-contrôler",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#la-confusion-contrôler",
+    "title": "Des causes aux scénarios",
+    "section": "La confusion : contrôler",
+    "text": "La confusion : contrôler\n\n\n\n\n\n\n\nG\n\n\nE\n\nInstruction, richesse,\ndistance, milieu\n\n\n\nD\n\nCPN\n\n\n\nE-&gt;D\n\n\n\n\n\nY\n\nAccouchement assisté\n\n\n\nE-&gt;Y\n\n\n\n\n\nD-&gt;Y\n\n\n\n\n\n\n\n\n\n\nUn facteur de confusion influence à la fois le traitement et le résultat. Il faut le contrôler : comparer des femmes de même instruction, même richesse, même distance."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#la-médiation-ne-pas-contrôler",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#la-médiation-ne-pas-contrôler",
+    "title": "Des causes aux scénarios",
+    "section": "La médiation : ne pas contrôler",
+    "text": "La médiation : ne pas contrôler\n\n\n\n\n\n\n\nG\n\n\nD\n\nCPN\n\n\n\nM\n\nAccouchement\nen centre de santé\n\n\n\nD-&gt;M\n\n\n\n\n\nY\n\nAccouchement assisté\n\n\n\nD-&gt;Y\n\n\n\n\n\nM-&gt;Y\n\n\n\n\n\n\n\n\n\n\nLe lieu d’accouchement est une conséquence des CPN. Le contrôler retire le chemin principal de l’effet : dans le labo, l’estimation tombe de 22 à 2 points.\nRègle : une variable de contrôle doit être mesurée avant le traitement."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#le-sens-de-la-flèche-la-causalité-inverse",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#le-sens-de-la-flèche-la-causalité-inverse",
+    "title": "Des causes aux scénarios",
+    "section": "Le sens de la flèche : la causalité inverse",
+    "text": "Le sens de la flèche : la causalité inverse\nAdjiwanou et N’Bouke (2015) : dans plusieurs pays d’Afrique subsaharienne, les femmes victimes de violence conjugale utilisent plus la contraception. Un paradoxe ?\n\nViolence → contraception : se protéger d’une grossesse dans une relation violente.\nContraception → violence : la sanction d’une décision prise sans l’accord du conjoint.\nUn troisième facteur : l’autonomie des femmes, qui accroît à la fois le recours à la contraception et les conflits.\n\nUne enquête transversale mesure les deux en même temps : l’antériorité n’est pas garantie."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#ce-que-montre-larticle",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#ce-que-montre-larticle",
+    "title": "Des causes aux scénarios",
+    "section": "Ce que montre l’article",
+    "text": "Ce que montre l’article\nEDS de 13 pays (2006-2011), femmes en union non stérilisées.\n\n\n\n\n\n\n\nMéthode\nEffet de la violence sur la contraception moderne\n\n\n\n\nProbit simple\nPositif dans 5 pays sur 13 (Burkina Faso, Mali, Nigeria, Tanzanie, Zimbabwe)\n\n\n+ autonomie des femmes\nInchangé : l’autonomie n’explique pas le paradoxe\n\n\nProbit bivarié récursif (instruments : alcool du conjoint, violence du père, acceptation de la violence)\nSignificatif dans aucun pays\n\n\nAppariement sur score de propension, bornes de Rosenbaum\nSeul le Burkina Faso garde un effet robuste (+6 points)\n\n\n\nLe paradoxe venait surtout d’une mauvaise spécification : on traitait comme une cause une variable déterminée en même temps que le résultat.\n\nMessage général : quand la flèche peut aller dans les deux sens, aucun contrôle supplémentaire ne règle le problème. Il faut des données datées (calendrier des EDS), longitudinales, ou un modèle qui traite la simultanéité, ici le probit bivarié récursif. Mais ce modèle repose sur des instruments : l’alcool du conjoint ou la violence vue chez le père n’agiraient sur la contraception qu’à travers la violence. C’est une hypothèse à discuter avec la salle. Le Burkina Faso, pays hôte, est le seul où l’effet résiste en partie : bonne question de recherche pour l’INSD."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#comparer-à-caractéristiques-égales",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#comparer-à-caractéristiques-égales",
+    "title": "Des causes aux scénarios",
+    "section": "Comparer à caractéristiques égales",
+    "text": "Comparer à caractéristiques égales\nLa régression compare des femmes semblables sur les facteurs de confusion mesurés : une moyenne pondérée de comparaisons « à caractéristiques égales ».\n\n : l’effet du traitement, les contrôles  (instruction, richesse, distance, région…) étant maintenus fixes.\n\n\n\n\n\n\n\nEDS Ghana 2003, femmes rurales\nEffet des CPN sur l’accouchement assisté\n\n\n\n\nComparaison naïve\n28 points\n\n\nLogit avec contrôles, effet en points de pourcentage\n22 points\n\n\n\nSix points venaient de la sélection observée. Reste la question : et la sélection non observée ?"
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#ce-que-lon-oublie-se-retrouve-dans-β",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#ce-que-lon-oublie-se-retrouve-dans-β",
+    "title": "Des causes aux scénarios",
+    "section": "Ce que l’on oublie se retrouve dans β",
+    "text": "Ce que l’on oublie se retrouve dans β\nSi le vrai modèle contient une variable  omise :\n\n\n : l’effet de  sur le résultat ;\n : l’association entre  et le traitement.\n\nLe biais est nul seulement si  n’influence pas le résultat ou n’est pas liée au traitement. C’est la traduction algébrique de la confusion."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#lestimation-bouge-lhypothèse-aussi",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#lestimation-bouge-lhypothèse-aussi",
+    "title": "Des causes aux scénarios",
+    "section": "L’estimation bouge, l’hypothèse aussi",
+    "text": "L’estimation bouge, l’hypothèse aussi\n\n\n\n\n\n\n\n\nMéthode (labo, EDS Ghana 2003)\nEffet (points)\nCe qu’il faut croire\n\n\n\n\nComparaison naïve\n28\nLes deux groupes sont comparables\n\n\nLogit avec contrôles\n22\nAucune confusion non observée\n\n\n+ effets fixes de grappe\n18\nL’inobservé est commun au village\n\n\nVariable instrumentale (CPN précoce)\n28\nLa date de la 1re CPN n’agit qu’à travers le nombre de CPN\n\n\n+ lieu d’accouchement\n2\nMauvais contrôle : on retire le mécanisme\n\n\n\nAucune méthode ne supprime les hypothèses : chacune déplace la question vers une hypothèse qu’il faut défendre.\n\nLe labo complet est sur le site, à faire en autonomie ou à l’atelier du soir. Ici, retenir l’ordre de grandeur : de 18 à 28 points selon les hypothèses, la conclusion tient ; seul le mauvais contrôle l’efface, et pour une mauvaise raison."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#ce-que-font-nos-articles",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#ce-que-font-nos-articles",
+    "title": "Des causes aux scénarios",
+    "section": "Ce que font nos articles",
+    "text": "Ce que font nos articles\n\n\n\n\n\n\n\n\nStratégie\nHypothèse\nArticle\n\n\n\n\nContrôles, modèle multiniveau\nPas de confusion non observée\nAdjiwanou, Bougma et LeGrand (2018)\n\n\nEffets fixes de grappe, puis de mère\nL’inobservé est commun à la grappe ou à la famille\nAdjiwanou, Boco et Yaya (2021)\n\n\nCorrection de l’endogénéité (équations structurelles)\nLe modèle décrit correctement la sélection dans le traitement\nAdjiwanou et LeGrand (2013)\n\n\nDouble différence\nTendances parallèles\nCard et Krueger (1994)\n\n\nProbit bivarié avec instruments ; score de propension et bornes de Rosenbaum\nInstruments valides ; force d’un facteur caché\nAdjiwanou et N’Bouke (2015)\n\n\n\nAucune méthode ne supprime toutes les hypothèses : chacune déplace la question vers une hypothèse qu’il faut défendre."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#exemple-les-effets-fixes",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#exemple-les-effets-fixes",
+    "title": "Des causes aux scénarios",
+    "section": "Exemple : les effets fixes",
+    "text": "Exemple : les effets fixes\nAdjiwanou, Boco et Yaya (2021) : 277 726 enfants de 6 à 14 ans, 33 EDS (2006-2015).\n\n\n\n\n\n\n\nComparaison\nRapport de cotes de la fréquentation scolaire, beau-père vs deux parents\n\n\n\n\nEffets fixes de grappe\n0,76\n\n\nEffets fixes de mère (frères et sœurs comparés entre eux)\n0,49\n\n\n\n\nLes effets fixes neutralisent tout ce qui est commun à la grappe (école, normes, pauvreté locale), même non mesuré.\nLe lien est plus fort en ville et chez les 10-14 ans.\nLes auteurs restent prudents : données transversales, sélection possible des enfants (confiage), sous-échantillon restreint pour les effets fixes de mère."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#exemple-lendogénéité-et-la-sélection",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#exemple-lendogénéité-et-la-sélection",
+    "title": "Des causes aux scénarios",
+    "section": "Exemple : l’endogénéité et la sélection",
+    "text": "Exemple : l’endogénéité et la sélection\nAdjiwanou et LeGrand (2013) : Ghana, Kenya, Ouganda, Tanzanie, milieu rural.\n\nLes femmes qui font des CPN diffèrent par des caractéristiques non observées (préférences, accès) qui jouent aussi sur l’accouchement.\nUn modèle d’équations structurelles qui corrige cette endogénéité montre que les probit et logit simples sous-estiment l’effet direct des CPN, qui passe en partie par les services reçus pendant les consultations.\n\nJohn et Adjiwanou (2021) : 34 pays, femmes de 40 à 49 ans. Dans 29 pays, les femmes remariées finissent avec moins d’enfants que celles restées dans leur première union. Mais qui se remarie ? Le divorce et le remariage ne sont pas tirés au sort : la sélection fait partie de la question.\n\nPoint pédagogique : le sens du biais n’est pas toujours celui qu’on attend. Dans l’article de 2013, la correction augmente l’effet estimé ; dans le labo (Ghana), la variable instrumentale donne aussi un effet un peu plus élevé (28 points contre 22), alors que les effets fixes de grappe le réduisent (18). Il faut raisonner sur le mécanisme de sélection propre à chaque question, pas appliquer une règle."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#big-data-et-causalité-ce-qui-change-ce-qui-ne-change-pas",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#big-data-et-causalité-ce-qui-change-ce-qui-ne-change-pas",
+    "title": "Des causes aux scénarios",
+    "section": "Big data et causalité : ce qui change, ce qui ne change pas",
+    "text": "Big data et causalité : ce qui change, ce qui ne change pas\nPlus de données ne règle pas la confusion : une corrélation calculée sur des millions de cas reste une corrélation (Salganik, 2018, chap. 2).\nTrois apports réels des nouvelles sources :\n\nDes expériences naturelles visibles : des données « toujours actives » enregistrent ce qui se passe avant et après un choc. Mas et Moretti (2009) : les données de caisse d’un supermarché montrent qu’un collègue rapide rend les autres caissiers plus productifs.\nDes expériences à très grande échelle : Bond et al. (2012) ont tiré au sort un message d’incitation au vote envoyé à 61 millions d’utilisateurs de Facebook.\nL’hétérogénéité des effets : avec des millions d’observations, on peut estimer l’effet pour chaque groupe, et pas seulement en moyenne.\n\n\nSalganik, Bit by Bit, chapitre 2 (observer les comportements) et chapitre 4 (expériences). Rappeler aussi les limites qu’il décrit : ces données sont incomplètes, non représentatives, instables dans le temps (dérive) et façonnées par les algorithmes des plateformes."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#lhétérogénéité-un-effet-moyen-peut-tromper",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#lhétérogénéité-un-effet-moyen-peut-tromper",
+    "title": "Des causes aux scénarios",
+    "section": "L’hétérogénéité : un effet moyen peut tromper",
+    "text": "L’hétérogénéité : un effet moyen peut tromper\nL’exemple des factures d’électricité qui comparent chaque ménage à ses voisins (Salganik, 2018, chap. 4) :\n\nSchultz et al. (2007) : les gros consommateurs réduisent leur consommation, mais les petits consommateurs l’augmentent (effet « boomerang »). Ajouter un simple visage souriant aux bons élèves supprime cet effet pervers.\nAllcott (2011), environ 600 000 ménages : une baisse moyenne d’environ 2 %, beaucoup plus forte chez les ménages qui consommaient le plus au départ.\nCosta et Kahn (2013) : l’effet varie aussi selon l’orientation politique des ménages.\n\n\nUn même effet moyen peut cacher des groupes qui gagnent beaucoup, peu, ou qui perdent. Pour un décideur, la question devient : pour qui la politique marche-t-elle ?"
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#pour-nos-questions-à-qui-profite-leffet",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#pour-nos-questions-à-qui-profite-leffet",
+    "title": "Des causes aux scénarios",
+    "section": "Pour nos questions : à qui profite l’effet ?",
+    "text": "Pour nos questions : à qui profite l’effet ?\n\nBeau-père et scolarisation (2021) : 277 726 enfants de 33 EDS. Le désavantage est plus fort en ville et chez les 10-14 ans. La mise en commun des EDS, c’est le « big data » du démographe : assez d’observations pour comparer des sous-groupes.\nCPN et accouchement assisté : l’effet est-il le même dans tous les quintiles, toutes les régions, à toutes les distances ? Une interaction dans la régression permet de le tester.\nPour les projections : appliquer un effet moyen à toute la population peut tromper si l’effet varie selon l’instruction, la région ou le milieu. C’est l’argument de la microsimulation, que l’on verra en fin de journée.\n\n\nLes nouvelles sources (téléphonie mobile, images satellitaires) servent surtout à prédire finement, par exemple la pauvreté (Blumenstock, Cadamuro et On, 2015, au Rwanda). Elles aident à cibler ; elles ne disent pas à elles seules si une politique marche."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#un-scénario-est-une-question-causale",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#un-scénario-est-une-question-causale",
+    "title": "Des causes aux scénarios",
+    "section": "Un scénario est une question causale",
+    "text": "Un scénario est une question causale\nUne projection répond à « et si… ? » : c’est une question contrefactuelle posée à toute une population.\n\n : naissances,  : décès,  : immigrants,  : émigrants, entre  et .\nChaque composante dépend d’une hypothèse : fécondité, mortalité, migration.\n\nUne hypothèse tendancielle prolonge le passé : elle décrit.\nUne hypothèse de politique (« si la scolarisation des filles progresse », « si la gratuité des soins s’étend ») suppose un effet causal : elle explique.\n\nSans estimation crédible de cet effet, le scénario « politique » n’est qu’un chiffre choisi au hasard.\n\nExemple à développer oralement : un scénario « fécondité basse » pour le Niger n’est crédible que si l’on sait quels facteurs font baisser l’ISF, de combien, et en combien de temps. Les femmes instruites ont moins d’enfants, mais l’écart observé mélange l’effet de l’instruction et la sélection (milieu, richesse) : c’est exactement le biais de la matinée."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#trois-questions-à-poser-à-tout-scénario",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#trois-questions-à-poser-à-tout-scénario",
+    "title": "Des causes aux scénarios",
+    "section": "Trois questions à poser à tout scénario",
+    "text": "Trois questions à poser à tout scénario\n\nQuel levier ? Quelle politique ou quel changement fait bouger la composante (fécondité, mortalité, migration) ?\nQuel effet, et d’où vient l’estimation ? Une association brute, une régression avec contrôles, une expérience ? Quelle hypothèse faut-il croire ?\nEn combien de temps ? Les effets passent souvent par des médiateurs (instruction → âge au mariage → fécondité) et mettent une génération à se voir.\n\n\nPlace à la projection : la méthode des composantes, les hypothèses et l’incertitude. Cet après-midi, chaque équipe construit quatre scénarios pour son pays : gardez ces trois questions en tête."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#gouverner-cest-prévoir",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#gouverner-cest-prévoir",
+    "title": "Des causes aux scénarios",
+    "section": "« Gouverner, c’est prévoir »",
+    "text": "« Gouverner, c’est prévoir »\n\n« Savoir pour prévoir, prévoir pour agir. » — Jacques Vallin (2002)\n\n\n« Les perspectives démographiques servent à nous faire connaître par le calcul quel serait l’avenir d’une population, en nombre et en structure, dans telle ou telle hypothèse. » — Louis Henry (1973)\n\n\nAnticiper les conséquences de tendances déjà engagées.\nÉviter qu’un futur porteur de déséquilibres ne se réalise : c’est le paradoxe de la projection réussie, qui ne se réalise pas parce qu’on a agi.\n\n\nCatherine Rollet résume l’ambivalence : on projette pour prévoir, mais parfois aussi « pour ne pas voir », quand les chiffres servent à justifier une décision déjà prise."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#trois-mots-à-ne-pas-confondre",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#trois-mots-à-ne-pas-confondre",
+    "title": "Des causes aux scénarios",
+    "section": "Trois mots à ne pas confondre",
+    "text": "Trois mots à ne pas confondre\n\n\n\n\n\n\n\n\nTerme\nCe que c’est\nQuestion posée\n\n\n\n\nProjection\nCalcul conditionnel : résultat mécanique d’hypothèses données\n« Que se passerait-il si… ? »\n\n\nPerspective\nProjection jugée la plus plausible par son auteur\n« Que pensons-nous probable ? »\n\n\nPrévision\nProjection assortie d’une mesure explicite d’incertitude\n« Avec quelle probabilité ? »\n\n\n\nUne projection ne se trompe jamais : elle est juste, si le calcul l’est, au regard de ses hypothèses. Ce sont les hypothèses qui peuvent se tromper."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#à-quoi-servent-les-projections-dans-un-ins",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#à-quoi-servent-les-projections-dans-un-ins",
+    "title": "Des causes aux scénarios",
+    "section": "À quoi servent les projections dans un INS ?",
+    "text": "À quoi servent les projections dans un INS ?\n\n\nPlanification\n\nPlans nationaux de développement\nCartes scolaires, besoins en enseignants\nCouverture vaccinale, soins maternels\nEmplois à créer, retraites\n\n\nStatistique publique\n\nDénominateurs des indicateurs (ODD, taux de scolarisation, couverture sanitaire)\nBases de sondage des enquêtes entre deux recensements\nAllocation de budgets aux régions\n\n\nÀ la salle : quels ministères vous demandent des projections ? À quel niveau géographique ?\n\nLaisser 4 à 5 minutes. Faire ressortir que la demande est surtout infranationale (régions, communes) et sectorielle, alors que les projections publiées sont souvent nationales."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#malthus-1798-la-première-projection-célèbre",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#malthus-1798-la-première-projection-célèbre",
+    "title": "Des causes aux scénarios",
+    "section": "Malthus (1798) : la première projection célèbre",
+    "text": "Malthus (1798) : la première projection célèbre\n\n« La population croît à un rythme géométrique alors que les subsistances évoluent de manière linéaire. »\n\n\n\n\nPopulation : 1, 2, 4, 8, 16, 32…\nSubsistances : 1, 2, 3, 4, 5, 6…\nD’où les « freins » : préventifs (mariage tardif) ou destructifs (famines, épidémies).\n\n\n\nMarx répond que la « surpopulation » est relative à un mode de production.\nBoserup inverse la causalité : la pression démographique stimule l’innovation agricole.\n\n\n\nLa méthode de Malthus, une seule courbe pour toute la population, a été abandonnée. Le débat population-ressources revient aujourd’hui avec le climat (dernière partie du cours). Ce qui a été abandonné, c’est la projection par une seule courbe globale."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#les-méthodes-mathématiques-globales",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#les-méthodes-mathématiques-globales",
+    "title": "Des causes aux scénarios",
+    "section": "Les méthodes mathématiques globales",
+    "text": "Les méthodes mathématiques globales\n\n\n\n\n\n\n\n\nModèle\nFormule\nHypothèse implicite\n\n\n\n\nLinéaire\n\nMême accroissement absolu chaque année\n\n\nGéométrique\n\nTaux de croissance constant, discret\n\n\nExponentielle\n\nTaux de croissance constant, continu\n\n\nLogistique\n\nCroissance freinée vers un plafond \n\n\n\nAvec  entre deux recensements.\nLimites : aucune structure par âge, donc pas d’élèves, pas d’actifs, pas de naissances ; un taux constant ignore la transition.\n\nElles restent utiles pour interpoler entre deux recensements, pour estimer une population à une date intermédiaire, ou pour de très petites zones sans données par âge. L’exercice 1 du travail en équipe compare une projection exponentielle à la projection par composantes."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#pourquoi-raisonner-par-âge-linertie-démographique",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#pourquoi-raisonner-par-âge-linertie-démographique",
+    "title": "Des causes aux scénarios",
+    "section": "Pourquoi raisonner par âge : l’inertie démographique",
+    "text": "Pourquoi raisonner par âge : l’inertie démographique\n\n\nMessage clé : à horizon 2050, environ la moitié de la population est déjà née. Leur nombre ne dépend plus que de la mortalité et de la migration. C’est pourquoi les projections à 20 ou 25 ans sont robustes pour les adultes, et incertaines surtout pour les enfants."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#la-méthode-des-composantes",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#la-méthode-des-composantes",
+    "title": "Des causes aux scénarios",
+    "section": "La méthode des composantes",
+    "text": "La méthode des composantes\n\nUtilise les trois phénomènes de la dynamique : fécondité, mortalité, migration.\nAppliquée pour la première fois par Wicksell (1926) et Whelpton (1928).\nBase de toutes les projections modernes : ONU, Wittgenstein Centre, IHME, INS.\n\nL’équation de bilan, appliquée à chaque groupe d’âge et de sexe :\n\n : naissances,  : décès,  : immigrants,  : émigrants, entre  et ."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#les-intrants",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#les-intrants",
+    "title": "Des causes aux scénarios",
+    "section": "Les intrants",
+    "text": "Les intrants\n\n\n\n\n\n\n\n\nIntrant\nVentilation\nSource (dans le labo)\n\n\n\n\nPopulation de départ, 1er juillet 2025\nsexe × âge quinquennal, 0-4 à 100+\nWPP 2024 ou recensement corrigé\n\n\nRapports de survie \nsexe × âge × période\ntables de mortalité projetées\n\n\nTaux de fécondité par âge \n15-19 à 45-49 × période\nISF × calendrier\n\n\nRapport de masculinité à la naissance\npériode\n1,03 à 1,05 dans l’UEMOA\n\n\nMigrants nets \nsexe × âge × période\nhypothèse de l’ONU"
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#lalgorithme-en-un-schéma",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#lalgorithme-en-un-schéma",
+    "title": "Des causes aux scénarios",
+    "section": "L’algorithme en un schéma",
+    "text": "L’algorithme en un schéma\n\n\n\n\n\nflowchart LR\n  A[\"Population en t&lt;br/&gt;sexe × âge\"] --&gt; B[\"1. Survie&lt;br/&gt;× ₅Lₓ / ₅Lₓ₋₅\"]\n  M[\"Migration nette&lt;br/&gt;moitié début, moitié fin\"] --&gt; B\n  B --&gt; C[\"2. Groupe ouvert&lt;br/&gt;95-99 et 100+ → 100+\"]\n  C --&gt; D[\"Population en t+5\"]\n  A --&gt;|\"femmes 15-49\"| E[\"3. Naissances&lt;br/&gt;f(x) × femmes moyennes\"]\n  E --&gt; F[\"4. Filles et garçons&lt;br/&gt;selon le RMN\"]\n  F --&gt; G[\"5. Survie jusqu'à 0-4 ans\"]\n  G --&gt; D\n  D -.-&gt;|\"période suivante\"| A\n\n\n\n\n\n\nOn répète les étapes à chaque période de 5 ans : 2025 → 2030 → … → 2050."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#deux-lectures-de-sur-le-diagramme-de-lexis",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#deux-lectures-de-sur-le-diagramme-de-lexis",
+    "title": "Des causes aux scénarios",
+    "section": "Deux lectures de  sur le diagramme de Lexis",
+    "text": "Deux lectures de  sur le diagramme de Lexis\n\n\n\n\n\n\nMême formule, ₅Lₓ = intégrale de l(x+u) pour u de 0 à 5, mais deux lectures.\nÀ gauche, le suivi d’une cohorte : ₅Lₓ est une durée, le nombre d’années vécues par l₀ naissances entre les âges exacts x et x+5. On le lit le long d’une diagonale, dans la bande horizontale des âges x à x+5.\nÀ droite, la population stationnaire (l₀ naissances chaque année, mortalité qui ne change jamais) : chaque génération vit la même histoire, donc le nombre de personnes âgées de x à x+5 à une date est égal au nombre d’années vécues par une génération entre ces âges. ₅Lₓ devient un effectif, lu sur un segment vertical.\nC’est cette seconde lecture qu’utilise la projection : la part du segment vert qui atteint le segment orange cinq ans plus tard est ₅Lₓ / ₅Lₓ₋₅.\nSi la question vient : ce rapport n’est pas égal à l(x)/l(x−5), qui est la survie d’une personne d’âge exact x−5 (la ligne de vie du bas du parallélogramme). C’est la moyenne des survies individuelles l(x+u)/l(x−5+u), pondérée par la répartition des personnes à l’intérieur du groupe, supposée proportionnelle à l(x−5+u). Avec ce poids, l(x−5+u) se simplifie et il reste ∫l(x+u)du / ∫l(x−5+u)du = ₅Lₓ/₅Lₓ₋₅.\nLes ₅L de la projection viennent d’une table du moment (mortalité de 2025-2030) : on applique à de vraies personnes la survie d’une cohorte fictive."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#étape-1-faire-vieillir-les-cohortes",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#étape-1-faire-vieillir-les-cohortes",
+    "title": "Des causes aux scénarios",
+    "section": "Étape 1 : faire vieillir les cohortes",
+    "text": "Étape 1 : faire vieillir les cohortes\n\n\nFormule de Preston, Heuveline et Guillot (2001, chap. 6). Le rapport vient de la table de mortalité de la période ; dans le code du labo, il s’appelle S.\nExemple : 515 562 filles de 15-19 ans au Togo en 2025,  → environ 508 000 femmes de 20-24 ans en 2030, avant migration.\nGroupe ouvert : même principe, avec le rapport  appliqué aux 95-99 ans et aux 100 ans et plus.\n\n\nLe chiffre de 515 562 vient du fichier pop_age_sexe.csv (Togo, 2025, femmes, 15-19 ans, en milliers : 515,562). Le rapport 0,9853 est celui que calcule la fonction table_mortalite() du labo pour les femmes, période 2025-2030."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#étapes-2-à-4-les-naissances",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#étapes-2-à-4-les-naissances",
+    "title": "Des causes aux scénarios",
+    "section": "Étapes 2 à 4 : les naissances",
+    "text": "Étapes 2 à 4 : les naissances\nOn applique les taux de fécondité à l’effectif féminin moyen de la période :\n\nOn répartit par sexe,  et , puis on fait survivre les naissances jusqu’au groupe 0-4 ans :"
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#étape-5-la-migration",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#étape-5-la-migration",
+    "title": "Des causes aux scénarios",
+    "section": "Étape 5 : la migration",
+    "text": "Étape 5 : la migration\nHypothèse classique : la moitié des migrants arrive en début de période et subit la mortalité, l’autre moitié en fin de période.\n\n\nDans l’UEMOA, les soldes sont négatifs pour sept pays sur huit : de –13 000 (Guinée-Bissau) à –278 000 (Mali) sur 2025-2030.\nLa Côte d’Ivoire est le seul pays à solde positif (+34 000).\nCes soldes sont les plus incertains de toutes les hypothèses."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#exemple-chiffré-à-faire-en-binôme",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#exemple-chiffré-à-faire-en-binôme",
+    "title": "Des causes aux scénarios",
+    "section": "Exemple chiffré à faire en binôme",
+    "text": "Exemple chiffré à faire en binôme\n\n\n\n\n\n\n\n\n\nGroupe\nFemmes en 2025\n annuel\nSurvie au groupe suivant\n\n\n\n\n15-19\n120 000\n0,10\n0,995\n\n\n20-24\n100 000\n0,20\n0,993\n\n\n25-29\n—\n0,18\n—\n\n\n\nCalculez (5 minutes) :\n\nles femmes de 20-24 ans et de 25-29 ans en 2030 ;\nles naissances de la période dues à ces deux groupes ;\nles filles de 0-4 ans en 2030, avec un RMN de 1,05 et .\n\n\nCorrigé : (1) 119 400 et 99 300. (2) 15-19 : 5 × 120 000 × (0,10 + 0,995 × 0,20) / 2 = 89 700 ; 20-24 : 5 × 100 000 × (0,20 + 0,993 × 0,18) / 2 = 94 685 ; total 184 385. (3) 184 385 × 0,4878 × 0,93 = 83 647 filles. Faire remarquer que les femmes de 15-19 ans contribuent deux fois : à 15-19 ans en début de période et à 20-24 ans en fin de période."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#une-projection-ne-vaut-pas-mieux-que-sa-population-de-départ",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#une-projection-ne-vaut-pas-mieux-que-sa-population-de-départ",
+    "title": "Des causes aux scénarios",
+    "section": "Une projection ne vaut pas mieux que sa population de départ",
+    "text": "Une projection ne vaut pas mieux que sa population de départ\n\nSous-dénombrement des jeunes enfants et des jeunes hommes mobiles.\nAttraction des âges ronds : à mesurer par les indices de Whipple et de Myers, ou l’indice combiné des Nations Unies.\nDate de référence : ramener le recensement au 1er juillet de l’année de départ.\n\nDeux choix possibles dans le labo :\n\nla population de départ de l’ONU, déjà corrigée ;\nvotre recensement par âge simple, regroupé en âges quinquennaux et lissé, si vous l’avez apporté.\n\n\nCette question a été traitée en partie le lundi. Ne pas y passer plus de 5 minutes. Insister : si l’équipe utilise son recensement, l’écart avec l’ONU en 2050 viendra d’abord de la population de départ."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#le-choix-des-hypothèses",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#le-choix-des-hypothèses",
+    "title": "Des causes aux scénarios",
+    "section": "Le choix des hypothèses",
+    "text": "Le choix des hypothèses\nÀ chaque période, il faut choisir une table de mortalité, des taux de fécondité et des soldes migratoires.\n\nConstance : fécondité et mortalité constantes. C’est un scénario de référence, pas une hypothèse plausible : il mène, à terme, au modèle de population stable.\nExtrapolation des tendances : prolonger les séries passées les plus longues possibles. Limite : les retournements et les paliers.\nAnalogie avec la transition : s’inspirer d’un pays plus avancé dans la transition. Limite : quelle référence pour les pays qui ont fini leur transition ?\nModèles statistiques : trajectoires probabilistes de l’ONU (partie 5)."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#fécondité-le-niveau",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#fécondité-le-niveau",
+    "title": "Des causes aux scénarios",
+    "section": "Fécondité : le niveau",
+    "text": "Fécondité : le niveau\nL’ONU distinguait trois groupes de pays : fécondité élevée, moyenne et faible. Aujourd’hui, chaque pays suit une trajectoire de baisse tirée d’un modèle commun à tous les pays.\nUne forme simple et réaliste pour un scénario national, la logistique :\n\n = niveau de départ,  = niveau final,  = date de baisse la plus rapide,  = vitesse.\nVariantes de l’ONU : haute et basse = variante moyenne ± 0,5 enfant (atteint progressivement)."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#fécondité-les-hypothèses-de-lonu-pour-luemoa",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#fécondité-les-hypothèses-de-lonu-pour-luemoa",
+    "title": "Des causes aux scénarios",
+    "section": "Fécondité : les hypothèses de l’ONU pour l’UEMOA",
+    "text": "Fécondité : les hypothèses de l’ONU pour l’UEMOA\n\n\nLire un pays : Niger, 6,1 enfants par femme en 2020-2025, 3,4 en 2045-2050 dans la variante moyenne. Demander à la salle : cette baisse vous paraît-elle plausible dans votre pays ? Sur quoi fondez-vous votre jugement : EDS, MICS, recensement ?"
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#fécondité-le-calendrier",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#fécondité-le-calendrier",
+    "title": "Des causes aux scénarios",
+    "section": "Fécondité : le calendrier",
+    "text": "Fécondité : le calendrier\nLes taux par âge se déduisent de l’ISF et d’une structure par âge  (somme égale à 1) :\n\n\nÂge moyen à la maternité : .\nDans le labo, on garde le calendrier projeté par l’ONU et on ne fait varier que le niveau.\nPiège : un recul de l’âge à la maternité fait baisser l’ISF du moment sans changer la descendance finale (effet de calendrier)."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#mortalité",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#mortalité",
+    "title": "Des causes aux scénarios",
+    "section": "Mortalité",
+    "text": "Mortalité\nOn projette l’espérance de vie à la naissance , puis on en déduit une table complète.\n\nGains rapides aux niveaux moyens, plus lents au-delà de 75 ans.\nL’ONU prévoit +4 à +5,5 ans dans l’UEMOA entre 2020-2025 et 2045-2050.\nDe  à une table : tables types, logit de Brass, Lee-Carter.\n\n\n\nPour les ordres de grandeur : Mali 60,0 → 65,0 ; Sénégal 68,1 → 73,4 ; Togo 62,3 → 67,0 (WPP 2024, deux sexes). La mortalité pèse peu sur la population totale à 2050 comparée à la fécondité, mais beaucoup sur le nombre de personnes âgées."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#migration",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#migration",
+    "title": "Des causes aux scénarios",
+    "section": "Migration",
+    "text": "Migration\n\nOn projette des soldes nets par âge et sexe, faute de flux d’entrées et de sorties mesurés.\nProfil par âge très régulier (modèle de Rogers-Castro) : un pic chez les jeunes adultes, les enfants qui suivent leurs parents.\nHypothèses usuelles : solde constant, retour progressif vers zéro, scénarios (migration nulle ou doublée).\nDans l’UEMOA, l’essentiel des migrations est intrarégional : ce que perd l’un, un voisin le gagne en partie.\n\n\nRappeler la limite des données : les entrées et sorties par âge et par sexe ne sont connues dans aucun pays de la région. Au mieux, on estime des soldes, souvent par la méthode résiduelle entre deux recensements."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#combiner-les-hypothèses-priorité-à-la-fécondité",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#combiner-les-hypothèses-priorité-à-la-fécondité",
+    "title": "Des causes aux scénarios",
+    "section": "Combiner les hypothèses : priorité à la fécondité",
+    "text": "Combiner les hypothèses : priorité à la fécondité\n\n\n\n\n\n\n\n\n\nScénario\nFécondité\nMortalité\nMigration\n\n\n\n\nConstante\nISF de 2020-2025 maintenu\nONU, moyenne\nONU, moyenne\n\n\nHaute\nONU, variante haute (+0,5)\nONU, moyenne\nONU, moyenne\n\n\nMoyenne\nONU, variante moyenne\nONU, moyenne\nONU, moyenne\n\n\nBasse\nONU, variante basse (–0,5)\nONU, moyenne\nONU, moyenne\n\n\n\nCe sont les quatre scénarios du labo. À 2050, c’est la fécondité qui crée l’essentiel des écarts."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#les-projections-de-lonu-sont-elles-fiables",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#les-projections-de-lonu-sont-elles-fiables",
+    "title": "Des causes aux scénarios",
+    "section": "Les projections de l’ONU sont-elles fiables ?",
+    "text": "Les projections de l’ONU sont-elles fiables ?\n\nOn peut confronter les projections passées à ce qui s’est réalisé.\nLa projection de la population mondiale de l’an 2000, faite en 1958, s’est révélée remarquablement juste.\nMais les erreurs croissent avec l’horizon, et elles sont plus fortes pour les pays dont les données de base sont fragiles.\nLes révisions successives changent les résultats : la population mondiale attendue en 2100 a été revue à la baisse d’environ 700 millions en dix ans."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#des-variantes-aux-probabilités",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#des-variantes-aux-probabilités",
+    "title": "Des causes aux scénarios",
+    "section": "Des variantes aux probabilités",
+    "text": "Des variantes aux probabilités\nLes variantes ±0,5 enfant supposent un écart identique partout et toujours, ne disent rien de leur probabilité, et ignorent la mortalité et la migration.\nDepuis le début des années 2010, l’ONU produit des projections probabilistes :\n\nun modèle bayésien de l’ISF et de  pour chaque pays, dont les paramètres sont tirés d’une distribution commune à tous les pays ;\ndes milliers de trajectoires, chacune passée dans la méthode des composantes ;\ndepuis le WPP 2024, l’incertitude sur la migration est aussi intégrée."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#lire-une-projection-probabiliste",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#lire-une-projection-probabiliste",
+    "title": "Des causes aux scénarios",
+    "section": "Lire une projection probabiliste",
+    "text": "Lire une projection probabiliste\n\n\nLire la Côte d’Ivoire : médiane d’environ 100 millions en 2100, mais l’intervalle à 95 % va de 40 à plus de 250 millions. À horizon 2050, l’intervalle est étroit : c’est l’inertie. Une phrase prudente pour un décideur : « Il y a 95 chances sur 100 que la population soit comprise entre… et… »."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#trois-règles-pour-utiliser-ces-résultats",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#trois-règles-pour-utiliser-ces-résultats",
+    "title": "Des causes aux scénarios",
+    "section": "Trois règles pour utiliser ces résultats",
+    "text": "Trois règles pour utiliser ces résultats\n\nUne médiane n’est pas une certitude : donnez toujours l’intervalle.\nLes quantiles ne s’additionnent pas. Pour une région, un groupe d’âge ou un ratio, on calcule l’indicateur sur chaque trajectoire, puis on prend les quantiles.\nVariante moyenne ≠ médiane probabiliste. La première est une projection déterministe, la seconde le milieu de milliers de trajectoires : elles diffèrent légèrement.\n\nDans le labo, vous disposerez des deux : la variante moyenne et les intervalles de l’ONU, et des simulations bayesPop déjà calculées pour les huit pays."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#trois-producteurs-trois-logiques",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#trois-producteurs-trois-logiques",
+    "title": "Des causes aux scénarios",
+    "section": "Trois producteurs, trois logiques",
+    "text": "Trois producteurs, trois logiques\n\n\n\n\n\n\n\n\n\n\nONU (WPP 2024)\nWittgenstein (2023)\nIHME (GBD 2021)\n\n\n\n\nLogique\nExtrapolation statistique\nL’éducation comme moteur\nRégression sur des déterminants\n\n\nIncertitude\nIntervalles probabilistes\nScénarios SSP\nTirages et scénarios\n\n\nPic mondial\n10,3 milliards en 2084\nSelon le SSP\n9,7 milliards en 2064 (Vollset et al., 2020)\n\n\nISF mondial en 2100\nEnviron 1,8\nSelon le SSP\n1,66\n\n\n\nL’écart le plus fort concerne l’Afrique subsaharienne : la vitesse de baisse de la fécondité y dépend du modèle choisi plus que des données. Ezeh et al. (2020) soutiennent même que l’Afrique subsaharienne pourrait dépasser les projections, si la baisse de la fécondité y reste lente.\n\nMessage : pour planifier, la référence reste le WPP, avec ses intervalles. Le Wittgenstein Centre est utile dès que la question touche à l’éducation (les pyramides par niveau d’instruction vues lundi). L’IHME se lit comme une borne basse."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#le-scénario-change-le-chiffre-pas-la-tendance",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#le-scénario-change-le-chiffre-pas-la-tendance",
+    "title": "Des causes aux scénarios",
+    "section": "Le scénario change le chiffre, pas la tendance",
+    "text": "Le scénario change le chiffre, pas la tendance"
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#des-projections-dérivées-un-même-principe",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#des-projections-dérivées-un-même-principe",
+    "title": "Des causes aux scénarios",
+    "section": "Des projections dérivées : un même principe",
+    "text": "Des projections dérivées : un même principe\n\n\n\n\n\n\n\n\n\n\nSecteur\nTaux appliqué\nPopulation\nRésultat\n\n\n\n\nÉducation\ntaux de scolarisation\n6-11 ans\nélèves, enseignants, salles\n\n\nEmploi\ntaux d’activité\n15-64 ans\nactifs, emplois à créer par an\n\n\nSanté\ntaux de recours\nnaissances, femmes 15-49 ans\naccouchements, vaccinations\n\n\nLogement\ntaux de chef de ménage\n15 ans et plus\nménages, logements"
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#exemple-les-élèves-du-primaire",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#exemple-les-élèves-du-primaire",
+    "title": "Des causes aux scénarios",
+    "section": "Exemple : les élèves du primaire",
+    "text": "Exemple : les élèves du primaire\n\n\nAvec 90 % de scolarisation et 45 élèves par maître, l’UEMOA passe d’environ 509 000 enseignants nécessaires en 2025 à près de 700 000 en 2050 dans le scénario moyen, et plus de 970 000 si la fécondité restait constante. L’écart entre scénarios, environ 380 000 enseignants entre la variante basse et la fécondité constante, est la vraie information pour le décideur."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#le-dividende-démographique",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#le-dividende-démographique",
+    "title": "Des causes aux scénarios",
+    "section": "Le dividende démographique",
+    "text": "Le dividende démographique\n\n\nLa fenêtre s’ouvre quand le rapport de dépendance baisse : plus d’actifs potentiels par personne à charge.\nElle ne produit un dividende que si ces actifs trouvent un emploi : c’est une opportunité, pas un acquis."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#la-pyramide-de-luemoa-en-2050",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#la-pyramide-de-luemoa-en-2050",
+    "title": "Des causes aux scénarios",
+    "section": "La pyramide de l’UEMOA en 2050",
+    "text": "La pyramide de l’UEMOA en 2050"
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#population-ressources-et-climat",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#population-ressources-et-climat",
+    "title": "Des causes aux scénarios",
+    "section": "Population, ressources et climat",
+    "text": "Population, ressources et climat\n\nIPAT (Ehrlich et Holdren, 1971) : . L’impact dépend de la population, mais aussi de la consommation et des techniques.\nPar habitant, les pays à forte croissance démographique émettent peu : c’est le paradoxe de la justice climatique (Muttarak, 2024).\nLes scénarios SSP du GIEC reposent sur des projections démographiques par niveau d’instruction : la démographie est un intrant des politiques climatiques.\nInversement, le climat agit sur la mortalité, la fécondité et la migration : les hypothèses de demain devront l’intégrer."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#de-la-projection-agrégée-à-la-microsimulation",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#de-la-projection-agrégée-à-la-microsimulation",
+    "title": "Des causes aux scénarios",
+    "section": "De la projection agrégée à la microsimulation",
+    "text": "De la projection agrégée à la microsimulation\n\n\n\n\n\n\n\n\n\nProjection par composantes\nMicrosimulation\n\n\n\n\nUnité\nGroupes d’âge et de sexe\nIndividus\n\n\nHétérogénéité\nMoyennes par groupe\nCaractéristiques individuelles (éducation, région, union)\n\n\nQuestion\nCombien ?\nPour qui ? Quelles inégalités ?\n\n\nDonnées\nAgrégats\nPopulation synthétique, histoires de vie\n\n\n\nLa microsimulation part d’une population synthétique (celle construite mercredi) et applique à chaque individu des risques d’événements. Elle permet de comparer l’évolution de deux groupes sous un même scénario."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#pour-aller-plus-loin-le-principe-de-la-microsimulation",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#pour-aller-plus-loin-le-principe-de-la-microsimulation",
+    "title": "Des causes aux scénarios",
+    "section": "Pour aller plus loin : le principe de la microsimulation",
+    "text": "Pour aller plus loin : le principe de la microsimulation\n\nUne population de départ d’individus, chacun avec ses caractéristiques : âge, sexe, instruction, région, situation d’union. C’est la population synthétique de mercredi.\nDes risques de transition propres à chaque individu : se marier, avoir un enfant, migrer, achever l’école, décéder. On les estime sur les EDS ou le recensement, par des modèles de survie ou des régressions.\nUn tirage au sort : chaque individu vit une biographie simulée. On répète la simulation pour mesurer l’incertitude.\nL’agrégation : pyramides, indicateurs, besoins, mais aussi par groupe (instruction, région, ménage).\n\nPour un risque , la probabilité de vivre l’événement dans un petit intervalle  :"
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#ce-que-la-microsimulation-permet-et-ce-quelle-exige",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#ce-que-la-microsimulation-permet-et-ce-quelle-exige",
+    "title": "Des causes aux scénarios",
+    "section": "Ce que la microsimulation permet, et ce qu’elle exige",
+    "text": "Ce que la microsimulation permet, et ce qu’elle exige\n\n\nElle permet\n\nde tenir compte de l’hétérogénéité : un effet qui varie selon les groupes ;\nde suivre des mécanismes : instruction → âge au mariage → fécondité ;\nde produire des sorties par groupe et par ménage ;\nde reconstituer des réseaux de parenté (orphelins, grands-parents).\n\n\nElle exige\n\ndes taux de transition fiables par groupe ;\nde la validation : reproduire le passé avant de projeter ;\ndu calcul et plusieurs tirages pour l’incertitude ;\nune documentation claire des hypothèses, plus nombreuses que dans la méthode des composantes."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#exemples-et-outils",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#exemples-et-outils",
+    "title": "Des causes aux scénarios",
+    "section": "Exemples et outils",
+    "text": "Exemples et outils\n\n\n\n\n\n\n\nOutil ou modèle\nUsage\n\n\n\n\nDemosim (Statistique Canada)\nProjections de la diversité de la population canadienne : immigration, langue, instruction\n\n\nModgen (Statistique Canada)\nLangage pour construire des microsimulations (Bélanger et Sabourin, 2017)\n\n\nMicSim (paquet R)\nMicrosimulation en temps continu, accessible pour débuter (Zinn, 2014)\n\n\nSOCSIM\nSimulation des réseaux de parenté\n\n\n\nPour l’UEMOA : population synthétique de mercredi + taux de transition tirés des EDS = projeter la population par niveau d’instruction ou par région, et tester des scénarios de politique groupe par groupe.\n\nLien avec le séminaire de Laurent Martel lundi : Demosim est l’outil de projection par microsimulation de Statistique Canada. Pour s’initier : le paquet MicSim et son exemple d’un modèle d’éducation et de fécondité."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#ce-quil-faut-retenir",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#ce-quil-faut-retenir",
+    "title": "Des causes aux scénarios",
+    "section": "Ce qu’il faut retenir",
+    "text": "Ce qu’il faut retenir\n\n\nDistinguer décrire, prédire, expliquer ; une question causale est une question contrefactuelle.\nContrôler les facteurs de confusion, pas les médiateurs ; toute stratégie repose sur une hypothèse à défendre.\nUne projection est un calcul conditionnel : discutez les hypothèses, pas le calcul. Un scénario de politique est une hypothèse causale.\nLa méthode des composantes fait vieillir des cohortes déjà nées : à 2050, environ la moitié de la population est déjà là.\nÀ cet horizon, la fécondité fait l’essentiel de l’écart entre scénarios.\nDonnez toujours un intervalle, et n’additionnez jamais des quantiles.\nUne projection ne sert la décision que traduite en besoins : élèves, enseignants, emplois, services."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#vérification-des-acquis",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#vérification-des-acquis",
+    "title": "Des causes aux scénarios",
+    "section": "Vérification des acquis",
+    "text": "Vérification des acquis\n\nPourquoi les variantes haute et basse de l’ONU ne sont-elles pas des intervalles de confiance ?\nDans un pas de projection, pourquoi utilise-t-on l’effectif moyen des femmes de la période pour calculer les naissances ?\nVotre ministre demande combien d’enseignants recruter d’ici 2035. Quelles hypothèses de la projection pèsent le plus sur votre réponse ?\nVotre scénario « fécondité basse » suppose que la scolarisation des filles fait baisser l’ISF. Quelle estimation de cet effet utiliseriez-vous, et quel facteur de confusion la menace ?"
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#cet-après-midi",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#cet-après-midi",
+    "title": "Des causes aux scénarios",
+    "section": "Cet après-midi",
+    "text": "Cet après-midi\n\n14 h – 15 h 30 · Labo : projection de votre pays à 2050 en R (le script tp1_projection.R), puis la même chose dans le classeur Excel.\n15 h 45 – 17 h 45 · Équipe pays : choisir un scénario et un secteur, chiffrer l’écart de besoins entre deux scénarios, écrire la section « Scénario à 2050 » de la note pays.\n\nMatériel : projet-projection/ (données des huit pays, scripts, simulations, classeur Excel). Aucune connexion internet n’est nécessaire."
+  },
+  {
+    "objectID": "materiel/jour-4/cours-causes-scenarios.html#références",
+    "href": "materiel/jour-4/cours-causes-scenarios.html#références",
+    "title": "Des causes aux scénarios",
+    "section": "Références",
+    "text": "Références\n\n\nAdjiwanou, V. et LeGrand, T. (2013). Does antenatal care matter in the use of skilled birth attendance in rural Africa: A multi-country analysis. Social Science & Medicine, 86, 26-34.\nAdjiwanou, V. et N’Bouke, A. (2015). Exploring the paradox of intimate partner violence and increased contraceptive use in sub-Saharan Africa. Studies in Family Planning, 46(2), 127-142.\nAdjiwanou, V., Boco, G. A. et Yaya, S. (2021). Stepfather families and children’s schooling in sub-Saharan Africa: A cross-national study. Demographic Research, 44(27), 627-670.\nAdjiwanou, V., Bougma, M. et LeGrand, T. (2018). The effect of partners’ education on women’s reproductive and maternal health in developing countries. Social Science & Medicine, 197, 104-115.\nAllcott, H. (2011). Social norms and energy conservation. Journal of Public Economics, 95(9-10), 1082-1095.\nAngrist, J. D. et Pischke, J.-S. (2015). Mastering ’Metrics: The Path from Cause to Effect. Princeton University Press.\nBélanger, A. et Sabourin, P. (2017). Microsimulation and Population Dynamics: An Introduction to Modgen 12. Springer.\nBlumenstock, J., Cadamuro, G. et On, R. (2015). Predicting poverty and wealth from mobile phone metadata. Science, 350(6264), 1073-1076.\nBond, R. M. et al. (2012). A 61-million-person experiment in social influence and political mobilization. Nature, 489(7415), 295-298.\nCard, D. et Krueger, A. B. (1994). Minimum wages and employment. American Economic Review, 84(4), 772-793.\nCosta, D. L. et Kahn, M. E. (2013). Energy conservation « nudges » and environmentalist ideology. Journal of the European Economic Association, 11(3), 680-702.\nCunningham, S. (2021). Causal Inference: The Mixtape. Yale University Press (mixtape.scunning.com).\nEhrlich, P. R. et Holdren, J. P. (1971). Impact of population growth. Science, 171(3977), 1212-1217.\nEzeh, A., Kissling, F. et Singer, P. (2020). Why sub-Saharan Africa might exceed its projected population size by 2100. The Lancet, 396(10258), 1131-1133.\nHenry, L. (1973). Perspectives démographiques. INED.\nHernán, M. A., Hsu, J. et Healy, B. (2019). A second chance to get causal inference right: A classification of data science tasks. Chance, 32(1), 42-49.\nImai, K. (2017). Quantitative Social Science: An Introduction. Princeton University Press.\nJohn, B. M. et Adjiwanou, V. (2022). Fertility decline in sub-Saharan Africa: Does remarriage matter? Population Studies, 76(2), 213-233.\nK.C., S. et al. (2024). Updating the Shared Socioeconomic Pathways (SSPs) global population and human capital projections. IIASA, WP-24-003.\nMas, A. et Moretti, E. (2009). Peers at work. American Economic Review, 99(1), 112-145.\nMuttarak, R. (2024). Towards a better understanding of the role of population policies in tackling climate change. Vienna Yearbook of Population Research, 22, 45-51.\nNations Unies (2024). World Population Prospects 2024: Summary of Results.\nPreston, S. H., Heuveline, P. et Guillot, M. (2001). Demography: Measuring and Modeling Population Processes. Blackwell.\nRaftery, A. E. et al. (2012). Bayesian probabilistic population projections for all countries. PNAS, 109(35).\nSalganik, M. J. (2018). Bit by Bit: Social Research in the Digital Age. Princeton University Press (bitbybitbook.com).\nSchultz, P. W. et al. (2007). The constructive, destructive, and reconstructive power of social norms. Psychological Science, 18(5), 429-434.\nTrovato, F. (2015). Canada’s Population in a Global Context, 2e éd., chap. 11. Oxford University Press.\nvan Imhoff, E. et Post, W. (1998). Microsimulation methods for population projection. Population: An English Selection, 10(1).\nVollset, S. E. et al. (2020). Fertility, mortality, migration, and population scenarios for 195 countries and territories from 2017 to 2100. The Lancet, 396(10258), 1285-1306.\nZinn, S. (2014). The MicSim package of R: An entry-level toolkit for continuous-time microsimulation. International Journal of Microsimulation, 7(3), 3-32."
   }
 ]

@@ -7,7 +7,7 @@ subtitle: "Jeudi 26 novembre 2026 · Formation régionale en analyse démographi
 
 | Rubrique | À remplir |
 |---|---|
-| Objectifs du TDR couverts | **6** (développer des scénarios démographiques prospectifs utiles à la planification publique) ; en appui, **4** (méthodes quantitatives) et **7** (traduire les analyses en outils d'aide à la décision) |
+| Objectifs du TDR couverts | **6** (développer des scénarios démographiques prospectifs utiles à la planification publique) ; en appui, **4** (méthodes quantitatives, dont l'inférence causale reportée du mercredi) et **7** (traduire les analyses en outils d'aide à la décision) |
 | Formateur(s) du cours | Vissého Adjiwanou, Département de sociologie, UQAM · SSAPOPLAB ; Onadja, [institution] |
 | Formateur(s) du labo | Vissého Adjiwanou, UQAM ; Onadja, [institution] |
 | Logiciels utilisés | R et RStudio (`tidyverse`) ; Excel ou LibreOffice Calc pour la version tableur |
@@ -16,10 +16,11 @@ subtitle: "Jeudi 26 novembre 2026 · Formation régionale en analyse démographi
 
 À la fin de la journée, les participants seront capables de :
 
-1. **expliquer** la méthode des composantes, y compris la survie d'un groupe d'âges par le rapport ₅Lₓ/₅Lₓ₋₅, et ce que chaque hypothèse de fécondité, de mortalité et de migration apporte au résultat ;
-2. **projeter** la population de leur pays de 2025 à 2050 sous quatre hypothèses de fécondité, en R ou en Excel, et **contrôler** le résultat par rapport à la variante moyenne de l'ONU ;
-3. **lire** une projection probabiliste et en tirer un intervalle ou une probabilité correctement formulés ;
-4. **traduire** une projection en besoins pour un secteur (élèves et enseignants, emplois, santé maternelle) et l'écrire en une phrase pour un décideur.
+1. **distinguer** décrire, prédire et expliquer, raisonner en contrefactuel et repérer un facteur de confusion, et voir pourquoi un scénario est une question causale ;
+2. **expliquer** la méthode des composantes, y compris la survie d'un groupe d'âges par le rapport ₅Lₓ/₅Lₓ₋₅, et ce que chaque hypothèse de fécondité, de mortalité et de migration apporte au résultat ;
+3. **projeter** la population de leur pays de 2025 à 2050 sous quatre hypothèses de fécondité, en R ou en Excel, et **contrôler** le résultat par rapport à la variante moyenne de l'ONU ;
+4. **lire** une projection probabiliste et en tirer un intervalle ou une probabilité correctement formulés ;
+5. **traduire** une projection en besoins pour un secteur (élèves et enseignants, emplois, santé maternelle) et l'écrire en une phrase pour un décideur, en nommant le levier qui ferait changer de scénario et la preuve qui le soutient.
 
 ## 3. Prérequis
 
@@ -33,14 +34,14 @@ subtitle: "Jeudi 26 novembre 2026 · Formation régionale en analyse démographi
 | Horaire | Bloc | Contenu | Formateur | Matériel |
 |---|---|---|---|---|
 | 8 h 30 – 9 h | Retour sur l'exercice de la veille | Deux équipes présentent leur demi-page sur l'apport d'une nouvelle source de données à la note pays ; discussion des limites | Fabrice Yaméogo | Corrigé du jour 3 |
-| 9 h – 12 h 30 | Cours magistral (pause 10 h 30 – 11 h) | Projeter la population pour planifier : méthodes, hypothèses, incertitude, besoins | Vissého Adjiwanou, Onadja | [Diapos](cours-projections.html) |
-| 14 h – 15 h 30 | Labo (démonstration) | Projeter la population de son pays à 2050, en R puis en Excel | Vissého Adjiwanou, Onadja | [Script](labo-projections.qmd) · [Données](donnees-projections.html) · `projet-projection/` |
-| 15 h 45 – 17 h 45 | Travail en équipe pays | Projeter son pays sous quatre scénarios, choisir un secteur, chiffrer ses besoins et rédiger la section « Scénario à 2050 » | Tous les formateurs présents | [Feuille de travail](exercices-projections.html) · Gabarit de note pays |
+| 9 h – 12 h 30 | Cours magistral (pause 10 h 30 – 11 h) | Des causes aux scénarios : inférence causale, puis projections (méthodes, hypothèses, incertitude, besoins) | Vissého Adjiwanou, Onadja | [Diapos](cours-causes-scenarios.html) |
+| 14 h – 15 h 30 | Labo (démonstration) | Projeter la population de son pays à 2050, en R puis en Excel | Vissého Adjiwanou, Onadja | [Labo](labo-projections.html) · [Télécharger](jour4-labo.zip) · [Données](donnees-projections.html) · `projet-projection/` |
+| 15 h 45 – 17 h 45 | Travail en équipe pays | Projeter son pays sous quatre scénarios, choisir un secteur, chiffrer ses besoins, nommer le levier causal et rédiger la section « Scénario à 2050 » | Tous les formateurs présents | [Feuille de travail](exercices-projections.html) · Gabarit de note pays |
 | 17 h 45 – 17 h 55 | Consignes de l'exercice | Scénario national et part de l'écart due à la démographie | Vissého Adjiwanou | Section 8 ci-dessous |
 
 ## 5. Cours magistral
 
-- **Plan** : (1) pourquoi projeter : projection, perspective et prévision ; (2) des formules globales (Malthus, croissance exponentielle) à la méthode des composantes ; (3) la méthode des composantes pas à pas, avec le diagramme de Lexis et la formule de Preston ; (4) construire les hypothèses de fécondité, de mortalité et de migration ; (5) l'incertitude, des variantes de l'ONU aux projections probabilistes ; (6) des projections aux besoins, au dividende démographique et au climat, et ouverture sur la microsimulation.
+- **Plan** : **Partie A, causalité** : trois tâches (décrire, prédire, expliquer) ; le contrefactuel ; les graphes causaux (confusion, médiation, causalité inverse) ; comparer à caractéristiques égales, effets fixes et endogénéité, illustrés par nos articles sur les CPN et le beau-père ; big data et hétérogénéité des effets ; un scénario est une question causale. **Partie B, projections** : (1) pourquoi projeter : projection, perspective et prévision ; (2) des formules globales (Malthus, croissance exponentielle) à la méthode des composantes ; (3) la méthode des composantes pas à pas, avec le diagramme de Lexis et la formule de Preston ; (4) construire les hypothèses de fécondité, de mortalité et de migration ; (5) l'incertitude, des variantes de l'ONU aux projections probabilistes ; (6) des projections aux besoins, au dividende démographique et au climat, et ouverture sur la microsimulation.
 - **Concepts clés** : équation de bilan ; méthode des composantes ; rapport de survie ₅Lₓ/₅Lₓ₋₅ et population stationnaire ; groupe ouvert ; calendrier et niveau de la fécondité ; solde migratoire et profil de Rogers-Castro ; inertie démographique ; variantes haute et basse (±0,5 enfant) ; médiane et intervalles de prédiction ; projection dérivée ; rapport de dépendance et dividende démographique.
 - **Cas UEMOA utilisé** : les huit pays, à partir du WPP 2024. Environ la moitié des habitants de 2050 sont déjà nés. L'UEMOA passerait de 156 millions d'habitants en 2025 à 247 à 312 millions en 2050 selon la fécondité. Avec 90 % de scolarisation et 45 élèves par maître, il faudrait environ 509 000 enseignants du primaire en 2025, et entre 593 000 (variante basse) et 972 000 (fécondité constante) en 2050. Le Togo sert d'exemple suivi tout au long du cours.
 - **Moments interactifs** : sondage d'ouverture sur les projections de chaque INS et le niveau en R ; question à la salle sur la demande de projections des ministères ; calcul en binôme d'un pas de projection (femmes de 15-24 ans, naissances, filles de 0-4 ans) ; discussion de la plausibilité de la baisse de la fécondité prévue pour son pays ; trois questions de vérification en fin de cours.

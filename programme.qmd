@@ -92,7 +92,7 @@ Le lundi, le premier créneau est consacré à l'ouverture officielle, et l'apr�
 ::: {.callout-note appearance="simple"}
 ## Matériel du mercredi
 
-- **Cours 2 (causalité et modélisation)** : [diapositives](materiel/jour-3/cours-causalite-modelisation.html)
+- **Cours 2 (causalité et modélisation)** : [diapositives](materiel/jour-3/cours-causalite-modelisation.html) — présenté finalement le jeudi, dans le cours « Des causes aux scénarios »
 - **Labo causalité (complémentaire, à faire en autonomie)** : [résultats commentés](materiel/jour-3/labo-causalite/jour3-labo-causalite-resultats.html) · [télécharger le labo](materiel/jour-3/jour3-labo.zip) (script R Markdown et données des parties A et B). La partie C utilise l'EDS Ghana 2003 (`GHIR4BFL.DTA`), à télécharger avec son compte DHS et à placer dans `donnees/`.
 - **Cours 1 (populations synthétiques)** : [diapositives](materiel/jour-3/Cours_magistral_populations_synthetiques_VF.html)
 - **Labo populations synthétiques (commune de Djibo)** : [télécharger le labo](materiel/jour-3/Labo_jour3_Populations_synthetiques.zip) (labo commenté en HTML et  les quatre fichiers de données). Décompresser le dossier, ouvrir le HTML et copier le code dans R au fur et à mesure : les fichiers CSV doivent se trouver dans le répertoire de travail de R. Packages : `mlfit`, `dplyr`, `ggplot2`, `knitr`.
@@ -104,7 +104,7 @@ Le lundi, le premier créneau est consacré à l'ouverture officielle, et l'apr�
 
 | Horaire | Bloc | Contenu |
 |:--|:--|:--|
-| 9 h – 12 h 30 | Cours | Projeter la population pour planifier : méthode des composantes, hypothèses, incertitude, besoins |
+| 9 h – 12 h 30 | Cours | Des causes aux scénarios : inférence causale (contrefactuel, graphes, comparer à caractéristiques égales, hétérogénéité) puis projections par composantes, hypothèses, incertitude, besoins et microsimulation |
 | 14 h – 15 h 30 | Labo | Projeter la population de son pays à 2050, en R puis en Excel |
 | 15 h 45 – 17 h 45 | Équipe pays | Projeter son pays sous quatre scénarios, choisir un secteur, chiffrer ses besoins |
 | 17 h 45 – 18 h | Consignes | Exercice : scénario national et part de l'écart de besoins due à la démographie |
@@ -115,9 +115,10 @@ Le lundi, le premier créneau est consacré à l'ouverture officielle, et l'apr�
 ## Matériel du jeudi
 
 - [Syllabus](materiel/jour-4/syllabus.html)
-- **Cours** : [diapositives](materiel/jour-4/cours-projections.html)
-- **Labo** : [projeter la population de son pays à 2050](materiel/jour-4/labo-projections.html) (dossier `projet-projection/` sur la clé USB)
-- **Travail en équipe et exercice** : [scénario à 2050 et besoins pour un secteur](materiel/jour-4/exercices-projections.html)
+- **Cours** : [diapositives « Des causes aux scénarios »](materiel/jour-4/cours-causes-scenarios.html) (causalité et projections réunies)
+- **Labo** : [projeter la population de son pays à 2050](materiel/jour-4/labo-projections.html) · [télécharger le labo](materiel/jour-4/jour4-labo.zip) (dossier `projet-projection/` : script R, fonctions, données des huit pays, simulations et classeur Excel ; aussi sur la clé USB)
+- **Travail en équipe et exercice** : [scénario à 2050, besoins pour un secteur et levier causal](materiel/jour-4/exercices-projections.html)
+- **Labo causalité, en autonomie** : [résultats commentés](materiel/jour-3/labo-causalite/jour3-labo-causalite-resultats.html) · [télécharger le labo](materiel/jour-3/jour3-labo.zip), à reprendre à l'atelier R du soir
 - **Données** : [description des fichiers](materiel/jour-4/donnees-projections.html)
 :::
 
