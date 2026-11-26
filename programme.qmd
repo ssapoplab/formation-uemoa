@@ -116,7 +116,8 @@ Le lundi, le premier créneau est consacré à l'ouverture officielle, et l'apr�
 
 - [Syllabus](materiel/jour-4/syllabus.html)
 - **Cours** : [diapositives « Des causes aux scénarios »](materiel/jour-4/cours-causes-scenarios.html) (causalité et projections réunies)
-- **Labo** : [projeter la population de son pays à 2050](materiel/jour-4/labo-projections.html) · [télécharger le labo](materiel/jour-4/jour4-labo.zip) (dossier `projet-projection/` : script R, fonctions, données des huit pays, simulations et classeur Excel ; aussi sur la clé USB)
+- **Labo 1 (projections)** : [projeter la population de son pays à 2050](materiel/jour-4/labo-projections.html) · [télécharger le labo](materiel/jour-4/jour4-labo.zip) (dossier `projet-projection/` : script R, fonctions, données des huit pays, simulations et classeur Excel ; aussi sur la clé USB)
+- **Labo 2 (microsimulation)** : [le labo exécuté, avec ses résultats](materiel/jour-4/labo-microsimulation-resultats.html) · [télécharger le labo](materiel/jour-4/jour4-labo-microsimulation.zip) (script R Markdown et données). La population synthétique de Djibo du mercredi, des taux de décès, de naissance et d'entrée à l'école, et cinq scénarios de politique comparés groupe par groupe. Paquet : `tidyverse`.
 - **Travail en équipe et exercice** : [scénario à 2050, besoins pour un secteur et levier causal](materiel/jour-4/exercices-projections.html)
 - **Labo causalité, en autonomie** : [résultats commentés](materiel/jour-3/labo-causalite/jour3-labo-causalite-resultats.html) · [télécharger le labo](materiel/jour-3/jour3-labo.zip), à reprendre à l'atelier R du soir
 - **Données** : [description des fichiers](materiel/jour-4/donnees-projections.html)
