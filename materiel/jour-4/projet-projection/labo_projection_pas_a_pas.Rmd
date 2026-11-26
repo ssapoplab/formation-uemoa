@@ -1,0 +1,590 @@
+---
+title: "Labo — Projeter la population pas à pas"
+subtitle: "La méthode des composantes avec le tidyverse · Formation UEMOA, jour 4 · Ouagadougou, 26 novembre 2026"
+author: "Vissého Adjiwanou — Département de sociologie, UQAM · SSAPOPLAB · Département de démographie, UdeM"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    number_sections: true
+    code_folding: show
+---
+
+```{r reglages, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE,
+                      fig.width = 8, fig.height = 4.5, dpi = 120, fig.align = "center")
+```
+
+# Avant de commencer {-}
+
+**Le principe du labo.** On projette la population d'un pays de 2025 à 2050 par la méthode des composantes, en suivant les étapes du cours. Pour chaque étape :
+
+1. on fait **le calcul une fois, à la main**, sur la période 2025-2030, et on regarde le résultat ;
+2. on le **range dans une fonction** ;
+3. on **vérifie** que la fonction redonne exactement le même résultat.
+
+À la fin, on assemble les fonctions pour projeter jusqu'en 2050 sous quatre hypothèses de fécondité, puis on traduit la projection en besoins pour l'école primaire.
+
+**Matériel.** Ce fichier se place dans le dossier `projet-projection/`. Ouvrez `projet-projection.Rproj`, puis ce fichier, et exécutez les blocs un à un (Cmd + Entrée sur Mac, Ctrl + Entrée sur Windows), ou tout le document avec le bouton *Knit*. Les effectifs sont en **milliers**.
+
+```{r paquets}
+
+library(tidyverse)
+
+pays <- "Togo"     # <- le seul endroit à changer pour votre pays
+
+# nb() : écrire un nombre à la française (espace des milliers, virgule décimale)
+nb <- function(x, d = 0) format(round(x, d), big.mark = " ", decimal.mark = ",", nsmall = d, trim = TRUE)
+
+# Les 21 groupes d'âges : k = 1 pour 0-4, k = 2 pour 5-9, ..., k = 21 pour 100+
+groupes <- tibble(k = 1:21,
+                  age = c(paste0(seq(0, 95, 5), "-", seq(4, 99, 5)), "100+"))
+groupes
+```
+
+Le numéro `k` du groupe d'âges est l'astuce de tout le labo : **vieillir de cinq ans, c'est passer de `k` à `k + 1`**.
+
+# Le schéma d'ensemble
+
+```{r schema-methode, fig.height = 3.6, echo = FALSE}
+
+boites <- tribble(
+  ~x,  ~y,   ~texte,
+  1,   2,    "Population en t\npar sexe et âge",
+  3.2, 3,    "1. Survie\n× S(x)",
+  5.4, 3,    "2. Groupe ouvert\n95-99 et 100+",
+  3.2, 1,    "3. Naissances\nf(x) × femmes moyennes",
+  5.4, 1,    "4. Filles et garçons\nselon le RMN",
+  7.6, 1,    "5. Survie\njusqu'à 0-4 ans",
+  7.6, 3,    "6. + migration",
+  9.6, 2,    "Population\nen t + 5"
+)
+fleches <- tribble(
+  ~x,   ~y,  ~xend, ~yend,
+  1.9,  2.3, 2.4,   2.8,
+  4.0,  3,   4.5,   3,
+  6.3,  3,   6.9,   3,
+  1.9,  1.7, 2.1,   1.2,
+  4.3,  1,   4.6,   1,
+  6.3,  1,   6.8,   1,
+  8.3,  2.8, 8.9,   2.3,
+  8.3,  1.2, 8.9,   1.7
+)
+ggplot() +
+  geom_segment(data = fleches, aes(x, y, xend = xend, yend = yend),
+               arrow = arrow(length = unit(2.5, "mm"), type = "closed"), colour = "grey40") +
+  geom_label(data = boites, aes(x, y, label = texte), size = 3.4, lineheight = 0.9,
+             fill = "#f6ecec", colour = "#7b1f1f", label.padding = unit(0.35, "lines")) +
+  annotate("text", x = 1.55, y = 1.35, label = "femmes\n15-49 ans", size = 3, colour = "grey30", hjust = 1) +
+  coord_cartesian(xlim = c(0.2, 10.4), ylim = c(0.4, 3.6)) +
+  theme_void()
+```
+
+Le haut du schéma fait **vieillir** les personnes déjà nées ; le bas fait **naître** les nouvelles générations. Les deux branches se rejoignent dans la population de t + 5, qui devient le point de départ de la période suivante.
+
+# Les données
+
+Les fichiers du dossier `donnees/` viennent des *World Population Prospects 2024* des Nations Unies.
+
+```{r donnees}
+lire <- function(f) read_csv(file.path("donnees", f), show_col_types = FALSE) %>% filter(pays == !!pays)
+
+pop    <- lire("pop_age_sexe.csv")              # population par âge et sexe, 1990-2100
+mx     <- lire("mortalite_mx.csv")              # taux de mortalité par âge
+isf    <- lire("fecondite_isf.csv")             # ISF, variantes et intervalles
+calend <- lire("fecondite_calendrier.csv")      # répartition des naissances par âge
+rmn    <- lire("rapport_masculinite_naissance.csv")
+mig    <- lire("migration_age_sexe.csv")        # solde migratoire par âge et sexe
+```
+
+## La population de départ
+
+```{r pop-2025}
+
+pop_2025 <- pop %>%
+  filter(annee == 2025) %>%
+  left_join(groupes, by = "age") %>%
+  select(sexe, k, age, pop = pop_milliers) %>%
+  arrange(sexe, k)
+
+pop_2025 %>% group_by(sexe) %>% summarise(population = sum(pop))
+
+```
+
+```{r pyramide-2025, fig.height = 5.5}
+
+pyramide <- function(donnees, titre) {
+  donnees %>%
+    mutate(age = factor(age, levels = groupes$age),
+           pop = if_else(sexe == "hommes", -pop, pop)) %>%
+    ggplot(aes(pop, age, fill = sexe)) +
+    geom_col(width = 0.9) +
+    scale_x_continuous(labels = function(x) nb(abs(x))) +
+    scale_fill_manual(values = c(femmes = "#a51c24", hommes = "#5b6670")) +
+    labs(title = titre, x = "Effectif (milliers)", y = NULL, fill = NULL) +
+    theme_minimal(base_size = 12)
+}
+
+pyramide(pop_2025, paste(pays, ": population en 2025"))
+
+```
+
+**Interprétation.** La pyramide est large à la base : chaque génération qui arrive est plus nombreuse que la précédente. Les femmes qui auront des enfants d'ici 2050 sont déjà nées : elles sont aujourd'hui dans les groupes 0-4 à 30-34 ans. C'est l'**inertie démographique** : même si la fécondité baissait demain, le nombre de naissances continuerait d'augmenter pendant quelque temps.
+
+# Étape 1. De la mortalité aux rapports de survie
+
+## Ce qu'on cherche
+
+Pour faire vieillir un groupe d'âges de cinq ans, on a besoin de la part des personnes qui survivent. On la tire d'une **table de mortalité** : les années vécues ₅L(x) dans chaque groupe d'âges.
+
+```{r schema-Lx, echo = FALSE, fig.height = 3.6}
+tm_illus <- mx %>% filter(periode == "2025-2030", sexe == "femmes") %>% arrange(age_debut) %>%
+  mutate(n = lead(age_debut) - age_debut, q = if_else(is.na(n), 1, 1 - exp(-n * mx)),
+         l = lag(cumprod(1 - q), default = 1))
+ggplot(tm_illus %>% filter(age_debut <= 90), aes(age_debut, l)) +
+  geom_area(data = tm_illus %>% filter(between(age_debut, 15, 20)), fill = "#b5651d", alpha = 0.4) +
+  geom_area(data = tm_illus %>% filter(between(age_debut, 20, 25)), fill = "#2c7fb8", alpha = 0.4) +
+  geom_line(linewidth = 1, colour = "#7b1f1f") +
+  annotate("text", x = 17.5, y = 0.45, label = "5L(15)", colour = "#5a3010", size = 3.5, angle = 90) +
+  annotate("text", x = 22.5, y = 0.45, label = "5L(20)", colour = "#123d5c", size = 3.5, angle = 90) +
+  labs(title = "Survivants l(x) : les années vécues sont les surfaces sous la courbe",
+       x = "Âge", y = "Survivants sur 1 naissance") +
+  theme_minimal(base_size = 11)
+```
+
+Le rapport de survie de 15-19 à 20-24 ans est le rapport des deux surfaces : S(15) = ₅L(20) / ₅L(15).
+
+## Le calcul, une fois, pour les femmes en 2025-2030
+
+On part des taux de mortalité m(x) et on calcule, colonne après colonne :
+
+- n : la largeur de l'intervalle (1 an pour 0, 4 ans pour 1-4, puis 5 ans) ;
+- a : le temps vécu en moyenne dans l'intervalle par ceux qui y décèdent (0,1 an avant 1 an, 1,5 an entre 1 et 4 ans, la moitié de l'intervalle ensuite) ;
+- q = n·m / (1 + (n − a)·m) : la probabilité de décéder dans l'intervalle ;
+- l : les survivants au début de l'intervalle, sur 1 ;
+- L = n·(l − d) + a·d : les années vécues dans l'intervalle (pour 100+, L = l / m) ;
+- e : l'espérance de vie à chaque âge.
+
+```{r table-main}
+
+tm_femmes <- mx %>%
+  filter(periode == "2025-2030", sexe == "femmes") %>%
+  arrange(age_debut) %>%
+  mutate(n = lead(age_debut) - age_debut,
+         a = case_when(age_debut == 0 ~ 0.1, age_debut == 1 ~ 1.5, TRUE ~ n / 2),
+         q = if_else(is.na(n), 1, n * mx / (1 + (n - a) * mx)),
+         l = lag(cumprod(1 - q), default = 1),
+         d = l * q,
+         L = if_else(is.na(n), l / mx, n * (l - d) + a * d),
+         e = rev(cumsum(rev(L))) / l)
+
+tm_femmes %>% select(age_debut, mx, q, l, L, e) %>% slice(1:8) %>%
+  mutate(across(-age_debut, ~ round(.x, 4)))
+```
+
+**Contrôle.** L'espérance de vie des femmes à la naissance est de **`r nb(tm_femmes$e[1], 1)` ans** en 2025-2030. Comparez avec le fichier `onu_esperance_vie.csv` : l'écart doit être de quelques dixièmes d'année.
+
+## En fonction
+
+```{r table-fonction}
+
+table_mortalite <- function(taux) {
+  taux %>%
+    arrange(age_debut) %>%
+    mutate(n = lead(age_debut) - age_debut,
+           a = case_when(age_debut == 0 ~ 0.1, age_debut == 1 ~ 1.5, TRUE ~ n / 2),
+           q = if_else(is.na(n), 1, n * mx / (1 + (n - a) * mx)),
+           l = lag(cumprod(1 - q), default = 1),
+           d = l * q,
+           L = if_else(is.na(n), l / mx, n * (l - d) + a * d),
+           e = rev(cumsum(rev(L))) / l)
+}
+
+# Vérification : la fonction redonne le calcul à la main
+
+all.equal(table_mortalite(mx %>% filter(periode == "2025-2030", sexe == "femmes")), tm_femmes)
+
+```
+
+## Des années vécues aux rapports de survie
+
+Les intervalles 0 et 1-4 forment le groupe 0-4 (k = 1) : on additionne leurs L. Puis :
+
+- S = ₅L(k + 1) / ₅L(k) fait passer du groupe k au groupe k + 1 ;
+- pour le **groupe ouvert**, les 95-99 et les 100+ de t forment ensemble les 100+ de t + 5 : S = L(100+) / [₅L(95) + L(100+)] ;
+- `s0` = ₅L(0) / 5 est la survie des naissances jusqu'au groupe 0-4 (sur une naissance, l(0) = 1).
+
+```{r survies-main}
+
+sv_femmes <- tm_femmes %>%
+  mutate(k = if_else(age_debut < 5, 1, age_debut / 5 + 1)) %>%
+  group_by(k) %>%
+  summarise(L5 = sum(L)) %>%
+  mutate(S = case_when(k <= 19 ~ lead(L5) / L5,
+                       k >= 20 ~ L5[k == 21] / (L5[k == 20] + L5[k == 21])),
+         s0 = L5[k == 1] / 5)
+
+sv_femmes %>% left_join(groupes, by = "k") %>% select(k, age, L5, S) %>% slice(1:8) %>%
+  mutate(across(c(L5, S), ~ round(.x, 4)))
+
+```
+
+**Interprétation.** Sur 1 000 femmes de 15-19 ans, **`r nb(1000 * sv_femmes$S[sv_femmes$k == 4])`** seront encore en vie cinq ans plus tard, à 20-24 ans. La survie de la naissance au groupe 0-4 ans est de **`r nb(sv_femmes$s0[1], 3)`** : c'est ici que la mortalité infantile pèse le plus.
+
+## En fonction, pour les deux sexes et n'importe quelle période
+
+```{r survies-fonction}
+
+survies <- function(periode_p) {
+  mx %>%
+    filter(periode == periode_p) %>%
+    group_by(sexe) %>%
+    group_modify(~ table_mortalite(.x)) %>%
+    mutate(k = if_else(age_debut < 5, 1, age_debut / 5 + 1)) %>%
+    group_by(sexe, k) %>%
+    summarise(L5 = sum(L), .groups = "drop_last") %>%
+    mutate(S = case_when(k <= 19 ~ lead(L5) / L5,
+                         k >= 20 ~ L5[k == 21] / (L5[k == 20] + L5[k == 21])),
+           s0 = L5[k == 1] / 5) %>%
+    ungroup()
+}
+
+sv_2025 <- survies("2025-2030")
+
+# Vérification sur les femmes
+all.equal(sv_2025 %>% filter(sexe == "femmes") %>% select(-sexe), sv_femmes)
+```
+
+# Étape 2. Faire vieillir la population
+
+## Le diagramme de Lexis
+
+```{r schema-lexis, echo = FALSE, fig.height = 5.5, fig.width = 7}
+
+cohorte <- function(a) tibble(x = c(2025, 2025, 2030, 2030), y = c(a, a + 5, a + 10, a + 5))
+ggplot() +
+  geom_polygon(data = cohorte(15), aes(x, y), fill = "#b5651d", alpha = 0.35, colour = "#b5651d") +
+  geom_polygon(data = cohorte(20), aes(x, y), fill = "#2c7fb8", alpha = 0.35, colour = "#2c7fb8") +
+  geom_polygon(data = tibble(x = c(2025, 2030, 2030), y = c(0, 0, 5)), aes(x, y),
+               fill = "#6a3d9a", alpha = 0.35, colour = "#6a3d9a") +
+  annotate("text", x = 2024.7, y = c(17.5, 22.5), hjust = 1, size = 3.4,
+           label = c("15-19 ans en 2025", "20-24 ans en 2025"), colour = c("#b5651d", "#2c7fb8")) +
+  annotate("text", x = 2030.3, y = c(22.5, 27.5, 2.5), hjust = 0, size = 3.4,
+           label = c("20-24 ans en 2030", "25-29 ans en 2030", "0-4 ans en 2030\n(nés pendant la période)"),
+           colour = c("#b5651d", "#2c7fb8", "#6a3d9a")) +
+  scale_x_continuous(breaks = c(2025, 2030)) +
+  scale_y_continuous(breaks = seq(0, 30, 5)) +
+  coord_equal(xlim = c(2012, 2043), ylim = c(0, 30), expand = FALSE, clip = "off") +
+  labs(x = "Temps", y = "Âge") +
+  theme_minimal(base_size = 11) +
+  theme(panel.grid.minor = element_blank())
+```
+
+Chaque cohorte avance en diagonale : les femmes de 15-19 ans en 2025 sont, en 2030, les survivantes de 20-24 ans. Le triangle violet sera rempli par les naissances (étape 3).
+
+## Le calcul, une fois
+
+On joint les survies à la population, puis on décale d'un groupe : `k + 1`. Les 95-99 et les 100+ vont tous dans le groupe ouvert (`k = 21`).
+
+```{r vieillir-main}
+
+vieillis_2030 <- pop_2025 %>%
+  left_join(sv_2025 %>% select(sexe, k, S), by = c("sexe", "k")) %>%
+  mutate(k_suivant = pmin(k + 1, 21),
+         survivants = pop * S) %>%
+  group_by(sexe, k = k_suivant) %>%
+  summarise(pop = sum(survivants), .groups = "drop")
+
+# Les femmes de 15-19 ans en 2025 et ce qu'elles deviennent en 2030
+pop_2025 %>%
+  filter(sexe == "femmes", k %in% 3:7) %>%
+  left_join(sv_2025 %>% select(sexe, k, S), by = c("sexe", "k")) %>%
+  mutate(k_2030 = k + 1) %>%
+  left_join(vieillis_2030 %>% select(sexe, k_2030 = k, pop_2030 = pop), by = c("sexe", "k_2030")) %>%
+  mutate(age_2030 = groupes$age[k_2030]) %>%
+  select(age_2025 = age, pop_2025 = pop, S, age_2030, pop_2030) %>%
+  mutate(across(where(is.double), ~ round(.x, 3)))
+```
+
+**Interprétation.** C'est exactement l'exercice en binôme : effectif de 2025 × survie = effectif de 2030 dans le groupe suivant. Le groupe 0-4 de 2030 est encore vide : il viendra des naissances.
+
+## En fonction
+
+```{r vieillir-fonction}
+
+vieillir <- function(pop_t, sv) {
+  pop_t %>%
+    left_join(sv %>% select(sexe, k, S), by = c("sexe", "k")) %>%
+    mutate(k_suivant = pmin(k + 1, 21),
+           survivants = pop * S) %>%
+    group_by(sexe, k = k_suivant) %>%
+    summarise(pop = sum(survivants), .groups = "drop")
+}
+
+all.equal(vieillir(pop_2025, sv_2025), vieillis_2030)
+
+```
+
+# Étape 3. Les naissances de la période
+
+## Le calcul, une fois
+
+Les taux de fécondité par âge viennent de l'ISF et du calendrier : f(x) = ISF × p(x) / 5. Les naissances de la période sont :
+
+$$B = 5 \sum_{x=15}^{45} f_x \cdot \frac{W_x(t) + W_x(t+5)}{2}$$
+
+où W est le nombre de femmes de chaque groupe d'âges, au début et à la fin de la période.
+
+```{r naissances-main}
+
+isf_2025 <- isf %>% filter(periode == "2025-2030") %>% pull(isf_moyenne)
+
+naissances_2025 <- calend %>%
+  filter(periode == "2025-2030") %>%
+  left_join(groupes, by = "age") %>%
+  mutate(f = isf_2025 * pct_naissances / 100 / 5) %>%
+  left_join(pop_2025 %>% filter(sexe == "femmes") %>% select(k, W_debut = pop), by = "k") %>%
+  left_join(vieillis_2030 %>% filter(sexe == "femmes") %>% select(k, W_fin = pop), by = "k") %>%
+  mutate(W_moyen = (W_debut + W_fin) / 2,
+         naissances = 5 * f * W_moyen) %>%
+  select(age, f, W_debut, W_fin, W_moyen, naissances)
+
+naissances_2025 %>% mutate(across(where(is.double), ~ round(.x, 3)))
+B_2025 <- sum(naissances_2025$naissances)
+
+```
+
+**Interprétation.** Avec un ISF de **`r nb(isf_2025, 2)`**, il naît **`r nb(B_2025)` milliers** d'enfants entre 2025 et 2030, soit environ **`r nb(B_2025 / 5)` milliers par an**. Les femmes de 20 à 34 ans en donnent près des trois quarts : leur nombre compte autant que leur fécondité.
+
+## En fonction
+
+```{r naissances-fonction}
+
+naissances <- function(pop_t, vieillis, periode_p, isf_p) {
+  calend %>%
+    filter(periode == periode_p) %>%
+    left_join(groupes, by = "age") %>%
+    mutate(f = isf_p * pct_naissances / 100 / 5) %>%
+    left_join(pop_t %>% filter(sexe == "femmes") %>% select(k, W_debut = pop), by = "k") %>%
+    left_join(vieillis %>% filter(sexe == "femmes") %>% select(k, W_fin = pop), by = "k") %>%
+    summarise(B = sum(5 * f * (W_debut + W_fin) / 2)) %>%
+    pull(B)
+}
+
+all.equal(naissances(pop_2025, vieillis_2030, "2025-2030", isf_2025), B_2025)
+
+```
+
+# Étape 4. Les enfants de 0-4 ans
+
+## Le calcul, une fois
+
+On répartit les naissances entre filles et garçons avec le rapport de masculinité à la naissance (RMN, environ 105 garçons pour 100 filles), puis on applique la survie jusqu'au groupe 0-4.
+
+```{r enfants-main}
+
+rmn_2025 <- rmn %>% filter(periode == "2025-2030") %>% pull(rmn)
+
+enfants_2030 <- sv_2025 %>%
+  filter(k == 1) %>%
+  transmute(sexe, k,
+            part = if_else(sexe == "hommes", rmn_2025 / (1 + rmn_2025), 1 / (1 + rmn_2025)),
+            pop  = B_2025 * part * s0) %>%
+  select(sexe, k, pop)
+
+enfants_2030
+```
+
+**Interprétation.** Sur les `r nb(B_2025)` milliers de naissances, `r nb(sum(enfants_2030$pop))` milliers d'enfants sont encore en vie et ont 0-4 ans en 2030.
+
+## En fonction
+
+```{r enfants-fonction}
+enfants <- function(B, sv, periode_p) {
+  r <- rmn %>% filter(periode == periode_p) %>% pull(rmn)
+  sv %>%
+    filter(k == 1) %>%
+    transmute(sexe, k,
+              pop = B * if_else(sexe == "hommes", r / (1 + r), 1 / (1 + r)) * s0)
+}
+
+all.equal(enfants(B_2025, sv_2025, "2025-2030"), enfants_2030)
+```
+
+# Étape 5. La migration et la population de 2030
+
+## Le calcul, une fois
+
+On ajoute le solde migratoire net de la période, par sexe et par âge. Simplification : les migrants arrivent (ou partent) en fin de période.
+
+```{r assembler-main}
+mig_2025 <- mig %>%
+  filter(periode == "2025-2030") %>%
+  left_join(groupes, by = "age") %>%
+  select(sexe, k, migrants = migrants_nets_milliers)
+
+mig_2025 %>% group_by(sexe) %>% summarise(solde = sum(migrants))
+
+pop_2030 <- bind_rows(enfants_2030, vieillis_2030) %>%
+  left_join(mig_2025, by = c("sexe", "k")) %>%
+  mutate(pop = pop + migrants) %>%
+  left_join(groupes, by = "k") %>%
+  select(sexe, k, age, pop) %>%
+  arrange(sexe, k)
+```
+
+## Contrôle avec l'ONU
+
+```{r controle-2030}
+controle <- tibble(
+  notre_calcul = sum(pop_2030$pop),
+  onu_variante_moyenne = pop %>% filter(annee == 2030) %>% summarise(t = sum(pop_milliers)) %>% pull(t)
+) %>%
+  mutate(ecart_pct = 100 * (notre_calcul / onu_variante_moyenne - 1))
+controle
+```
+
+**Interprétation.** Notre calcul donne **`r nb(controle$notre_calcul)` milliers** d'habitants en 2030, contre **`r nb(controle$onu_variante_moyenne)` milliers** pour l'ONU, soit un écart de **`r nb(controle$ecart_pct, 2)` %**. La méthode est la bonne. L'écart vient de nos simplifications (le paramètre a de la table de mortalité, la migration ajoutée en fin de période).
+
+# Étape 6. Une période complète, en une fonction
+
+Toutes les pièces sont prêtes. La fonction `projeter_periode()` les enchaîne dans l'ordre du schéma.
+
+```{r periode-fonction}
+
+projeter_periode <- function(pop_t, periode_p, isf_p) {
+  sv       <- survies(periode_p)
+  vieillis <- vieillir(pop_t, sv)
+  B        <- naissances(pop_t, vieillis, periode_p, isf_p)
+  migrants <- mig %>% filter(periode == periode_p) %>% left_join(groupes, by = "age") %>%
+    select(sexe, k, migrants = migrants_nets_milliers)
+
+  bind_rows(enfants(B, sv, periode_p), vieillis) %>%
+    left_join(migrants, by = c("sexe", "k")) %>%
+    mutate(pop = pop + migrants) %>%
+    left_join(groupes, by = "k") %>%
+    select(sexe, k, age, pop) %>%
+    arrange(sexe, k)
+}
+
+# Vérification : la fonction redonne la population de 2030 calculée pas à pas
+all.equal(projeter_periode(pop_2025, "2025-2030", isf_2025), pop_2030)
+```
+
+# Étape 7. Projeter jusqu'en 2050 sous quatre hypothèses
+
+## Les hypothèses de fécondité
+
+```{r hypotheses}
+periodes <- c("2025-2030", "2030-2035", "2035-2040", "2040-2045", "2045-2050")
+
+hypotheses <- isf %>%
+  filter(periode %in% periodes) %>%
+  arrange(periode) %>%
+  transmute(periode,
+            constante = isf %>% filter(periode == "2020-2025") %>% pull(isf_moyenne),
+            haute = isf_haute, moyenne = isf_moyenne, basse = isf_basse) %>%
+  pivot_longer(-periode, names_to = "scenario", values_to = "isf")
+
+hypotheses %>% pivot_wider(names_from = scenario, values_from = isf)
+```
+
+- **constante** : l'ISF de 2020-2025 ne bouge plus. Ce n'est pas une prévision, c'est un point de comparaison.
+- **haute, moyenne, basse** : les variantes de l'ONU (± 0,5 enfant autour de la moyenne).
+
+## La projection
+
+`accumulate()` applique `projeter_periode()` période après période : la population de 2030 sert de départ pour 2035, et ainsi de suite.
+
+```{r projeter}
+projeter <- function(isf_vecteur) {
+  accumulate(seq_along(periodes),
+             function(pop_t, i) projeter_periode(pop_t, periodes[i], isf_vecteur[i]),
+             .init = pop_2025) %>%
+    set_names(seq(2025, 2050, 5)) %>%
+    bind_rows(.id = "annee") %>%
+    mutate(annee = as.integer(annee))
+}
+
+projection <- hypotheses %>%
+  group_by(scenario) %>%
+  summarise(resultat = list(projeter(isf))) %>%
+  unnest(resultat)
+
+totaux <- projection %>%
+  group_by(scenario, annee) %>%
+  summarise(population = sum(pop), .groups = "drop") %>%
+  mutate(scenario = factor(scenario, levels = c("constante", "haute", "moyenne", "basse")))
+
+totaux %>% filter(annee == 2050) %>% arrange(desc(population))
+```
+
+```{r graphique-scenarios}
+couleurs <- c(constante = "#7f8c8d", haute = "#c0392b", moyenne = "#2c3e50", basse = "#2c7fb8")
+totaux %>%
+  ggplot(aes(annee, population / 1000, colour = scenario)) +
+  geom_line(linewidth = 1) + geom_point() +
+  scale_colour_manual(values = couleurs) +
+  labs(title = paste(pays, ": population selon quatre hypothèses de fécondité"),
+       x = NULL, y = "Population (millions)", colour = "Fécondité") +
+  theme_minimal(base_size = 12)
+```
+
+```{r chiffres-2050, include = FALSE}
+p2050 <- totaux %>% filter(annee == 2050) %>% select(scenario, population) %>% deframe()
+```
+
+**Interprétation.** En 2050, la population va de **`r nb(p2050["basse"] / 1000, 1)` millions** (fécondité basse) à **`r nb(p2050["constante"] / 1000, 1)` millions** (fécondité constante). L'écart entre les scénarios est faible jusqu'en 2030 puis s'ouvre : c'est l'inertie démographique. Les mères des enfants de 2030 sont déjà nées ; c'est seulement à partir de 2035-2040 que le niveau de la fécondité change vraiment le nombre de naissances.
+
+```{r pyramides-2050, fig.height = 5.5}
+projection %>%
+  filter(scenario %in% c("constante", "basse"), annee == 2050) %>%
+  mutate(scenario = paste("Fécondité", scenario)) %>%
+  pyramide(paste(pays, ": pyramide en 2050")) +
+  facet_wrap(~ scenario)
+```
+
+**Interprétation.** Les deux pyramides sont identiques au-dessus de 25 ans : ces personnes sont déjà nées. Toute la différence est à la base. Avec une fécondité basse, la base se resserre : c'est le début de la fenêtre du dividende démographique.
+
+# Étape 8. Des effectifs aux besoins : l'école primaire
+
+On approche les enfants de 6 à 11 ans par 4/5 du groupe 5-9 ans et 2/5 du groupe 10-14 ans. Avec un taux de scolarisation de 90 % et 45 élèves par enseignant :
+
+```{r besoins}
+besoins <- projection %>%
+  filter(age %in% c("5-9", "10-14")) %>%
+  mutate(part = if_else(age == "5-9", 4 / 5, 2 / 5)) %>%
+  group_by(scenario, annee) %>%
+  summarise(enfants_6_11 = sum(part * pop), .groups = "drop") %>%
+  mutate(eleves = 0.9 * enfants_6_11,
+         enseignants = eleves / 45,
+         scenario = factor(scenario, levels = c("constante", "haute", "moyenne", "basse")))
+
+besoins %>% filter(annee %in% c(2025, 2035, 2050)) %>%
+  arrange(annee, scenario) %>%
+  mutate(across(where(is.double), ~ round(.x, 1)))
+```
+
+```{r graphique-besoins}
+besoins %>%
+  ggplot(aes(annee, enseignants, colour = scenario)) +
+  geom_line(linewidth = 1) + geom_point() +
+  scale_colour_manual(values = couleurs) +
+  labs(title = paste(pays, ": enseignants du primaire nécessaires"),
+       subtitle = "90 % de scolarisation, 45 élèves par enseignant",
+       x = NULL, y = "Enseignants (milliers)", colour = "Fécondité") +
+  theme_minimal(base_size = 12)
+```
+
+```{r ecart-enseignants, include = FALSE}
+ens <- besoins %>% filter(annee == 2050) %>% select(scenario, enseignants) %>% deframe()
+```
+
+**La phrase pour le décideur (`r pays`).** « Si la fécondité reste à son niveau actuel, le pays devra disposer d'environ **`r nb(ens["constante"], 1)` milliers d'enseignants** du primaire en 2050, contre **`r nb(ens["basse"], 1)` milliers** si elle baisse selon l'hypothèse basse de l'ONU : un écart de **`r nb(ens["constante"] - ens["basse"], 1)` milliers d'enseignants** à recruter et à former. »
+
+# À vous {-}
+
+1. Remplacez `"Togo"` par votre pays, puis cliquez sur *Knit*. Tous les chiffres et toutes les phrases d'interprétation se mettent à jour.
+2. Projetez sans migration : dans `projeter_periode()`, remplacez `pop + migrants` par `pop`. Quel écart en 2050 ?
+3. Ajoutez un scénario national : une ligne dans `hypotheses` avec l'ISF visé par votre plan de développement.
+4. Calculez les besoins pour un autre secteur : les femmes de 15-49 ans (santé maternelle), ou les 15-24 ans qui entrent sur le marché du travail.
